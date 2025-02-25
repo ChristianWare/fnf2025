@@ -1,6 +1,8 @@
 :root {
   --black: #1f1f1f;
   --gray: #919598;
+  --lightGray: #dfdfdf;
+  --orange: #ff4d00;
   --white: #ffffff;
 }
 
@@ -51,7 +53,7 @@ span {
 h1 {
   font-size: 12.8rem;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   font-family: var(--NeueHaasGroteskMedium);
   /* font-weight: 600; */
 }

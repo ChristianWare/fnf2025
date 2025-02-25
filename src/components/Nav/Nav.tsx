@@ -4,28 +4,16 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
-import Button from "../Button/Button";
-// import useInvalidPaths from "../../../lib/use-invalid-paths";
+// import Button from "../Button/Button";
 
 const navItems = [
-  { text: "About", href: "/#about" },
-  { text: "Skills", href: "/#skills" },
-  { text: "Contact", href: "/#contact" },
-];
-
-const navItemsii = [
-  { text: "Email", href: "/#email" },
-  {
-    text: "Github",
-    href: "https://github.com/ChristianWare",
-    target: "_blank",
-  },
+  { text: "Works", href: "/portfolio" },
+  { text: "Info", href: "/about" },
+  { text: "Journal", href: "/blog" },
+  { text: "Start a Project", href: "/contact" },
 ];
 
 export default function Nav() {
-//   const invalidPath: boolean = useInvalidPaths();
-//   if (invalidPath) return <></>;
-
   const [isOpen, setIsOpen] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
   const [showNav, setShowNav] = useState(true);
@@ -133,22 +121,6 @@ export default function Nav() {
                 <Link href={navItem.href}>{navItem.text}</Link>
               </li>
             ))}
-          </ul>
-          <ul className={styles.navItemsii}>
-            {navItemsii.map((navItem, index) => (
-              <li
-                key={index}
-                className={`${styles.navItem}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <Link href={navItem.href} target={navItem.target}>
-                  {navItem.text}
-                </Link>
-              </li>
-            ))}
-            <div className={styles.btnContainer}>
-              <Button text='Contact' btnType='primary' href='/' />
-            </div>
           </ul>
         </div>
         <div

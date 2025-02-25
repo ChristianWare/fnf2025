@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Nav from "@/components/Nav/Nav";
+import Nav from "@/components/Nav/Nav";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
 
@@ -31,7 +31,10 @@ export default function RootLayout({
       <body
         className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable}`}
       >
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <Nav />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

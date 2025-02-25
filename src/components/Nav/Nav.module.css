@@ -1,3 +1,28 @@
+.header {
+  padding: 0.7rem;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  max-width: 1500px;
+  width: 100%;
+}
+
+.header.hide {
+  transform: translate(-50%, -150%);
+  opacity: 0;
+}
+
+.header.show {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
 .white {
   color: white !important;
 }
@@ -12,9 +37,22 @@
   z-index: 1000;
 }
 
+.leftContainer {
+  display: flex;
+  align-items: center;
+}
+
+.desc {
+  font-size: 1.4rem;
+  white-space: nowrap;
+  padding-right: 10rem;
+  background-color: var(--lightGray);
+}
+
 .navMenu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -22,6 +60,7 @@
 .logoContainerMobile {
   display: flex;
   align-items: center;
+  margin-left: 0.7rem;
 }
 
 .logoContainerMobile {
@@ -32,40 +71,33 @@
 .navItemsii {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: flex-end;
   list-style: none;
-  position: relative;
   width: 100%;
-  /* padding: 0rem 2rem; */
-  position: relative;
-}
-
-.navItems {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--tan);
 }
 
 .navItemsii {
   justify-content: flex-end;
-  background-color: var(--tan);
   padding: 0rem;
   width: fit-content;
   margin-left: auto;
 }
 
 .navItem {
-  position: relative;
-  line-height: 1;
-  font-weight: 600;
   font-size: 1.4rem;
+  line-height: 1;
   color: var(--black);
   user-select: none;
-  scroll-behavior: smooth;
   z-index: 998;
-  transition: color 0.1s ease-in-out;
+  padding: 6px 12px;
+  background-color: var(--lightGray);
+  border: 1px solid var(--white);
+  text-transform: uppercase;
+}
+
+.navItem:nth-child(4) {
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 .hamburger {
@@ -185,7 +217,6 @@
   .hamburger.active .whiteBar:nth-child(1) {
     -webkit-transform: translateY(0px) rotate(45deg);
     transform: translateY(12px) rotate(45deg);
-    background-color: var(--white);
   }
 
   .hamburger.active .whiteBar:nth-child(2) {
@@ -195,7 +226,6 @@
   .hamburger.active .whiteBar:nth-child(3) {
     -webkit-transform: translateY(0px) rotate(-45deg);
     transform: translateY(2px) rotate(-45deg);
-    background-color: var(--white);
   }
 
   .white {

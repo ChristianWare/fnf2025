@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
-import Nav from "../Nav/Nav";
+
 
 export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <Nav />
+        
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.headingClip}>
