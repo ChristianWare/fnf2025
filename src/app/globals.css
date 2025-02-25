@@ -15,10 +15,11 @@
   line-height: 120%;
   /* scroll-behavior: smooth;
   scroll-margin-top: 40px;
-  overscroll-behavior: none; */
+  */
   -webkit-tap-highlight-color: transparent;
   font-family: var(--NeueHaasGroteskBold);
   text-transform: uppercase;
+  overscroll-behavior: none;
 }
 
 html {

@@ -6,11 +6,17 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const copyRef = useRef<HTMLParagraphElement>(null);
+    const overlayRef = useRef<HTMLDivElement>(null);
+
 
   useGSAP(() => {
     if (!headingRef.current) return;
@@ -50,7 +56,6 @@ export default function Hero() {
 
       gsap.set(text.lines, {
         y: 400,
-        // opacity: 0,
         willChange: "transform, opacity",
       });
 
@@ -68,10 +73,30 @@ export default function Hero() {
     { scope: copyRef }
   );
 
+   useGSAP(() => {
+     if (!overlayRef.current) return;
+
+     gsap.fromTo(
+       overlayRef.current,
+       { opacity: 0 },
+       {
+         opacity: 0.7,
+         scrollTrigger: {
+           trigger: overlayRef.current, 
+           start: "top top", 
+           end: "bottom top", 
+           scrub: true,
+         },
+       }
+     );
+   });
+
+
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        
+        <div className={styles.overlay} ref={overlayRef}></div>
+
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.headingClip}>
@@ -81,7 +106,6 @@ export default function Hero() {
                 Websites <br />
               </h1>
             </div>
-           
           </div>
           <div className={styles.bottom}>
             <div className={styles.copyContainer}>
