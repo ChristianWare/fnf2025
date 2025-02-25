@@ -9,6 +9,7 @@ export default function Home() {
       <div className={styles.scrollContainer}>
         <Hero />
         <Impressions />
+        <Impressions />
       </div>
     </main>
   );
