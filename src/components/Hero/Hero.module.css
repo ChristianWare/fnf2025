@@ -1,19 +1,55 @@
-.content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  min-height: 100vh;
+.container {
   position: relative;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.headingClip {
+  overflow: hidden;
+  line-height: 1;
+  z-index: 999;
+  width: 100%;
 }
 
 .heading {
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  top: 15%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  font-size: 10.8vw;
-  letter-spacing: -0.1em;
-  font-weight: 500;
   text-transform: uppercase;
+  padding-top: 5rem;
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  visibility: hidden;
+  line-height: 0.9;
+}
+
+.heading :global(.word),
+.heading :global(.word),
+.heading :global(.line) {
+  line-height: 0.01;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.copyContainer {
+  margin-left: auto;
+}
+
+.copy {
+  overflow: hidden;
+  visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  text-transform: uppercase;
+  margin-left: auto;
+  width: 70%;
 }

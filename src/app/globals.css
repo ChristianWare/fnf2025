@@ -1,15 +1,7 @@
 :root {
-  --black: #1F1F1F;
-  --blue: #162f35;
+  --black: #1f1f1f;
+  --gray: #919598;
   --white: #ffffff;
-  --pink: #fcd2cd;
-  --purple: #bdb7d5;
-  --purple2: #7f62f3;
-  --gray: #787a7d;
-  --gray2: #f1f1f2;
-  --lightGray: #aab9c5;
-  --lightGray2: #6c6c83;
-  --grayText: #6c6f75;
 }
 
 * {
@@ -22,7 +14,7 @@
   scroll-margin-top: 40px;
   overscroll-behavior: none; */
   -webkit-tap-highlight-color: transparent;
-  font-family: var(--inter);
+  font-family: var(--NeueHaasGroteskBold);
 }
 
 html {
@@ -53,12 +45,15 @@ h5,
 h6,
 span {
   color: var(--black);
+  font-family: var(--NeueHaasGroteskBold);
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 12.8rem;
   line-height: 1;
-  font-weight: 600;
+  letter-spacing: -2px;
+  font-family: var(--NeueHaasGroteskMedium);
+  /* font-weight: 600; */
 }
 
 h2 {
@@ -101,6 +96,7 @@ textarea {
   hyphens: auto;
   font-size: 1.6rem;
   line-height: 1.6em;
+  font-family: var(--inter);
 }
 
 input:focus,

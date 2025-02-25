@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./ContentPadding.module.css";
 
 interface PaddingProps {

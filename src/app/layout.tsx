@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav/Nav";
+// import Nav from "@/components/Nav/Nav";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
+import localFont from "next/font/local";
 
-const inter = Inter({
-  variable: "--inter",
-  weight: ["500", "600"],
-  subsets: ["latin"],
+const NeueHaasGroteskBold = localFont({
+  src: "../../public/fonts/NeueHaasGroteskBold.woff2",
+  variable: "--NeueHaasGroteskBold",
+  display: "swap",
+});
+
+const NeueHaasGroteskMedium = localFont({
+  src: "../../public/fonts/NeueHaasGroteskMedium.woff2",
+  variable: "--NeueHaasGroteskMedium",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,12 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable}`}>
-        <SmoothScroll>
-          <Nav />
-          {children}
-        </SmoothScroll>
+      <body
+        className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable}`}
+      >
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
 }
+
+// nbGroteskProMonoBold.woff2;
