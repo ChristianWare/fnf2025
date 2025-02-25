@@ -11,51 +11,52 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const copyRef = useRef<HTMLParagraphElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
+  const refs = {
+    heading: useRef<HTMLHeadingElement>(null),
+    copy: useRef<HTMLParagraphElement>(null),
+    servicesTitle: useRef<HTMLParagraphElement>(null),
+    servicesContainer: useRef<HTMLUListElement>(null),
+    overlay: useRef<HTMLDivElement>(null),
+  };
 
   useGSAP(() => {
-    if (!headingRef.current) return;
+    // Overlay animation
+    if (refs.overlay.current) {
+      gsap.fromTo(
+        refs.overlay.current,
+        { opacity: 0 },
+        {
+          opacity: 0.7,
+          scrollTrigger: {
+            trigger: refs.overlay.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    }
 
-    const heroText = new SplitType(headingRef.current, { types: "words" });
+    // Generic text animation handler
+    const animateText = (
+      element: HTMLElement,
+      config: {
+        type: "words" | "lines";
+        ignore?: string;
+      }
+    ) => {
+      gsap.set(element, { visibility: "visible" });
 
-    gsap.set(headingRef.current, { visibility: "visible" });
-
-    gsap.set(heroText.words, {
-      y: 400,
-    });
-
-    gsap.to(heroText.words, {
-      y: 0,
-      opacity: 1,
-      duration: 2,
-      stagger: 0.075,
-      ease: "power4.out",
-      delay: 0.25,
-    });
-  });
-
-  useGSAP(
-    () => {
-      if (!copyRef.current) return;
-
-      gsap.set(copyRef.current, { visibility: "hidden" });
-
-      const text = new SplitType(copyRef.current, {
-        types: "lines",
-        tagName: "div",
+      const split = new SplitType(element, {
+        types: config.type,
+        ...(config.ignore && { children: config.ignore }),
         lineClass: styles.line,
       });
 
-      gsap.set(copyRef.current, { visibility: "visible" });
+      const targets = config.type === "words" ? split.words : split.lines;
 
-      gsap.set(text.lines, {
-        y: 400,
-        willChange: "transform, opacity",
-      });
-
-      gsap.to(text.lines, {
+      gsap.set(targets, { y: 400, opacity: 0 });
+      gsap.to(targets, {
         y: 0,
         opacity: 1,
         duration: 2,
@@ -64,53 +65,71 @@ export default function Hero() {
         delay: 0.25,
       });
 
-      return () => text.revert();
-    },
-    { scope: copyRef }
-  );
+      return () => split.revert();
+    };
 
-  useGSAP(() => {
-    if (!overlayRef.current) return;
-
-    gsap.fromTo(
-      overlayRef.current,
-      { opacity: 0 },
+    // Animate all text elements
+    const animations = [
       {
-        opacity: 0.7,
-        scrollTrigger: {
-          trigger: overlayRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
+        ref: refs.heading,
+        config: { type: "words" as const },
+      },
+      {
+        ref: refs.copy,
+        config: { type: "lines" as const },
+      },
+      {
+        ref: refs.servicesTitle,
+        config: { type: "lines" as const },
+      },
+      {
+        ref: refs.servicesContainer,
+        config: {
+          type: "lines" as const,
+          ignore: `.${styles.blackDot}`,
+          isList: true,
         },
+      },
+    ].map(({ ref, config }) => {
+      if (!ref.current) return null;
+
+      if (config.isList) {
+        const listItems = gsap.utils.toArray<HTMLLIElement>(
+          ref.current.querySelectorAll("li")
+        );
+
+        return listItems.map((li) => animateText(li, config));
       }
-    );
+
+      return animateText(ref.current, config);
+    });
+
+    // Cleanup
+    return () =>
+      animations.forEach((animation) => {
+        if (Array.isArray(animation)) {
+          animation.forEach((a) => a?.());
+        } else {
+          animation?.();
+        }
+      });
   });
 
   const services = [
-    {
-      id: 1,
-      name: "Business Websites",
-    },
-    {
-      id: 2,
-      name: "E-commerce Stores",
-    },
-    {
-      id: 3,
-      name: "Booking Platforms",
-    },
+    { id: 1, name: "Business Websites" },
+    { id: 2, name: "E-commerce Stores" },
+    { id: 3, name: "Booking Platforms" },
   ];
 
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <div className={styles.overlay} ref={overlayRef}></div>
+        <div className={styles.overlay} ref={refs.overlay}></div>
 
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.headingClip}>
-              <h1 ref={headingRef} className={styles.heading}>
+              <h1 ref={refs.heading} className={styles.heading}>
                 You need an <br />
                 Innovative
                 <br />
@@ -118,17 +137,24 @@ export default function Hero() {
               </h1>
             </div>
           </div>
+
           <div className={styles.bottom}>
             <div className={styles.copyContainer}>
-              <p className={styles.copy} ref={copyRef}>
+              <p className={styles.copy} ref={refs.copy}>
                 Since 2022, we&apos;ve been crafting digital experiences that
-                maetter.{" "}
+                matter.
               </p>
             </div>
           </div>
+
           <div className={styles.bottom2}>
-            <span className={styles.servicesTitle}>What we Build:</span>
-            <ul className={styles.servicesContainer}>
+            <p className={styles.servicesTitle} ref={refs.servicesTitle}>
+              What we Build:
+            </p>
+            <ul
+              className={styles.servicesContainer}
+              ref={refs.servicesContainer}
+            >
               {services.map((x) => (
                 <li className={styles.service} key={x.id}>
                   {x.name}
