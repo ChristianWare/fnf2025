@@ -1,6 +1,55 @@
 .container {
   min-height: 100vh;
   background-color: var(--white);
-  position: relative; /* Add this */
+  position: relative;
   z-index: 2;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.left {
+  border-right: 1px solid var(--gray);
+  padding-top: 5rem;
+}
+
+.heading {
+  max-width: 52rem;
+}
+
+.right {
+  padding: 5rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.copy {
+  text-transform: none;
+  width: 60%;
+  letter-spacing: -0.3px;
+}
+
+.headingii {
+  width: 70%;
+}
+
+.highlight {
+  color: var(--orange);
+}
+
+@media screen and (max-width: 1068px) {
+  .left {
+    padding-right: 3rem;
+  }
+
+  .copy,
+  .headingii {
+    width: 100%;
+  }
 }

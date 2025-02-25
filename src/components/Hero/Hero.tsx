@@ -10,13 +10,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const copyRef = useRef<HTMLParagraphElement>(null);
-    const overlayRef = useRef<HTMLDivElement>(null);
-
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     if (!headingRef.current) return;
@@ -27,7 +24,6 @@ export default function Hero() {
 
     gsap.set(heroText.words, {
       y: 400,
-      // opacity: 0,
     });
 
     gsap.to(heroText.words, {
@@ -73,24 +69,38 @@ export default function Hero() {
     { scope: copyRef }
   );
 
-   useGSAP(() => {
-     if (!overlayRef.current) return;
+  useGSAP(() => {
+    if (!overlayRef.current) return;
 
-     gsap.fromTo(
-       overlayRef.current,
-       { opacity: 0 },
-       {
-         opacity: 0.7,
-         scrollTrigger: {
-           trigger: overlayRef.current, 
-           start: "top top", 
-           end: "bottom top", 
-           scrub: true,
-         },
-       }
-     );
-   });
+    gsap.fromTo(
+      overlayRef.current,
+      { opacity: 0 },
+      {
+        opacity: 0.7,
+        scrollTrigger: {
+          trigger: overlayRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  });
 
+  const services = [
+    {
+      id: 1,
+      name: "Business Websites",
+    },
+    {
+      id: 2,
+      name: "E-commerce Stores",
+    },
+    {
+      id: 3,
+      name: "Booking Platforms",
+    },
+  ];
 
   return (
     <section className={styles.container}>
@@ -101,9 +111,10 @@ export default function Hero() {
           <div className={styles.top}>
             <div className={styles.headingClip}>
               <h1 ref={headingRef} className={styles.heading}>
-                INNOVATING <br />
-                {/* Ecommerce <br /> */}
-                Websites <br />
+                You need an <br />
+                Innovative
+                <br />
+                Website <br />
               </h1>
             </div>
           </div>
@@ -114,6 +125,17 @@ export default function Hero() {
                 maetter.{" "}
               </p>
             </div>
+          </div>
+          <div className={styles.bottom2}>
+            <span className={styles.servicesTitle}>What we Build:</span>
+            <ul className={styles.servicesContainer}>
+              {services.map((x) => (
+                <li className={styles.service} key={x.id}>
+                  {x.name}
+                  <span className={styles.blackDot}></span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </LayoutWrapper>

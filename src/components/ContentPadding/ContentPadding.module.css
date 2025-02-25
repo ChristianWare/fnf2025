@@ -5,12 +5,12 @@
 
 @media screen and (max-width: 870px) {
   .container {
-    padding: 8rem 3rem;
+    padding: 5rem 2rem;
   }
 }
 
 @media screen and (max-width: 568px) {
   .container {
-    padding: 7rem 2rem;
+    padding: 5rem 1rem;
   }
 }

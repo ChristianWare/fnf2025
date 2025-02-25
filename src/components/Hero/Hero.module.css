@@ -41,7 +41,7 @@
   will-change: transform, opacity, filter;
   backface-visibility: hidden;
   visibility: hidden;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 .heading :global(.word),
@@ -71,6 +71,39 @@
   width: 70%;
 }
 
+.bottom2 {
+  width: 50%;
+}
+
+.servicesTitle {
+  color: var(--gray);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.servicesContainer {
+  list-style: none;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
+  padding: 1rem 0rem;
+}
+
+.service:nth-child(1) {
+  border-top: 1px solid var(--gray);
+}
+
+.blackDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
 @media screen and (max-width: 968px) {
   .content,
   .top,
@@ -90,6 +123,11 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+  }
+
+  .bottom2 {
+    width: 100%;
+    margin-top: 5rem;
   }
 }
 
