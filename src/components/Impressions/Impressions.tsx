@@ -53,7 +53,7 @@ export default function Impressions() {
         duration: 1,
         ease: "power3.inOut",
       },
-      0.25
+      0.15
     );
 
     // Cleanup function
