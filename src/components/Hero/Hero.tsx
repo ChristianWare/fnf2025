@@ -55,7 +55,10 @@ export default function Hero() {
 
       const targets = config.type === "words" ? split.words : split.lines;
 
-      gsap.set(targets, { y: 400, opacity: 0 });
+      gsap.set(targets, {
+        y: 400,
+        //  opacity: 0
+      });
       gsap.to(targets, {
         y: 0,
         opacity: 1,

@@ -54,7 +54,7 @@
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
+  top: 90px;
   background-color: var(--white);
   padding-left: 3rem;
 }
@@ -70,7 +70,7 @@
 
 .headingiii {
   border-top: 1px solid var(--gray);
-  padding-top: 5rem;
+  padding: 3rem;
 }
 
 .imgContainer {
@@ -78,6 +78,13 @@
   width: 100%;
   height: 500px;
   background-color: var(--tan);
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .img {
@@ -94,5 +101,39 @@
   .headingii,
   .headingiii {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left,
+  .right {
+    gap: 3rem;
+    border: 1px solid var(--gray);
+    padding: 3rem;
+  }
+
+  .right {
+    border-top: none;
+    padding: 0rem;
+  }
+
+  .copy,
+  .headingii,
+  .headingiii {
+    padding: 3rem;
+  }
+
+  .copy {
+    margin-bottom: 0rem;
+  }
+
+  .headingii {
+    /* margin-bottom: 5rem; */
+    padding-bottom: 0rem;
+    border-top: 1px solid var(--gray);
   }
 }
