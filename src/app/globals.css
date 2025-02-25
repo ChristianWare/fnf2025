@@ -3,6 +3,7 @@
   --gray: #919598;
   --lightGray: #dfdfdf;
   --orange: #ff4d00;
+  --tan: #ebeae4;
   --white: #ffffff;
 }
 
@@ -17,6 +18,7 @@
   overscroll-behavior: none; */
   -webkit-tap-highlight-color: transparent;
   font-family: var(--NeueHaasGroteskBold);
+  text-transform: uppercase;
 }
 
 html {
@@ -55,13 +57,14 @@ h1 {
   line-height: 1;
   letter-spacing: -3px;
   font-family: var(--NeueHaasGroteskMedium);
-  /* font-weight: 600; */
 }
 
 h2 {
-  font-size: 4.8rem;
+  font-size: 8.2rem;
   font-weight: 600;
   line-height: 1;
+  font-family: var(--NeueHaasGroteskMedium);
+  letter-spacing: -1.6px;
 }
 
 h3 {
