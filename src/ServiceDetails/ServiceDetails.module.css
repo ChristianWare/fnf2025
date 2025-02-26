@@ -32,7 +32,7 @@
 .card {
   width: 50vw;
   height: 350px;
-  background-color: var(--gray);
+  background-color: var(--tan);
   border-right: 1px solid var(--black);
   padding: 3rem;
   display: flex;
@@ -41,10 +41,11 @@
   justify-content: space-between;
   gap: 2rem;
   transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 
 .card:hover {
-  background-color: var(--lightGray);
+  background-color: var(--orange);
 }
 
 .cardTop {
@@ -57,14 +58,22 @@
 
 .id {
   font-size: 3.4rem;
+  transition: all 0.3s ease-in;
 }
 
-.cardTitle {
-  color: var(--white);
+.cardTitle,
+.cardDescription,
+.cardBottom {
   transition: all 0.3s ease-in;
 }
 
 .card:hover .cardTitle {
-  color: var(--black);
+  color: var(--white);
   text-decoration: underline;
+}
+
+.card:hover .cardDescription,
+.card:hover .id,
+.card:hover .cardBottom {
+  color: var(--white);
 }

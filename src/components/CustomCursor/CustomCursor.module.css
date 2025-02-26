@@ -2,21 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-
-  /* Your preferred size, shape, color, etc. */
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-color: var(--orange);
-
-  /* 
-    Keep it on top:
-    - z-index high enough so nothing (hero overlays, etc.) sits above it
-    - pointer-events: none so it doesn't block clicks
-  */
+  border: 1px solid var(--black);
   z-index: 9999;
   pointer-events: none;
-
-  /* Move its center to the mouse coordinate instead of top-left corner */
   transform: translate(-50%, -50%);
 }
