@@ -37,7 +37,6 @@ export default function Hero() {
       );
     }
 
-    // Generic text animation handler
     const animateText = (
       element: HTMLElement,
       config: {
@@ -127,16 +126,18 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <div className={styles.overlay} ref={refs.overlay}></div>
-
+        {/* <div className={styles.overlay} ref={refs.overlay}></div> */}
+        <video preload='auto' autoPlay muted loop className={styles.video}>
+          <source src='./videos/glass.mp4' />
+        </video>
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                You need an <br />
+                We Build <br />
                 Innovative
                 <br />
-                Website <br />
+                Websites <br />
               </h1>
             </div>
           </div>

@@ -14,6 +14,10 @@
 
 .heading {
   width: 50%;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
 }
 
 .right {
@@ -64,5 +68,18 @@
 @media screen and (max-width: 568px) {
   .heading {
     width: 100%;
+  }
+
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cardRight {
+    padding-left: 0rem;
+  }
+
+  .id {
+    display: block;
+    margin-bottom: 1rem;
   }
 }

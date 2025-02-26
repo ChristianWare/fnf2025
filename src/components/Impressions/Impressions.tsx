@@ -4,7 +4,7 @@ import styles from "./Impressions.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Image from "next/image";
-import Img1 from "../../../public/images/handshake.png";
+import Img1 from "../../../public/images/glass.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";

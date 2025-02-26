@@ -11,9 +11,9 @@
 
 .stickyContainer {
   position: sticky;
-  top: 400px;
+  top: 300px;
   display: flex;
-  /* align-items: center; */
+  overflow: hidden;
 }
 
 .btnContainer {
@@ -59,7 +59,6 @@
 .id {
   font-size: 3.4rem;
   transition: all 0.3s ease-in;
-  /* color: var(--tan); */
 }
 
 .cardDescription {
@@ -70,7 +69,6 @@
 .cardDescription,
 .cardBottom {
   transition: all 0.3s ease-in;
-  /* color: var(--tan); */
 }
 
 .card:hover .cardTitle {
