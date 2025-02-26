@@ -1,6 +1,7 @@
-import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
+import LayoutWrapper from "../LayoutWrapper";
+import Projects from "../Projects/Projects";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const data = [
   {
@@ -35,17 +36,22 @@ export default function Process() {
             <h3 className={styles.heading}>The strategic narrative process</h3>
           </div>
           <div className={styles.right}>
-            {data.map((x) => (
-              <div className={styles.card} key={x.id}>
-                <div className={styles.cardLeft}>
-                  <span className={styles.id}>0{x.id}.</span>
+            <div className={styles.mapDataBox}>
+              {data.map((x) => (
+                <div className={styles.card} key={x.id}>
+                  <div className={styles.cardLeft}>
+                    <span className={styles.id}>0{x.id}.</span>
+                  </div>
+                  <div className={styles.cardRight}>
+                    <h4 className={styles.feature}>{x.feature}</h4>
+                    <p className={styles.desc}>{x.desc}</p>
+                  </div>
                 </div>
-                <div className={styles.cardRight}>
-                  <h4 className={styles.feature}>{x.feature}</h4>
-                  <p className={styles.desc}>{x.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className={styles.projectsBox}>
+              <Projects />
+            </div>
           </div>
         </div>
       </LayoutWrapper>

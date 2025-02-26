@@ -1,0 +1,39 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 7rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.heading {
+  color: var(--orange);
+}
+
+.headingii {
+  width: 90%;
+  text-transform: none;
+}
+
+.span {
+  text-decoration: underline;
+  text-transform: none;
+}
+
+.includes {
+  display: block;
+  color: var(--gray);
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .headingii {
+    width: 100%;
+  }
+}

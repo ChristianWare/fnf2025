@@ -1,5 +1,6 @@
 .container {
   background-color: var(--white);
+  padding-bottom: 5rem;
 }
 
 .content {
@@ -48,6 +49,10 @@
 .desc {
   text-transform: none;
   width: 80%;
+}
+
+.projectsBox {
+  margin-top: 10rem;
 }
 
 @media screen and (max-width: 1068px) {

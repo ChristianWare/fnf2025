@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 
 import Hero from "@/components/Hero/Hero";
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
-import ServiceDetails from "@/ServiceDetails/ServiceDetails";
+import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 import Process from "@/components/Process/Process";
 
 export default function Home() {
