@@ -1,0 +1,70 @@
+.container {
+  background-color: var(--gray);
+  padding: 10rem 0;
+}
+
+.horizontalScrollSection {
+  position: relative;
+  height: 150vh;
+  background-color: var(--gray);
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  /* align-items: center; */
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.cardsRow {
+  display: flex;
+  border-top: 10px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.card {
+  width: 50vw;
+  height: 350px;
+  background-color: var(--gray);
+  border-right: 1px solid var(--black);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: all 0.3s ease-in;
+}
+
+.card:hover {
+  background-color: var(--lightGray);
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.id {
+  font-size: 3.4rem;
+}
+
+.cardTitle {
+  color: var(--white);
+  transition: all 0.3s ease-in;
+}
+
+.card:hover .cardTitle {
+  color: var(--black);
+  text-decoration: underline;
+}

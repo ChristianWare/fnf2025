@@ -140,7 +140,6 @@ export default function Hero() {
               </h1>
             </div>
           </div>
-
           <div className={styles.bottom}>
             <div className={styles.copyContainer}>
               <p className={styles.copy} ref={refs.copy}>

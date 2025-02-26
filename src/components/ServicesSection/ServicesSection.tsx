@@ -12,7 +12,7 @@ const cardsData = [
   { id: 1, title: "2:" },
   { id: 2, title: "the main" },
   { id: 3, title: "services" },
-  { id: 4, title: "we offer" },
+  { id: 4, title: "we offer:" },
 ];
 
 export default function ServicesSection() {
