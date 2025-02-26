@@ -11,7 +11,7 @@
 
 .stickyContainer {
   position: sticky;
-  top: 100px;
+  top: 200px;
   display: flex;
   /* align-items: center; */
 }
@@ -25,15 +25,15 @@
 
 .cardsRow {
   display: flex;
-  border-top: 10px solid var(--black);
-  border-bottom: 1px solid var(--black);
+  border-top: 10px solid var(--tan);
+  border-bottom: 1px solid var(--tan);
 }
 
 .card {
   width: 50vw;
   height: 350px;
-  background-color: var(--tan);
-  border-right: 1px solid var(--black);
+  background-color: var(--gray);
+  border-right: 1px solid var(--tan);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -59,12 +59,14 @@
 .id {
   font-size: 3.4rem;
   transition: all 0.3s ease-in;
+  color: var(--tan);
 }
 
 .cardTitle,
 .cardDescription,
 .cardBottom {
   transition: all 0.3s ease-in;
+  color: var(--tan);
 }
 
 .card:hover .cardTitle {
