@@ -10,25 +10,25 @@ const services = [
     id: "A",
     name: "Business Websites",
     description:
-      "How do you give the world’s safest car seat a priceless personality?",
+      "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
   },
   {
     id: "B",
     name: "E-commerce Stores",
     description:
-      "How do you give the world’s safest car seat a priceless personality?",
+      "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
   },
   {
     id: "C",
     name: "Booking Platforms",
     description:
-      "How do you give the world’s safest car seat a priceless personality?",
+      "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
   },
   {
     id: "D",
     name: "Landing Pages",
     description:
-      "How do you give the world’s safest car seat a priceless personality?",
+      "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
   },
 ];
 
