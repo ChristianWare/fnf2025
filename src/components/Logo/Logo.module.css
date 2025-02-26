@@ -4,26 +4,10 @@
   cursor: pointer;
   text-transform: uppercase;
   font-size: 1.4rem;
-  /* letter-spacing: -0.5px; */
+  backdrop-filter: grayscale(1);
+  mix-blend-mode: difference;
 }
 
 .large {
   font-size: 2.5rem;
-}
-
-.logo span {
-  margin-right: 1rem;
-}
-
-.icon {
-  color: var(--black);
-  width: 2.7rem;
-  height: 2.7rem;
-  transform-origin: center;
-  transition: transform 0.1s ease-out;
-}
-
-.iconLarge {
-  width: 3.5rem;
-  height: 3.5rem;
 }

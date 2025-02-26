@@ -77,6 +77,7 @@
 .titleHeading {
   font-size: 15rem;
   z-index: 2;
+  letter-spacing: -5px;
 }
 
 .blackDot {

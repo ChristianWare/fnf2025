@@ -131,6 +131,15 @@ textarea:focus {
   background: var(--secondary);
 } */
 
+::selection {
+  background: var(--orange);
+  color: var(--black);
+}
+::-moz-selection {
+  background: var(--orange);
+  color: var(--black);
+}
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 55%;
