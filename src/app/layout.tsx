@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
+
 const NeueHaasGroteskBold = localFont({
   src: "../../public/fonts/NeueHaasGroteskBold.woff2",
   variable: "--NeueHaasGroteskBold",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Nav />
           {children}
+          
           <CustomCursor />
         </SmoothScroll>
       </body>

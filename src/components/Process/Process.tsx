@@ -6,23 +6,23 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 const data = [
   {
     id: 1,
-    feature: "Discovery & Planning",
-    desc: "I begin each project by thoroughly understanding the goals, target audience, and technical requirements.",
+    feature: "Discovery",
+    desc: "→ I begin each project by thoroughly understanding the goals, target audience, and technical requirements.",
   },
   {
     id: 2,
-    feature: "Design & Prototyping",
-    desc: "I create detailed wireframes and prototypes that align with the project's objectives.",
+    feature: "Design",
+    desc: "→ I create detailed wireframes and prototypes that align with the project's objectives.",
   },
   {
     id: 3,
-    feature: "Development & Integration",
-    desc: "With the design finalized, I move into development, leveraging modern technologies like Next.js and TypeScript.",
+    feature: "Development ",
+    desc: "→ With the design finalized, I move into development, leveraging modern technologies like Next.js and TypeScript.",
   },
   {
     id: 4,
-    feature: "Testing & Launch",
-    desc: "Before deployment, I conduct extensive testing to guarantee optimal performance and reliability.",
+    feature: "Test",
+    desc: "→ Before deployment, I conduct extensive testing to guarantee optimal performance and reliability.",
   },
 ];
 
@@ -39,6 +39,7 @@ export default function Process() {
             <div className={styles.mapDataBox}>
               {data.map((x) => (
                 <div className={styles.card} key={x.id}>
+                  <span className={styles.blackDot} />
                   <div className={styles.cardLeft}>
                     <span className={styles.id}>0{x.id}.</span>
                   </div>

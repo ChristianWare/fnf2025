@@ -45,11 +45,13 @@
   border: 1px solid var(--black);
 }
 
+.card:nth-child(1) {
+  background-color: var(--orange);
+}
+
 .card:hover {
-  /* background-color: rgba(7, 254, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(7, 254, 255, 0.4); */
   transform: translateY(-5px);
-  background-color: var(--lightGray);
+  background-color: var(--orange);
 }
 
 .cardTop {
@@ -66,16 +68,8 @@
 }
 
 .cardDescription {
-  /* background: var(--gray); */
-  /* color: #07feff;
-  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(7, 254, 255, 0.3); */
   display: inline-block;
   transform: perspective(1000px) translateZ(0);
-  /* box-shadow: 0 0 15px rgba(7, 254, 255, 0.2); */
 }
 
 .cardTitle,
@@ -88,18 +82,14 @@
   text-decoration: underline;
 }
 
-.cardTitle {
+.cardTitle,
+.id,
+.cardBottom {
   font-size: 3.4rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #07feff;
-  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
-  background: rgba(7, 254, 255, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(7, 254, 255, 0.3);
-  display: inline-block;
-  transform: perspective(1000px) translateZ(0);
-  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
+}
+
+.cardBottom {
+  font-size: 2rem;
 }

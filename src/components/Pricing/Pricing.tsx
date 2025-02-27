@@ -4,7 +4,7 @@ import ServicesSectionIntro from "../ServicesSectionIntro/ServicesSectionIntro";
 import styles from "./Pricing.module.css";
 
 const cardsData = [
-  { id: 1, title: "5:" },
+  { id: 1, title: "4:" },
   { id: 3, title: "Pricing" },
 ];
 

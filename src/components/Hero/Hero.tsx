@@ -161,7 +161,7 @@ export default function Hero() {
               {services.map((x) => (
                 <li className={styles.service} key={x.id}>
                   {x.name}
-                  <span className={styles.blackDot}></span>
+                  <span className={styles.blackDot} />
                 </li>
               ))}
             </ul>
