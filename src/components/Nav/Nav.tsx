@@ -8,7 +8,8 @@ import Logo from "../Logo/Logo";
 
 const navItems = [
   { text: "Works", href: "/portfolio" },
-  { text: "Info", href: "/about" },
+  { text: "About", href: "/about" },
+  { text: "Services", href: "/about" },
   { text: "Journal", href: "/blog" },
   { text: "Start a Project", href: "/contact" },
 ];
