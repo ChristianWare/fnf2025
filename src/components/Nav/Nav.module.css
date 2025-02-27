@@ -95,7 +95,7 @@
   text-transform: uppercase;
 }
 
-.navItem:nth-child(4) {
+.navItem:nth-child(5) {
   background-color: var(--orange);
   color: var(--white);
 }

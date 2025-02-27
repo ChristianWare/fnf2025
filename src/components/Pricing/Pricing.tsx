@@ -5,7 +5,6 @@ import styles from "./Pricing.module.css";
 
 const cardsData = [
   { id: 1, title: "5:" },
-  { id: 2, title: "our" },
   { id: 3, title: "Pricing" },
 ];
 
