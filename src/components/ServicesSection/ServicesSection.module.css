@@ -43,7 +43,7 @@
   letter-spacing: -5px;
 }
 
-.card1 .titleHeading,
+/* .card1 .titleHeading,
 .card4 .titleHeading {
   color: #07feff;
   text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
@@ -55,7 +55,7 @@
   display: inline-block;
   transform: perspective(1000px) translateZ(0);
   box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
-}
+} */
 
 .blackDot {
   position: absolute;

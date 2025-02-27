@@ -6,9 +6,10 @@ import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 import Process from "@/components/Process/Process";
 import VideoSection from "@/components/VideoSection/VideoSection";
-import OtherThings from "@/components/OtherThings/OtherThings";
-import Pricing from "@/components/Pricing/Pricing";
-import ProjectSection from "@/components/ProjectSection/ProjectSection";
+import Contact1 from "@/components/Contact1/Contact1";
+// import OtherThings from "@/components/OtherThings/OtherThings";
+// import Pricing from "@/components/Pricing/Pricing";
+// import ProjectSection from "@/components/ProjectSection/ProjectSection";
 
 export default function Home() {
   return (
@@ -20,9 +21,10 @@ export default function Home() {
         <ServiceDetails />
         <Process />
         <VideoSection />
-        <OtherThings />
-        <Pricing />
-        <ProjectSection />
+        <Contact1 />
+        {/* <OtherThings /> */}
+        {/* <Pricing /> */}
+        {/* <ProjectSection /> */}
       </div>
     </main>
   );

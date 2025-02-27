@@ -52,6 +52,7 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--gray);
   padding: 1rem 0;
+  font-size: 3.4rem;
   /* visibility: hidden; */
   /* overflow: hidden; */
   width: 100%;

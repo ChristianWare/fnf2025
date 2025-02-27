@@ -11,7 +11,7 @@
 
 .stickyContainer {
   position: sticky;
-  top: 300px;
+  top: 200px;
   display: flex;
   overflow: hidden;
 }
@@ -28,17 +28,11 @@
   gap: 5rem;
   border-top: 10px solid var(--black);
   padding-top: 3rem;
-  /* border-bottom: 1px solid var(--black); */
 }
 
 .card {
   width: 50vw;
   min-height: 350px;
-  background-color: rgba(7, 254, 255, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(7, 254, 255, 0.5);
-  box-shadow: 0 4px 20px rgba(7, 254, 255, 0.3);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -47,12 +41,15 @@
   gap: 2rem;
   transition: all 0.3s ease-in;
   cursor: pointer;
+  background-color: var(--gray);
+  border: 1px solid var(--black);
 }
 
 .card:hover {
-  background-color: rgba(7, 254, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(7, 254, 255, 0.4);
+  /* background-color: rgba(7, 254, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(7, 254, 255, 0.4); */
   transform: translateY(-5px);
+  background-color: var(--lightGray);
 }
 
 .cardTop {
@@ -70,15 +67,15 @@
 
 .cardDescription {
   /* background: var(--gray); */
-  color: #07feff;
+  /* color: #07feff;
   text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(7, 254, 255, 0.3);
+  border: 1px solid rgba(7, 254, 255, 0.3); */
   display: inline-block;
   transform: perspective(1000px) translateZ(0);
-  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
+  /* box-shadow: 0 0 15px rgba(7, 254, 255, 0.2); */
 }
 
 .cardTitle,
@@ -88,12 +85,21 @@
 }
 
 .card:hover .cardTitle {
-  color: var(--white);
   text-decoration: underline;
 }
 
-.card:hover .cardDescription,
-.card:hover .id,
-.card:hover .cardBottom {
-  color: var(--white);
+.cardTitle {
+  font-size: 3.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #07feff;
+  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
+  background: rgba(7, 254, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(7, 254, 255, 0.3);
+  display: inline-block;
+  transform: perspective(1000px) translateZ(0);
+  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
 }
