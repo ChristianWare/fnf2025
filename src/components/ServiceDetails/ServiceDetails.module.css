@@ -38,7 +38,7 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(7, 254, 255, 0.5);
-  box-shadow: 0 4px 20px rgba(7, 254, 255, 0.3); 
+  box-shadow: 0 4px 20px rgba(7, 254, 255, 0.3);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,16 @@
 }
 
 .cardDescription {
-  color: var(--lightGray);
+  /* background: var(--gray); */
+  color: #07feff;
+  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(7, 254, 255, 0.3);
+  display: inline-block;
+  transform: perspective(1000px) translateZ(0);
+  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
 }
 
 .cardTitle,

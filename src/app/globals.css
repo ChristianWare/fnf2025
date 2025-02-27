@@ -129,16 +129,9 @@ textarea:focus {
 } */
 
 ::selection {
-  background: var(--gray);
-color: #07feff;
-  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(7, 254, 255, 0.3);
-  display: inline-block;
-  transform: perspective(1000px) translateZ(0);
-  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);}
+  background: var(--orange);
+  color: var(--black);
+}
 ::-moz-selection {
   background: var(--orange);
   color: var(--black);
