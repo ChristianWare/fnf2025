@@ -4,8 +4,7 @@
   position: relative;
   z-index: 2;
   border-top: 1px solid var(--gray);
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .content {

@@ -5,8 +5,15 @@
 }
 
 .left {
-  padding: 2rem;
-  padding-left: 0rem;
+  border-right: 1px solid var(--gray);
+  padding-top: 5rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12rem;
 }
 
 .imgContainer {
@@ -35,6 +42,14 @@
   font-size: 1.4rem;
 }
 
+.copy {
+  text-transform: none;
+  width: 60%;
+  letter-spacing: -0.3px;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
+
 .btnContainer {
   margin-top: 2rem;
 }
@@ -53,14 +68,18 @@
     border: 1px solid var(--gray);
     border-bottom: none;
   }
+
+  .copy {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 568px) {
   .imgContainer {
     height: 300px;
   }
-  
-    .btnContainer {
+
+  .btnContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
