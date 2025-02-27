@@ -25,15 +25,20 @@
 
 .cardsRow {
   display: flex;
+  gap: 5rem;
   border-top: 10px solid var(--black);
-  border-bottom: 1px solid var(--black);
+  padding-top: 3rem;
+  /* border-bottom: 1px solid var(--black); */
 }
 
 .card {
   width: 50vw;
   min-height: 350px;
-  background-color: var(--gray);
-  border-right: 1px solid var(--black);
+  background-color: rgba(7, 254, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(7, 254, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(7, 254, 255, 0.3); 
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -45,7 +50,9 @@
 }
 
 .card:hover {
-  background-color: var(--orange);
+  background-color: rgba(7, 254, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(7, 254, 255, 0.4);
+  transform: translateY(-5px);
 }
 
 .cardTop {

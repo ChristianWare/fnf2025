@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
 import styles from "./ServicesSection.module.css";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register GSAP's scroll plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const cardsData = [
