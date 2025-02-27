@@ -7,6 +7,7 @@ import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 import Process from "@/components/Process/Process";
 import VideoSection from "@/components/VideoSection/VideoSection";
 import OtherThings from "@/components/OtherThings/OtherThings";
+import Pricing from "@/components/Pricing/Pricing";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Process />
         <VideoSection />
         <OtherThings />
+        <Pricing />
       </div>
     </main>
   );
