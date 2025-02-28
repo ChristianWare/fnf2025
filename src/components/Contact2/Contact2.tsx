@@ -7,7 +7,6 @@ const cardsData = [
   { id: 1, title: "8:" },
   { id: 2, title: "Get" },
   { id: 3, title: "In Touch" },
-  { id: 4, title: "Any time" },
 ];
 
 export default function Contact2() {

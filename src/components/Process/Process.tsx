@@ -16,12 +16,12 @@ const data = [
   },
   {
     id: 3,
-    feature: "Development ",
+    feature: "Develop",
     desc: "→ With the design finalized, I move into development, leveraging modern technologies like Next.js and TypeScript.",
   },
   {
     id: 4,
-    feature: "Test",
+    feature: "Deploy",
     desc: "→ Before deployment, I conduct extensive testing to guarantee optimal performance and reliability.",
   },
 ];
