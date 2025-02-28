@@ -1,8 +1,12 @@
 .bottom {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   margin-top: 5rem;
-  border-top: 1px solid var(--lightGray);
+  border-top: 1px solid var(--gray);
+}
+
+.left {
+  padding-right: 5rem;
 }
 
 .left .heading {
@@ -11,7 +15,7 @@
 
 .right .heading {
   padding: 1rem 0rem;
-  border-bottom: 1px solid var(--lightGray);
+  border-bottom: 1px solid var(--gray);
 }
 
 .btnContainer {
@@ -27,8 +31,16 @@
     grid-gap: 5rem;
   }
 
-  .left .heading {
+  .right {
+    order: -1;
+  }
+
+  .heading {
     width: 100%;
     text-align: center;
+  }
+
+  .left {
+    padding-right: 0rem;
   }
 }

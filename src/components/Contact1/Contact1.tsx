@@ -1,7 +1,8 @@
-import Button from "../Button/Button";
-import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import Button from "../Button/Button";
 import styles from "./Contact.module.css";
+import LayoutWrapper from "../LayoutWrapper";
+import Problem from "../Problem/Problem";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 export default function Contact1() {
   return (
@@ -11,14 +12,15 @@ export default function Contact1() {
         <div className={styles.bottom}>
           <div className={styles.left}>
             <h3 className={styles.heading}>Let&lsquo;s talk about you</h3>
+            <Problem />
           </div>
           <div className={styles.right}>
             <h3 className={styles.heading}>7 Questions</h3>
             <h3 className={styles.heading}>To make sure we&lsquo;re</h3>
             <h3 className={styles.heading}>a good fit</h3>
-            <div className={styles.btnContainer}>
+            {/* <div className={styles.btnContainer}>
               <Button text='Learn More' btnType='primary' href='/' />
-            </div>
+            </div> */}
           </div>
         </div>
       </LayoutWrapper>
