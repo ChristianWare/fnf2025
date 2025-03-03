@@ -29,7 +29,7 @@
 
 .title {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .icon {
@@ -52,6 +52,10 @@
 .card:nth-child(7) {
   background-color: var(--white);
   opacity: 0;
+}
+
+.description {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 1068px) {

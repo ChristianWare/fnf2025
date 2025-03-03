@@ -2,7 +2,6 @@
 
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
-import Button from "@/components/Button/Button";
 
 // const services = [
 //   {
@@ -62,16 +61,16 @@ const data = [
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
-    title: "Website Redesign",
+    title: "Blogs",
     company: "Fandem",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
-    title: "Resume",
+    title: "Marketplaces",
     company: "",
-    description: "",
-    btn: "Download My Resume",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
 ];
 
@@ -86,17 +85,6 @@ export default function ServiceDetails() {
               <h3 className={styles.title}>{x.title}</h3>
               {/* <h4 className={styles.company}>{x.company}</h4> */}
               <p className={styles.desc}>{x.description}</p>
-              {x.btn && (
-                <div className={styles.btnContainer}>
-                  <Button
-                    btnType='primary'
-                    text={x.btn}
-                    href='/Chris_Ware_Resume_2024.pdf'
-                    target='_blank'
-                    download={true}
-                  />
-                </div>
-              )}
             </div>
           ))}
         </div>

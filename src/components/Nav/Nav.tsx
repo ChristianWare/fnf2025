@@ -7,9 +7,9 @@ import Logo from "../Logo/Logo";
 // import Button from "../Button/Button";
 
 const navItems = [
-  { text: "Works", href: "/portfolio" },
+  { text: "Works", href: "/work" },
   { text: "About", href: "/about" },
-  { text: "Services", href: "/about" },
+  { text: "Services", href: "/services" },
   { text: "Journal", href: "/blog" },
   { text: "Start a Project", href: "/contact" },
 ];

@@ -3,8 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
-import CustomCursor from "@/components/CustomCursor/CustomCursor";
-
+// import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const NeueHaasGroteskBold = localFont({
   src: "../../public/fonts/NeueHaasGroteskBold.woff2",
@@ -36,8 +35,8 @@ export default function RootLayout({
         <SmoothScroll>
           <Nav />
           {children}
-          
-          <CustomCursor />
+
+          {/* <CustomCursor /> */}
         </SmoothScroll>
       </body>
     </html>
