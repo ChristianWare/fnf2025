@@ -2,7 +2,7 @@ import styles from "./SectionHeading.module.css";
 
 interface Props {
   number: string;
-  title: string;
+  title?: string;
 }
 
 export default function SectionHeading({ number, title }: Props) {
@@ -14,8 +14,13 @@ export default function SectionHeading({ number, title }: Props) {
           <div className={styles.blackDot2}></div>
         </div>
         <div className={styles.right}>
-          <h2 className={styles.title}>{title}</h2>
-          <div className={styles.blackDot}></div>
+          {title && (
+            <>
+              <h2 className={styles.title}>{title}</h2>
+              <div className={styles.blackDot}></div>
+            </>
+          )}
+          {!title && <div className={styles.blackDotii}></div>}
         </div>
       </div>
     </div>
