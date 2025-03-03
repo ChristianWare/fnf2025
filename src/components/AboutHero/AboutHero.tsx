@@ -2,7 +2,7 @@ import styles from "./AboutHero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Image from "next/image";
-import Img1 from "../../../public/images/glass.png";
+import Img1 from "../../../public/images/glass2.png";
 
 export default function AboutHero() {
   return (
