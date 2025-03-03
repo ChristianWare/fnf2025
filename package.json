@@ -13,6 +13,7 @@
     "@react-three/drei": "^10.0.2",
     "@react-three/fiber": "^9.0.4",
     "@studio-freight/react-lenis": "^0.0.47",
+    "@svgr/webpack": "^8.1.0",
     "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",
     "lottie-react": "^2.4.1",

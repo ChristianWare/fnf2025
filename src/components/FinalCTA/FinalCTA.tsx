@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Logo from "../Logo/Logo";
 import styles from "./FinalCTA.module.css";
 
@@ -15,7 +16,6 @@ export default function FinalCTA() {
         <video preload='auto' autoPlay muted loop className={styles.video}>
           <source src='./videos/glass.mp4' />
         </video>
-
         <div className={styles.contentChildren}>
           <div className={styles.left}>
             <Logo size='large' color='tan' />
@@ -33,6 +33,9 @@ export default function FinalCTA() {
               We Build <br /> Innovative <br /> Websites
             </h2>
           </div>
+        </div>
+        <div className={styles.footer}>
+          <Footer />
         </div>
       </div>
     </section>
