@@ -11,7 +11,7 @@ export default function OtherThings() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <SectionHeading number='4' title='About Us' />
+            <SectionHeading number='2' title='Fonts & Footers' />
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
