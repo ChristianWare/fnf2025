@@ -4,10 +4,13 @@
   cursor: pointer;
   text-transform: uppercase;
   font-size: 1.4rem;
-  backdrop-filter: grayscale(1);
-  mix-blend-mode: difference;
+  z-index: 999;
 }
 
 .large {
   font-size: 2.5rem;
+}
+
+.tan {
+  color: var(--tan);
 }

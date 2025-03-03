@@ -126,7 +126,7 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        {/* <div className={styles.overlay} ref={refs.overlay}></div> */}
+        <div className={styles.overlay} ref={refs.overlay}></div>
         <video preload='auto' autoPlay muted loop className={styles.video}>
           <source src='./videos/glass.mp4' />
         </video>
