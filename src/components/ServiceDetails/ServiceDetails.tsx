@@ -3,33 +3,6 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
 
-// const services = [
-//   {
-//     id: "A",
-//     name: "E-commerce Stores",
-//     description:
-//     "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
-//   },
-//   {
-//     id: "B",
-//     name: "Business Websites",
-//     description:
-//       "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
-//   },
-//   {
-//     id: "C",
-//     name: "Booking Platforms",
-//     description:
-//       "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
-//   },
-//   {
-//     id: "D",
-//     name: "Landing Pages",
-//     description:
-//       "How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?How do you give the world’s safest car seat a priceless personality?",
-//   },
-// ];
-
 const data = [
   {
     title: "E-commerce Stores",
@@ -83,7 +56,6 @@ export default function ServiceDetails() {
             <div className={styles.card} key={index}>
               {x.icon && <div className={styles.iconContainer}>{x.icon}</div>}
               <h3 className={styles.title}>{x.title}</h3>
-              {/* <h4 className={styles.company}>{x.company}</h4> */}
               <p className={styles.desc}>{x.description}</p>
             </div>
           ))}

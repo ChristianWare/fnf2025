@@ -43,6 +43,10 @@
   letter-spacing: -5px;
 }
 
+.card4 .cardInner .titleHeading {
+  color: var(--tan);
+}
+
 /* .card1 .titleHeading,
 .card4 .titleHeading {
   color: #07feff;
@@ -65,6 +69,10 @@
   height: 35px;
   border-radius: 50%;
   background-color: var(--black);
+}
+
+.card4 .cardInner .blackDot {
+  background-color: var(--tan);
 }
 
 @media screen and (max-width: 1268px) {

@@ -1,13 +1,6 @@
 import styles from "./ProjectSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import ServicesSectionIntro from "../ServicesSectionIntro/ServicesSectionIntro";
-
-const cardsData = [
-  { id: 1, title: "6:" },
-  { id: 2, title: "selected" },
-  { id: 3, title: "recent" },
-  { id: 4, title: "projects" },
-];
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
 const projectData = [
   { id: 1, title: "Project Name 1" },
@@ -21,8 +14,9 @@ const projectData = [
 export default function ProjectSection() {
   return (
     <section className={styles.container}>
-      <ServicesSectionIntro data={cardsData} />
       <LayoutWrapper>
+        <SectionHeading2 title='Projects' />
+
         <div className={styles.content}>
           <div className={styles.left}>
             <video preload='auto' autoPlay muted loop className={styles.video}>

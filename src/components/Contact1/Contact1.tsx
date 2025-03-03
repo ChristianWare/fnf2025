@@ -2,13 +2,14 @@
 import styles from "./Contact.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import Problem from "../Problem/Problem";
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import SectionHeading from "../SectionHeading/SectionHeading";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
 export default function Contact1() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='7' title='Enough about us' />
+        <SectionHeading2 title='Enough about us' />
         <div className={styles.bottom}>
           <div className={styles.left}>
             <h3 className={styles.heading}>Let&lsquo;s talk about you</h3>

@@ -15,7 +15,7 @@
   justify-content: flex-start;
   gap: 10rem;
   padding: 3rem;
-  border: 1px solid var(--black);
+  border: 1px solid var(--tan);
   background-color: var(--gray);
   transition: all 0.3s ease-in;
   cursor: pointer;
@@ -62,11 +62,7 @@
 .title,
 .dates,
 .desc {
-  color: var(--black);
-}
-
-.desc {
-  opacity: 0.5;
+  color: var(--tan);
 }
 
 .company {
