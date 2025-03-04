@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import LayoutWrapper from "../LayoutWrapper";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import SectionHeading from "../SectionHeading/SectionHeading";
 
 export default function Explain() {
   const [lettersRef, setLettersRef] = useArrayRef();
@@ -29,7 +29,7 @@ export default function Explain() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: triggerRef.current,
-        scrub: 0.9,
+        scrub: 0.5,
         start: "top center",
         end: "bottom center",
         markers: false,
@@ -55,7 +55,7 @@ export default function Explain() {
   return (
     <section className={styles.container} ref={triggerRef}>
       <LayoutWrapper>
-        <SectionHeading number='1' title='About Us' />
+        {/* <SectionHeading number='1' title='About Us' /> */}
 
         <div className={styles.content}>
           <div className={styles.left}>
