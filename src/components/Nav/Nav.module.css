@@ -97,7 +97,7 @@
 
 .navItem:nth-child(5) {
   background-color: var(--orange);
-  color: var(--white);
+  /* color: var(--white); */
 }
 
 .hamburger {
