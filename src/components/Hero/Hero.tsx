@@ -118,18 +118,18 @@ export default function Hero() {
   });
 
   const services = [
-    { id: 1, name: "Business Websites" },
+    { id: 1, name: "Multi-page Business Websites" },
     { id: 2, name: "E-commerce Stores" },
-    { id: 3, name: "Booking Platforms" },
+    { id: 3, name: "Landing Pages" },
   ];
 
   return (
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.overlay} ref={refs.overlay}></div>
-        {/* <video preload='auto' autoPlay muted loop className={styles.video}>
+        <video preload='auto' autoPlay muted loop className={styles.video}>
           <source src='./videos/glass.mp4' />
-        </video> */}
+        </video>
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.headingClip}>
