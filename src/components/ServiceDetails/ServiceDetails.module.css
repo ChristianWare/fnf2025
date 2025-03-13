@@ -15,14 +15,14 @@
   justify-content: flex-start;
   gap: 10rem;
   padding: 3rem;
-  border: 1px solid var(--tan);
+  border: 1px solid var(--black);
   background-color: var(--gray);
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .card:hover {
-  background-color: var(--orange);
+  background-color: var(--tan);
 }
 
 .card:nth-child(2) {
@@ -62,7 +62,7 @@
 .title,
 .dates,
 .desc {
-  color: var(--tan);
+  color: var(--black);
 }
 
 .company {

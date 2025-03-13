@@ -3,12 +3,13 @@
 import styles from "./Impressions.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import Image from "next/image";
-import Img1 from "../../../public/images/glass2.png";
+// import Image from "next/image";
+// import Img1 from "../../../public/images/glass2.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Cog from "../Cog/Cog";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -73,8 +74,11 @@ export default function Impressions() {
               only get one shot.
             </h3>
             <div ref={imgContainerRef} className={styles.imgContainer}>
-              <div ref={imageWrapperRef} className={styles.imageWrapper}>
+              {/* <div ref={imageWrapperRef} className={styles.imageWrapper}>
                 <Image src={Img1} fill alt='' className={styles.img} />
+              </div> */}
+              <div className={styles.sceneContainer}>
+                <Cog useViewportScale={false} fixedScale={[2.8, 2.8, 2.8]} />
               </div>
             </div>
           </div>
