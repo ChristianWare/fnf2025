@@ -15,6 +15,7 @@
     var(--orange)
   );
   background-size: 400% 400%;
+  background-position: 50% 0%;
   animation: gradient 10s ease infinite;
 }
 
