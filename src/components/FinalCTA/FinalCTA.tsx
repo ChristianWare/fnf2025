@@ -1,6 +1,6 @@
+import styles from "./FinalCTA.module.css";
 import Footer from "../Footer/Footer";
 import Logo from "../Logo/Logo";
-import styles from "./FinalCTA.module.css";
 
 const services = [
   { id: 1, name: "Business Websites" },
@@ -13,9 +13,9 @@ export default function FinalCTA() {
     <section className={styles.container}>
       <div className={styles.imgOverlay}></div>
       <div className={styles.content}>
-        <video preload='auto' autoPlay muted loop className={styles.video}>
+        {/* <video preload='auto' autoPlay muted loop className={styles.video}>
           <source src='./videos/glass.mp4' />
-        </video>
+        </video> */}
         <div className={styles.contentChildren}>
           <div className={styles.left}>
             <Logo size='large' color='tan' />

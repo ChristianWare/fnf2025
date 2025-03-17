@@ -2,6 +2,30 @@
   margin-top: -2rem;
   margin-bottom: 8rem;
   position: relative;
+
+  background-color: var(--tan);
+  background: linear-gradient(
+    -45deg,
+    var(--orange),
+    var(--tan),
+    var(--tan),
+    var(--orange)
+  );
+  background-size: 400% 400%;
+  background-position: 30% 0%;
+  animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content {
