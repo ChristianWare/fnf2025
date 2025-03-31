@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 // import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const NeueHaasGroteskBold = localFont({
@@ -28,17 +29,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable}`}
-      >
-        <SmoothScroll>
-          <Nav />
-          {children}
+    <ViewTransitions>
+      <html lang='en'>
+        <body
+          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable}`}
+        >
+          <SmoothScroll>
+            <Nav />
+            {children}
 
-          {/* <CustomCursor /> */}
-        </SmoothScroll>
-      </body>
-    </html>
+            {/* <CustomCursor /> */}
+          </SmoothScroll>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
