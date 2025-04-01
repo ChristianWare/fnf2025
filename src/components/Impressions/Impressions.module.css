@@ -62,12 +62,18 @@
   letter-spacing: -0.3px;
 }
 
+.icon {
+  width: 100%;
+  height: 100%;
+  color: var(--orange);
+  opacity: 0.1;
+  display: none;
+}
+
 .btnContainer {
   display: grid;
   width: 100%;
 }
-
-
 
 @media screen and (max-width: 1068px) {
   /* .left {

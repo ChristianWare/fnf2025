@@ -2,7 +2,7 @@ import styles from "./OtherThings.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Image from "next/image";
-import Img1 from "../../../public/images/glass.png";
+import Img1 from "../../../public/images/ecomm.jpeg";
 import Button from "../Button/Button";
 
 export default function OtherThings() {

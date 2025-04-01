@@ -11,7 +11,7 @@ import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../Button/Button";
-// import Cog from "../Cog/Cog";
+import Online from "../../../public/icons/online.svg";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -102,7 +102,7 @@ export default function Impressions() {
               At Fonts & Footers, we understand the unique challenges of
               e-commerce and build solutions that drive real business growth.
             </p>
-
+            <Online className={styles.icon} />
             <div className={styles.btnContainer}>
               <Button
                 btnType='secondary'
