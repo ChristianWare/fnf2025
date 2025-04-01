@@ -98,7 +98,8 @@
   } */
 
   .titleHeading {
-    font-size: 5rem;
+    font-size: 17vw;
+    letter-spacing: -4px;
   }
 
   .blackDot {

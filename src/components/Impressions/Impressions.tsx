@@ -10,6 +10,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Button from "../Button/Button";
 // import Cog from "../Cog/Cog";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
@@ -67,40 +68,47 @@ export default function Impressions() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='1' title='First impressions matter' />
+        <SectionHeading
+          number='1'
+          title='Your online store is more than just a website'
+        />
         <div className={styles.content}>
           <div className={styles.left}>
             <h3 className={styles.heading}>
-              In a world where decisions are made in a matter of seconds, you
-              only get one shot.
+              In today&apos;s digital marketplace,{" "}
+              <span className={styles.span}>
+                having an e-commerce site that simply &ldquo;works&rdquo;
+                isn&apos;t enough.
+              </span>
+              <br />
+              <br />
+              Your online store needs to tell your{" "}
+              <span className={styles.span}>brand story,</span> provide an
+              exceptional <span className={styles.span}>user experience,</span>{" "}
+              and convert visitors into{" "}
+              <span className={styles.span}> loyal customers.</span>
             </h3>
             <div ref={imgContainerRef} className={styles.imgContainer}>
-              {/* <div ref={imageWrapperRef} className={styles.imageWrapper}>
-                <Image src={Img1} fill alt='' className={styles.img} />
-              </div> */}
               <ParallaxImage src={Img1} alt='' />
             </div>
           </div>
           <div className={styles.right}>
-            <div className={styles.righContent}>
-              <p className={styles.copy}>
-                Whether you’re targeting investors, customers or users, you not
-                only have to get to the point quickly, you have to give them a
-                reason to believe you’re about to make their lives better, or at
-                least make life itself better.
-                <br />
-                <br />
-                Strong strategic core messaging is what lies behind that strong
-                first impression.
-              </p>
-              <h3 className={styles.headingii}>
-                It is also the foundation for whatever comes{" "}
-                <span className={styles.highlight}>next</span>
-              </h3>
-              <h3 className={styles.headingiii}>
-                we partner with ambitious founders and executive teams who want
-                to stand out and go big.
-              </h3>
+            <p className={styles.copy}>
+              Many businesses struggle with outdated platforms, poor mobile
+              experiences, or complicated checkout processes that cost them
+              sales every day.
+              <br />
+              <br />
+              At Fonts & Footers, we understand the unique challenges of
+              e-commerce and build solutions that drive real business growth.
+            </p>
+
+            <div className={styles.btnContainer}>
+              <Button
+                btnType='secondary'
+                text='Learn how we can help'
+                href='/'
+              />
             </div>
           </div>
         </div>

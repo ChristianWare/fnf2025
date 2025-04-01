@@ -152,9 +152,9 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .container {
+  /* .container {
     height: 100%;
-  }
+  } */
 
   .content {
     grid-template-columns: repeat(1, 1fr);

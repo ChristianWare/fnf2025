@@ -58,19 +58,10 @@
 }
 
 @media screen and (max-width: 568px) {
-  .heading,
-  .headingii {
-    font-size: 5rem;
-    font-weight: 500;
-    text-align: left;
-  }
-
-  .headingii {
-    display: block;
-  }
-
   .heading {
-    display: none;
+    font-size: 11vw;
+    text-align: left;
+    line-height: 1.2;
   }
 
   .lottieBox {

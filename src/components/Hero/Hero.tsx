@@ -123,7 +123,7 @@ export default function Hero() {
   const services = [
     { id: 1, name: "B2B Stores" },
     { id: 2, name: "B2C Stores" },
-    { id: 3, name: "Multivendor Marketplaces" },
+    { id: 3, name: "Booking Platforms" },
   ];
 
   return (

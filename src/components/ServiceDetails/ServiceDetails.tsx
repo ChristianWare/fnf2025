@@ -5,19 +5,19 @@ import styles from "./ServiceDetails.module.css";
 
 const data = [
   {
-    title: "E-commerce Stores",
+    title: "Custom e-commerce development",
     company: "Self",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
-    title: "Business Websites",
+    title: "Platform migration & integration",
     company: "KNI",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
-    title: "Booking Platforms",
+    title: "Responsive design optimization",
     company: "Joyus App",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
@@ -28,19 +28,19 @@ const data = [
     description: "",
   },
   {
-    title: "Landing Pages",
+    title: "Payment gateway setup",
     company: "Mentorworks",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
-    title: "Blogs",
+    title: "Analytics & conversion rate optimization",
     company: "Fandem",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
-    title: "Marketplaces",
+    title: "Ongoing support & maintenance",
     company: "",
     description:
       "How do you give the world’s safest car seat a priceless personality?",

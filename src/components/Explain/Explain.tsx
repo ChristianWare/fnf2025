@@ -23,7 +23,7 @@ export default function Explain() {
   gsap.registerPlugin(ScrollTrigger);
 
   const text =
-    "Most web developers build sites — we build profit engines. Here’s why e-commerce requires our niche expertise.";
+    "We craft custom, high-converting online stores for businesses of all sizes.";
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -70,16 +70,10 @@ export default function Explain() {
                 </span>
               ))}
             </h1>
-            <h1 className={styles.headingii}>
-              About Us: <br />
-              Most web developers build sites — we build profit engines. Here’s
-              why e-commerce requires our niche expertise.
-            </h1>
+            
           </div>
           <div className={styles.right}>
-            {/* <div className={styles.lottieBox}>
-              <Lottie animationData={animationData} className={styles.lottie} />
-            </div> */}
+           
           </div>
         </div>
       </LayoutWrapper>

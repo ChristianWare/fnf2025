@@ -5,6 +5,7 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
   width: 100%;
 }
 
@@ -15,8 +16,9 @@
   justify-content: flex-start;
   gap: 10rem;
   padding: 3rem;
-  border: 1px solid var(--black);
   background-color: var(--gray);
+  border: 1px solid var(--black);
+  border-top: 10px solid var(--black);
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
@@ -78,38 +80,6 @@
   .bottom {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .card:nth-child(1) {
-    top: 0rem;
-    border-bottom-left-radius: 0px;
-  }
-
-  .card:nth-child(2) {
-    top: 0rem;
-  }
-
-  .card:nth-child(3) {
-    left: 0px;
-    top: -1px;
-    border-radius: 0px;
-  }
-
-  .card:nth-child(5) {
-    top: -2px;
-    left: 0px;
-    border-radius: 0px;
-  }
-
-  .card:nth-child(6) {
-    top: -2px;
-    left: -1px;
-    border-bottom-left-radius: 0px;
-  }
-
-  .card:nth-child(7) {
-    top: -3px;
-    border-top-left-radius: 0px;
-  }
 }
 
 @media screen and (max-width: 968px) {
@@ -131,37 +101,13 @@
     justify-content: center;
   }
 
-  .card:nth-child(2) {
-    border-radius: 0px;
-    left: 0;
-    top: -1px;
-  }
-
-  .card:nth-child(3) {
-    top: -2px;
+  .title,
+  .desc {
+    text-align: center;
   }
 
   .card:nth-child(4) {
     display: none;
-  }
-
-  .card:nth-child(5) {
-    position: relative;
-    border-radius: 0px;
-    border-right: 1px solid var(--lightBlack);
-    top: -3px;
-  }
-
-  .card:nth-child(6) {
-    position: relative;
-    top: -4px;
-    left: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-
-  .card:nth-child(7) {
-    top: -5px;
   }
 
   .btnContainer {
