@@ -40,7 +40,7 @@ export default function Explain() {
       tl.to(
         letter,
         {
-          color: "#aeff12",
+          color: "#ff4d00",
           duration: 0.2,
         },
         index * 0.015

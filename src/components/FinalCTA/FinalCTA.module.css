@@ -6,10 +6,10 @@
   background-color: var(--tan);
   background: linear-gradient(
     -45deg,
-    var(--green),
+    var(--orange),
     var(--tan),
     var(--tan),
-    var(--green)
+    var(--orange)
   );
   background-size: 400% 400%;
   background-position: 30% 0%;
