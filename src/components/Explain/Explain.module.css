@@ -28,7 +28,7 @@
 
 .revealText {
   color: var(--tan);
-  filter: drop-shadow(0 0 0.08rem var(--orange));
+  filter: drop-shadow(0 0 0.08rem var(--black));
   line-height: 1;
   /* font-family: var(--BoogyBrutPoster); */
   /* text-transform: none; */

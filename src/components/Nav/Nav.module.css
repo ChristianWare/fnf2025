@@ -91,13 +91,12 @@
   z-index: 998;
   padding: 6px 12px;
   background-color: var(--lightGray);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   text-transform: uppercase;
 }
 
-.navItem:nth-child(5) {
-  background-color: var(--orange);
-  /* color: var(--white); */
+.navItem:last-child {
+  background-color: var(--green);
 }
 
 .hamburger {

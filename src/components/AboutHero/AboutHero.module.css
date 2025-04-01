@@ -4,6 +4,7 @@
 
 .top {
   margin: 5rem 0rem;
+  overflow: hidden; /* Added to contain the animated elements */
 }
 
 .sectionHeadingContainer {
@@ -16,29 +17,44 @@
   grid-gap: 2rem;
 }
 
+/* Animation styles for heading */
+.heading {
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  visibility: hidden; /* Initially hidden, will be set to visible by GSAP */
+  line-height: 1;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style for split text elements */
+.heading :global(.word),
+.heading :global(.line) {
+  line-height: 0.01;
+}
+
 .headingii {
-  font-size: 3.4rem;
+  font-size: 2.5rem;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  height: 100%;
+  display: flex; /* Added */
+  align-items: stretch; /* Added */
+  min-height: 600px; /* Added minimum height */
 }
 
-.imgContainer {
-  position: relative;
+/* Add this class to ensure MomentumLines fills the container */
+.rightInner {
   width: 100%;
-  height: 75vh;
-}
-
-.img {
-  background-color: var(--tan);
-  padding: 2rem;
-  object-fit: contain;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1068px) {
@@ -46,13 +62,17 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .imgContainer {
-    height: 500px;
+  .heading {
+    width: 100%;
+  }
+  
+  .right {
+    min-height: 400px; /* Adjust for smaller screens */
   }
 }
 
 @media screen and (max-width: 568px) {
-  .imgContainer {
-    height: 300px;
+  .right {
+    min-height: 300px; /* Adjust for mobile screens */
   }
 }

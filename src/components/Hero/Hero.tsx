@@ -127,15 +127,13 @@ export default function Hero() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.overlay} ref={refs.overlay}></div>
-
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                We Build <br />
-                Innovative
+                Fonts & <br />
+                Footers
                 <br />
-                Websites <br />
               </h1>
             </div>
           </div>
@@ -147,7 +145,6 @@ export default function Hero() {
               </p>
             </div>
           </div>
-
           <div className={styles.bottom2}>
             <p className={styles.servicesTitle} ref={refs.servicesTitle}>
               What we Build:

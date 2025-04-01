@@ -1,0 +1,23 @@
+.article {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  /* border: 1px solid var(--green); */
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+.line {
+  pointer-events: none;
+  height: 100%;
+  width: 1px;
+  background-color: var(--green);
+}

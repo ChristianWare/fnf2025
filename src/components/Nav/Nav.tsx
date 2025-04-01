@@ -163,7 +163,6 @@ export default function Nav() {
               >
                 <Link
                   onClick={() => {
-                    // e.preventDefault();
                     router.push(navItem.href, {
                       onTransitionReady: slideInOut,
                     });
