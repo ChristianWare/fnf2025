@@ -33,12 +33,12 @@
 }
 
 .icon {
-  color: var(--orange);
+  color: var(--green);
   opacity: 0.6;
 }
 
 .card:nth-child(4) {
-  background-color: var(--orange);
+  background-color: var(--green);
 }
 
 .card:nth-child(2) .title,

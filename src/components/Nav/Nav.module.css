@@ -96,7 +96,7 @@
 }
 
 .navItem:last-child {
-  background-color: var(--orange);
+  background-color: var(--green);
 }
 
 .hamburger {
