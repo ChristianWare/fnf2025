@@ -1,41 +1,50 @@
 "use client";
 
-import styles from "./ServiceDetails.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Rotate from "../../../public/icons/rotate.svg";
-import Development from "../../../public/icons/development.svg";
-import Conversion from "../../../public/icons/target.svg";
-import Cart from "../../../public/icons/cart.svg";
-import Login from "../../../public/icons/login.svg";
+import styles from "./ServiceDetails.module.css";
+import Button from "../Button/Button";
 
 const data = [
   {
     title: "Custom e-commerce development",
-    icon: <Development className={styles.icon} />,
+    company: "Self",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Platform migration & integration",
-    icon: <Login className={styles.icon} />,
+    company: "KNI",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Responsive design optimization",
-    icon: <Rotate className={styles.icon} />,
+    company: "Joyus App",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     icon: "",
     title: "",
+    description: "",
   },
   {
     title: "Payment gateway setup",
-    icon: <Cart className={styles.icon} />,
+    company: "Mentorworks",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Conversion rate optimization",
-    icon: <Conversion className={styles.icon} />,
+    company: "Fandem",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Ongoing support & maintenance",
-    icon: <Rotate className={styles.icon} />,
+    company: "",
+    description:
+      "How do you give the world’s safest car seat a priceless personality?",
   },
 ];
 
@@ -47,9 +56,12 @@ export default function ServiceDetails() {
           {data.map((x, index) => (
             <div className={styles.card} key={index}>
               <h3 className={styles.title}>{x.title}</h3>
-              {x.icon}
+              <p className={styles.desc}>{x.description}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.btnContainer}>
+          <Button text='View All Services' btnType='black' href='/' />
         </div>
       </LayoutWrapper>
     </div>

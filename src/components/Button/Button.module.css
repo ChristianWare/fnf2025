@@ -59,7 +59,6 @@
   color: var(--black);
   background-color: transparent;
   border: 1px solid var(--black);
-  
 }
 
 .primary:hover {
@@ -84,91 +83,27 @@
   background-color: transparent;
 }
 
-.yellow:hover {
-  background-color: var(--brown);
-  color: var(--yellow);
-}
-
-.yellow .dot1,
-.yellow .dot2,
-.yellow .dot3,
-.yellow .dot4 {
-  background-color: var(--brown);
-}
-
-.yellow:hover .dot1,
-.yellow:hover .dot2,
-.yellow:hover .dot3,
-.yellow:hover .dot4 {
-  background-color: var(--yellow);
-}
-
-.blue {
-  background-color: var(--blue);
-  color: var(--tan);
-  border: 1px solid var(--blue);
-}
-
-.blue:hover {
-  background-color: var(--tan);
-  color: var(--blue);
-}
-
-.blue:hover .dot1,
-.blue:hover .dot2,
-.blue:hover .dot3,
-.blue:hover .dot4 {
-  background-color: var(--blue);
-}
-
-.tan {
-  background-color: var(--tan);
-  border: 1px solid var(--brown);
-}
-
-.tan .dot1,
-.tan .dot2,
-.tan .dot3,
-.tan .dot4 {
-  background-color: var(--brown);
-}
-
-.tan:hover {
-  background-color: var(--yellow);
-}
-
-.olive {
-  background-color: var(--olive);
-  color: var(--tan);
-  border: 1px solid var(--brown);
-}
-
-.navBtn {
-  padding: 1rem 3rem;
-  color: var(--tan);
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
-}
-
-.navBtn:hover {
-  background-color: transparent;
-  color: var(--blue);
-}
-
-.navBtn:hover .dot1,
-.navBtn:hover .dot2,
-.navBtn:hover .dot3,
-.navBtn:hover .dot4 {
-  background-color: var(--blue);
-}
-
-.navBtn {
-  line-height: 1;
-  padding: 1.7rem 5rem;
-  font-weight: 600;
+.black {
+  background-color: var(--black);
   color: var(--white);
-  background-color: var(--blue);
-  border: 2px solid var(--black);
-  font-size: 1.2rem;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--black);
+}
+
+.black:hover {
+  background-color: transparent;
+  color: var(--black);
+}
+
+.black .dot1,
+.black .dot2,
+.black .dot3,
+.black .dot4 {
+  background-color: var(--white);
+}
+
+.black:hover .dot1,
+.black:hover .dot2,
+.black:hover .dot3,
+.black:hover .dot4 {
+  background-color: var(--black);
 }
