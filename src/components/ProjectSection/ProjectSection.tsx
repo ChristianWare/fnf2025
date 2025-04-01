@@ -1,6 +1,6 @@
 import styles from "./ProjectSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading2 from "../SectionHeading2/SectionHeading2";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const projectData = [
   { id: 1, title: "Project Name 1" },
@@ -15,7 +15,7 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Projects' />
+        <SectionHeading number='3' title='Featured Work' />
 
         <div className={styles.content}>
           <div className={styles.left}>
