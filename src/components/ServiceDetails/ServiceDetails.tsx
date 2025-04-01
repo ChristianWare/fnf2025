@@ -1,49 +1,41 @@
 "use client";
 
-import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
+import LayoutWrapper from "../LayoutWrapper";
+import Rotate from "../../../public/icons/rotate.svg";
+import Development from "../../../public/icons/development.svg";
+import Conversion from "../../../public/icons/target.svg";
+import Cart from "../../../public/icons/cart.svg";
+import Login from "../../../public/icons/login.svg";
 
 const data = [
   {
     title: "Custom e-commerce development",
-    company: "Self",
-    description:
-      "How do you give the world’s safest car seat a priceless personality?",
+    icon: <Development className={styles.icon} />,
   },
   {
     title: "Platform migration & integration",
-    company: "KNI",
-    description:
-      "How do you give the world’s safest car seat a priceless personality?",
+    icon: <Login className={styles.icon} />,
   },
   {
     title: "Responsive design optimization",
-    company: "Joyus App",
-    description:
-      "How do you give the world’s safest car seat a priceless personality?",
+    icon: <Rotate className={styles.icon} />,
   },
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
     title: "Payment gateway setup",
-    company: "Mentorworks",
-    description:
-      "How do you give the world’s safest car seat a priceless personality?",
+    icon: <Cart className={styles.icon} />,
   },
   {
-    title: "Analytics & conversion rate optimization",
-    company: "Fandem",
-    description:
-      "How do you give the world’s safest car seat a priceless personality?",
+    title: "Conversion rate optimization",
+    icon: <Conversion className={styles.icon} />,
   },
   {
     title: "Ongoing support & maintenance",
-    company: "",
-    description:
-      "How do you give the world’s safest car seat a priceless personality?",
+    icon: <Rotate className={styles.icon} />,
   },
 ];
 
@@ -54,9 +46,8 @@ export default function ServiceDetails() {
         <div className={styles.bottom}>
           {data.map((x, index) => (
             <div className={styles.card} key={index}>
-              {x.icon && <div className={styles.iconContainer}>{x.icon}</div>}
               <h3 className={styles.title}>{x.title}</h3>
-              <p className={styles.desc}>{x.description}</p>
+              {x.icon}
             </div>
           ))}
         </div>

@@ -59,6 +59,7 @@
   color: var(--black);
   background-color: transparent;
   border: 1px solid var(--black);
+  
 }
 
 .primary:hover {

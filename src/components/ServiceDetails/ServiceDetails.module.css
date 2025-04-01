@@ -27,48 +27,20 @@
   background-color: var(--tan);
 }
 
-.card:nth-child(2) {
-  position: relative;
-  left: -1px;
-}
-
-.card:nth-child(3) {
-  position: relative;
-  left: -2px;
-}
-
 .card:nth-child(4) {
   background-color: transparent;
   border: none;
   display: hidden;
 }
 
-.card:nth-child(5) {
-  position: relative;
-  top: -1px;
-  left: -1px;
-}
-
-.card:nth-child(6) {
-  position: relative;
-  left: -2px;
-  top: -1px;
-}
-
-.card:nth-child(7) {
-  position: relative;
-  left: 0px;
-  top: -2px;
-}
-
-.title,
-.dates,
-.desc {
+.title {
   color: var(--black);
 }
 
-.company {
-  font-size: 2rem;
+.icon {
+  width: 10rem;
+  height: 10rem;
+  color: var(--black);
 }
 
 .btnContainer {
