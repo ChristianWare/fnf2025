@@ -5,7 +5,7 @@
   --orange: #ff4d00;
   --tan: #ebeae4;
   --white: #ffffff;
-  --purple: #2703db;
+  --text: #2c2a2a;
 }
 
 * {
@@ -55,7 +55,7 @@ span {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 6vw;
   line-height: 1;
   letter-spacing: -3px;
   font-family: var(--NeueHaasGroteskMedium);

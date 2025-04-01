@@ -1,50 +1,41 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use client";
-
-import { ReactNode } from "react";
-import Link from "next/link";
 import styles from "./Button.module.css";
+import { FC, ReactNode } from "react";
+import Link from "next/link";
 
-
-interface ButtonProps {
+interface Props {
   href: string;
-  text: ReactNode;
+  text?: string;
   btnType: string;
   target?: string;
-  download?: boolean;
-  arrow?: boolean;
-  onClick?: any;
-  disabled?: boolean;
+  onClick?: () => void;
+  disabled?: any;
+  children?: ReactNode;
 }
 
-export default function Button({
+const Button: FC<Props> = ({
   href = "",
   text,
   btnType,
   target = "",
-  download,
-  // onClick,
-  disabled = false,
-}: ButtonProps) {
-
+  onClick,
+  disabled,
+  children,
+}) => {
   return (
-    <button
-      className={styles.container}
-      // onClick={() => {
-      //   if (!disabled && onClick) onClick();
-      // }}
-      disabled={disabled}
-      // onClick={() => handleSubmit()}
-      // onClick={() => handleSubmit()}
-    >
+    <button className={styles.container} onClick={onClick} disabled={disabled}>
       <Link
         href={href}
         className={`${styles.btn} ${styles[btnType]}`}
         target={target}
-        download={download}
       >
-        {text}
+        <span className={styles.dot1}></span>
+        <span className={styles.dot2}></span>
+        <span className={styles.dot3}></span>
+        <span className={styles.dot4}></span>
+        {text || children}
       </Link>
     </button>
   );
-}
+};
+export default Button;

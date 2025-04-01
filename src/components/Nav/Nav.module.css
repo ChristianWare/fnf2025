@@ -8,8 +8,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-
   max-width: 1500px;
+  padding-right: 30px;
+  padding-left: 30px;
   width: 100%;
 }
 
@@ -233,6 +234,11 @@
 }
 
 @media screen and (max-width: 568px) {
+  .header {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
   .hamburgerParent::after {
     top: 7px;
     left: 7px;

@@ -1,34 +1,173 @@
 .container {
   position: relative;
   z-index: 1;
+  /* z-index: 998; */
 }
 
 .btn {
-  border-radius: 50px;
-  padding: 12px 30px;
-  font-weight: 600;
-  text-decoration: none;
+  z-index: 998;
+  font-family: var(--NeubauGroteskNor);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  user-select: none;
   display: inline-block;
-  font-size: 15px;
-  cursor: pointer;
-  line-height: 1.2em;
-  padding: 10px 20px;
+  padding: 1.5rem 6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   position: relative;
   z-index: 1;
   width: 100%;
-  user-select: none;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-  font-family: var(--NeueHaasGroteskMedium);
+  transition: all 0.2s ease-in;
+}
+
+.dot1,
+.dot2,
+.dot3,
+.dot4 {
+  width: 5px;
+  height: 5px;
+  background-color: var(--black);
+  position: absolute;
+  transition: all 0.2s ease-in;
+}
+
+.dot1 {
+  top: 5;
+  right: 5;
+}
+
+.dot2 {
+  bottom: 5;
+  right: 5;
+}
+
+.dot3 {
+  top: 5;
+  left: 5;
+}
+
+.dot4 {
+  bottom: 5;
+  left: 5;
 }
 
 .primary {
-  color: var(--white);
+  color: var(--black);
+  background-color: transparent;
+  border: 1px solid var(--black);
+}
+
+.primary:hover {
   background-color: var(--black);
-  /* border: 2px solid var(--white); */
+  color: var(--white);
+}
+
+.primary:hover .dot1,
+.primary:hover .dot2,
+.primary:hover .dot3,
+.primary:hover .dot4 {
+  background-color: var(--white);
 }
 
 .secondary {
-  background-color: var(--white);
+  background-color: var(--orange);
+  border: 1px solid var(--black);
+  color: var(--brown);
+}
+
+.secondary:hover {
+  background-color: transparent;
+}
+
+.yellow:hover {
+  background-color: var(--brown);
+  color: var(--yellow);
+}
+
+.yellow .dot1,
+.yellow .dot2,
+.yellow .dot3,
+.yellow .dot4 {
+  background-color: var(--brown);
+}
+
+.yellow:hover .dot1,
+.yellow:hover .dot2,
+.yellow:hover .dot3,
+.yellow:hover .dot4 {
+  background-color: var(--yellow);
+}
+
+.blue {
+  background-color: var(--blue);
+  color: var(--tan);
+  border: 1px solid var(--blue);
+}
+
+.blue:hover {
+  background-color: var(--tan);
+  color: var(--blue);
+}
+
+.blue:hover .dot1,
+.blue:hover .dot2,
+.blue:hover .dot3,
+.blue:hover .dot4 {
+  background-color: var(--blue);
+}
+
+.tan {
+  background-color: var(--tan);
+  border: 1px solid var(--brown);
+}
+
+.tan .dot1,
+.tan .dot2,
+.tan .dot3,
+.tan .dot4 {
+  background-color: var(--brown);
+}
+
+.tan:hover {
+  background-color: var(--yellow);
+}
+
+.olive {
+  background-color: var(--olive);
+  color: var(--tan);
+  border: 1px solid var(--brown);
+}
+
+.navBtn {
+  padding: 1rem 3rem;
+  color: var(--tan);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.navBtn:hover {
+  background-color: transparent;
+  color: var(--blue);
+}
+
+.navBtn:hover .dot1,
+.navBtn:hover .dot2,
+.navBtn:hover .dot3,
+.navBtn:hover .dot4 {
+  background-color: var(--blue);
+}
+
+.navBtn {
+  line-height: 1;
+  padding: 1.7rem 5rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--black);
+  font-size: 1.2rem;
   border: 1px solid var(--gray);
 }

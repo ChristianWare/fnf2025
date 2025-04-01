@@ -7,6 +7,9 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Button from "../Button/Button";
+import Image from "next/image";
+import Img1 from "../../../public/images/heroiii.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,9 +121,9 @@ export default function Hero() {
   });
 
   const services = [
-    { id: 1, name: "Multi-page Business Websites" },
-    { id: 2, name: "E-commerce Stores" },
-    { id: 3, name: "Landing Pages" },
+    { id: 1, name: "B2B Stores" },
+    { id: 2, name: "B2C Stores" },
+    { id: 3, name: "Multivendor Marketplaces" },
   ];
 
   return (
@@ -128,7 +131,7 @@ export default function Hero() {
       <LayoutWrapper>
         <div className={styles.overlay} ref={refs.overlay}></div>
         <div className={styles.content}>
-          <div className={styles.top}>
+          <div className={styles.left}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
                 We Build <br />
@@ -137,30 +140,37 @@ export default function Hero() {
                 Websites <br />
               </h1>
             </div>
+            <div>
+              <p className={styles.servicesTitle} ref={refs.servicesTitle}>
+                What we Build:
+              </p>
+              <ul
+                className={styles.servicesContainer}
+                ref={refs.servicesContainer}
+              >
+                {services.map((x) => (
+                  <li className={styles.service} key={x.id}>
+                    {x.name}
+                    <span className={styles.blackDot} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={styles.btnContainer}>
+              <Button text='Get Started' btnType='secondary' href='/' />
+              <Button text='View our Work' btnType='primary' href='/' />
+            </div>
           </div>
-          <div className={styles.bottom}>
-            <div className={styles.bottomLeft}/>
-            <p className={styles.copy} ref={refs.copy}>
-              Fonts & Footers is a specialized e-commerce web development agency
-              crafting custom, high-converting online stores for businesses of
-              all sizes.
-            </p>
-          </div>
-          <div className={styles.bottom2}>
-            <p className={styles.servicesTitle} ref={refs.servicesTitle}>
-              What we Build:
-            </p>
-            <ul
-              className={styles.servicesContainer}
-              ref={refs.servicesContainer}
-            >
-              {services.map((x) => (
-                <li className={styles.service} key={x.id}>
-                  {x.name}
-                  <span className={styles.blackDot} />
-                </li>
-              ))}
-            </ul>
+          <div className={styles.right}>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgOverlay} />
+              <Image src={Img1} fill alt='' title='' className={styles.img} />
+              <p className={styles.copy} ref={refs.copy}>
+                Fonts & Footers is a specialized e-commerce web development
+                agency crafting custom, high-converting online stores for
+                businesses of all sizes.
+              </p>
+            </div>
           </div>
         </div>
       </LayoutWrapper>

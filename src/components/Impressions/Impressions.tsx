@@ -4,7 +4,7 @@ import styles from "./Impressions.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
-import Img1 from "../../../public/images/glass2.png";
+import Img1 from "../../../public/images/ecomm.jpeg";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
