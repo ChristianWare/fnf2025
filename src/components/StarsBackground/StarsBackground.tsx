@@ -64,7 +64,7 @@ export default function StarsBackground(): JSX.Element {
       flareCount: 10,
       motion: 0.05,
       tilt: 0.05,
-      color: "#ff4d00", // Using your green var
+      color: "#ff4d00", // Using your orange var
       particleSizeBase: 1,
       particleSizeMultiplier: 0.5,
       flareSizeBase: 100,

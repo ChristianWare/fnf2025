@@ -7,10 +7,6 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import animationData from "../../../public/lottie/heroii.json";
-import dynamic from "next/dynamic";
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -133,9 +129,6 @@ export default function Hero() {
         <div className={styles.overlay} ref={refs.overlay}></div>
         <div className={styles.content}>
           <div className={styles.top}>
-            <div className={styles.lottieBox}>
-              <Lottie animationData={animationData} className={styles.lottie} />
-            </div>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
                 We Build <br />
@@ -145,14 +138,14 @@ export default function Hero() {
               </h1>
             </div>
           </div>
-          {/* <div className={styles.bottom}>
-            <div className={styles.copyContainer}>
-              <p className={styles.copy} ref={refs.copy}>
-                Since 2022, we&apos;ve been crafting digital experiences that
-                matter.
-              </p>
-            </div>
-          </div> */}
+          <div className={styles.bottom}>
+            <div className={styles.bottomLeft}/>
+            <p className={styles.copy} ref={refs.copy}>
+              Fonts & Footers is a specialized e-commerce web development agency
+              crafting custom, high-converting online stores for businesses of
+              all sizes.
+            </p>
+          </div>
           <div className={styles.bottom2}>
             <p className={styles.servicesTitle} ref={refs.servicesTitle}>
               What we Build:

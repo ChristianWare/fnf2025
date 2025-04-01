@@ -9,14 +9,14 @@
   background-color: var(--tan);
   background: linear-gradient(
     -45deg,
-    var(--green),
+    var(--orange),
     var(--tan),
     var(--tan),
-    var(--green)
+    var(--orange)
   );
   background-size: 400% 400%;
   background-position: 50% 0%;
-  animation: gradient 10s ease infinite;
+  /* animation: gradient 10s ease infinite; */
 }
 
 @keyframes gradient {
@@ -43,44 +43,40 @@
   z-index: 2;
 }
 
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  user-select: none;
+  opacity: 0.9;
+}
+
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  align-items: flex-start;
+  justify-content: space-between;
   z-index: 3;
 }
 
-.top {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-.lottieBox {
-  height: 250px;
-  margin-bottom: -5rem;
-}
-
-.lottie {
-  width: 100%;
-  height: 100%;
-}
-
 .headingClip {
-  overflow: hidden;
   line-height: 1;
   width: 100%;
 }
 
 .heading {
-  text-align: center;
   text-transform: uppercase;
   padding-top: 5rem;
   will-change: transform, opacity, filter;
+  overflow: hidden;
   backface-visibility: hidden;
   visibility: hidden;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .heading :global(.word),
@@ -90,25 +86,18 @@
 }
 
 .bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
   width: 100%;
-}
-
-.copyContainer {
-  margin-left: auto;
 }
 
 .copy {
   overflow: hidden;
   visibility: hidden;
-  overflow: hidden;
   width: 100%;
   text-transform: uppercase;
   margin-left: auto;
-  width: 70%;
+  width: 80%;
 }
 
 .bottom2 {
@@ -121,6 +110,8 @@
   overflow: hidden;
   visibility: hidden;
   overflow: hidden;
+  /* font-size: 2.5rem; */
+  /* color: var(--gray); */
 }
 
 .servicesContainer {
@@ -137,7 +128,6 @@
   visibility: hidden;
   overflow: hidden;
   width: 100%;
-  /* color: var(--green); */
 }
 
 .service:nth-child(1) {
@@ -155,8 +145,7 @@
 
 @media screen and (max-width: 968px) {
   .content,
-  .top,
-  .bottom {
+  .top {
     align-items: center;
     justify-content: center;
     gap: 3rem;
@@ -178,9 +167,27 @@
     text-align: center;
   }
 
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bottomLeft {
+    display: none;
+  }
+
+  .copy {
+    width: 70%;
+  }
+
   .bottom2 {
     width: 100%;
     margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 100%;
   }
 }
 

@@ -2,7 +2,7 @@
   --black: #1f1f1f;
   --gray: #919598;
   --lightGray: #d4d4d4;
-  --green: #aeff12;
+  --orange: #ff4d00;
   --tan: #ebeae4;
   --white: #ffffff;
   --purple: #2703db;
@@ -129,11 +129,11 @@ textarea:focus {
 } */
 
 ::selection {
-  background: var(--green);
+  background: var(--orange);
   color: var(--black);
 }
 ::-moz-selection {
-  background: var(--green);
+  background: var(--orange);
   color: var(--black);
 }
 

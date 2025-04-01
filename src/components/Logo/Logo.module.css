@@ -5,6 +5,9 @@
   text-transform: uppercase;
   font-size: 1.4rem;
   z-index: 999;
+  background-color: var(--lightGray);
+  border: 1px solid var(--black);
+  padding: 6px;
 }
 
 .large {
