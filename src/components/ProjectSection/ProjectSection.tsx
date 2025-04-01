@@ -6,7 +6,6 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import styles from "./ProjectSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import Image from "next/image";
 import Img1 from "../../../public/images/ecomm.jpeg";
 import Img2 from "../../../public/images/heroii.jpeg";
 import Img3 from "../../../public/images/heroiii.jpeg";
