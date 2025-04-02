@@ -1,6 +1,7 @@
 import AboutHero from "@/components/AboutHero/AboutHero";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
+import Owner from "@/components/Owner/Owner";
 // import Contact1 from "@/components/Contact1/Contact1";
 // import Contact2 from "@/components/Contact2/Contact2";
 // import FinalCTA from "@/components/FinalCTA/FinalCTA";
@@ -12,6 +13,7 @@ export default function AboutPage() {
       <AboutHero />
       <AboutIntro />
       <HowItWorks />
+      <Owner />
       {/* <OtherThings />
       <Contact1 />
       <Contact2 />
