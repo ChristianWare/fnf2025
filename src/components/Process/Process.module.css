@@ -42,15 +42,23 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 .card {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 2rem 0rem;
   position: relative;
-  border-bottom: 1px solid var(--gray);
+  border: 1px solid var(--black);
+  border-bottom: none;
+}
+
+.card:first-child {
+  border-top: 1px solid var(--black);
+}
+
+.card:last-child {
+  border-bottom: 1px solid var(--black);
 }
 
 .blackDot {
@@ -62,12 +70,12 @@
   margin-left: auto;
   position: absolute;
   top: 20px;
-  right: 0px;
+  right: 20px;
 }
 
 .cardLeft {
-  border-right: 1px solid var(--gray);
-  padding-left: 2rem;
+  border-right: 1px solid var(--black);
+  padding: 2rem;
 }
 
 .id {
@@ -76,7 +84,7 @@
 }
 
 .cardRight {
-  padding-left: 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -115,10 +123,6 @@
 
   .card {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .cardRight {
-    padding-left: 0rem;
   }
 
   .cardLeft {

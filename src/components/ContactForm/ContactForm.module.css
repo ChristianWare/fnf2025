@@ -2,6 +2,7 @@
   margin-bottom: 15rem;
   background-color: var(--white);
   padding: 3rem;
+  border: 1px solid var(--black);
 }
 
 .heading {
@@ -12,6 +13,10 @@
   gap: 2rem;
   width: 50%;
   padding: 3rem;
+  border: 1px solid var(--black);
+  border-bottom: 1px solid var(--white);
+  position: relative;
+  top: 2px;
 }
 
 .blackDot {

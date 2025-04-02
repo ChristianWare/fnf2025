@@ -1,5 +1,6 @@
 .container {
   padding-top: 5rem;
+  background-color: var(--tan);
 }
 
 .top {
