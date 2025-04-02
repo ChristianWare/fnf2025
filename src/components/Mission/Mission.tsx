@@ -35,10 +35,8 @@ const Mission = () => {
         <div className={styles.content}>
           <SectionHeading number='3' title='What Drives us' />
           <div className={styles.top}>
-           
-            <div className={styles.topRight}></div>
-          </div>
           <SectionIntro title='Our Values' color='black' dotColor='blackDot' />
+          </div>
           <div className={styles.bottom}>
             {mission.map((x, index) => (
               <div key={index} className={styles.box}>

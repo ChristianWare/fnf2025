@@ -3,7 +3,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Img1 from "../../../public/images/aboutiv.jpg";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import SectionIntro from "../SectionIntro/SectionIntro";
+// import SectionIntro from "../SectionIntro/SectionIntro";
 
 export default function AboutIntro() {
   return (
@@ -12,16 +12,13 @@ export default function AboutIntro() {
         <SectionHeading number='1' title='Bridging design and functionality' />
         <div className={styles.content}>
           <div className={styles.left}>
-            <SectionIntro title='About Us' color='black' dotColor='blackDot' />
             <h2 className={styles.heading}>
               Founded by a team of e-commerce enthusiasts with backgrounds in
               both design and development, Fonts & Footers was born from the
               recognition that successful online stores require both beautiful
               aesthetics and robust functionality.{" "}
             </h2>
-            <div className={styles.imgContainer}>
-              <ParallaxImage src={Img1} alt='' />
-            </div>
+            <ParallaxImage src={Img1} alt='' title='Our Story' />
           </div>
           <div className={styles.right}>
             <div className={styles.copyBox}>

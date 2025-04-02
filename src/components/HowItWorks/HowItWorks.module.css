@@ -2,18 +2,18 @@
   margin-bottom: 10rem;
 }
 
-.heading1 {
-  text-align: center;
-}
-
-.span {
-  font-size: 6rem;
-  letter-spacing: 1px;
+.sectionIntroContainer {
+  border: 1px solid var(--black);
+  border-bottom: none;
+  width: fit-content;
+  padding: 1rem 2rem;
+  position: relative;
+  top: 1px;
+  background-color: var(--white);
 }
 
 .box {
   border: 1px solid var(--black);
-  margin-top: 3rem;
   margin-bottom: 10rem;
 }
 
@@ -29,7 +29,6 @@
   padding: 3rem;
   font-size: 2rem;
   /* text-indent: 4em; */
-  /* text-transform: none; */
   width: 60%;
 }
 
@@ -174,9 +173,5 @@
   .feature {
     text-align: center;
     width: 100%;
-  }
-
-  .span {
-    font-size: 5rem;
   }
 }

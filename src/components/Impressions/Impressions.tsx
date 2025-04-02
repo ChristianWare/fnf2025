@@ -89,7 +89,7 @@ export default function Impressions() {
               <span className={styles.span}> loyal customers.</span>
             </h3>
             <div ref={imgContainerRef} className={styles.imgContainer}>
-              <ParallaxImage src={Img1} alt='' />
+              <ParallaxImage src={Img1} alt='' title='Your Online Store' />
             </div>
           </div>
           <div className={styles.right}>

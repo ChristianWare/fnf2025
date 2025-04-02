@@ -9,19 +9,19 @@
 }
 
 .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  margin-top: 10rem;
+  border: 1px solid var(--black);
+  border-bottom: none;
+  width: fit-content;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  position: relative;
+  top: 1px;
 }
 
 .topHeading {
   line-height: 100%;
   margin-bottom: 3rem;
-}
-
-.top {
-  margin-bottom: 10rem;
 }
 
 .topLeft {
@@ -41,7 +41,7 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .box {
@@ -114,12 +114,12 @@
 }
 
 @media screen and (max-width: 568px) {
-    .bottom {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    .box:nth-child(even) {
-      border-left: 1px solid var(--black);
-      border-top: none;
-    }
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box:nth-child(even) {
+    border-left: 1px solid var(--black);
+    border-top: none;
+  }
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import SectionIntro from "../SectionIntro/SectionIntro";
 import styles from "./Logo.module.css";
 import Link from "next/link";
 
@@ -14,7 +15,8 @@ const Logo = ({ size = "", color = "" }: Props) => {
       href='/'
       className={`${styles.logo} ${styles[size]} ${styles[color]}`}
     >
-      Fonts & Footers
+      {/* Fonts & Footers */}
+      <SectionIntro title="FONTS & FOOTERS" color="black" dotColor="blackDot" />
     </Link>
   );
 };

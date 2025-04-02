@@ -58,7 +58,6 @@ export default function AboutHero(): JSX.Element {
             We build e-commerce experiences that drive growth
           </h1>
         </div>
-
         <div className={styles.content}>
           <div className={styles.left}>
             <h2 className={styles.headingii}>
@@ -66,21 +65,16 @@ export default function AboutHero(): JSX.Element {
               helping businesses of all sizes establish and optimize their
               online presence.
             </h2>
-            <br />
-            <br />
-            <p className={styles.copy}>
-              With a focus on user experience, conversion optimization, and
-              technical excellence, we create online stores that not only look
-              great but also drive real business results.
-            </p>
+            <div className={styles.copyContainer}>
+              <p className={styles.copy}>
+                With a focus on user experience, conversion optimization, and
+                technical excellence, we create online stores that not only look
+                great but also drive real business results.
+              </p>
+            </div>
           </div>
           <div className={styles.right}>
-            {/* <div className={styles.imgContainer}>
-              <Image src={Img1} alt='' title='' fill className={styles.img} />
-            </div> */}
-            <div className={styles.imgContainer}>
-              <ParallaxImage src={Img1} alt='' />
-            </div>
+            <ParallaxImage src={Img1} alt='' title='About Us' />
           </div>
         </div>
       </LayoutWrapper>

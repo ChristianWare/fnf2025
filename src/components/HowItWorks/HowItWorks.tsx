@@ -38,11 +38,13 @@ const HowItWorks = () => {
               title='Data-driven design, human-centered solutions'
             />
           </div>
-          <SectionIntro
-            title='Our Approach'
-            color='black'
-            dotColor='blackDot'
-          />
+          <div className={styles.sectionIntroContainer}>
+            <SectionIntro
+              title='Our Approach'
+              color='black'
+              dotColor='blackDot'
+            />
+          </div>
           <div className={styles.box}>
             <div className={styles.middle}>
               <div className={styles.middleLeft}>

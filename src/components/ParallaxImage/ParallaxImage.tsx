@@ -5,6 +5,7 @@ import styles from "./ParallaxImage.module.css";
 import { useEffect, useRef } from "react";
 import { useLenis } from "@studio-freight/react-lenis";
 import { StaticImageData } from "next/image";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 const lerp = (start: number, end: number, factor: number) =>
   start + (end - start) * factor;
@@ -12,6 +13,7 @@ const lerp = (start: number, end: number, factor: number) =>
 interface ParallaxImageProps {
   src: string | StaticImageData;
   alt: string;
+  title: string;
 }
 
 interface BoundsRect {
@@ -19,7 +21,7 @@ interface BoundsRect {
   bottom: number;
 }
 
-export default function ParallaxImage({ src, alt }: ParallaxImageProps) {
+export default function ParallaxImage({ src, alt, title }: ParallaxImageProps) {
   const imageRef = useRef<HTMLImageElement>(null);
   const bounds = useRef<BoundsRect | null>(null);
   const currentTranslateY = useRef<number>(0);
@@ -76,17 +78,26 @@ export default function ParallaxImage({ src, alt }: ParallaxImageProps) {
   });
 
   return (
-    <div className={styles.imgContainer}>
-      <img
-        ref={imageRef}
-        src={typeof src === "string" ? src : src.src}
-        alt={alt}
-        style={{
-          willChange: "transform",
-          transform: "translateY(0) scale(1.5)",
-        }}
-        className={styles.img}
-      />
+    <div className={styles.parent}>
+      <div className={styles.top}>
+        <SectionIntro title={title} color='black' dotColor='blackDot' />
+      </div>
+      <div className={styles.container}>
+        <div className={styles.parallaxWrapper}>
+          <div className={styles.imgContainer}>
+            <img
+              ref={imageRef}
+              src={typeof src === "string" ? src : src.src}
+              alt={alt}
+              style={{
+                willChange: "transform",
+                transform: "translateY(0) scale(1.5)",
+              }}
+              className={styles.img}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
