@@ -2,14 +2,13 @@
 
 import styles from "./AboutHero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-// import SectionHeading from "../SectionHeading/SectionHeading";
 
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Img1 from '../../../public/images/about.jpeg'
+import Img1 from "../../../public/images/about.jpeg";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -59,7 +58,7 @@ export default function AboutHero(): JSX.Element {
             We build e-commerce experiences that drive growth
           </h1>
         </div>
-        {/* <SectionHeading number='1' title='Bridging design and functionality' /> */}
+
         <div className={styles.content}>
           <div className={styles.left}>
             <h2 className={styles.headingii}>

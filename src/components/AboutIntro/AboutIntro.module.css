@@ -6,18 +6,45 @@
   padding-top: 3rem;
 }
 
+.left {
+  padding-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* gap: 5rem; */
+}
+
 .heading {
-  font-size: 3.4rem;
+  font-size: 2rem;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  margin-top: 2rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin-top: 5rem;
+}
+
+.img {
+  object-fit: cover;
 }
 
 .right {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
-  border-bottom: 8px solid var(--black);
-  padding-bottom: 3rem;
+  /* border-bottom: 8px solid var(--black);
+  padding-bottom: 3rem; */
+}
+
+.copyBox, .copyBoxMobile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .copy {
@@ -28,6 +55,10 @@
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    padding-right: 0rem;
   }
 }
 
@@ -42,10 +73,20 @@
   }
 
   .copyBox {
-    display: none;
+    margin-top: 5rem;
   }
 
   .copyBoxMobile {
     display: block;
+  }
+
+  .imgContainer {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .imgContainer {
+    height: 350px;
   }
 }
