@@ -9,36 +9,29 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
-import Img1 from '../../../public\/images/about.jpeg'
+import Img1 from '../../../public/images/about.jpeg'
+import ParallaxImage from "../ParallaxImage/ParallaxImage";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutHero(): JSX.Element {
-  // Create a ref for the heading element
   const headingRef = useRef<HTMLHeadingElement | null>(null);
 
   useGSAP(() => {
-    // Text animation for heading only
     const animateHeading = (): (() => void) | null => {
       if (!headingRef.current) return null;
 
-      // Set visibility to visible initially
       gsap.set(headingRef.current, { visibility: "visible" });
 
-      // Split the heading text into words
       const split = new SplitType(headingRef.current, {
         types: "words",
         lineClass: styles.line,
       });
 
-      // Set initial position for the words
       gsap.set(split.words || [], {
         y: 400,
-        // opacity: 0  // Uncomment if you want opacity animation too
       });
 
-      // Animate words coming up
       gsap.to(split.words || [], {
         y: 0,
         opacity: 1,
@@ -48,14 +41,11 @@ export default function AboutHero(): JSX.Element {
         delay: 0.25,
       });
 
-      // Return cleanup function
       return () => split.revert();
     };
 
-    // Run the animation
     const headingAnimation = animateHeading();
 
-    // Cleanup
     return () => {
       headingAnimation?.();
     };
@@ -69,10 +59,7 @@ export default function AboutHero(): JSX.Element {
             We build e-commerce experiences that drive growth
           </h1>
         </div>
-              <SectionHeading
-                number='1'
-                title='Bridging design and functionality'
-              />
+        <SectionHeading number='1' title='Bridging design and functionality' />
         <div className={styles.content}>
           <div className={styles.left}>
             <h2 className={styles.headingii}>
@@ -89,8 +76,11 @@ export default function AboutHero(): JSX.Element {
             </p>
           </div>
           <div className={styles.right}>
-            <div className={styles.imgContainer}>
+            {/* <div className={styles.imgContainer}>
               <Image src={Img1} alt='' title='' fill className={styles.img} />
+            </div> */}
+            <div className={styles.imgContainer}>
+              <ParallaxImage src={Img1} alt='' />
             </div>
           </div>
         </div>
