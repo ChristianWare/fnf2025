@@ -7,9 +7,8 @@
 }
 
 .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 10rem;
 }
 
@@ -93,8 +92,8 @@
 .btnContainer {
   margin-top: 5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 1068px) {
