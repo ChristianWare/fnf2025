@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  padding-top: 15rem;
 }
 
 .content {

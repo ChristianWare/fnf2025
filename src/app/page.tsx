@@ -7,7 +7,7 @@ import Process from "@/components/Process/Process";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Contact2 from "@/components/Contact2/Contact2";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
-import Explain from "@/components/Explain/Explain";
+// import Explain from "@/components/Explain/Explain";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <div className={styles.scrollContainer}>
         <Hero />
         <Impressions />
-        <Explain />
+        {/* <Explain /> */}
         <ServicesSection />
         <ServiceDetails />
         <ProjectSection />
