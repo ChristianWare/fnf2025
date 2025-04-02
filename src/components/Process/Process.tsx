@@ -1,8 +1,8 @@
 import styles from "./Process.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import ParallaxImage from "../ParallaxImage/ParallaxImage";
-import Img1 from "../../../public/images/process.jpeg";
+// import ParallaxImage from "../ParallaxImage/ParallaxImage";
+// import Img1 from "../../../public/images/process.jpeg";
 
 const data = [
   {
@@ -58,9 +58,9 @@ export default function Process() {
                 B2B portal, or creating a multi-vendor marketplace, we have the
                 expertise to build the perfect solution for your business model:
               </p>
-              <div className={styles.imgContainer}>
+              {/* <div className={styles.imgContainer}>
                 <ParallaxImage src={Img1} alt='' />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={styles.right}>

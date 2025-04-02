@@ -142,7 +142,7 @@ export default function Hero() {
             </div>
             <div>
               <p className={styles.servicesTitle} ref={refs.servicesTitle}>
-                What we Build:
+                We specialize in:
               </p>
               <ul
                 className={styles.servicesContainer}

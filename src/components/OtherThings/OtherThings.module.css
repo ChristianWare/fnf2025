@@ -21,9 +21,8 @@
 }
 
 .img {
-  object-fit: contain;
+  object-fit: cover;
   background-color: var(--tan);
-  padding: 3rem;
 }
 
 .right {

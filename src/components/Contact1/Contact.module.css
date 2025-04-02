@@ -1,6 +1,6 @@
 .bottom {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   margin-top: 5rem;
   border-top: 1px solid var(--gray);
 }
@@ -16,6 +16,10 @@
 .right .heading {
   padding: 1rem 0rem;
   border-bottom: 1px solid var(--gray);
+}
+
+.heading {
+  margin-top: 5rem;
 }
 
 .btnContainer {
