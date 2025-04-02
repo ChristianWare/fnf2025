@@ -10,7 +10,7 @@
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 5rem;
   margin-top: 5rem;
 }
 
@@ -35,6 +35,7 @@
 
 .copy {
   color: var(--gray);
+  width: 60%;
 }
 
 .imgContainer {
@@ -56,13 +57,17 @@
     width: 100%;
   }
 
+  .copy {
+    width: 80%;
+  }
+
   .imgContainer {
     height: 500px;
   }
 }
 
-@media screen and (max-width: 568px) {
-  .imgContainer {
-    height: 300px;
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 100%;
   }
 }
