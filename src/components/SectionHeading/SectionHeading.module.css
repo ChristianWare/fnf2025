@@ -13,6 +13,11 @@
   font-family: var(--NeueHaasGroteskMedium);
 }
 
+.title {
+  color: var(--tan);
+  background-color: var(--black);
+}
+
 .number {
   font-size: 8.2rem;
   padding-bottom: 1rem;

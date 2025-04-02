@@ -9,6 +9,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import Img1 from '../../../public\/images/about.jpeg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,11 +69,12 @@ export default function AboutHero(): JSX.Element {
             We build e-commerce experiences that drive growth
           </h1>
         </div>
+              <SectionHeading
+                number='1'
+                title='Bridging design and functionality'
+              />
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.sectionHeadingContainer}>
-              <SectionHeading number='1' />
-            </div>
             <h2 className={styles.headingii}>
               Fonts & Footers is a specialized e-commerce development agency
               helping businesses of all sizes establish and optimize their
@@ -79,14 +82,16 @@ export default function AboutHero(): JSX.Element {
             </h2>
             <br />
             <br />
-            <h2 className={styles.headingii}>
+            <p className={styles.copy}>
               With a focus on user experience, conversion optimization, and
               technical excellence, we create online stores that not only look
               great but also drive real business results.
-            </h2>
+            </p>
           </div>
           <div className={styles.right}>
-            <div className={styles.rightInner}></div>
+            <div className={styles.imgContainer}>
+              <Image src={Img1} alt='' title='' fill className={styles.img} />
+            </div>
           </div>
         </div>
       </LayoutWrapper>

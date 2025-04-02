@@ -4,32 +4,24 @@
 
 .top {
   margin: 5rem 0rem;
-  overflow: hidden; /* Added to contain the animated elements */
-}
-
-.sectionHeadingContainer {
-  margin-bottom: 5rem;
+  overflow: hidden;
 }
 
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+  margin-top: 5rem;
 }
 
-/* Animation styles for heading */
 .heading {
   will-change: transform, opacity, filter;
   backface-visibility: hidden;
-  visibility: hidden; /* Initially hidden, will be set to visible by GSAP */
+  visibility: hidden;
   line-height: 1;
-  text-align: center;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Style for split text elements */
 .heading :global(.word),
 .heading :global(.line) {
   line-height: 0.01;
@@ -41,20 +33,18 @@
   line-height: 1.3;
 }
 
-.right {
-  height: 100%;
-  display: flex; /* Added */
-  align-items: stretch; /* Added */
-  min-height: 600px; /* Added minimum height */
+.copy {
+  color: var(--gray);
 }
 
-/* Add this class to ensure MomentumLines fills the container */
-.rightInner {
-  width: 100%;
-  height: 100%;
+.imgContainer {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 450px;
+}
+
+.img {
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1068px) {
@@ -65,14 +55,14 @@
   .heading {
     width: 100%;
   }
-  
-  .right {
-    min-height: 400px; /* Adjust for smaller screens */
+
+  .imgContainer {
+    height: 500px;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .right {
-    min-height: 300px; /* Adjust for mobile screens */
+  .imgContainer {
+    height: 300px;
   }
 }
