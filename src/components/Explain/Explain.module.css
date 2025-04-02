@@ -12,46 +12,25 @@
   gap: 2rem;
 }
 
-.heading,
-.headingii {
+.heading {
   margin-right: auto;
   font-size: 8rem;
   width: 80%;
   margin-right: auto;
 }
 
-.headingii {
-  display: none;
-  color: var(--purple);
-  letter-spacing: -0.5px;
-}
-
 .revealText {
   color: var(--tan);
   filter: drop-shadow(0 0 0.08rem var(--black));
   line-height: 1;
-  /* font-family: var(--BoogyBrutPoster); */
-  /* text-transform: none; */
 }
 
 .bottom {
   margin-top: 5rem;
 }
 
-.lottieBox {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 2rem;
-}
-
-.lottie {
-  width: 100%;
-  height: 100%;
-}
-
 @media screen and (max-width: 1068px) {
-  .heading,
-  .headingii {
+  .heading {
     width: 100%;
     text-align: center;
   }
@@ -62,9 +41,5 @@
     font-size: 11vw;
     text-align: left;
     line-height: 1.2;
-  }
-
-  .lottieBox {
-    height: 175px;
   }
 }

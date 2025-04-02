@@ -6,12 +6,14 @@
 
 .left {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .copyRight {
-  color: var(--tan);
-  z-index: 3;
+  color: var(--black);
+  margin-top: 3rem;
 }
 
 .right {
@@ -19,7 +21,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  z-index: 3;
+
   width: 100%;
 }
 
@@ -34,8 +36,8 @@
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
-  border-bottom: 1px solid var(--tan);
-  color: var(--tan);
+  border-bottom: 1px solid var(--black);
+  color: var(--black);
   padding: 1rem 0rem;
   width: 100%;
   cursor: pointer;
@@ -43,25 +45,25 @@
 }
 
 .service:nth-child(1) {
-  border-top: 1px solid var(--tan);
+  border-top: 1px solid var(--black);
 }
 
 .service:hover {
-  background-color: var(--tan);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--tan);
   padding: 1rem;
 }
 
 .arrow {
   width: 3rem;
   height: 3rem;
-  color: var(--tan);
+  color: var(--black);
   transform: rotate(45deg);
   transition: all 0.3s ease-in;
 }
 
 .service:hover .arrow {
-  color: var(--black);
+  color: var(--tan);
 }
 
 .leftBottom {
@@ -73,7 +75,7 @@
 }
 
 .detail {
-  border: 1px solid var(--tan);
+  border: 1px solid var(--black);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -85,7 +87,7 @@
 }
 
 .icon {
-  color: var(--tan);
+  color: var(--black);
   width: 20px;
   height: 20px;
   transition: all 0.3s ease-in;
@@ -103,5 +105,15 @@
   .content {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
+  }
+
+  .left {
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+   .leftBottom {
+    margin-top: 0rem;
   }
 }

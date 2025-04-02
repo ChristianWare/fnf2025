@@ -11,6 +11,7 @@ import Img2 from "../../../public/images/heroii.jpeg";
 import Img3 from "../../../public/images/heroiii.jpeg";
 import gsap from "gsap";
 import Arrow from "../../../public/icons/arrow.svg";
+import Button from "../Button/Button";
 
 const projectData = [
   {
@@ -344,6 +345,9 @@ export default function ProjectSection() {
               </div>
             ))}
           </div>
+        </div>
+        <div className={styles.btnContainer}>
+          <Button btnType='secondary' text='View All Projects' href='/' />
         </div>
       </LayoutWrapper>
       <div className={styles.projectPreview} ref={projectPreviewRef}></div>

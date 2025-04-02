@@ -55,11 +55,9 @@ export default function Explain() {
   return (
     <section className={styles.container} ref={triggerRef}>
       <LayoutWrapper>
-        {/* <SectionHeading number='1' title='About Us' /> */}
-
         <div className={styles.content}>
           <div className={styles.left}>
-            <h1 className={styles.heading}>
+            <h2 className={styles.heading}>
               {text.split("").map((letter, index) => (
                 <span
                   key={index}
@@ -69,12 +67,9 @@ export default function Explain() {
                   {letter}
                 </span>
               ))}
-            </h1>
-            
+            </h2>
           </div>
-          <div className={styles.right}>
-           
-          </div>
+          <div className={styles.right}></div>
         </div>
       </LayoutWrapper>
     </section>

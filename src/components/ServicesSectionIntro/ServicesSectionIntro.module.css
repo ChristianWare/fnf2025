@@ -85,12 +85,9 @@
 }
 
 @media screen and (max-width: 868px) {
-  /* .card {
-    height: 200px;
-  } */
-
   .titleHeading {
-    font-size: 5rem;
+    font-size: 17vw;
+    letter-spacing: -4px;
   }
 
   .blackDot {

@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .projectDataContainer {
@@ -41,7 +41,6 @@
   align-items: center;
   height: 80px;
   cursor: pointer;
-  /* border-bottom: 1px solid var(--gray); */
   padding: 1rem;
 }
 
@@ -90,6 +89,13 @@
   color: var(--tan);
 }
 
+.btnContainer {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
@@ -117,5 +123,11 @@
   .projectPreview {
     width: 70%;
     height: 20%;
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 }

@@ -1,28 +1,44 @@
 import styles from "./Process.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Projects from "../Projects/Projects";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import ParallaxImage from "../ParallaxImage/ParallaxImage";
+import Img1 from "../../../public/images/process.jpeg";
 
 const data = [
   {
     id: 1,
-    feature: "Discovery",
-    desc: "→ I begin each project by thoroughly understanding the goals, target audience, and technical requirements.",
+    feature: "B2C storefronts",
+    desc: "→ Direct-to-consumer online shops ideal for retail brands, specialty goods, and independent artisans looking to sell products directly to end consumers.",
   },
   {
     id: 2,
-    feature: "Design",
-    desc: "→ I create detailed wireframes and prototypes that align with the project's objectives.",
+    feature: "B2B portals",
+    desc: "→ Business-focused platforms perfect for wholesalers, manufacturers, industrial suppliers, and service providers who primarily sell to other businesses rather than consumers.",
   },
   {
     id: 3,
-    feature: "Develop",
-    desc: "→ With the design finalized, I move into development, leveraging modern technologies like Next.js and TypeScript.",
+    feature: "Subscription services",
+    desc: "→ Recurring billing platforms ideal for software companies (SaaS), content creators, box subscription services, and membership organizations requiring regular payment processing.",
   },
   {
     id: 4,
-    feature: "Deploy",
-    desc: "→ Before deployment, I conduct extensive testing to guarantee optimal performance and reliability.",
+    feature: "Digital product delivery",
+    desc: "→ Platforms for selling and distributing non-physical goods, perfect for educational content creators, software developers, digital artists, and e-book publishers.",
+  },
+  {
+    id: 5,
+    feature: "Service booking platforms",
+    desc: "→ Appointment and reservation systems ideal for consultants, healthcare providers, beauty professionals, fitness instructors, and event venues needing to manage client scheduling.",
+  },
+  {
+    id: 6,
+    feature: "Multi-vendor marketplaces",
+    desc: "→ Platforms hosting multiple sellers, perfect for community marketplaces, industry-specific exchanges, and businesses looking to create their own Amazon or Etsy-like ecosystem.",
+  },
+  {
+    id: 7,
+    feature: "Rental platforms",
+    desc: "→ Temporary-use item booking systems ideal for equipment rental businesses, property managers, vehicle rentals, and peer-to-peer sharing economy ventures.",
   },
 ];
 
@@ -30,10 +46,22 @@ export default function Process() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='3' title='How We Get There' />
+        <SectionHeading
+          number='4'
+          title='We Specialize in all e-comm business models'
+        />
         <div className={styles.content}>
           <div className={styles.left}>
-            <h3 className={styles.heading}>The strategic narrative process</h3>
+            <div className={styles.leftContent}>
+              <p className={styles.heading}>
+                Whether you&apos;re selling directly to consumers, building a
+                B2B portal, or creating a multi-vendor marketplace, we have the
+                expertise to build the perfect solution for your business model:
+              </p>
+              <div className={styles.imgContainer}>
+                <ParallaxImage src={Img1} alt='' />
+              </div>
+            </div>
           </div>
           <div className={styles.right}>
             <div className={styles.mapDataBox}>
@@ -50,9 +78,9 @@ export default function Process() {
                 </div>
               ))}
             </div>
-            <div className={styles.projectsBox}>
+            {/* <div className={styles.projectsBox}>
               <Projects />
-            </div>
+            </div> */}
           </div>
         </div>
       </LayoutWrapper>

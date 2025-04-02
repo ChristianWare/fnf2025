@@ -33,14 +33,14 @@
   display: hidden;
 }
 
-.card:last-child {
+/* .card:last-child {
   background-color: var(--orange);
 }
 
 .card:last-child .title,
 .card:last-child .desc {
   color: var(--tan);
-}
+} */
 
 .title,
 .dates,

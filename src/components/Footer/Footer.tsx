@@ -4,6 +4,7 @@ import Insta from "../../../public/icons/instagram.svg";
 import LinkedIn from "../../../public/icons/linkedin.svg";
 import Facebook from "../../../public/icons/facebook.svg";
 import Link from "next/link";
+import Logo from "../Logo/Logo";
 
 const services = [
   { id: 1, name: "Works" },
@@ -18,19 +19,7 @@ export default function Footer() {
     <footer className={styles.container}>
       <div className={styles.content}>
         <div className={styles.left}>
-          <p className={styles.copyRight}>© 2025 All Rights Reserved</p>
-        </div>
-        <div className={styles.right}>
-          <ul className={styles.servicesContainer}>
-            {services.map((x) => (
-              <li className={styles.service} key={x.id}>
-                {x.name}
-                <span className={styles.blackDot}>
-                  <Arrow className={styles.arrow} />
-                </span>
-              </li>
-            ))}
-          </ul>
+          <Logo size='large' />
           <div className={styles.leftBottom}>
             <Link
               href='https://www.linkedin.com/'
@@ -57,6 +46,19 @@ export default function Footer() {
               <Insta className={styles.icon} />
             </Link>
           </div>
+        </div>
+        <div className={styles.right}>
+          <ul className={styles.servicesContainer}>
+            {services.map((x) => (
+              <li className={styles.service} key={x.id}>
+                {x.name}
+                <span className={styles.blackDot}>
+                  <Arrow className={styles.arrow} />
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className={styles.copyRight}>© 2025 All Rights Reserved</p>
         </div>
       </div>
     </footer>

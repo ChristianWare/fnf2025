@@ -7,12 +7,12 @@ import Process from "@/components/Process/Process";
 // import VideoSection from "@/components/VideoSection/VideoSection";
 // import Contact1 from "@/components/Contact1/Contact1";
 // import OtherThings from "@/components/OtherThings/OtherThings";
-import Pricing from "@/components/Pricing/Pricing";
+// import Pricing from "@/components/Pricing/Pricing";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Contact2 from "@/components/Contact2/Contact2";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Explain from "@/components/Explain/Explain";
-import OtherThings from "@/components/OtherThings/OtherThings";
+// import OtherThings from "@/components/OtherThings/OtherThings";
 
 export default function Home() {
   return (
@@ -26,11 +26,11 @@ export default function Home() {
         <ProjectSection />
         <Process />
         {/* <VideoSection /> */}
-        <Pricing />
+        {/* <Pricing /> */}
         {/* <Contact1 /> */}
-        <OtherThings />
-        <Contact2 />
+        {/* <OtherThings /> */}
         <FinalCTA />
+        <Contact2 />
       </div>
     </main>
   );

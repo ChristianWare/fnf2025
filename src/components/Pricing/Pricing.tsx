@@ -4,7 +4,7 @@ import ServicesSectionIntro from "../ServicesSectionIntro/ServicesSectionIntro";
 import styles from "./Pricing.module.css";
 
 const cardsData = [
-  { id: 1, title: "4:" },
+  { id: 1, title: "5:" },
   { id: 3, title: "Pricing" },
 ];
 
@@ -12,7 +12,6 @@ const pricingData = [
   {
     id: 2845654656,
     title: "Business",
-    description: "Optimize your online presence and attract more visitors.",
     href: "/services/business-websites",
     mostPopular: false,
     prices: [
@@ -52,7 +51,6 @@ const pricingData = [
   {
     id: 27,
     title: "E-Commerce",
-    description: "Comprehensive e-commerce platforms designed to drive sales.",
     href: "/services/ecommerce-stores",
     mostPopular: true,
     prices: [
@@ -91,7 +89,6 @@ const pricingData = [
   {
     id: 28,
     title: "Booking",
-    description: "Optimize your online presence and attract more visitors.",
     href: "/services/booking-platforms",
     mostPopular: false,
 
@@ -127,7 +124,6 @@ const pricingData = [
         feature: "Chat bot",
       },
     ],
-    btnType: "tertiary",
   },
 ];
 export default function Pricing() {
@@ -138,9 +134,9 @@ export default function Pricing() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>
-              <h3 className={styles.heading}>
+              {/* <h3 className={styles.heading}>
                 Before you proceed, a few things you should know about us
-              </h3>
+              </h3> */}
             </div>
             <div className={styles.bottom}>
               <div className={styles.dataMapContainer}>

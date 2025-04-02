@@ -1,43 +1,72 @@
-import styles from "./FinalCTA.module.css";
-import Footer from "../Footer/Footer";
-import Logo from "../Logo/Logo";
+'use client'
 
-const services = [
-  { id: 1, name: "Business Websites" },
-  { id: 2, name: "E-commerce Stores" },
-  { id: 3, name: "Booking Platforms" },
-];
+import styles from "./FinalCTA.module.css";
+import LayoutWrapper from "../LayoutWrapper";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 export default function FinalCTA() {
+  const [lettersRef, setLettersRef] = useArrayRef();
+  const triggerRef = useRef(null);
+
+  function useArrayRef(): [
+    React.MutableRefObject<HTMLSpanElement[]>,
+    (ref: HTMLSpanElement) => void
+  ] {
+    const lettersRef = useRef<HTMLSpanElement[]>([]);
+    lettersRef.current = [];
+    return [lettersRef, (ref) => ref && lettersRef.current.push(ref)];
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const text = "Ready to elevate your e-commerce experience?";
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scrub: 0.5,
+        start: "top center",
+        end: "bottom center",
+        markers: false,
+      },
+    });
+
+    lettersRef.current.forEach((letter, index) => {
+      tl.to(
+        letter,
+        {
+          color: "#ff4d00",
+          duration: 0.2,
+        },
+        index * 0.015
+      );
+    });
+
+    return () => {
+      tl.scrollTrigger?.kill();
+    };
+  }, [lettersRef]);
+
   return (
-    <section className={styles.container}>
-      <div className={styles.imgOverlay}></div>
-      <div className={styles.content}>
-        {/* <video preload='auto' autoPlay muted loop className={styles.video}>
-          <source src='./videos/glass.mp4' />
-        </video> */}
-        <div className={styles.contentChildren}>
-          <div className={styles.left}>
-            <Logo size='large' color='tan' />
-          </div>
-          <div className={styles.right}>
-            <ul className={styles.servicesContainer}>
-              {services.map((x) => (
-                <li className={styles.service} key={x.id}>
-                  {x.name}
-                  <span className={styles.blackDot} />
-                </li>
-              ))}
-            </ul>
-            <h2 className={styles.heading}>
-              We Build <br /> Innovative <br /> Websites
-            </h2>
-          </div>
+    <section className={styles.container} ref={triggerRef}>
+      <LayoutWrapper>
+        <div className={styles.content}>
+          <h2 className={styles.heading}>
+            {text.split("").map((letter, index) => (
+              <span
+                key={index}
+                className={styles.revealText}
+                ref={setLettersRef}
+              >
+                {letter}
+              </span>
+            ))}{" "}
+          </h2>
         </div>
-        <div className={styles.footer}>
-          <Footer />
-        </div>
-      </div>
+      </LayoutWrapper>
     </section>
   );
 }
