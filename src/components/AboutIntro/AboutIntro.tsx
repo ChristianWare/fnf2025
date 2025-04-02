@@ -1,10 +1,12 @@
 import LayoutWrapper from "../LayoutWrapper";
+import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./AboutIntro.module.css";
 
 export default function AboutIntro() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
+        <SectionHeading number='1' title='Bridging design and functionality' />
         <div className={styles.content}>
           <div className={styles.left}>
             <h2 className={styles.heading}>
