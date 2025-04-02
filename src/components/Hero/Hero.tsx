@@ -157,7 +157,7 @@ export default function Hero() {
               </ul>
             </div>
             <div className={styles.btnContainer}>
-              <Button text='Get Started' btnType='secondary' href='/' />
+              <Button text='Get Started' btnType='black' href='/' />
               <Button text='View our Work' btnType='primary' href='/' />
             </div>
           </div>
