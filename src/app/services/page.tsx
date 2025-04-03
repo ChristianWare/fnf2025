@@ -1,7 +1,13 @@
+import Contact2 from "@/components/Contact2/Contact2";
+import FinalCTA from "@/components/FinalCTA/FinalCTA";
+import ServicesHero from "@/components/Services/ServicesHero/ServicesHero";
+
 export default function ServicesPage() {
-   return (
-     <main>
-        <h1>Services Page</h1>
-     </main>
-   )
- }
+  return (
+    <main>
+      <ServicesHero />
+      <FinalCTA />
+      <Contact2 />
+    </main>
+  );
+}

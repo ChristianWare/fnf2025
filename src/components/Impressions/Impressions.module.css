@@ -18,20 +18,20 @@
   padding-top: 5rem;
   padding-right: 3rem;
   padding-bottom: 3rem;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 5rem;
 }
 
 .heading {
   max-width: 52rem;
-}
-
-.span {
-  color: var(--orange);
-  line-height: inherit;
+  background-color: var(--orange);
+  padding: 2rem;
+  border: 1px solid var(--black);
 }
 
 .imgContainer {

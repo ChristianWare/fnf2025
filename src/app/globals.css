@@ -2,8 +2,7 @@
   --black: #1f1f1f;
   --gray: #919598;
   --lightGray: #d4d4d4;
-  --orange: #ff4d00;
-  --orange2: #ffa984;
+  --orange: #FF8F00;
   --tan: #ebeae4;
   --white: #ffffff;
   --text: #2c2a2a;
@@ -165,7 +164,7 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 
   h2 {

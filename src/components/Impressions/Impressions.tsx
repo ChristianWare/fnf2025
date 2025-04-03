@@ -75,22 +75,17 @@ export default function Impressions() {
         <div className={styles.content}>
           <div className={styles.left}>
             <h3 className={styles.heading}>
-              In today&apos;s digital marketplace,{" "}
-              <span className={styles.span}>
-                having an e-commerce site that simply &ldquo;works&rdquo;
-                isn&apos;t enough.
-              </span>
+              In today&apos;s digital marketplace, having an e-commerce site
+              that simply &ldquo;works&rdquo; isn&apos;t enough.
               <br />
               <br />
               Your online store needs to tell your{" "}
-              <span className={styles.span}>brand story,</span> provide an
-              exceptional <span className={styles.span}>user experience,</span>{" "}
-              and convert visitors into{" "}
-              <span className={styles.span}> loyal customers.</span>
+             brand story, provide an
+              exceptionaluser experience,
+              and convert visitors into
+          loyal customers.
             </h3>
-            <div ref={imgContainerRef} className={styles.imgContainer}>
               <ParallaxImage src={Img1} alt='' title='Your Online Store' />
-            </div>
           </div>
           <div className={styles.right}>
             <p className={styles.copy}>

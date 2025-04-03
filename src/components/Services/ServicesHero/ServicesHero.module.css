@@ -1,0 +1,23 @@
+.container {
+  padding-top: 10rem;
+  background-color: var(--tan);
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+.copy {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}

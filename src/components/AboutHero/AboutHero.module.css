@@ -15,7 +15,6 @@
 }
 
 .left {
-  /* padding: 3rem; */
   border: 1px solid var(--black);
   border-right: none;
   display: flex;
@@ -47,10 +46,11 @@
 .copyContainer {
   border-top: 1px solid var(--black);
   padding: 3rem;
+  background-color: var(--orange);
 }
 
 .copy {
-  color: var(--gray);
+  color: var(--black);
   width: 60%;
 }
 
@@ -72,7 +72,6 @@
   .left {
     border-right: 1px solid var(--black);
     border-top: none;
-    
   }
 
   .right {
@@ -83,7 +82,8 @@
     width: 100%;
   }
 
-  .headingii, .copyContainer {
+  .headingii,
+  .copyContainer {
     padding: 2rem;
   }
 

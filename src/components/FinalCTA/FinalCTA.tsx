@@ -38,7 +38,7 @@ export default function FinalCTA() {
       tl.to(
         letter,
         {
-          color: "#ff4d00",
+          color: "#FF8F00",
           duration: 0.2,
         },
         index * 0.015
