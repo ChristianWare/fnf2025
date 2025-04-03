@@ -4,6 +4,23 @@ import styles from "./ServicesHero.module.css";
 const data = [
   {
     id: 1,
+    title: "Strategy & Planning",
+  },
+  {
+    id: 2,
+    title: "Design & User Experience",
+  },
+  {
+    id: 3,
+    title: "E-commerce Development",
+  },
+  {
+    id: 4,
+    title: "Systems Integration",
+  },
+  {
+    id: 5,
+    title: "Optimization & Growth",
   },
 ];
 
@@ -23,7 +40,11 @@ export default function ServicesHero() {
             </p>
           </div>
           <div className={styles.bottom}>
-            {}
+            {data.map((x) => (
+              <div key={x.id}>
+                <h3 className={styles.title}>{x.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </LayoutWrapper>
