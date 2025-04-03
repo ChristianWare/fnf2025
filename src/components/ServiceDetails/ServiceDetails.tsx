@@ -3,6 +3,7 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
 import Button from "../Button/Button";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 const data = [
   {
@@ -52,6 +53,13 @@ export default function ServiceDetails() {
   return (
     <div className={styles.container}>
       <LayoutWrapper>
+        <div className={styles.top}>
+          <SectionIntro
+            title='End-to-end ecommerce solitions'
+            color='black'
+            dotColor='blackDot'
+          />
+        </div>
         <div className={styles.bottom}>
           {data.map((x, index) => (
             <div className={styles.card} key={index}>

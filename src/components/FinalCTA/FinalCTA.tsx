@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import styles from "./FinalCTA.module.css";
 import LayoutWrapper from "../LayoutWrapper";
@@ -63,8 +63,12 @@ export default function FinalCTA() {
               >
                 {letter}
               </span>
-            ))}{" "}
+            ))}
           </h2>
+          <p className={styles.copy}>
+            Let&apos;s discuss how we can help your business grow with a custom
+            e-commerce solution that meets your unique needs.
+          </p>
         </div>
       </LayoutWrapper>
     </section>

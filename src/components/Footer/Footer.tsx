@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 import Arrow from "../../../public/icons/arrow.svg";
-// import RotatingText from "@/components/home-page/RotatingText/RotatingText";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 const data = [
   {
@@ -96,48 +96,52 @@ const data2 = [
 
 export default function Footer() {
   return (
-    <>
-      <footer className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <h3 className={styles.heading}>
-              Get ready for golden goodness—recipes, inspiration, and everything
-              honey.
-            </h3>
-            <p className={styles.copy}>
-              A surprise for your first order by subscribing to the newsletter
-            </p>
-            <div className={styles.email}>
-              <span className={styles.span}>Email</span>
-              <Arrow className={styles.icon} />
+    <footer className={styles.container}>
+      <div className={styles.top}>
+        <SectionIntro
+          title='Fonts & Footers'
+          color='black'
+          dotColor='blackDot'
+        />
+      </div>
+      <div className={styles.content}>
+        <div className={styles.left}>
+          <h3 className={styles.heading}>
+            Your E-commerce Specialists
+          </h3>
+          <p className={styles.copy}>
+            A surprise for your first order by subscribing to the newsletter
+          </p>
+          <div className={styles.email}>
+            <span className={styles.span}>Email</span>
+            <Arrow className={styles.icon} />
+          </div>
+          <p className={styles.privacy}>I accept the privacy policy</p>
+        </div>
+        <div className={styles.right}>
+          {data.map((x) => (
+            <div className={styles.optionSection} key={x.id}>
+              <div className={styles.title}>{x.title}</div>
+              <ul className={styles.optionList}>
+                {x.options.map((y) => (
+                  <li key={y.id} className={styles.option}>
+                    {y.option}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <p className={styles.privacy}>I accept the privacy policy</p>
-          </div>
-          <div className={styles.right}>
-            {data.map((x) => (
-              <div className={styles.optionSection} key={x.id}>
-                <div className={styles.title}>{x.title}</div>
-                <ul className={styles.optionList}>
-                  {x.options.map((y) => (
-                    <li key={y.id} className={styles.option}>
-                      {y.option}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
-        <div className={styles.bottom}>
-          <div className={styles.data2Container}>
-            {data2.map((x) => (
-              <p key={x.id} className={styles.option}>
-                {x.title}
-              </p>
-            ))}
-          </div>
+      </div>
+      <div className={styles.bottom}>
+        <div className={styles.data2Container}>
+          {data2.map((x) => (
+            <p key={x.id} className={styles.option}>
+              {x.title}
+            </p>
+          ))}
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }

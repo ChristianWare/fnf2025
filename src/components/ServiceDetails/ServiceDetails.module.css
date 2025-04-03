@@ -2,6 +2,16 @@
   background-color: var(--gray);
 }
 
+.top {
+  width: fit-content;
+  border: 1px solid var(--black);
+  border-bottom: none;
+  padding: 1rem 2rem;
+  background-color: var(--gray);
+  position: relative;
+  top: 1px;
+}
+
 .bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -113,7 +123,8 @@
     display: none;
   }
 
-  .card:nth-child(2), .card:nth-child(6) {
+  .card:nth-child(2),
+  .card:nth-child(6) {
     border-top: none;
     border-left: 1px solid var(--black);
   }
