@@ -12,6 +12,8 @@ import Img1 from "../../../public/images/about.jpeg";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 // import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
+import Mission from "../Mission/Mission";
+import Owner from "../Owner/Owner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +61,7 @@ export default function AboutHero(): JSX.Element {
           {/* <h2 ref={headingRef} className={styles.heading}>
             We build e-commerce experiences that drive growth
           </h2> */}
-          <SectionHeading2 title='Who Are We?' />
+          <SectionHeading2 title='2: Who Are We?' />
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
@@ -80,6 +82,8 @@ export default function AboutHero(): JSX.Element {
             <ParallaxImage src={Img1} alt='' title='About Us' />
           </div>
         </div>
+        <Mission />
+        <Owner />
       </LayoutWrapper>
     </section>
   );

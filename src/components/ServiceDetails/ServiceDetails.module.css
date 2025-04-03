@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--gray);
+  background-color: var(--tan);
 }
 
 .top {
@@ -7,7 +7,7 @@
   border: 1px solid var(--black);
   border-bottom: none;
   padding: 1rem 2rem;
-  background-color: var(--gray);
+  background-color: var(--tan);
   position: relative;
   top: 1px;
 }
@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 10rem;
+  gap: 5rem;
   padding: 3rem;
   border: 1px solid var(--black);
   transition: all 0.3s ease-in;
@@ -32,7 +32,7 @@
 }
 
 .card:hover {
-  background-color: var(--tan);
+  background-color: var(--orange);
 }
 
 .card:nth-child(1) {

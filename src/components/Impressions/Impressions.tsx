@@ -10,8 +10,8 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Button from "../Button/Button";
-import Online from "../../../public/icons/online.svg";
+// import Button from "../Button/Button";
+import HowItWorks from "../HowItWorks/HowItWorks";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -74,18 +74,18 @@ export default function Impressions() {
         />
         <div className={styles.content}>
           <div className={styles.left}>
+            <ParallaxImage src={Img1} alt='' title='Your Online Store' />
+          </div>
+          <div className={styles.right}>
             <h3 className={styles.heading}>
               In today&apos;s digital marketplace, having an e-commerce site
               that simply &ldquo;works&rdquo; isn&apos;t enough.
               <br />
               <br />
               Your online store needs to tell your brand story, provide an
-              exceptionaluser experience, and convert visitors into loyal
+              exceptional user experience, and convert visitors into loyal
               customers.
             </h3>
-            <ParallaxImage src={Img1} alt='' title='Your Online Store' />
-          </div>
-          <div className={styles.right}>
             <p className={styles.copy}>
               Many businesses struggle with outdated platforms, poor mobile
               experiences, or complicated checkout processes that cost them
@@ -95,16 +95,16 @@ export default function Impressions() {
               At Fonts & Footers, we understand the unique challenges of
               e-commerce and build solutions that drive real business growth.
             </p>
-            <Online className={styles.icon} />
-            <div className={styles.btnContainer}>
+            {/* <div className={styles.btnContainer}>
               <Button
                 btnType='secondary'
                 text='Learn how we can help'
                 href='/'
               />
-            </div>
+            </div> */}
           </div>
         </div>
+        <HowItWorks />
       </LayoutWrapper>
     </section>
   );

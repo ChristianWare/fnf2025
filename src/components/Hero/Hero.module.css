@@ -72,14 +72,17 @@
 
 .service {
   z-index: 2;
-  display: grid;
-  grid-template-columns: 5fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--black);
   padding: 1rem 0rem;
   overflow: hidden;
   visibility: hidden;
   overflow: hidden;
   width: 100%;
+  color: var(--black);
+  opacity: 0.7;
 }
 
 .service:nth-child(1) {
@@ -91,6 +94,7 @@
   height: 10px;
   border-radius: 50%;
   background-color: var(--black);
+  opacity: 0.7;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;

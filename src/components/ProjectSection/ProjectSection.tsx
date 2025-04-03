@@ -12,6 +12,7 @@ import Img3 from "../../../public/images/heroiii.jpeg";
 import gsap from "gsap";
 import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
 const projectData = [
   {
@@ -304,7 +305,7 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='3' title='Featured Work' />
+        <SectionHeading2 title='4: Featured Work' />
 
         <div className={styles.content}>
           <div className={styles.projectDataContainer} ref={projectsListRef}>

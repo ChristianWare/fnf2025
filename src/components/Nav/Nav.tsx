@@ -4,58 +4,57 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
-import { useTransitionRouter } from "next-view-transitions";
+// import { useTransitionRouter } from "next-view-transitions";
 // import Button from "../Button/Button";
 
 const navItems = [
-  { text: "Home", href: "/" },
-  { text: "Works", href: "/work" },
-  { text: "About", href: "/about" },
-  { text: "Services", href: "/services" },
-  { text: "Journal", href: "/blog" },
-  { text: "Start a Project", href: "/contact" },
+  { text: "Works", href: "/#work" },
+  { text: "About", href: "/#about" },
+  { text: "Services", href: "/#services" },
+  { text: "Journal", href: "/#blog" },
+  { text: "Start a Project", href: "/#contact" },
 ];
 
 export default function Nav() {
-  const router = useTransitionRouter();
+  // const router = useTransitionRouter();
 
-  function slideInOut() {
-    document.documentElement.animate(
-      [
-        {
-          opacity: 1,
-          transform: "translateY(0)",
-        },
-        {
-          opacity: 0.2,
-          transform: "translateY(-35%)",
-        },
-      ],
-      {
-        duration: 1500,
-        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
-        fill: "forwards",
-        pseudoElement: "::view-transition-old(root)",
-      }
-    );
+  // function slideInOut() {
+  //   document.documentElement.animate(
+  //     [
+  //       {
+  //         opacity: 1,
+  //         transform: "translateY(0)",
+  //       },
+  //       {
+  //         opacity: 0.2,
+  //         transform: "translateY(-35%)",
+  //       },
+  //     ],
+  //     {
+  //       duration: 1500,
+  //       easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+  //       fill: "forwards",
+  //       pseudoElement: "::view-transition-old(root)",
+  //     }
+  //   );
 
-    document.documentElement.animate(
-      [
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-        },
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-        },
-      ],
-      {
-        duration: 1500,
-        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
-        fill: "forwards",
-        pseudoElement: "::view-transition-new(root)",
-      }
-    );
-  }
+  //   document.documentElement.animate(
+  //     [
+  //       {
+  //         clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+  //       },
+  //       {
+  //         clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+  //       },
+  //     ],
+  //     {
+  //       duration: 1500,
+  //       easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+  //       fill: "forwards",
+  //       pseudoElement: "::view-transition-new(root)",
+  //     }
+  //   );
+  // }
 
   const [isOpen, setIsOpen] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
@@ -162,11 +161,11 @@ export default function Nav() {
                 onClick={() => setIsOpen(false)}
               >
                 <Link
-                  onClick={() => {
-                    router.push(navItem.href, {
-                      onTransitionReady: slideInOut,
-                    });
-                  }}
+                  // onClick={() => {
+                  //   router.push(navItem.href, {
+                  //     onTransitionReady: slideInOut,
+                  //   });
+                  // }}
                   href={navItem.href}
                 >
                   {navItem.text}

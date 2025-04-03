@@ -125,6 +125,7 @@ export default function Hero() {
     { id: 1, name: "B2B Stores" },
     { id: 2, name: "B2C Stores" },
     { id: 3, name: "Booking Platforms" },
+    { id: 4, name: "And much more!" },
   ];
 
   return (

@@ -2,7 +2,6 @@
 
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
-import Button from "../Button/Button";
 import SectionIntro from "../SectionIntro/SectionIntro";
 
 const data = [
@@ -67,9 +66,6 @@ export default function ServiceDetails() {
               <p className={styles.desc}>{x.description}</p>
             </div>
           ))}
-        </div>
-        <div className={styles.btnContainer}>
-          <Button text='View All Services' btnType='black' href='/' />
         </div>
       </LayoutWrapper>
     </div>

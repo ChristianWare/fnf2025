@@ -3,6 +3,7 @@
   --gray: #919598;
   --lightGray: #d4d4d4;
   --orange: #FF8F00;
+  --orange2: #ff4d00;
   --tan: #ebeae4;
   --white: #ffffff;
   --text: #2c2a2a;
@@ -186,7 +187,7 @@ textarea:focus {
   }
 } */
 
-::view-transition-old(root),
+/* ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none !important;
 }
@@ -209,4 +210,4 @@ textarea:focus {
 ::view-transition-old(root) {
   z-index: 1;
   animation: none !important;
-}
+} */

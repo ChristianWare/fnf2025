@@ -1,6 +1,6 @@
 import styles from "./HowItWorks.module.css";
-import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import LayoutWrapper from "../LayoutWrapper";
+// import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionIntro from "../SectionIntro/SectionIntro";
 // import Offer from "../Offer/Offer";
 
@@ -31,13 +31,13 @@ const HowItWorks = () => {
   return (
     <section className={styles.container}>
       <div className={styles.parent}>
-        <LayoutWrapper>
-          <div className={styles.top}>
+        {/* <LayoutWrapper> */}
+          {/* <div className={styles.top}>
             <SectionHeading
               number='2'
               title='Data-driven design, human-centered solutions'
             />
-          </div>
+          </div> */}
           <div className={styles.sectionIntroContainer}>
             <SectionIntro
               title='Our Approach'
@@ -70,7 +70,7 @@ const HowItWorks = () => {
             </div>
           </div>
           {/* <Offer /> */}
-        </LayoutWrapper>
+        {/* </LayoutWrapper> */}
       </div>
     </section>
   );

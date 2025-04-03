@@ -24,15 +24,22 @@
   align-items: center;
   justify-content: center;
   position: relative;
-
 }
 
 .square:hover {
   background-color: var(--orange);
 }
 
+.square:nth-child(1),
+.square:nth-child(5),
+.square:nth-child(9)
+{
+  background-color: var(--orange);
+}
+
 .title {
   text-align: center;
+  font-size: 1.4rem;
 }
 
 .img {
