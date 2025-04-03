@@ -8,7 +8,10 @@ import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Contact2 from "@/components/Contact2/Contact2";
 import OtherThings from "@/components/OtherThings/OtherThings";
 import Pricing from "@/components/Pricing/Pricing";
-// import Explain from "@/components/Explain/Explain";
+import AboutHero from "@/components/AboutHero/AboutHero";
+import Owner from "@/components/Owner/Owner";
+import Mission from "@/components/Mission/Mission";
+import HowItWorks from "@/components/HowItWorks/HowItWorks";
 
 export default function Home() {
   return (
@@ -16,14 +19,16 @@ export default function Home() {
       <div className={styles.scrollContainer}>
         <Hero />
         <Impressions />
-        {/* <Explain /> */}
+        <HowItWorks />
+        <AboutHero />
+        <Mission />
+        <Owner />
         <ServicesSection />
         <ServiceDetails />
         <ProjectSection />
         <Process />
         <Pricing />
         <OtherThings />
-        {/* <FinalCTA /> */}
         <Contact2 />
       </div>
     </main>

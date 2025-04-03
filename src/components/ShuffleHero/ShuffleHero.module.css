@@ -1,0 +1,39 @@
+.section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 400px;
+  grid-gap: 0.5rem;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+
+
+.img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

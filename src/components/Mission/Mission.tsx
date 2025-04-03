@@ -1,7 +1,7 @@
 "use client";
 
 import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionIntro from "../SectionIntro/SectionIntro";
 import styles from "./Mission.module.css";
 
@@ -33,7 +33,6 @@ const Mission = () => {
     <div className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          <SectionHeading number='3' title='What Drives us' />
           <div className={styles.top}>
           <SectionIntro title='Our Values' color='black' dotColor='blackDot' />
           </div>

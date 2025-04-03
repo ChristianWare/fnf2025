@@ -42,7 +42,7 @@ export default function OtherThings() {
       tl.to(
         letter,
         {
-          color: "#FF8F00",
+          color: "#1f1f1f",
           duration: 0.2,
         },
         index * 0.015

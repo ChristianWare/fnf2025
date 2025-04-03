@@ -16,3 +16,9 @@
 .tan {
   color: var(--tan);
 }
+
+.span {
+  display: block;
+  border: 1px solid var(--black);
+  padding: .5rem 1rem;
+}

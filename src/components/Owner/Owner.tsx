@@ -11,11 +11,6 @@ const Owner = () => {
         <div className={styles.parent}>
           <div className={styles.content}>
             <div className={styles.left}>
-              {/* <p className={styles.author}> */}
-              {/* Chris Ware  */}
-              {/* － <br /> */}
-              {/* Founder & Lead Developer */}
-              {/* </p> */}
               <div className={styles.leftTop}>
                 <SectionIntro
                   title='Chris Ware'
