@@ -42,7 +42,6 @@
 
 .headingii {
   font-size: 8rem;
-  line-height: 1.1;
 }
 
 .revealText {
@@ -96,7 +95,7 @@
   .headingii {
     font-size: 11vw;
     text-align: left;
-    line-height: 1.2;
+    /* line-height: 1.2; */
   }
 }
 
