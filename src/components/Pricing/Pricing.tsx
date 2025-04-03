@@ -161,7 +161,7 @@ export default function Pricing() {
               </div>
             </div>
             <div className={styles.btnContainer}>
-              <Button btnType='primary' href='.' text='More About Us' />
+              <Button btnType='secondary' href='/' text='More Details' />
             </div>
           </div>
         </LayoutWrapper>

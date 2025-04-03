@@ -6,7 +6,8 @@ import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 import Process from "@/components/Process/Process";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Contact2 from "@/components/Contact2/Contact2";
-import FinalCTA from "@/components/FinalCTA/FinalCTA";
+import OtherThings from "@/components/OtherThings/OtherThings";
+import Pricing from "@/components/Pricing/Pricing";
 // import Explain from "@/components/Explain/Explain";
 
 export default function Home() {
@@ -20,7 +21,9 @@ export default function Home() {
         <ServiceDetails />
         <ProjectSection />
         <Process />
-        <FinalCTA />
+        <Pricing />
+        <OtherThings />
+        {/* <FinalCTA /> */}
         <Contact2 />
       </div>
     </main>

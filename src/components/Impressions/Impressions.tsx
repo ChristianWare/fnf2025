@@ -79,13 +79,11 @@ export default function Impressions() {
               that simply &ldquo;works&rdquo; isn&apos;t enough.
               <br />
               <br />
-              Your online store needs to tell your{" "}
-             brand story, provide an
-              exceptionaluser experience,
-              and convert visitors into
-          loyal customers.
+              Your online store needs to tell your brand story, provide an
+              exceptionaluser experience, and convert visitors into loyal
+              customers.
             </h3>
-              <ParallaxImage src={Img1} alt='' title='Your Online Store' />
+            <ParallaxImage src={Img1} alt='' title='Your Online Store' />
           </div>
           <div className={styles.right}>
             <p className={styles.copy}>

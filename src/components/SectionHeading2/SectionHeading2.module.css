@@ -1,22 +1,18 @@
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: var(--tan);
+  background-color: var(--orange);
+  border: 1px solid var(--black);
   border-bottom: 8px solid var(--black);
   padding-bottom: 8rem;
 }
 
-.title,
-.number {
-  background-color: var(--white);
+.title {
+  background-color: var(--black);
   padding: 2rem;
   font-family: var(--NeueHaasGroteskMedium);
   width: 90%;
-}
-
-.number {
-  font-size: 8.2rem;
-  padding-bottom: 1rem;
+  color: var(--tan)
 }
 
 .left,
@@ -50,8 +46,7 @@
 }
 
 @media screen and (max-width: 1268px) {
-  .title,
-  .number {
+  .title {
     font-size: 5rem;
   }
 }

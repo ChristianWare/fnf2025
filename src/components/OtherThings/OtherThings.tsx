@@ -1,48 +1,93 @@
+"use client";
+
 import styles from "./OtherThings.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading from "../SectionHeading/SectionHeading";
-import Image from "next/image";
 import Img1 from "../../../public/images/ecomm.jpeg";
 import Button from "../Button/Button";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import ParallaxImage from "../ParallaxImage/ParallaxImage";
 
 export default function OtherThings() {
+  const [lettersRef, setLettersRef] = useArrayRef();
+  const triggerRef = useRef(null);
+
+  function useArrayRef(): [
+    React.MutableRefObject<HTMLSpanElement[]>,
+    (ref: HTMLSpanElement) => void
+  ] {
+    const lettersRef = useRef<HTMLSpanElement[]>([]);
+    lettersRef.current = [];
+    return [lettersRef, (ref) => ref && lettersRef.current.push(ref)];
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const text = "Ready to elevate your e-commerce experience?";
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scrub: 0.5,
+        start: "top center",
+        end: "bottom center",
+        markers: false,
+      },
+    });
+
+    lettersRef.current.forEach((letter, index) => {
+      tl.to(
+        letter,
+        {
+          color: "#FF8F00",
+          duration: 0.2,
+        },
+        index * 0.015
+      );
+    });
+
+    return () => {
+      tl.scrollTrigger?.kill();
+    };
+  }, [lettersRef]);
+
   return (
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <SectionHeading number='5' title='Fonts & Footers' />
+            <SectionHeading2 title='Fonts & Footers' />
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
-              <h3 className={styles.heading}>
-                In a world where decisions are made in a matter of seconds, you
-                only get one shot.
-              </h3>
-              <div className={styles.imgContainer}>
-                <Image src={Img1} fill alt='' title='' className={styles.img} />
-              </div>
+              <ParallaxImage
+                src={Img1}
+                alt=''
+                title='Your E-commerce Specialists'
+              />
             </div>
-            <div className={styles.right}>
+            <div className={styles.right} ref={triggerRef}>
               <div className={styles.rightTop}>
-                <span className={styles.span}>Partners:</span>
-                <p className={styles.copy}>
-                  Whether you’re targeting investors, customers or users, you
-                  not only have to get to the point quickly, you have to give
-                  them a reason to believe you’re about to make their lives
-                  better, or at least make life itself better.
-                  <br />
-                  <br />
-                  Strong strategic core messaging is what lies behind that
-                  strong first impression.
-                </p>
+                <h2 className={styles.headingii}>
+                  {text.split("").map((letter, index) => (
+                    <span
+                      key={index}
+                      className={styles.revealText}
+                      ref={setLettersRef}
+                    >
+                      {letter}
+                    </span>
+                  ))}
+                </h2>
               </div>
               <div className={styles.rightBottom}>
-                <h4 className={styles.info}>
-                  Laxer partners with select strategists, storytellers,
-                  designers and content creators on complex projects on a
-                  per-need basis
-                </h4>
+                <p className={styles.info}>
+                  Let&apos;s discuss how we can help your business grow with a
+                  custom e-commerce solution that meets your unique needs.
+                </p>
                 <div className={styles.btnContainer}>
                   <Button btnType='secondary' text='Work With Us' href='/' />
                 </div>
