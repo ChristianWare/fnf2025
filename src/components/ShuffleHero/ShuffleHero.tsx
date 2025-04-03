@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import styles from "./ShuffleHero.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import Img1 from "../../../public/images/heroii.jpeg";
 import Img2 from "../../../public/images/heroiii.jpeg";
 import Img3 from "../../../public/images/process.jpeg";
@@ -44,38 +44,47 @@ const squareData = [
   {
     id: 1,
     src: Img1,
+    title: "B2B (Business to Business)",
   },
   {
     id: 2,
     src: Img2,
+    title: "B2C (Business to Consumer)",
   },
   {
     id: 3,
     src: Img3,
+    title: "Multi-Vendor Marketplace",
   },
   {
     id: 4,
     src: Img4,
+    title: "Subscription-Based E-commerce",
   },
   {
     id: 5,
     src: Img5,
+    title: "Digital Products Store",
   },
   {
     id: 6,
     src: Img6,
+    title: "Services-Based E-commerce",
   },
   {
     id: 7,
     src: Img7,
+    title: "Rental E-commerce Platforms",
   },
   {
     id: 8,
     src: Img8,
+    title: "Niche Vertical Stores",
   },
   {
     id: 9,
     src: Img9,
+    title: "Social Commerce Stores",
   },
 ];
 
@@ -87,8 +96,8 @@ const generateSquares = () => {
       transition={{ duration: 1.5, type: "spring" }}
       className={styles.square}
     >
-      {/* {sq.src} */}
-      <Image src={sq.src} fill alt='' className={styles.img} />
+      <span className={styles.title}>{sq.title}</span>
+      {/* <Image src={sq.src} fill alt='' className={styles.img} /> */}
     </motion.div>
   ));
 };

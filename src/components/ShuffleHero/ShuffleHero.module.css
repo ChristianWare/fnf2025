@@ -18,15 +18,22 @@
   height: 100%;
   background-size: cover;
   border: 1px solid var(--black);
+  background-color: var(--tan);
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+
 }
 
+.square:hover {
+  background-color: var(--orange);
+}
 
-
-
+.title {
+  text-align: center;
+}
 
 .img {
   object-fit: cover;

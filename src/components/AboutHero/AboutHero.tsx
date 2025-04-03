@@ -54,7 +54,6 @@ export default function AboutHero(): JSX.Element {
 
   return (
     <section className={styles.container}>
-      x
       <LayoutWrapper>
         <div className={styles.top}>
           {/* <h2 ref={headingRef} className={styles.heading}>
