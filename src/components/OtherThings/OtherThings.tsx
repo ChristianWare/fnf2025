@@ -2,13 +2,14 @@
 
 import styles from "./OtherThings.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Img1 from "../../../public/images/ecomm.jpeg";
-import Button from "../Button/Button";
+// import Img1 from "../../../public/images/ecomm.jpeg";
+// import Button from "../Button/Button";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import ParallaxImage from "../ParallaxImage/ParallaxImage";
+// import ParallaxImage from "../ParallaxImage/ParallaxImage";
+import ContactForm from "../ContactForm/ContactForm";
 
 export default function OtherThings() {
   const [lettersRef, setLettersRef] = useArrayRef();
@@ -63,11 +64,12 @@ export default function OtherThings() {
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
-              <ParallaxImage
+              {/* <ParallaxImage
                 src={Img1}
                 alt=''
                 title='Your E-commerce Specialists'
-              />
+              /> */}
+              <ContactForm />
             </div>
             <div className={styles.right} ref={triggerRef}>
               <div className={styles.rightTop}>
@@ -88,9 +90,9 @@ export default function OtherThings() {
                   Let&apos;s discuss how we can help your business grow with a
                   custom e-commerce solution that meets your unique needs.
                 </p>
-                <div className={styles.btnContainer}>
+                {/* <div className={styles.btnContainer}>
                   <Button btnType='secondary' text='Work With Us' href='/' />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

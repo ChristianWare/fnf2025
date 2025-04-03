@@ -1,4 +1,4 @@
-import ContactForm from "../ContactForm/ContactForm";
+// import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
 import LayoutWrapper from "../LayoutWrapper";
 // import ServicesSectionIntro from "../ServicesSectionIntro/ServicesSectionIntro";
@@ -15,7 +15,7 @@ export default function Contact2() {
     <section className={styles.container}>
       {/* <ServicesSectionIntro data={cardsData} /> */}
       <LayoutWrapper>
-        <ContactForm />
+        {/* <ContactForm /> */}
         
         <Footer />
       </LayoutWrapper>

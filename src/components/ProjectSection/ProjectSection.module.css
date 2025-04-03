@@ -1,7 +1,6 @@
 .container {
   position: relative;
   width: 100%;
-  /* min-height: 100vh; */
   overflow: hidden;
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -10,6 +9,7 @@
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
   margin-top: 10rem;
 }
 
@@ -89,6 +89,17 @@
 .icon2 {
   color: var(--tan);
 }
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer {
+  width: 100%;
+}
+
 
 .btnContainer {
   margin-top: 5rem;

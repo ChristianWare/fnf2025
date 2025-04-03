@@ -9,6 +9,8 @@ import Contact2 from "@/components/Contact2/Contact2";
 import OtherThings from "@/components/OtherThings/OtherThings";
 import Pricing from "@/components/Pricing/Pricing";
 import AboutHero from "@/components/AboutHero/AboutHero";
+import ShuffleHero from "@/components/ShuffleHero/ShuffleHero";
+import FinalCTA from "@/components/FinalCTA/FinalCTA";
 
 export default function Home() {
   return (
@@ -20,9 +22,9 @@ export default function Home() {
         <ServicesSection />
         <ServiceDetails />
         <ProjectSection />
-        {/* <Process /> */}
         <Pricing />
         <OtherThings />
+        <FinalCTA />
         <Contact2 />
       </div>
     </main>
