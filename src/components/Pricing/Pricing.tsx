@@ -125,6 +125,45 @@ const pricingData = [
       },
     ],
   },
+  {
+    id: 29,
+    title: "Booking",
+    href: "/services/booking-platforms",
+    mostPopular: false,
+
+    prices: [
+      {
+        id: 1.29,
+        price: "375 / Month",
+      },
+      {
+        id: 2.29,
+        price: "3,600 / Year",
+      },
+    ],
+    includes: [
+      {
+        id: 29.2,
+        feature: "Stripe Payment Gateway",
+      },
+      {
+        id: 29.3,
+        feature: "Custom coded website",
+      },
+      {
+        id: 29.4,
+        feature: "SEO Services",
+      },
+      {
+        id: 29.5,
+        feature: "36 Blog Articles/year",
+      },
+      {
+        id: 29.6,
+        feature: "Chat bot",
+      },
+    ],
+  },
 ];
 export default function Pricing() {
   return (
@@ -133,17 +172,13 @@ export default function Pricing() {
       <section className={styles.container}>
         <LayoutWrapper>
           <div className={styles.content}>
-            <div className={styles.top}>
-              {/* <h3 className={styles.heading}>
-                Before you proceed, a few things you should know about us
-              </h3> */}
-            </div>
             <div className={styles.bottom}>
               <div className={styles.dataMapContainer}>
                 {pricingData.map((x) => (
                   <div key={x.id} className={styles.card}>
+                    <div className={styles.tab}>{x.title}</div>
                     <div className={styles.cardTop}>
-                      <h4 className={styles.title}>{x.title}</h4>
+                      {/* <h4 className={styles.title}>{x.title}</h4> */}
                       <span className={styles.price}>$5,000</span>
                     </div>
                     <div className={styles.cardBottom}>
