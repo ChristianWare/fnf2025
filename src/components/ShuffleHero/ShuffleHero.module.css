@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: 400px;
+  /* height: 400px; */
   grid-gap: 0.5rem;
 }
 
@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  min-height: 130px;
 }
 
 .square:hover {

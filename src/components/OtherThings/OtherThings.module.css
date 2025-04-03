@@ -42,7 +42,6 @@
 
 .headingii {
   font-size: 8rem;
-  /* width: 80%; */
   line-height: 1.1;
 }
 
@@ -90,6 +89,14 @@
 
   .copy {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headingii {
+    font-size: 11vw;
+    text-align: left;
+    line-height: 1.2;
   }
 }
 

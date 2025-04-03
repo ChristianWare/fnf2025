@@ -54,6 +54,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 568px) {
   .heading {
     font-size: 4rem;
