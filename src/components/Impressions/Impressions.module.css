@@ -29,6 +29,7 @@
   background-color: var(--orange);
   padding: 2rem;
   border: 1px solid var(--black);
+  font-size: 1.6rem;
 }
 
 .imgContainer {
