@@ -11,18 +11,81 @@
 
 .bottom {
   margin-top: 15rem;
+  display: grid;
+  grid-template-areas:
+    "one one two three"
+    "four four five five";
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
 }
 
 .card {
   background-color: var(--tan);
-  padding: 3rem;
+  /* padding: 3rem; */
   border: 1px solid var(--black);
-  border-bottom: 1px solid var(--tan);
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  /* border-bottom: 1px solid var(--tan); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  /* grid-gap: 3rem; */
 }
+
+/* Grid area classes */
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.card.one {
+  background-color: var(--black);
+}
+
+.card.one .title,
+.card.one .desc {
+  color: var(--tan);
+}
+
+.card.one .title {
+  font-size: 5rem;
+}
+
+.card.two {
+  background-color: var(--orange);
+}
+
+.card.five .title {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--black);
+  background-image: repeating-linear-gradient(
+    45deg,
+    #0f0c0c,
+    #f1f1f1 1px,
+    #0000 0 50%
+  );
+  background-size: 10px 10px;
+  position: relative;
+  background-color: var(--orange);
+}
+
+
 
 .sectionIntroContainer {
   position: absolute;
@@ -34,15 +97,20 @@
   background-color: var(--tan);
 }
 
-.title {
+.title, .titleii {
   font-size: 2rem;
+  padding: 3rem;
+  padding-bottom: 0rem;
+  width: 100%;
 }
 
 .desc {
-  width: 80%;
+  /* width: 80%; */
   font-size: 1.4rem;
   opacity: 0.5;
-  padding-bottom: 2rem;
+  padding: 3rem;
+  text-transform: none;
+  /* padding-bottom: 2rem; */
 }
 
 .card:last-child {
@@ -61,6 +129,16 @@
     text-align: left;
   }
 
+  .bottom {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+    grid-template-columns: 1fr;
+  }
+
   .card {
     padding-bottom: 3rem;
   }
@@ -76,8 +154,6 @@
 }
 
 @media screen and (max-width: 568px) {
- 
-
   .sectionIntroContainer {
     top: -38px;
   }

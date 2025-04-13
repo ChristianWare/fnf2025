@@ -5,23 +5,39 @@ import styles from "./Solution.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
-import SectionIntro from "../SectionIntro/SectionIntro";
+// import SectionIntro from "../SectionIntro/SectionIntro";
 
 const data = [
   {
     id: 1,
-    title: "Beautiful & Strategic Design",
-    desc: "We combine strategic thinking with beautiful design to build online stores that are not just functional, but exceptional at telling your brand story and converting visitors.",
+    title: "Strategic Brand Storytelling",
+    desc: "We design online stores that communicate your unique value proposition and brand narrative at every touchpoint, creating emotional connections that transform casual browsers into loyal customers.",
+    span: "one",
   },
   {
     id: 2,
-    title: "Technical Excellence",
-    desc: "We transform outdated platforms into modern, responsive storefronts and simplify complex checkout processes to dramatically improve user experience across all devices.",
+    title: "Conversion-Focused Design",
+    desc: "Our designs don't just look beautiful—they strategically guide visitors through the buying journey with intuitive navigation, compelling product presentations, and friction-free checkout experiences.",
+    span: "two",
   },
   {
     id: 3,
-    title: "Tailored Approach",
-    desc: "Whether you're launching a new store or optimizing an existing one, we address your specific pain points and turn them into competitive advantages that drive real business growth.",
+    title: "Responsive Technical Excellence",
+    desc: "We build mobile-first, responsive storefronts that deliver exceptional experiences across all devices, ensuring you never lose sales due to technical limitations or poor performance.",
+    span: "three",
+  },
+  {
+    id: 4,
+    title: "Seamless System Integration",
+    desc: "We connect your e-commerce platform with your business systems (inventory, fulfillment, CRM, marketing) to create a unified ecosystem that streamlines operations and enhances customer experiences.",
+    span: "four",
+  },
+  {
+    id: 5,
+    title: "",
+    titleii: "Data-Driven Optimization",
+    desc: "Beyond launch, we continuously analyze performance data to identify opportunities for improvement, implementing strategic enhancements that increase conversions and maximize your ROI.",
+    span: "five",
   },
 ];
 
@@ -88,15 +104,9 @@ export default function Solution() {
         </div>
         <div className={styles.bottom}>
           {data.map((x) => (
-            <div key={x.id} className={styles.card}>
-              <div className={styles.sectionIntroContainer}>
-                <SectionIntro
-                  title={"/// " + x.id.toString()}
-                  color='black'
-                  dotColor='blackDot'
-                />
-              </div>
+            <div key={x.id} className={`${styles.card} ${styles[x.span]}`}>
               <h3 className={styles.title}>{x.title}</h3>
+              {x.titleii && <h3 className={styles.titleii}>{x.titleii}</h3>}
               <p className={styles.desc}>{x.desc}</p>
             </div>
           ))}
