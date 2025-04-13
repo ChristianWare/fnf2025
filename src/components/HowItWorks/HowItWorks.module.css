@@ -1,5 +1,5 @@
-.top {
-  margin-bottom: 10rem;
+.container {
+  margin-top: 5rem;
 }
 
 .sectionIntroContainer {
@@ -9,7 +9,7 @@
   padding: 1rem 2rem;
   position: relative;
   top: 1px;
-  background-color: var(--white);
+  background-color: var(--tan);
 }
 
 .box {
@@ -21,6 +21,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid var(--black);
+  background-color: var(--tan);
 }
 
 .heading {
@@ -42,12 +43,15 @@
   justify-content: center;
   width: 100%;
   border-right: 1px solid var(--black);
+  background-color: var(--tan);
   height: 100%;
 }
 
 .bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+    background-color: var(--tan);
+
 }
 
 .card {

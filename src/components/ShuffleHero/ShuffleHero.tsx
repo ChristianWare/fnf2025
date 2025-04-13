@@ -74,17 +74,17 @@ const squareData = [
   {
     id: 7,
     src: Img7,
-    title: "Rental E-commerce Platforms",
+    title: "Wix E-commerce",
   },
   {
     id: 8,
     src: Img8,
-    title: "Niche Vertical Stores",
+    title: "Shopify",
   },
   {
     id: 9,
     src: Img9,
-    title: "Social Commerce Stores",
+    title: "Woo Commerce",
   },
 ];
 
