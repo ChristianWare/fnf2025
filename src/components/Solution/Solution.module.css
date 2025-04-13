@@ -1,3 +1,7 @@
+.container {
+  margin-bottom: 5rem;
+}
+
 .heading {
   font-size: 7rem;
   text-align: center;
@@ -64,7 +68,7 @@
 }
 
 .card.one .title {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .card.two {
@@ -85,8 +89,6 @@
   background-color: var(--orange);
 }
 
-
-
 .sectionIntroContainer {
   position: absolute;
   top: -47px;
@@ -97,7 +99,8 @@
   background-color: var(--tan);
 }
 
-.title, .titleii {
+.title,
+.titleii {
   font-size: 2rem;
   padding: 3rem;
   padding-bottom: 0rem;
