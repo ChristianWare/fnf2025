@@ -10,6 +10,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Solution from "../Solution/Solution";
 // import Button from "../Button/Button";
 // import HowItWorks from "../HowItWorks/HowItWorks";
 
@@ -105,6 +106,7 @@ export default function Impressions() {
           </div>
         </div>
         {/* <HowItWorks /> */}
+        <Solution />
       </LayoutWrapper>
     </section>
   );
