@@ -1,7 +1,5 @@
 "use client";
 
-// import LayoutWrapper from "../LayoutWrapper";
-// import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionIntro from "../SectionIntro/SectionIntro";
 import styles from "./Mission.module.css";
 
@@ -31,7 +29,6 @@ const mission = [
 const Mission = () => {
   return (
     <div className={styles.container}>
-      {/* <LayoutWrapper> */}
         <div className={styles.content}>
           <div className={styles.top}>
           <SectionIntro title='Our Values' color='black' dotColor='blackDot' />
@@ -46,8 +43,6 @@ const Mission = () => {
             ))}
           </div>
         </div>
-      {/* </LayoutWrapper> */}
-        {/* <div className={styles.test}></div> */}
     </div>
   );
 };

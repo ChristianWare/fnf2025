@@ -5,6 +5,7 @@ import styles from "./Solution.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 const data = [
   {
@@ -85,7 +86,21 @@ export default function Solution() {
             ))}
           </h2>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          {data.map((x) => (
+            <div key={x.id} className={styles.card}>
+              <div className={styles.sectionIntroContainer}>
+                <SectionIntro
+                  title={"/// " + x.id.toString()}
+                  color='black'
+                  dotColor='blackDot'
+                />
+              </div>
+              <h3 className={styles.title}>{x.title}</h3>
+              <p className={styles.desc}>{x.desc}</p>
+            </div>
+          ))}
+        </div>
       </LayoutWrapper>
     </div>
   );

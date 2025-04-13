@@ -1,10 +1,84 @@
 .heading {
-  font-size: 8rem;
+  font-size: 7rem;
   text-align: center;
 }
 
 .revealText {
-  color: var(--white);
+  color: var(--tan);
   filter: drop-shadow(0 0 0.1rem var(--black));
   line-height: 1;
+}
+
+.bottom {
+  margin-top: 15rem;
+}
+
+.card {
+  background-color: var(--tan);
+  padding: 3rem;
+  border: 1px solid var(--black);
+  border-bottom: 1px solid var(--tan);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+
+.sectionIntroContainer {
+  position: absolute;
+  top: -47px;
+  right: -1px;
+  border: 1px solid var(--black);
+  border-bottom: none;
+  padding: 1rem 2rem;
+  background-color: var(--tan);
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.desc {
+  width: 80%;
+  font-size: 1.4rem;
+  opacity: 0.5;
+  padding-bottom: 2rem;
+}
+
+.card:last-child {
+  border-bottom: 1px solid var(--black);
+}
+
+@media screen and (max-width: 868px) {
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 11vw;
+    text-align: left;
+  }
+
+  .card {
+    padding-bottom: 3rem;
+  }
+
+  .desc {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+
+  .sectionIntroContainer {
+    top: -42px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+ 
+
+  .sectionIntroContainer {
+    top: -38px;
+  }
 }
