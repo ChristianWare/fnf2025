@@ -20,6 +20,9 @@
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin-top: 2rem;
+  background-color: var(--orange);
+  border: 1px solid var(--black);
+  padding: 2rem;
 }
 
 .imgParent {
