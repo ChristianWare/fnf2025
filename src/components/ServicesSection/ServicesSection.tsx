@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const cardsData = [
-  { id: 1, title: "3:" },
+  { id: 1, title: "3 :" },
   { id: 2, title: "the main" },
   { id: 3, title: "services" },
   { id: 4, title: "we offer:" },

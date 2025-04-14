@@ -101,7 +101,7 @@ textarea {
   hyphens: auto;
   font-size: 1.6rem;
   line-height: 1.3;
-  font-family: var(--inter);
+  font-family: var(--NeueHaasGroteskMedium);
 }
 
 input:focus,

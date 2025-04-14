@@ -24,7 +24,7 @@
 }
 
 .card1 .cardInner {
-  background-color: var(--gray);
+  background-color: var(--pink);
 }
 .card2 .cardInner {
   background-color: var(--lightGray);
@@ -43,7 +43,12 @@
 }
 
 .card1 .cardInner .titleHeading {
-  color: var(--tan);
+  color: var(--pink);
+    text-shadow: 
+    -1px -1px 0 var(--black),
+    1px -1px 0 var(--black),
+    -1px 1px 0 var(--black),
+    1px 1px 0 var(--black);
 }
 
 .card2 .cardInner .titleHeading {
@@ -79,7 +84,8 @@
 }
 
 .card1 .cardInner .blackDot {
-  background-color: var(--tan);
+  background-color: var(--pink);
+  border: 1px solid var(--black);
 }
 
 .card4 .cardInner .blackDot {

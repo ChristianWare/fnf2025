@@ -1,44 +1,45 @@
+.headingContainer {
+  width: 100%;
+}
+
 .hcTop {
- background-image: repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
     45deg,
     var(--black),
-    var(--tan) 1px,
-    var(--tan) 0 50%
+    var(--pink) 1px,
+    var(--pink) 0 50%
   );
   background-size: 10px 10px;
   border: 1px solid var(--black);
   padding: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .heading {
-  width: 60%;
-  margin-left: auto;
-  text-align: right;
-  padding: 1rem;
-  background-color: var(--orange);
-  border: 1px solid var(--black);
-  /* line-height: 1.2; */
+  width: 45%;
+  /* padding: 1rem; */
+  /* background-color: var(--pink); */
+  /* border: 1px solid var(--black); */
 }
 
 @media screen and (max-width: 1268px) {
-  .top {
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-  }
-
-  .heading,
-  .headingii {
+  .heading {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 968px) {
-  .heading,
-  .headingii {
+  .heading {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    width: 100%;
   }
 }

@@ -31,29 +31,25 @@ export default function OurApproach() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            {/* <div className={styles.headingContainer}>
-              <div className={styles.hcTop} />
-              <h2 className={styles.heading}>
-                Data-driven design, human-centered solutions
-              </h2>
-            </div> */}
             <SectionHeading3 title='Data-driven design, human-centered solutions' />
             <h3 className={styles.headingii}>
               We believe that successful e-commerce experiences balance art and
               science. Our approach combines:
             </h3>
           </div>
-          {data.map((x) => (
-            <div key={x.id} className={styles.card}>
-              <div className={styles.cardTop}>
-                <span className={styles.index}>{x.id}</span>
-                <h4 className={styles.title}>{x.title}</h4>
+          <div className={styles.bottom}>
+            {data.map((x) => (
+              <div key={x.id} className={styles.card}>
+                <div className={styles.cardTop}>
+                  <span className={styles.index}>{x.id}.</span>
+                  <h4 className={styles.title}>{x.title}</h4>
+                </div>
+                <div className={styles.cardBottom}>
+                  <p className={styles.desc}>{x.desc}</p>
+                </div>
               </div>
-              <div className={styles.cardBottom}>
-                <p className={styles.desc}>{x.desc}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </LayoutWrapper>
     </section>
