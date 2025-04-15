@@ -16,6 +16,15 @@
   width: 100%;
 }
 
+.orange {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--black),
+    var(--orange) 1px,
+    var(--orange) 0 50%
+  );
+}
+
 .heading {
   width: 45%;
   /* padding: 1rem; */
