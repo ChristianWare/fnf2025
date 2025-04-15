@@ -57,6 +57,10 @@
   border-left: 1px solid var(--black);
 }
 
+.card:last-child {
+  background-color: var(--pink);
+}
+
 .title,
 .dates,
 .desc {

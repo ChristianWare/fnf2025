@@ -1,29 +1,33 @@
 import styles from "./HowItWorks.module.css";
-// import LayoutWrapper from "../LayoutWrapper";
+import LayoutWrapper from "../LayoutWrapper";
+import Owner from "../Owner/Owner";
 // import SectionHeading from "../SectionHeading/SectionHeading";
-import SectionIntro from "../SectionIntro/SectionIntro";
-// import Offer from "../Offer/Offer";
 
 const data = [
   {
     id: 1,
-    feature: "Strategic thinking",
-    desc: "We start by understanding your business goals, target audience, and competitive landscape.",
+    feature: "Quality over quantity",
+    desc: "We take on a limited number of projects to ensure each client receives our full attention and the highest quality work.",
   },
   {
     id: 2,
-    feature: "Data-informed design",
-    desc: "We use research and analytics to guide our design decisions, ensuring your site not only looks good but performs well.",
+    feature: "Transparency",
+    desc: "We believe in open communication about processes, timelines, and outcomes.",
   },
   {
     id: 3,
-    feature: "Technical excellence",
-    desc: "Our development team builds robust, scalable solutions that grow with your business.",
+    feature: "Measurable results",
+    desc: "We focus on metrics that matter to your business, not just vanity statistics.",
   },
   {
     id: 4,
-    feature: "Ongoing optimization",
-    desc: "We continually analyze and refine your e-commerce experience to improve conversions and customer satisfaction.",
+    feature: "Long-term partnerships",
+    desc: "We build relationships with our clients that extend beyond the initial project launch.",
+  },
+  {
+    id: 5,
+    feature: "Continuous learning",
+    desc: "The e-commerce landscape is constantly evolving, and we stay at the forefront of industry developments.",
   },
 ];
 
@@ -31,29 +35,10 @@ const HowItWorks = () => {
   return (
     <section className={styles.container}>
       <div className={styles.parent}>
-        {/* <LayoutWrapper> */}
-          {/* <div className={styles.top}>
-            <SectionHeading
-              number='2'
-              title='Data-driven design, human-centered solutions'
-            />
-          </div> */}
-          <div className={styles.sectionIntroContainer}>
-            <SectionIntro
-              title='Our Approach'
-              color='black'
-              dotColor='blackDot'
-            />
-          </div>
+        <LayoutWrapper>
           <div className={styles.box}>
             <div className={styles.middle}>
-              <div className={styles.middleLeft}>
-                <div className={styles.sectionTitle}></div>
-              </div>
-              <h4 className={styles.heading}>
-                We believe that successful e-commerce experiences balance art
-                and science. Our approach combines:
-              </h4>
+              <h4 className={styles.heading}>Our Values: What Drives Us</h4>
             </div>
             <div className={styles.bottom}>
               {data.map((x) => (
@@ -69,8 +54,8 @@ const HowItWorks = () => {
               ))}
             </div>
           </div>
-          {/* <Offer /> */}
-        {/* </LayoutWrapper> */}
+          <Owner />
+        </LayoutWrapper>
       </div>
     </section>
   );

@@ -113,6 +113,10 @@
   .card:nth-child(3) {
     border-right: 1px solid var(--gray);
   }
+
+  .top {
+    margin-bottom: 5rem;
+  }
 }
 
 @media screen and (max-width: 968px) {

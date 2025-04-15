@@ -7,19 +7,16 @@ import SectionIntro from "../SectionIntro/SectionIntro";
 const data = [
   {
     title: "Custom e-commerce development",
-    company: "Self",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Platform migration & integration",
-    company: "KNI",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Responsive design optimization",
-    company: "Joyus App",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
@@ -30,19 +27,16 @@ const data = [
   },
   {
     title: "Payment gateway setup",
-    company: "Mentorworks",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Conversion rate optimization",
-    company: "Fandem",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
   {
     title: "Ongoing support & maintenance",
-    company: "",
     description:
       "How do you give the world’s safest car seat a priceless personality?",
   },
