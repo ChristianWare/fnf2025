@@ -97,3 +97,10 @@
     width: 100%;
   }
 }
+
+
+@media screen and (max-width: 568px) {
+  .copy {
+    text-align: left;
+  }
+}
