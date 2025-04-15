@@ -1,5 +1,5 @@
-import LayoutWrapper from "@/components/LayoutWrapper";
 import styles from "./ServiceHero.module.css";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
 // import Img1 from "../../../../public/images/servicesHeroii.jpg";
 import Img2 from "../../../../public/images/aboutii.jpeg";
@@ -15,7 +15,6 @@ export default function ServiceHero() {
               <h1 className={styles.heading}>
                 Comprehensive ecommerce solutions
               </h1>
-             
             </div>
             <div className={styles.imgContainer}>
               <Image src={Img2} alt='' title='' fill className={styles.img} />

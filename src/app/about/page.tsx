@@ -5,7 +5,7 @@ import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import OtherThings from "@/components/OtherThings/OtherThings";
 import PageIntro from "@/components/PageIntro/PageIntro";
-import Img1 from "../../../public/images/aboutii.jpeg";
+import Img1 from "../../../public/images/servicesHero.jpg";
 
 export default function AboutPage() {
   return (

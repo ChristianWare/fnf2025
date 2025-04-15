@@ -100,7 +100,7 @@
 
 .copy {
   width: 50%;
-  background-color: var(--orange);
+  /* background-color: var(--orange); */
   padding: 2rem;
   border: 1px dashed var(--black);
   margin-left: auto;
