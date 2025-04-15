@@ -55,11 +55,10 @@
 }
 
 .copy {
-  /* text-transform: none; */
+  text-transform: none;
   width: 70%;
   letter-spacing: -0.3px;
   color: var(--black);
-  opacity: 0.7;
   font-size: 1.4rem;
 }
 

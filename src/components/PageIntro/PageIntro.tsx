@@ -1,4 +1,4 @@
-import styles from "./AboutPageHero.module.css";
+import styles from "./PageIntro.module.css";
 import Image, { StaticImageData } from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionIntro from "../SectionIntro/SectionIntro";
