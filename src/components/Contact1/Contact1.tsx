@@ -1,7 +1,7 @@
 // import Button from "../Button/Button";
 import styles from "./Contact.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Problem from "../Problem/Problem";
+import Problem from "../AboutPage/Problem/Problem";
 // import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
