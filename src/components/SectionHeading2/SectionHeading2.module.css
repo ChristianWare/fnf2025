@@ -18,7 +18,7 @@
   background-color: var(--black);
   padding: 2rem;
   font-family: var(--NeueHaasGroteskMedium);
-  width: 90%;
+  /* width: 90%; */
   color: var(--tan);
 }
 

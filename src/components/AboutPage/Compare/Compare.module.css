@@ -1,0 +1,161 @@
+.container {
+  /* background-color: var(--tan); */
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+}
+
+.copy {
+  opacity: 0.7;
+}
+
+.iconContainerBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-gap: 1rem; */
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0rem;
+  /* border: 1px solid var(--gray); */
+}
+
+.icon,
+.iconii,
+.iconiii,
+.iconPurple {
+  width: 100px;
+  height: 100px;
+  color: var(--orange);
+}
+
+.iconPurple {
+  color: var(--orange);
+  width: 40px;
+  height: 40px;
+}
+
+.column {
+  display: grid;
+}
+
+.column:nth-child(1) .iconii {
+  color: var(--gray3);
+}
+
+.iconii {
+  width: 40px;
+  height: 40px;
+}
+
+.iconiii {
+  color: var(--gray3);
+}
+
+.title {
+  text-align: center;
+  font-family: var(--suisse);
+  font-size: 2rem;
+  text-transform: none;
+  width: 80%;
+  line-height: 120%;
+}
+
+.dataBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+.box {
+  padding: 3rem;
+  background-color: var(--tan2);
+  border: 1px solid var(--gray);
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.box:last-child {
+  border-bottom: 1px solid var(--gray);
+}
+
+.box:nth-last-child(2) {
+  border-bottom: 1px solid var(--gray);
+}
+
+.box li {
+  list-style: none;
+  text-align: center;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    position: static;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+  }
+
+  .copy {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .copy {
+    width: 100%;
+  }
+
+  .icon,
+  .iconiii {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    line-height: 120%;
+  }
+
+  .iconii {
+    width: 40px;
+    height: 40px;
+  }
+}

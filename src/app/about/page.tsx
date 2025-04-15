@@ -6,6 +6,8 @@ import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import OtherThings from "@/components/OtherThings/OtherThings";
 import PageIntro from "@/components/PageIntro/PageIntro";
 import Img1 from "../../../public/images/servicesHero.jpg";
+import Problem from "@/components/AboutPage/Problem/Problem";
+import Compare from "@/components/AboutPage/Compare/Compare";
 
 export default function AboutPage() {
   return (
@@ -19,6 +21,8 @@ export default function AboutPage() {
       <AboutIntro />
       <OurApproach />
       <HowItWorks />
+      <Problem />
+      <Compare />
       <OtherThings />
       <FinalCTA />
       <Contact2 />

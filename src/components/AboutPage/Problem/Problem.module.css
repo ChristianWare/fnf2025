@@ -1,0 +1,158 @@
+.container {
+  background-color: var(--tan);
+  padding-bottom: 5rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.heading {
+  margin-right: auto;
+  background-color: var(--tan);
+  border: 1px solid var(--black);
+  padding: 1rem;
+}
+
+.problemContainer {
+  background-color: var(--pink);
+  border: 1px solid var(--black);
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--black),
+    var(--pink) 1px,
+    var(--pink) 0 50%
+  );
+  background-size: 10px 10px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.headingii {
+  line-height: 120%;
+}
+
+.falseBtnContainerii {
+  margin-top: 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-right: auto;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 7rem;
+  padding: 3rem;
+  background-color: var(--tan);
+  border: 1px solid var(--gray);
+  border-right: none;
+}
+
+.card:last-child {
+  border-right: 1px solid var(--gray);
+}
+
+.indexInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.description {
+  opacity: 0.7;
+  font-size: 1.4rem;
+}
+
+.icon {
+  color: var(--green);
+  opacity: 0.6;
+}
+
+.card:nth-child(2) {
+  background-color: var(--pink);
+}
+
+@media screen and (max-width: 1268px) {
+  .bottom {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card:nth-child(4) {
+    border-right: 1px solid var(--gray);
+  }
+
+  .card:nth-child(5) {
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .top {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+    width: 100%;
+  }
+
+  .headingii {
+    text-align: center;
+    width: 100%;
+  }
+
+  .problemContainer {
+    flex-direction: column;
+  }
+
+  .pattern {
+    width: 100%;
+  }
+
+  .card {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
