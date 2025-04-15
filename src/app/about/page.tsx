@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <main>
       <PageIntro
-        title='We build e-commerce experiences that drive growth'
+        title='We build ecommerce experiences that drive growth'
         introTitle='About Us'
         src={Img1}
         copy='Fonts & Footers is a specialized e-commerce development agencyhelping businesses of all sizes establish and optimize their online presence. With a focus on user experience, conversion optimization, and technical excellence, we create online stores that not only look great but also drive real business results.'
