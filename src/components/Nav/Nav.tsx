@@ -8,9 +8,10 @@ import { useTransitionRouter } from "next-view-transitions";
 // import Button from "../Button/Button";
 
 const navItems = [
-  { text: "Works", href: "/#work" },
   { text: "About", href: "/about" },
   { text: "Services", href: "/#services" },
+  { text: "Pricing", href: "/pricing" },
+  { text: "Works", href: "/portfolio" },
   { text: "Journal", href: "/#blog" },
   { text: "Start a Project", href: "/#contact" },
 ];

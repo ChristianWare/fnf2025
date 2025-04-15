@@ -94,6 +94,11 @@
   background-color: var(--lightGray);
   border: 1px solid var(--black);
   text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+
+.navItem:hover {
+  background-color: var(--orange);
 }
 
 .navItem:last-child {
