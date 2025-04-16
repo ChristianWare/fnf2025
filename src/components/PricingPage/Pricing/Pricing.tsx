@@ -28,7 +28,6 @@ const Pricing = () => {
                 </div>
                 <div className={styles.featureBox}>
                   <p className={styles.feature}>{x.features}</p>
-                {/* <div className={styles.timeframe}>{x.timeframe}</div> */}
                 </div>
               </div>
             ))}

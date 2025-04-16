@@ -1,6 +1,5 @@
 .container {
   padding-top: 10rem;
-  /* background-color: var(--tan); */
 }
 
 .heading {
@@ -38,11 +37,30 @@
 
 .title {
   font-family: var(--NeueHaasGroteskMedium);
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  background-color: var(--tan);
+  text-align: center;
+  width: 100%;
 }
 
 .description {
   font-size: 1.4rem;
   color: var(--grayii);
+}
+
+.card:nth-child(1) .title {
+  background-color: var(--orange);
+}
+
+.card:nth-child(2) .title {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.card:nth-child(3) .title {
+  background-color: var(--black);
+  color: var(--tan);
 }
 
 .price {
@@ -70,21 +88,33 @@
 .featureBox {
   border: 1px solid var(--gray);
   padding: 1rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
   background-color: var(--tan);
+  height: 100%;
+}
+
+.card:nth-child(1) .featureBox {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.card:nth-child(2) .featureBox {
+  background-color: var(--pink);
+}
+
+.card:nth-child(3) .featureBox {
+  background-color: var(--black);
 }
 
 .feature {
   font-family: var(--NeueHaasGroteskMedium);
-  color: var(--grayii);
+  color: var(--black);
   width: 100%;
   text-transform: none;
   font-size: 1.4rem;
+}
+
+.card:nth-child(3) .featureBox .feature {
+  color: var(--tan);
 }
 
 .feature:last-child {
