@@ -1,119 +1,42 @@
 export const pricing = [
   {
-    id: 2845654656,
-    description: "Optimize your online presence and attract more visitors.",
-    href: "/services/business-websites",
-    mostPopular: false,
-    prices: [
-      {
-        id: 1,
-        price: "295 / Month",
-      },
-      {
-        id: 2,
-        price: "2,832 / Year",
-      },
-    ],
-    includes: [
-      {
-        id: 28.2,
-        feature: "Stripe Payment Gateway",
-      },
-      {
-        id: 28.3,
-        feature: "Custom coded website",
-      },
-      {
-        id: 28.4,
-        feature: "SEO Services",
-      },
-      {
-        id: 28.5,
-        feature: "12 Blog Articles/year",
-      },
-    ],
-    btnType: "tertiary",
+    id: 1,
+    title: "Starter Store",
+    description:
+      "Small businesses launching their first e-commerce presence or entrepreneurs with straightforward product catalogs.",
+    price: "5,900",
+    timeframe: "4-6 weeks",
+    features:
+      "Custom design on your chosen platform (Shopify, WooCommerce, or Wix) with a mobile-responsive layout. Includes setup for up to 25 products, basic payment gateway integration, standard shipping configuration, essential SEO implementation, and comprehensive launch support to ensure your store starts strong.",
   },
   {
-    id: 27,
-    description: "Comprehensive e-commerce platforms designed to drive sales.",
-    href: "/services/ecommerce-stores",
-    mostPopular: true,
-    prices: [
-      {
-        id: 1,
-        price: "315 / Month",
-      },
-      {
-        id: 2,
-        price: "3,024 / Year",
-      },
-    ],
-    includes: [
-      {
-        id: 27.2,
-        feature: "Stripe Payment Gateway",
-      },
-      {
-        id: 27.3,
-        feature: "Custom coded website",
-      },
-      {
-        id: 27.4,
-        feature: "SEO Services",
-      },
-      {
-        id: 27.5,
-        feature: "24 Blog Articles/year",
-      },
-      {
-        id: 27.6,
-        feature: "Chat bot",
-      },
-    ],
+    id: 2,
+    title: "Growth Store",
+    description:
+      "Established businesses requiring more sophisticated e-commerce functionality or those with larger product catalogs.",
+    price: "7,500",
+    timeframe: "8-10 weeks",
+    features:
+      "All Starter Store features plus advanced user experience design and support for up to 100 products. Includes multiple payment gateways, complex shipping rules, advanced product filtering, wishlist functionality, basic CRM integration, email marketing setup, and 30 days of dedicated post-launch support to optimize your store's performance.",
   },
   {
-    id: 28,
-    description: "Optimize your online presence and attract more visitors.",
-    href: "/services/booking-platforms",
-    mostPopular: false,
-
-    prices: [
-      {
-        id: 1,
-        price: "375 / Month",
-      },
-      {
-        id: 2,
-        price: "3,600 / Year",
-      },
-    ],
-    includes: [
-      {
-        id: 28.2,
-        feature: "Stripe Payment Gateway",
-      },
-      {
-        id: 28.3,
-        feature: "Custom coded website",
-      },
-      {
-        id: 28.4,
-        feature: "SEO Services",
-      },
-      {
-        id: 28.5,
-        feature: "36 Blog Articles/year",
-      },
-      {
-        id: 28.6,
-        feature: "Chat bot",
-      },
-      {
-        id: 28.7,
-        feature: "Email Marketing Setup",
-      },
-    ],
-    btnType: "tertiary",
+    id: 3,
+    title: "Enterprise Solution",
+    description:
+      "Larger businesses with complex requirements, extensive product catalogs, or specialized e-commerce needs.",
+    price: "10,000",
+    timeframe: "12-16 weeks",
+    features:
+      "Everything in the Growth Store plus premium UX/UI design and unlimited product support. Includes custom functionality development, full systems integration (ERP, CRM, inventory), multi-currency support, advanced analytics, personalization features, conversion optimization, and 60 days of comprehensive post-launch support and training for your team.",
+  },
+  {
+    id: 4,
+    title: "Specialized E-commerce Solutions",
+    description:
+      "Businesses with specific e-commerce models or unique requirements that need customized solutions.",
+    price: "Custom",
+    timeframe: "Varies",
+    features:
+      "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",
   },
 ] as const;

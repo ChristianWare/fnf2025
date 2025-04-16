@@ -1,5 +1,5 @@
-import LayoutWrapper from "@/components/LayoutWrapper";
 import styles from "./OurApproach.module.css";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
 
 const data = [

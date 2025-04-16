@@ -3,10 +3,11 @@
 import styles from "./Solutionii.module.css";
 import Img1 from "../../../public/images/integration.jpg";
 import { useState } from "react";
-import Image from "next/image";
-import SectionIntro from "../SectionIntro/SectionIntro";
+// import Image from "next/image";
+// import SectionIntro from "../SectionIntro/SectionIntro";
 import { motion, AnimatePresence } from "framer-motion";
 import LayoutWrapper from "../LayoutWrapper";
+import ParallaxImage from "../ParallaxImage/ParallaxImage";
 
 const data = [
   {
@@ -74,13 +75,6 @@ export default function Solutionii() {
           </div>
           <div className={styles.right}>
             <div className={styles.rightTop}>
-              <div className={styles.sectionHeadingContainer}>
-                <SectionIntro
-                  title='Projects'
-                  color='black'
-                  dotColor='blackDot'
-                />
-              </div>
               <h2 className={styles.heading}>
                 Featured
                 <br />
@@ -91,7 +85,6 @@ export default function Solutionii() {
                 showcase it with impactful design that highlights the value you
                 offer.
               </p>
-            
             </div>
             <AnimatePresence mode='wait'>
               <motion.div
@@ -103,11 +96,16 @@ export default function Solutionii() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className={styles.imgContainer}
               >
-                <Image
+                {/* <Image
                   src={data[activeIndex].src}
                   alt=''
                   fill
                   className={styles.img}
+                /> */}
+                <ParallaxImage
+                  src={data[activeIndex].src}
+                  alt=''
+                  title='Your Online Store'
                 />
               </motion.div>
             </AnimatePresence>
