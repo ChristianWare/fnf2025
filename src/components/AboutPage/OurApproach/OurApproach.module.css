@@ -1,7 +1,12 @@
 .container {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: var(--tan);
+}
+
+.white {
+  background-color: var(--white);
 }
 
 .top {

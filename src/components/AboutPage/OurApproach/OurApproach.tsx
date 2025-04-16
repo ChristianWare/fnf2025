@@ -25,9 +25,13 @@ const data = [
   },
 ];
 
-export default function OurApproach() {
+interface Props {
+  background?: string;
+}
+
+export default function OurApproach({ background = "" }: Props) {
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${styles[background]}`}>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>

@@ -8,6 +8,7 @@ interface Props {
   introTitle: string;
   src: StaticImageData;
   copy: string;
+  
 }
 
 export default function PageIntro({ title, introTitle, src, copy }: Props) {
