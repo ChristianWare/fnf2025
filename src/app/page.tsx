@@ -11,6 +11,7 @@ import Pricing from "@/components/Pricing/Pricing";
 import AboutHero from "@/components/AboutHero/AboutHero";
 // import ShuffleHero from "@/components/ShuffleHero/ShuffleHero";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
+import Solutionii from "@/components/Solutionii/Solutionii";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Impressions />
         <AboutHero />
+        <Solutionii />
         <ServicesSection />
         <ServiceDetails />
         <ProjectSection />

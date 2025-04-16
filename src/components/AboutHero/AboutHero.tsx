@@ -85,7 +85,6 @@ export default function AboutHero(): JSX.Element {
         </div>
         <Mission />
         <Owner />
-        {/* <HowItWorks /> */}
       </LayoutWrapper>
     </section>
   );
