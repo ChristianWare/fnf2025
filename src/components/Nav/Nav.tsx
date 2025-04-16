@@ -13,7 +13,7 @@ const navItems = [
   { text: "Pricing", href: "/pricing" },
   { text: "Works", href: "/portfolio" },
   { text: "Journal", href: "/blog" },
-  { text: "Start a Project", href: "/#contact" },
+  { text: "Start a Project", href: "/contact" },
 ];
 
 export default function Nav() {
