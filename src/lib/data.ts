@@ -1,3 +1,8 @@
+import Thundertrails from "../../public/images/thunder.jpg";
+import Chuxly from "../../public/images/chuxly.png";
+import Honey from "../../public/images/honey.jpg";
+import ERREntals from "../../public/images/erRentals.png";
+
 export const pricing = [
   {
     id: 1,
@@ -38,5 +43,28 @@ export const pricing = [
     timeframe: "Varies",
     features:
       "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",
+  },
+] as const;
+
+export const projects = [
+  {
+    id: 1,
+    title: "Thundertrails",
+    src: Thundertrails,
+  },
+  {
+    id: 2,
+    title: "Chuxly",
+    src: Chuxly,
+  },
+  {
+    id: 3,
+    title: "Golden Drips",
+    src: Honey,
+  },
+  {
+    id: 4,
+    title: "Elite Retreat Rentals",
+    src: ERREntals,
   },
 ] as const;
