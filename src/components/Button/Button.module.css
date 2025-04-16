@@ -57,7 +57,7 @@
 .primary {
   color: var(--black);
   background-color: transparent;
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
 }
 
 .primary:hover {
@@ -74,7 +74,7 @@
 
 .secondary {
   background-color: var(--orange);
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
   color: var(--brown);
 }
 
@@ -85,7 +85,7 @@
 .black {
   background-color: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
 }
 
 .black:hover {

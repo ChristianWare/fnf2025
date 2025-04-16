@@ -49,7 +49,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   position: relative;
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
   border-bottom: none;
 }
 

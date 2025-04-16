@@ -19,6 +19,6 @@
 
 .span {
   display: block;
-  border: 1px solid var(--black);
-  padding: .5rem 1rem;
+  border: 1px solid var(--gray);
+  padding: 0.5rem 1rem;
 }
