@@ -1,20 +1,15 @@
 import styles from "./ServiceHero.module.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
-// import Img1 from "../../../../public/images/servicesHeroii.jpg";
 import Img2 from "../../../../public/images/aboutii.jpeg";
 import Arrow from "../../../../public/icons/arrow.svg";
 
 export default function ServiceHero() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
         <div className={styles.content}>
-          <div className={styles.top}>
+          <div className={styles .top}>
             <div className={styles.topLeft}>
-              <h1 className={styles.heading}>
-                Comprehensive ecommerce solutions
-              </h1>
+              <h2 className={styles.heading}>Our work speaks for itself </h2>
             </div>
             <div className={styles.imgContainer}>
               <Image src={Img2} alt='' title='' fill className={styles.img} />
@@ -35,7 +30,6 @@ export default function ServiceHero() {
             </div>
           </div>
         </div>
-      </LayoutWrapper>
     </section>
   );
 }

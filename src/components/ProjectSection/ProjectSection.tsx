@@ -11,6 +11,7 @@ import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
+import ServiceHero from "../ServicePage/ServiceHero/ServiceHero";
 
 const projectData = [
   {
@@ -269,6 +270,7 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
+        <ServiceHero />
         <div className={styles.btnContainer}>
           <Button btnType='secondary' text='View All Projects' href='/' />
         </div>

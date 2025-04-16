@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--tan);
+  /* background-color: var(--tan); */
   padding-top: 7rem;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .bottomLeft {
-  background-color: var(--tan);
+  /* background-color: var(--tan); */
   grid-column: span 3;
   display: grid;
   /* border: 1px solid var(--gray); */
