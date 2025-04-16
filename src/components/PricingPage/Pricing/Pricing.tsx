@@ -24,7 +24,7 @@ const Pricing = () => {
                 </div>
                 <div className={styles.price}>${x.price}</div>
                 <div className={styles.btnContainer}>
-                  <Button text='Book Your session' href='/' btnType='primary' />
+                  <Button text='Book Your session' href='/contact' btnType='primary' />
                 </div>
                 <div className={styles.featureBox}>
                   <p className={styles.feature}>{x.features}</p>

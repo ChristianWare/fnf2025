@@ -53,6 +53,7 @@
   padding: 2rem;
   border: 1px solid var(--black);
   border-left: none;
+  width: 100%;
 }
 
 .box:nth-child(1) {

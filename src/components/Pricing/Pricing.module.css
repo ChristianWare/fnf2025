@@ -1,4 +1,5 @@
 .container {
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
@@ -7,127 +8,128 @@
 }
 
 .bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
   margin-top: 5rem;
 }
 
-.dataMapContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 7rem;
-}
-
 .card {
-  border: 1px solid var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--gray);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 5rem;
-  width: 100%;
-  border-left: none;
-  border-right: none;
-  position: relative;
-}
-
-.card:last-child {
-  border-right: 1px solid var(--black);
-}
-
-.card:first-child {
-  border-left: 1px solid var(--black);
-
-}
-
-.tab {
-  position: absolute;
-  top: -30px;
-  left: -1px;
-  background-color: var(--white);
-  border: 1px solid var(--black);
-  border-bottom: none;
-  padding: 0.5rem 1rem;
+  justify-content: flex-start;
+  gap: 3rem;
+  height: 100%;
 }
 
 .cardTop {
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 3rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: var(--tan);
-  padding: 3rem;
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
-/* .title,
-.price {
-  color: #07feff;
-  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
-  background: rgba(7, 254, 255, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(7, 254, 255, 0.3);
-  display: inline-block;
-  transform: perspective(1000px) translateZ(0);
-  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
-} */
-
-.price {
-  font-size: 2rem;
+.title {
+  font-family: var(--NeueHaasGroteskMedium);
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  background-color: var(--tan);
   text-align: center;
   width: 100%;
 }
 
-.cardBottom {
-  width: 100%;
+.description {
+  font-size: 1.4rem;
+  color: var(--grayii);
 }
 
-.itemContainer {
-  list-style: none;
+.card:nth-child(1) .title {
+  background-color: var(--orange);
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  border-top: 1px solid var(--lightGray);
-  padding: 1rem 0rem;
+.card:nth-child(2) .title {
+  background-color: var(--pink);
+  color: var(--white);
 }
 
-.blackDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.card:nth-child(3) .title {
   background-color: var(--black);
-  display: block;
-  margin-left: auto;
+  color: var(--tan);
+}
+
+.price {
+  font-size: 3rem;
 }
 
 .btnContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
+  display: grid;
+  width: 100%;
 }
 
-@media screen and (max-width: 1268px) {
-  .dataMapContainer {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.includesSection {
+  list-style: none;
+}
 
-  .card:nth-child(3) {
-    border-right: 1px solid var(--black);
-  }
- 
-  .card:nth-child(4) {
-    border-left: 1px solid var(--black);
-  }
+.includesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
 
-  
+.featureBox {
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  background-color: var(--tan);
+  height: 100%;
+}
+
+.card:nth-child(1) .featureBox {
+  background-color: var(--orange);
+}
+
+.card:nth-child(2) .featureBox {
+  background-color: var(--pink);
+}
+
+.card:nth-child(3) .featureBox {
+  background-color: var(--black);
+}
+
+.feature {
+  font-family: var(--NeueHaasGroteskMedium);
+
+  width: 100%;
+  text-transform: none;
+  font-size: 1.4rem;
+}
+
+.card:nth-child(3) .featureBox .feature {
+  color: var(--tan);
+}
+
+.feature:last-child {
+  border-bottom: none;
+}
+
+.btnContainerii {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 1068px) {
@@ -141,39 +143,21 @@
   }
 
   .card:nth-child(2) {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--gray);
   }
-  
-  .card:nth-child(3) {
-    border-left: 1px solid var(--black);
-    border-right: none;
-  }
- 
-  .card:nth-child(4) {
-    border-left: none;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .tab {
-    top: -27px;
+  .card:nth-child(3) {
+    border-left: 1px solid var(--gray);
   }
 }
 
 @media screen and (max-width: 668px) {
-  .dataMapContainer {
+  .bottom {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .card:nth-child(odd) {
-    border-right: 1px solid var(--black);
-  }
- 
-  .card:nth-child(even) {
-    border-left: 1px solid var(--black);
-  }
-
-  .tab {
-    top: -24px;
+  .btnContainerii {
+    display: grid;
+    width: 100%;
   }
 }

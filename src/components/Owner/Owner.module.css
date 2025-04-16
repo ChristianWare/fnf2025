@@ -1,8 +1,8 @@
 .container {
   background-color: var(--tan);
   /* padding-top: 20rem; */
-  padding-bottom: 10rem;
-  padding-top: 10rem;
+  /* padding-top: 5rem; */
+  padding-bottom: 5rem;
 }
 
 .content {
@@ -12,7 +12,7 @@
 }
 
 .leftTop {
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
   background-color: var(--tan);
   border-bottom: none;
   width: fit-content;
@@ -23,7 +23,7 @@
 }
 
 .leftBottom {
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
   background-color: var(--tan);
   border-top: none;
   padding: 1rem 2rem;
@@ -39,7 +39,7 @@
   font-size: 1.6rem;
   letter-spacing: -0.02em;
   line-height: 1.3;
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
   padding: 3rem;
 }
 
@@ -55,7 +55,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  order: -1
+  order: -1;
 }
 
 .pulsingCircles {
@@ -142,7 +142,6 @@
     width: 200px;
     height: 200px;
   }
-
 }
 
 @keyframes pulse {
