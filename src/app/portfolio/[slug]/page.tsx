@@ -28,41 +28,6 @@ export default function ProjectDetail() {
   }
 
   return (
-    // <LayoutWrapper>
-    //   <div className={styles.container}>
-    //     <Link href='/portfolio' className={styles.backLink}>
-    //       ← Back to projects
-    //     </Link>
-
-    //     <h1 className={styles.title}>{project.title}</h1>
-
-    //     <div className={styles.imageContainer}>
-    //       {/* <Image
-    //         src={project.src}
-    //         alt={project.title}
-    //         className={styles.image}
-    //         fill
-    //         priority
-    //         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-    //       /> */}
-    //     </div>
-
-    //     <div className={styles.tags}>
-    //       {project.tags &&
-    //         project.tags.map((tag) => (
-    //           <span key={tag} className={styles.tag}>
-    //             {tag}
-    //           </span>
-    //         ))}
-    //     </div>
-
-    //     <div className={styles.description}>
-    //       <p>{project.description || "No description available."}</p>
-
-    //       {/* Add more project details here */}
-    //     </div>
-    //   </div>
-    // </LayoutWrapper>
     <main>
       <div className={styles.scrollContainer}>
         <SlugIntro project={project} />
