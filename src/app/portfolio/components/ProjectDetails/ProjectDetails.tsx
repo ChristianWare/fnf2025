@@ -3,6 +3,7 @@ import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { StaticImageData } from "next/image";
 import Stats from "../Stats/Stats";
+import Description from "../Description/Description";
 
 interface TagItem {
   id: number;
@@ -77,6 +78,7 @@ export default function ProjectDetails({ project }: Props) {
           </div>
         </div>
         <Stats />
+        <Description project={project} />
       </LayoutWrapper>
     </section>
   );
