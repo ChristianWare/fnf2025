@@ -1,7 +1,6 @@
 'use client'
 
 import {  useParams } from "next/navigation";
-// import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/data";
 import LayoutWrapper from "@/components/LayoutWrapper";
@@ -10,11 +9,8 @@ import styles from './ProjectDetail.module.css'
 export default function ProjectDetail() {
   const params = useParams();
   const slug = params.slug as string;
-
-  // Find the project that matches the slug
   const project = projects.find((p) => p.slug === slug);
 
-  // If the project doesn't exist, provide a way to go back
   if (!project) {
     return (
       <LayoutWrapper>

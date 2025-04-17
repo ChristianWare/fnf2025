@@ -49,6 +49,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   user-select: none;
+  white-space: nowrap;
 }
 
 .black {

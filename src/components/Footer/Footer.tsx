@@ -97,18 +97,16 @@ const data2 = [
 export default function Footer() {
   return (
     <footer className={styles.container}>
-      <div className={styles.top}>
-        <SectionIntro
-          title='Fonts & Footers'
-          color='tan'
-          dotColor='tanDot'
-        />
-      </div>
       <div className={styles.content}>
         <div className={styles.left}>
-          <h3 className={styles.heading}>
-            Your E-commerce Specialists
-          </h3>
+          <div className={styles.top}>
+            <SectionIntro
+              title='Fonts & Footers'
+              color='tan'
+              dotColor='tanDot'
+            />
+          </div>
+          <h3 className={styles.heading}>Your E-commerce Specialists</h3>
           <p className={styles.copy}>
             A surprise for your first order by subscribing to the newsletter
           </p>

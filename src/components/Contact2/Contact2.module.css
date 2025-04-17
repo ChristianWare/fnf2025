@@ -1,6 +1,7 @@
 .container {
   background-color: var(--tan);
   position: relative;
+  padding-top: 10rem;
 }
 
 .overlay {

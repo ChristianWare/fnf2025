@@ -1,16 +1,8 @@
 .content {
   border: 1px solid var(--tan);
+  border-top: none;
   display: grid;
   grid-template-columns: 2fr 3fr;
-}
-
-.top {
-  border: 1px solid var(--tan);
-  border-bottom: none;
-  width: fit-content;
-  padding: 1rem 2rem;
-  position: relative;
-  top: 1px;
 }
 
 .left {
@@ -21,6 +13,28 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
+  position: relative;
+}
+
+.left::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 1px;
+  width: 49%;
+  background-color: var(--tan);
+}
+
+.top {
+  border: 1px solid var(--tan);
+  border-bottom: none;
+  width: 51%;
+  padding: 1rem 2rem;
+  position: absolute;
+  content: "";
+  left: -1px;
+  top: -46px;
 }
 
 .heading {
@@ -66,6 +80,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 3rem;
+  border-top: 1px solid var(--tan);
 }
 
 .title {
