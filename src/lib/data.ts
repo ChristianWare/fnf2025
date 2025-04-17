@@ -1,7 +1,7 @@
 import Thundertrails from "../../public/images/thunder.jpg";
 // import Chuxly from "../../public/images/chuxly.png";
 // import Honey from "../../public/images/honey.jpg";
-// import ERREntals from "../../public/images/erRentals.png";
+import ERREntals from "../../public/images/erRentals.png";
 
 export const pricing = [
   {
@@ -97,30 +97,43 @@ export const projects = [
           "The overall look and feel of the brand is more in line with how they want to present themselves to their customer base locally and internationally.",
       },
     ],
+    gallery: [
+      {
+        id: 1.6,
+        src: ERREntals,
+      },
+      {
+        id: 1.7,
+        src: ERREntals,
+      },
+      {
+        id: 1.8,
+        src: ERREntals,
+      },
+      {
+        id: 1.9,
+        src: ERREntals,
+      },
+      {
+        id: 2.99,
+        src: ERREntals,
+      },
+      {
+        id: 2.98,
+        src: ERREntals,
+      },
+      {
+        id: 2.97,
+        src: ERREntals,
+      },
+      {
+        id: 2.96,
+        src: ERREntals,
+      },
+      {
+        id: 2.95,
+        src: ERREntals,
+      },
+    ],
   },
-  // {
-  //   id: 2,
-  //   title: "Chuxly",
-  //   slug: "chuxly",
-  //   src: Chuxly,
-  //   description: "A detailed description about the Chuxly project.",
-  //   tags: ["Ecommerce", "UX Design"],
-  // },
-  // {
-  //   id: 3,
-  //   title: "Golden Drips",
-  //   slug: "golden-drips",
-  //   src: Honey,
-  //   description: "A detailed description about the Golden Drips project.",
-  //   tags: ["Ecommerce", "Branding"],
-  // },
-  // {
-  //   id: 4,
-  //   title: "Elite Retreat Rentals",
-  //   slug: "elite-retreat-rentals",
-  //   src: ERREntals,
-  //   description:
-  //     "A detailed description about the Elite Retreat Rentals project.",
-  //   tags: ["Ecommerce", "Web Development"],
-  // },
 ] as const;

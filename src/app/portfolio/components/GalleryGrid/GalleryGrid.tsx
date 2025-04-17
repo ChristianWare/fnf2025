@@ -1,89 +1,95 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 
-// import Image from "next/image";
+import Image from "next/image";
 import styles from "./GalleryGrid.module.css";
-// import { useState } from "react";
+import { useState } from "react";
 import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
-// import Back from "../../public/icons/back.svg";
-// import Next from "../../public/icons/next.svg";
-// import Cancel from "../../public/icons/close.svg";
+import { StaticImageData } from "next/image";
+import Back from "../../../../../public/icons/next.svg";
+import Next from "../../../../../public/icons/next.svg";
+import Cancel from "../../../../../public/icons/next.svg";
 
-// interface iAppProps {
-//   images: any;
-// }
+interface GalleryItem {
+  id: number;
+  src: StaticImageData;
+}
 
-// const GalleryGrid = ({ images }: iAppProps) => {
-const GalleryGrid = () => {
-  //   const [slideNumber, setSlideNumber] = useState(0);
-  //   const [openModal, setOpenModal] = useState(false);
+interface GalleryGridProps {
+  gallery: readonly GalleryItem[];
+}
 
-  //   const handleOpenModal = (index: any) => {
-  //     setSlideNumber(index);
-  //     setOpenModal(true);
-  //   };
+const GalleryGrid = ({ gallery }: GalleryGridProps) => {
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
 
-  //   const handleCloseModal = () => {
-  //     setOpenModal(false);
-  //   };
+  const handleOpenModal = (index: number) => {
+    setSlideNumber(index);
+    setOpenModal(true);
+  };
 
-  //   const prevSlide = () => {
-  //     slideNumber === 0
-  //       ? setSlideNumber(images.length - 1)
-  //       : setSlideNumber(slideNumber - 1);
-  //   };
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
 
-  //   const nextSlide = () => {
-  //     slideNumber + 1 === images.length
-  //       ? setSlideNumber(0)
-  //       : setSlideNumber(slideNumber + 1);
-  //   };
+  const prevSlide = () => {
+    slideNumber === 0
+      ? setSlideNumber(gallery.length - 1)
+      : setSlideNumber(slideNumber - 1);
+  };
+
+  const nextSlide = () => {
+    slideNumber + 1 === gallery.length
+      ? setSlideNumber(0)
+      : setSlideNumber(slideNumber + 1);
+  };
 
   return (
     <div className={styles.container}>
-      {/* <h2 className={styles.heading2}>gallery</h2> */}
       <SectionHeading3 title='Gallery' />
       <div className={styles.gallery}>
-        {/* {images.map((slide: any, index: any) => (
-          <div key={index} className={styles.imgContainer4}>
+        {gallery.map((item, index) => (
+          <div key={item.id} className={styles.imgContainer4}>
             <Image
-              src={urlFor(slide).url()} // Use urlFor to generate the image URL
-              alt={slide?.alt || `Image ${index + 1}`}
+              src={item.src}
+              alt={`Gallery image ${index + 1}`}
               fill
               className={styles.img}
               onClick={() => handleOpenModal(index)}
             />
           </div>
-        ))} */}
-        {/* {openModal && ( */}
-        {/* <div className={styles.modalContainer}>
-              <Cancel
-                className={styles.close}
-                onClick={handleCloseModal}
+        ))}
+
+        {openModal && (
+          <div className={styles.modalContainer}>
+            <Cancel
+              className={styles.close}
+              onClick={handleCloseModal}
+              width={40}
+              height={40}
+            />
+            <div className={styles.fullScreenImage}>
+              <Back
+                className={styles.prev}
+                onClick={prevSlide}
                 width={40}
                 height={40}
               />
-              <div className={styles.fullScreenImage}>
-                <Back
-                  className={styles.prev}
-                  onClick={prevSlide}
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src={urlFor(images[slideNumber]).url()} // Use urlFor to generate the image URL
-                  alt={images[slideNumber]?.alt || `Image ${slideNumber + 1}`}
-                  fill
-                  className={styles.modalImg}
-                />
-                <Next
-                  className={styles.next}
-                  onClick={nextSlide}
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </div> */}
-        {/* )} */}
+              <Image
+                src={gallery[slideNumber].src}
+                alt={`Gallery image ${slideNumber + 1}`}
+                fill
+                className={styles.modalImg}
+              />
+              <Next
+                className={styles.next}
+                onClick={nextSlide}
+                width={40}
+                height={40}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

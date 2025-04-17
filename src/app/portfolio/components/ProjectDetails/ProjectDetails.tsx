@@ -24,6 +24,11 @@ interface ResultItem {
   resultDetail: string;
 }
 
+interface GalleryItem {
+  id: number;
+  src: StaticImageData;
+}
+
 interface Props {
   project: {
     title: string;
@@ -36,6 +41,7 @@ interface Props {
     href: string;
     challenge: readonly ChallengeItem[];
     results: readonly ResultItem[];
+    gallery?: readonly GalleryItem[];
   };
 }
 
@@ -83,11 +89,11 @@ export default function ProjectDetails({ project }: Props) {
         </div>
         <Stats />
         <Description project={project} />
-        <VideoSection /> 
+        <VideoSection />
         <Challenge project={project} />
-        <VideoSection /> 
+        <VideoSection />
         <Results project={project} />
-        <GalleryGrid />
+        {project.gallery && <GalleryGrid gallery={project.gallery} />}
       </LayoutWrapper>
     </section>
   );
