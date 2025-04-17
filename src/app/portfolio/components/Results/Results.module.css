@@ -1,17 +1,21 @@
 .container {
-  margin-top: 20rem;
+  margin-top: 10rem;
+}
+
+.bottom {
   display: grid;
   grid-template-columns: 2fr 5fr;
 }
 
 .copy {
+  margin-bottom: 3rem;
   padding-left: 3rem;
   color: var(--grayii);
   font-size: 1.4rem;
 }
 
 @media screen and (max-width: 568px) {
-  .container {
+  .bottom {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
   }

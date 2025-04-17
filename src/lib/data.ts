@@ -1,7 +1,7 @@
 import Thundertrails from "../../public/images/thunder.jpg";
-import Chuxly from "../../public/images/chuxly.png";
-import Honey from "../../public/images/honey.jpg";
-import ERREntals from "../../public/images/erRentals.png";
+// import Chuxly from "../../public/images/chuxly.png";
+// import Honey from "../../public/images/honey.jpg";
+// import ERREntals from "../../public/images/erRentals.png";
 
 export const pricing = [
   {

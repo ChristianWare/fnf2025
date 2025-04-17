@@ -4,6 +4,10 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import { StaticImageData } from "next/image";
 import Stats from "../Stats/Stats";
 import Description from "../Description/Description";
+import VideoSection from "../VideoSection/VideoSection";
+import Results from "../Results/Results";
+import Challenge from "../Challenge/Challenge";
+import GalleryGrid from "../GalleryGrid/GalleryGrid";
 
 interface TagItem {
   id: number;
@@ -79,6 +83,11 @@ export default function ProjectDetails({ project }: Props) {
         </div>
         <Stats />
         <Description project={project} />
+        <VideoSection /> 
+        <Challenge project={project} />
+        <VideoSection /> 
+        <Results project={project} />
+        <GalleryGrid />
       </LayoutWrapper>
     </section>
   );
