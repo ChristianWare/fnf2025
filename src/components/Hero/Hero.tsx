@@ -8,8 +8,6 @@ import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../Button/Button";
-// import Image from "next/image";
-// import Img1 from "../../../public/images/heroiii.jpeg";
 import ShuffleHero from "../ShuffleHero/ShuffleHero";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -57,11 +57,16 @@ const Logo = ({ size = "", color = "" }: Props) => {
           onTransitionReady: slideInOut,
         });
       }}
-      href={'/'}
+      href={"/"}
       className={`${styles.logo} ${styles[size]} ${styles[color]}`}
     >
-      {/* Fonts & Footers */}
-      <SectionIntro title='FONTS & FOOTERS' color='black' dotColor='blackDot' />
+      <div className={styles.logoBox}>
+        <SectionIntro
+          title='FONTS & FOOTERS'
+          color='black'
+          dotColor='blackDot'
+        />
+      </div>
     </Link>
   );
 };

@@ -4,7 +4,7 @@
   justify-content: flex-start;
   gap: 2rem;
   height: fit-content;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 
 .circle {
@@ -46,7 +46,7 @@
   text-align: center;
   font-size: 1.4rem;
   font-weight: 500;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   text-transform: uppercase;
   user-select: none;
   white-space: nowrap;

@@ -12,7 +12,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 400px;
+  min-height: 500px;
   border: 1px solid var(--gray);
   display: flex;
   flex-direction: column;
@@ -60,8 +60,10 @@
 }
 
 .heading {
-  width: 60%;
+  width: 50%;
   color: var(--tan);
+  font-size: 5rem;
+  letter-spacing: -1px;
 }
 
 .middle {
