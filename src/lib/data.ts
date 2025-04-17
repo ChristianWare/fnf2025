@@ -50,21 +50,34 @@ export const projects = [
   {
     id: 1,
     title: "Thundertrails",
+    slug: "thundertrails",
     src: Thundertrails,
+    description: "A detailed description about the Thundertrails project.",
+    tags: ["Ecommerce", "Web Development"],
   },
   {
     id: 2,
     title: "Chuxly",
+    slug: "chuxly",
     src: Chuxly,
+    description: "A detailed description about the Chuxly project.",
+    tags: ["Ecommerce", "UX Design"],
   },
   {
     id: 3,
     title: "Golden Drips",
+    slug: "golden-drips",
     src: Honey,
+    description: "A detailed description about the Golden Drips project.",
+    tags: ["Ecommerce", "Branding"],
   },
   {
     id: 4,
     title: "Elite Retreat Rentals",
+    slug: "elite-retreat-rentals",
     src: ERREntals,
+    description:
+      "A detailed description about the Elite Retreat Rentals project.",
+    tags: ["Ecommerce", "Web Development"],
   },
 ] as const;
