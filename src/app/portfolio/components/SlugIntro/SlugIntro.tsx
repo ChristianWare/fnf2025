@@ -9,17 +9,24 @@ import { useRef } from "react";
 import gsap from "gsap";
 
 // Define interface for the props
-interface Props {
+interface TagItem {
+  id: number;
+  tag: string;
+}
+
+// Define interface for the props
+interface SlugIntroProps {
   project: {
     title: string;
     src: StaticImageData;
     description?: string;
+    tags?: readonly TagItem[];
   };
 }
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SlugIntro({ project }: Props) {
+export default function SlugIntro({ project }: SlugIntroProps) {
   const refs = {
     overlay: useRef<HTMLDivElement>(null),
   };

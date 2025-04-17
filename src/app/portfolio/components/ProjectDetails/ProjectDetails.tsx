@@ -1,7 +1,8 @@
-import Button from "@/components/Button/Button";
 import styles from "./ProjectDetails.module.css";
+import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { StaticImageData } from "next/image";
+import Stats from "../Stats/Stats";
 
 interface TagItem {
   id: number;
@@ -65,14 +66,17 @@ export default function ProjectDetails({ project }: Props) {
             </div>
             <div className={styles.isRight}>
               <h1 className={styles.heading}>{project.h1}</h1>
-              <div className={styles.tagContainer}>{project.tags?.map((x) => (
-                <span className={styles.tag} key={x.id}>
-                  {x.tag}
-                </span>
-              ))}</div>
+              <div className={styles.tagContainer}>
+                {project.tags?.map((x) => (
+                  <span className={styles.tag} key={x.id}>
+                    {x.tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+        <Stats />
       </LayoutWrapper>
     </section>
   );

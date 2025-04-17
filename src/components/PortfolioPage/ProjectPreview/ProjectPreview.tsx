@@ -5,7 +5,6 @@ import { projects } from "@/lib/data";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import Link from "next/link";
 
-
 export default function ProjectPreview() {
   return (
     <section className={styles.container}>
@@ -27,9 +26,13 @@ export default function ProjectPreview() {
                   </div>
                   <div className={styles.cardBottom}>
                     <h3 className={styles.title}>{x.title}</h3>
-                    <span className={styles.tag}>
-                      {x.tags ? x.tags[0] : "Ecommerce"}
-                    </span>
+                    <div className={styles.tagContainer}>
+                      {x.tags?.map((tag) => (
+                        <span key={tag.id} className={styles.tag}>
+                          {tag.tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Link>
