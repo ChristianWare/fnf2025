@@ -25,6 +25,7 @@ export default function Home() {
         <ServiceDetails />
         <ProjectSection />
         <Pricing />
+        {/* Faq's here */}
         <OtherThings />
         <FinalCTA />
         <Contact2 />
