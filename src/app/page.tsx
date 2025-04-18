@@ -12,6 +12,7 @@ import AboutHero from "@/components/AboutHero/AboutHero";
 // import ShuffleHero from "@/components/ShuffleHero/ShuffleHero";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Solutionii from "@/components/Solutionii/Solutionii";
+import Faq from "@/components/Faq/Faq";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
         <ServiceDetails />
         <ProjectSection />
         <Pricing />
-        {/* Faq's here */}
+        <Faq />
         <OtherThings />
         <FinalCTA />
         <Contact2 />

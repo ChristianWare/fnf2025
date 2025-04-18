@@ -34,7 +34,7 @@
   position: absolute;
   content: "";
   left: -1px;
-  top: -46px;
+  top: -37px;
 }
 
 .heading {
@@ -138,13 +138,28 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .top {
+    top: -33px;
+  }
+
   .left {
     border-right: none;
     border-bottom: 1px solid var(--black);
   }
 }
 
+@media screen and (max-width: 768px) {
+  .top {
+    top: -33px;
+  }
+}
+
 @media screen and (max-width: 568px) {
+  .top {
+    top: -29px;
+    width: 51.3%;
+  }
+  
   .right {
     grid-template-columns: repeat(2, 1fr);
   }
