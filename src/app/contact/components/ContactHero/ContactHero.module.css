@@ -1,5 +1,5 @@
 .container {
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
   padding-bottom: 5rem;
   background-color: var(--tan);
 }
@@ -14,19 +14,42 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 2rem;
   height: 100%;
 }
 
 .subHeadingCopyContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
 
 .copy {
   color: var(--grayii);
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 10rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .left {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subHeading, .copy {
+    text-align: center;
+    width: 100%;
+  }
 }

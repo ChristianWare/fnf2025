@@ -93,6 +93,12 @@
   }
 }
 
+@media screen and (max-width: 968px) {
+  .top {
+    top: -33px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .heading,
   .copy {
@@ -101,7 +107,16 @@
 }
 
 @media screen and (max-width: 568px) {
+  .heading {
+    font-size: 10vw;
+    text-align: left;
+  }
+
   .copy {
     text-align: left;
+  }
+
+   .top {
+    top: -30px;
   }
 }
