@@ -1,6 +1,6 @@
 .container {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
 }
 
 .top {
@@ -9,18 +9,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
-}
-
-.content {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
-}
-
-.left {
-  gap: 2rem;
-  height: 100%;
+  margin-bottom: 5rem;
 }
 
 .copy {
@@ -29,77 +18,46 @@
   color: var(--grayii);
 }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  height: 100%;
-  order: -1;
+.subheading {
+  border-bottom: 1px solid var(--black);
+  width: fit-content;
+  margin-bottom: 2rem;
+  display: block;
 }
 
-.rightTop {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2rem;
+.dataBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  height: 100%;
+}
+
+.bottom {
+  margin-top: 5rem;
 }
 
 .imgContainer {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 400px;
+  background-color: var(--tan);
+  border: 1px solid var(--gray);
+  padding: 2rem;
 }
 
 .img {
   object-fit: cover;
-  border: 1px solid var(--gray);
-}
-
-.rightBottom {
-  display: grid;
-  gap: 0.5rem;
-  grid-template-areas:
-    "one one one"
-    "two two two"
-    "three four five"
-    "six six six";
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
-}
-
-/* Specific cards can be targeted if needed */
-.card:nth-child(1) {
-  grid-area: one;
-}
-.card:nth-child(2) {
-  grid-area: two;
-  /* background-color: var(--green3); */
-  /* border: 1px solid var(--lightBlack); */
-}
-.card:nth-child(3) {
-  grid-area: three;
-}
-.card:nth-child(4) {
-  grid-area: four;
-}
-.card:nth-child(5) {
-  grid-area: five;
-}
-.card:nth-child(6) {
-  grid-area: six;
+  padding: 2rem;
 }
 
 .card {
-  padding: 2rem;
+  padding: 4rem 2rem;
   background-color: var(--tan);
   border: 1px solid var(--gray);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
   height: 100%;
   cursor: pointer;
@@ -114,10 +72,8 @@
 
 .title {
   font-size: 1.6rem;
-  margin-bottom: 1rem;
   width: 100%;
-  font-family: var(--suisse);
-  text-transform: capitalize;
+  text-align: center;
 }
 
 .desc {
@@ -125,21 +81,6 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .content {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .left {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sectionHeadingContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .heading,
   .copy {
     text-align: center;
@@ -153,34 +94,27 @@
     margin-left: auto;
     margin-right: auto;
   }
+}
 
-  .right {
-    order: -1;
+@media screen and (max-width: 968px) {
+  .dataBox {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
-  .left {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
   .heading,
   .copy {
     width: 100%;
   }
+
+  .dataBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 568px) {
-  .rightBottom {
-    grid-template-areas:
-      "one"
-      "two"
-      "three"
-      "four"
-      "five"
-      "six";
+  .dataBox {
     grid-template-columns: repeat(1, 1fr);
-    overflow-x: hidden;
   }
 }
