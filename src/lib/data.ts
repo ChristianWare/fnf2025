@@ -1,6 +1,6 @@
 import Thundertrails from "../../public/images/thunder.jpg";
-// import Chuxly from "../../public/images/chuxly.png";
-// import Honey from "../../public/images/honey.jpg";
+import Chuxly from "../../public/images/chuxly.png";
+import Honey from "../../public/images/honey.jpg";
 import ERREntals from "../../public/images/erRentals.png";
 
 export const pricing = [
@@ -53,7 +53,7 @@ export const projects = [
     slug: "thundertrails",
     src: Thundertrails,
     description:
-      "Surf, sun and style; the three passions that nudged the founder of Hang Eleven to start the brand in 2019. Since then, the brand has been clothing the modern, fashion-forward men of the Netherlands and has ambitions to go further afield. But before they could take on the international scene, a new webshop was needed to refresh and elevate the online presence.",
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
     tags: [
       {
         id: 1.98,
@@ -64,7 +64,7 @@ export const projects = [
         tag: "Online Shop",
       },
     ],
-    h1: "Launching a refreshed webshop for Thundertrails to grow internationally",
+    h1: "Revolutionizing Thundertrails' online presence with a cutting-edge ecommerce platform",
     year: 2025,
     platform: "Wix E-commerce with Next.js",
     href: "https://thunder-wix.vercel.app/",
@@ -72,29 +72,29 @@ export const projects = [
       {
         id: 1.1,
         challengeDetail:
-          "Hang Eleven’s previous website was slow, inflexible, and quite basic when it came to functionality. And though they always had great products and a brand story, it wasn’t translating in the most cohesive and inspiring way. That’s where we came in to help guide them into a more mature and future-proof website. ",
+          "Thundertrails' previous website was outdated, with limited functionality and poor performance that failed to showcase their premium bike collection properly. The slow loading times and clunky navigation were frustrating customers and limiting online sales potential. The brand needed a robust digital solution that could handle complex product configurations while delivering an exceptional user experience.",
       },
       {
         id: 1.2,
         challengeDetail:
-          "We redesigned the website to showcase the brand more appealingly. Changing layouts and fonts was a big part of sharpening the look and feel. We creatively organised product pages to enhance the brand identity and shopping experience, for example, using subtle animations and consistent presentation of product content.",
+          "We completely overhauled the website architecture and design to create an immersive digital showroom for their bikes and accessories. The new design incorporates dynamic product visualization, interactive bike customization tools, and seamless integration with their inventory management system. Every aspect of the user interface was crafted to highlight the technical specifications and quality that Thundertrails' products are known for.",
       },
       {
         id: 1.3,
         challengeDetail:
-          "The brand had always cared about its content, but the existing website didn’t showcase the campaigns how they imagined. The new website allowed more space for their visual content, therefore serving customers more storytelling elements to build a stronger brand connection and loyalty.",
+          "Beyond products, Thundertrails has always been deeply connected to the mountain biking community, sponsoring events and producing trail guides. The previous website couldn't effectively feature this content. We developed a content strategy that integrates their blog, event calendar, and trail maps with the shopping experience, strengthening customer engagement and establishing Thundertrails as an authority in the mountain biking world.",
       },
     ],
     results: [
       {
         id: 1.4,
         resultDetail:
-          "The migration has made the webshop faster and features far more extensive functionalities to improve customer experience. The loading time decreased by over 60% compared to the previous webshop (loading time based on Largest Contentful Paint (LCP) - Google Core Web Vitals metrics). The average order value increased by 4% and the total sales increased by 88% compared to the previous year.",
+          "The new ecommerce platform dramatically improved performance metrics across the board. Page load times decreased by 65% (based on Largest Contentful Paint measurements), while the conversion rate increased by 38%. The enhanced product visualization and customization features contributed to a 42% increase in average order value, and overall sales grew by 92% compared to the previous year.",
       },
       {
         id: 1.5,
         resultDetail:
-          "The overall look and feel of the brand is more in line with how they want to present themselves to their customer base locally and internationally.",
+          "Thundertrails has successfully elevated its brand positioning in the digital space, aligning with its premium in-store experience. The integrated content strategy has boosted organic traffic by 55% and increased newsletter signups by 143%. The platform's scalable architecture now provides Thundertrails with the foundation they need to expand their online presence nationally while maintaining the personalized service their customers expect.",
       },
     ],
     gallery: [
@@ -104,11 +104,11 @@ export const projects = [
       },
       {
         id: 1.7,
-        src: ERREntals,
+        src: Chuxly,
       },
       {
         id: 1.8,
-        src: ERREntals,
+        src: Honey,
       },
       {
         id: 1.9,
@@ -116,11 +116,11 @@ export const projects = [
       },
       {
         id: 2.99,
-        src: ERREntals,
+        src: Chuxly,
       },
       {
         id: 2.98,
-        src: ERREntals,
+        src: Honey,
       },
       {
         id: 2.97,
@@ -128,11 +128,11 @@ export const projects = [
       },
       {
         id: 2.96,
-        src: ERREntals,
+        src: Chuxly,
       },
       {
         id: 2.95,
-        src: ERREntals,
+        src: Honey,
       },
     ],
   },

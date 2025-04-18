@@ -7,7 +7,7 @@ export default function VideoSection() {
   return (
     <div className={styles.container}>
       <video preload='auto' autoPlay muted loop className={styles.video}>
-        <source src='/videos/project.mp4' />
+        <source src='/videos/thunder.mp4' />
       </video>
       <div className={styles.bottom}>
         <div className={styles.imgContainer}>
