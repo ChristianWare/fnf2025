@@ -9,6 +9,7 @@ import { StaticImageData } from "next/image";
 import Back from "../../../../../public/icons/next.svg";
 import Next from "../../../../../public/icons/next.svg";
 import Cancel from "../../../../../public/icons/next.svg";
+import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 
 interface GalleryItem {
   id: number;
@@ -75,12 +76,25 @@ const GalleryGrid = ({ gallery }: GalleryGridProps) => {
                 width={40}
                 height={40}
               />
-              <Image
-                src={gallery[slideNumber].src}
-                alt={`Gallery image ${slideNumber + 1}`}
-                fill
-                className={styles.modalImg}
-              />
+
+              <AnimatePresence mode='wait'>
+                <motion.div
+                  key={slideNumber}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className={styles.imageWrapper}
+                >
+                  <Image
+                    src={gallery[slideNumber].src}
+                    alt={`Gallery image ${slideNumber + 1}`}
+                    fill
+                    className={styles.modalImg}
+                  />
+                </motion.div>
+              </AnimatePresence>
+
               <Next
                 className={styles.next}
                 onClick={nextSlide}
