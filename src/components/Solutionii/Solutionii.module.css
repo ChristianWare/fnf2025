@@ -51,7 +51,7 @@
 }
 
 .card {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background-color: var(--tan);
   border: 1px solid var(--gray);
   display: flex;
@@ -64,9 +64,16 @@
   transition: all 0.2s ease-in;
 }
 
-.card:hover,
+/* .card:hover, */
 .active {
-  background-color: var(--pink);
+  /* background-color: var(--pink); */
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--black),
+    var(--orange) 1px,
+    var(--orange) 0 50%
+  );
+  background-size: 10px 10px;
   transition: all 0.2s ease-in;
 }
 
@@ -74,7 +81,17 @@
   font-size: 1.6rem;
   width: 100%;
   text-align: center;
+  padding: 1rem;
+  border: 1px solid var(--tan);
+  transition: all 0.2s ease-in;
 }
+
+.active .title, .card:hover .title {
+  background-color: var(--orange);
+  border: 1px solid var(--black);
+  width: 100%;
+}
+
 
 .desc {
   font-size: 1.4rem;
