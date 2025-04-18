@@ -5,6 +5,7 @@ import PageIntro from "@/components/PageIntro/PageIntro";
 import Img1 from "../../../public/images/portfolio.jpg";
 import OurApproach from "@/components/AboutPage/OurApproach/OurApproach";
 import ProjectPreview from "@/components/PortfolioPage/ProjectPreview/ProjectPreview";
+import Faq from "@/components/Faq/Faq";
 
 export default function PortfolioPage() {
   return (
@@ -17,6 +18,7 @@ export default function PortfolioPage() {
       />
       <ProjectPreview />
       <OurApproach background='white' />
+      <Faq />
       <OtherThings />
       <FinalCTA />
       <Contact2 />

@@ -100,7 +100,7 @@ export default function Solutionii() {
           </div>
           <div className={styles.middle}>
             <span className={styles.subheading}>
-              breakdown of the main types:
+              breakdown of the main types (Click a box to learn more) :
             </span>
             <div className={styles.dataBox}>
               {data.map((item, index) => (

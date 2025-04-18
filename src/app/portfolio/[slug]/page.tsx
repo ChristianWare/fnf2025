@@ -10,6 +10,7 @@ import Contact2 from "@/components/Contact2/Contact2";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import OtherThings from "@/components/OtherThings/OtherThings";
 import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
+import Faq from "@/components/Faq/Faq";
 
 export default function ProjectDetail() {
   const params = useParams();
@@ -32,6 +33,7 @@ export default function ProjectDetail() {
       <div className={styles.scrollContainer}>
         <SlugIntro project={project} />
         <ProjectDetails project={project} />
+        <Faq />
         <OtherThings />
         <FinalCTA />
         <Contact2 />

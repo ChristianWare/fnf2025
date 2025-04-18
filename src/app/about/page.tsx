@@ -8,6 +8,7 @@ import PageIntro from "@/components/PageIntro/PageIntro";
 import Img1 from "../../../public/images/servicesHero.jpg";
 import Problem from "@/components/AboutPage/Problem/Problem";
 import Compare from "@/components/AboutPage/Compare/Compare";
+import Faq from "@/components/Faq/Faq";
 
 export default function AboutPage() {
   return (
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <HowItWorks />
       <Problem />
       <Compare />
+      <Faq />
       <OtherThings />
       <FinalCTA />
       <Contact2 />
