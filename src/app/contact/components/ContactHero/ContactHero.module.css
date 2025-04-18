@@ -1,0 +1,32 @@
+.container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--tan);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-gap: 3rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 2rem;
+  height: 100%;
+}
+
+.subHeadingCopyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.copy {
+  color: var(--grayii);
+}

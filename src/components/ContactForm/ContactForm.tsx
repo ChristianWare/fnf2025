@@ -5,16 +5,35 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Button from "../Button/Button";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 interface Inputs {
   firstName: string;
   lastName: string;
   email: string;
-  message: string;
+  company: string;
+  projectDescription: string;
+  services: string[];
 }
+
+const serviceOptions = [
+  "UI & UX Design",
+  "Shopify",
+  "WooCommerce",
+  "Wix",
+  "Custom Development",
+  "Booking/Reservation System",
+  "Membership Site",
+  "Marketplace",
+  "E-commerce",
+  "Online Store",
+  "Portfolio",
+  "Blog/Content Site",
+];
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   const {
     register,
@@ -23,11 +42,25 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
+  const toggleService = (service: string) => {
+    setSelectedServices((prev) =>
+      prev.includes(service)
+        ? prev.filter((s) => s !== service)
+        : [...prev, service]
+    );
+  };
+
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setLoading(true);
+    // Include selected services
+    const formData = {
+      ...data,
+      services: selectedServices,
+    };
+
     const response = await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
     }).then((res) => res.json());
 
     if (response.messageId) {
@@ -37,15 +70,15 @@ const ContactForm = () => {
     }
 
     reset();
+    setSelectedServices([]);
     setLoading(false);
   };
 
   return (
     <div className={styles.parent}>
-      <h3 className={styles.heading}>
-        <span className={styles.blackDot} />
-        Contact
-      </h3>
+      <div className={styles.heading}>
+        <SectionIntro title="Let's grow together" color='black' dotColor='blackDot' />{" "}
+      </div>
       <div className={styles.content}>
         <div className={styles.bottom}>
           <div className={styles.left}></div>
@@ -107,20 +140,54 @@ const ContactForm = () => {
                 </div>
 
                 <div className={styles.labelInputBox}>
-                  <label htmlFor='message'>
-                    Message <span className={styles.required}>*</span>
+                  <label htmlFor='company'>Company</label>
+                  <input
+                    id='company'
+                    type='text'
+                    {...register("company")}
+                    placeholder='Your company name (if applicable)'
+                    maxLength={500}
+                  />
+                </div>
+
+                <div className={styles.labelInputBox}>
+                  <label htmlFor='projectDescription'>
+                    Project Description{" "}
+                    <span className={styles.required}>*</span>
                   </label>
                   <textarea
-                    id='message'
+                    id='projectDescription'
                     maxLength={5000}
-                    {...register("message", { required: true })}
-                    placeholder='No solicitations, please.'
+                    {...register("projectDescription", { required: true })}
+                    placeholder='Tell me about your project needs.'
                   />
-                  {errors.message && (
+                  {errors.projectDescription && (
                     <span className={styles.error}>
-                      *** Message is required
+                      *** Project Description is required
                     </span>
                   )}
+                </div>
+
+                <div className={styles.servicesSection}>
+                  <label className={styles.servicesLabel}>
+                    What services are you interested in?
+                  </label>
+                  <div className={styles.serviceButtons}>
+                    {serviceOptions.map((service) => (
+                      <button
+                        key={service}
+                        type='button'
+                        className={`${styles.serviceButton} ${
+                          selectedServices.includes(service)
+                            ? styles.selected
+                            : ""
+                        }`}
+                        onClick={() => toggleService(service)}
+                      >
+                        {service}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -139,5 +206,3 @@ const ContactForm = () => {
   );
 };
 export default ContactForm;
-
-// <div className={styles.blackDot}></div>;

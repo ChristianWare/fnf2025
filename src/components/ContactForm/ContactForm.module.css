@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  width: 50%;
+  width: fit-content;
   padding: 2rem;
   border: 1px solid var(--gray);
   border-bottom: 1px solid var(--white);
@@ -127,6 +127,54 @@
   display: grid;
 }
 
+.servicesSection {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.servicesLabel {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.serviceButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.serviceButton {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 30px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.serviceButton:hover {
+  background-color: var(--lightGray);
+}
+
+.serviceButton.selected {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.required {
+  color: var(--orange);
+}
+
 .btnContainer {
   display: grid;
   width: 100%;
@@ -165,10 +213,31 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .serviceButtons {
+    gap: 0.75rem;
+  }
+
+  .serviceButton {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (max-width: 568px) {
   .namesContainer {
     flex-direction: column;
     gap: 0rem;
+  }
+
+  .serviceButtons {
+    gap: 0.5rem;
+  }
+
+  .serviceButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .btnContainer {

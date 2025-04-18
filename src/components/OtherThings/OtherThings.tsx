@@ -64,11 +64,6 @@ export default function OtherThings() {
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
-              {/* <ParallaxImage
-                src={Img1}
-                alt=''
-                title='Your E-commerce Specialists'
-              /> */}
               <ContactForm />
             </div>
             <div className={styles.right} ref={triggerRef}>
@@ -90,9 +85,6 @@ export default function OtherThings() {
                   Let&apos;s discuss how we can help your business grow with a
                   custom e-commerce solution that meets your unique needs.
                 </p>
-                {/* <div className={styles.btnContainer}>
-                  <Button btnType='secondary' text='Work With Us' href='/' />
-                </div> */}
               </div>
             </div>
           </div>
