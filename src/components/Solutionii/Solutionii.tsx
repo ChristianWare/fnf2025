@@ -3,8 +3,6 @@
 import styles from "./Solutionii.module.css";
 import Img1 from "../../../public/images/integration.jpg";
 import { useState } from "react";
-// import Image from "next/image";
-// import SectionIntro from "../SectionIntro/SectionIntro";
 import { motion, AnimatePresence } from "framer-motion";
 import LayoutWrapper from "../LayoutWrapper";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
@@ -76,9 +74,9 @@ export default function Solutionii() {
           <div className={styles.right}>
             <div className={styles.rightTop}>
               <h2 className={styles.heading}>
-                Featured
+                Owner 
                 <br />
-                Case Study
+                & Founder
               </h2>
               <p className={styles.copy}>
                 You&apos;ve worked hard to create something unique—let&apos;s
@@ -96,12 +94,7 @@ export default function Solutionii() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className={styles.imgContainer}
               >
-                {/* <Image
-                  src={data[activeIndex].src}
-                  alt=''
-                  fill
-                  className={styles.img}
-                /> */}
+                
                 <ParallaxImage
                   src={data[activeIndex].src}
                   alt=''

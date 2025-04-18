@@ -13,7 +13,7 @@ import ParallaxImage from "../ParallaxImage/ParallaxImage";
 // import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import Mission from "../Mission/Mission";
-import Owner from "../Owner/Owner";
+// import Owner from "../Owner/Owner";
 // import HowItWorks from "../HowItWorks/HowItWorks";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -84,7 +84,7 @@ export default function AboutHero(): JSX.Element {
           </div>
         </div>
         <Mission />
-        <Owner />
+        {/* <Owner /> */}
       </LayoutWrapper>
     </section>
   );
