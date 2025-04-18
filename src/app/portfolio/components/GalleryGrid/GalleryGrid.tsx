@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 
 import Image from "next/image";
 import styles from "./GalleryGrid.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
 import { StaticImageData } from "next/image";
 import Back from "../../../../../public/icons/next.svg";
@@ -44,6 +45,29 @@ const GalleryGrid = ({ gallery }: GalleryGridProps) => {
       ? setSlideNumber(0)
       : setSlideNumber(slideNumber + 1);
   };
+
+  // Add keyboard event handlers
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!openModal) return;
+
+      if (e.key === "Escape") {
+        handleCloseModal();
+      } else if (e.key === "ArrowLeft") {
+        prevSlide();
+      } else if (e.key === "ArrowRight") {
+        nextSlide();
+      }
+    };
+
+    // Add the event listener when the modal is open
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Clean up the event listener when component unmounts or modal closes
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [openModal, slideNumber]); // Re-apply when these values change
 
   return (
     <div className={styles.container}>
