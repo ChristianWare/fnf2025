@@ -59,12 +59,6 @@ const data = [
     desc: "Sells products that are fulfilled by third-party suppliers without inventory management. Examples include many Shopify stores, with supplier integration and automated order routing capabilities.",
     src: Dropshipping,
   },
-  // {
-  //   id: 8,
-  //   title: "Auction Websites",
-  //   desc: "Facilitates competitive bidding on products with time-limited offers. Examples include eBay and specialized auction houses with online bidding, featuring bidding systems, time limits, and bid history.",
-  //   src: Img1,
-  // },
   {
     id: 9,
     title: "Membership Sites",
@@ -120,7 +114,6 @@ export default function Solutionii() {
                   onClick={() => setActiveIndex(index)}
                 >
                   <h3 className={styles.title}>{item.title}</h3>
-                  {/* <p className={styles.desc}>{item.desc}</p> */}
                 </div>
               ))}
             </div>
@@ -136,19 +129,20 @@ export default function Solutionii() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className={styles.imgContainer}
               >
-                {/* <ParallaxImage
-                  src={data[activeIndex].src}
-                  alt=''
-                  title='Your Online Store'
-                /> */}
                 <Image
                   src={data[activeIndex].src}
-                  alt=''
-                  title=''
+                  alt={data[activeIndex].title}
+                  title={data[activeIndex].title}
                   fill
                   className={styles.img}
                   priority
                 />
+                <div className={styles.overlay}></div>
+                <div className={styles.descriptionContainer}>
+                  <p className={styles.descriptionText}>
+                    {data[activeIndex].desc}
+                  </p>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
