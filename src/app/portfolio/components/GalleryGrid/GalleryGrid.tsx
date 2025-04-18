@@ -9,7 +9,7 @@ import { StaticImageData } from "next/image";
 import Back from "../../../../../public/icons/next.svg";
 import Next from "../../../../../public/icons/next.svg";
 import Cancel from "../../../../../public/icons/next.svg";
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { motion, AnimatePresence } from "framer-motion";
 
 interface GalleryItem {
   id: number;
