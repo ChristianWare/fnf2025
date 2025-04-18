@@ -10,11 +10,9 @@ import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Img1 from "../../../public/images/about.jpeg";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
-// import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import Mission from "../Mission/Mission";
-// import Owner from "../Owner/Owner";
-// import HowItWorks from "../HowItWorks/HowItWorks";
+import Button from "../Button/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,9 +57,6 @@ export default function AboutHero(): JSX.Element {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          {/* <h2 ref={headingRef} className={styles.heading}>
-            We build e-commerce experiences that drive growth
-          </h2> */}
           <SectionHeading2 title='2: Who Are We?' />
         </div>
         <div className={styles.content}>
@@ -84,7 +79,9 @@ export default function AboutHero(): JSX.Element {
           </div>
         </div>
         <Mission />
-        {/* <Owner /> */}
+        <div className={styles.btnContainer}>
+          <Button text='Learn more about Us' btnType='black' href='/about' />
+        </div>
       </LayoutWrapper>
     </section>
   );
