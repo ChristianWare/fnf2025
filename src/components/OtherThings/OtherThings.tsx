@@ -2,13 +2,10 @@
 
 import styles from "./OtherThings.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-// import Img1 from "../../../public/images/ecomm.jpeg";
-// import Button from "../Button/Button";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-// import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import ContactForm from "../ContactForm/ContactForm";
 
 export default function OtherThings() {
