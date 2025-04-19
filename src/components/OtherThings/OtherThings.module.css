@@ -6,7 +6,10 @@
 
 .bottom {
   display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 3rem;
   border-bottom: 1px solid var(--lightGray);
+  margin-top: 3rem;
 }
 
 .right {
@@ -14,14 +17,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 2rem;
   order: -1;
   margin-bottom: 3rem;
 }
 
 .headingii {
-  font-size: 5vw;
+  font-size: 5rem;
 }
 
 .revealText {
@@ -31,17 +34,19 @@
 }
 
 .info {
-  width: 60%;
+  /* width: 60%; */
+  display: block;
 }
 
 @media screen and (max-width: 1068px) {
   .bottom {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
   }
 
   .left {
     padding: 3rem;
-    padding-top: 5rem;
+    padding-top: 0rem;
     border-bottom: none;
   }
 
@@ -49,10 +54,11 @@
     border-bottom: none;
     padding: 3rem;
     order: -1;
+    margin-bottom: 0rem;
   }
 
-  .copy {
-    width: 100%;
+  .info {
+    width: 60%;
   }
 }
 
@@ -60,6 +66,10 @@
   .headingii {
     font-size: 8vw;
     text-align: left;
+  }
+
+  .info {
+    width: 100%;
   }
 }
 
