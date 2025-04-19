@@ -2,9 +2,11 @@
 "use client";
 import styles from "./Faq.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import { useState } from "react";
-import Arrow from '../../../public/icons/arrow.svg'
-import SectionHeading3 from "../SectionHeading3/SectionHeading3";
+import React, { useEffect, useRef, useState } from "react";
+import Arrow from "../../../public/icons/arrow.svg";
+// import SectionHeading3 from "../SectionHeading3/SectionHeading3";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const data = [
   {
@@ -33,11 +35,19 @@ const data = [
   },
   {
     id: 36.4,
-    question: "What sets Fonts & Footers apart from other web development agencies?",
+    question:
+      "What sets Fonts & Footers apart from other web development agencies?",
     answer:
       "Unlike general web developers, we specialize exclusively in e-commerce, with deep expertise across multiple business models including B2C, B2B, marketplaces, subscription services, and more. Our approach balances beautiful design with data-driven strategy, ensuring your store not only looks great but delivers measurable business results. We take a limited number of clients to provide personalized attention, and our focus on long-term partnerships means we're invested in your success far beyond the initial launch.",
   },
 ] as const;
+
+const cardsData = [
+  { id: 1, title: "Frequently" },
+  { id: 2, title: "Asked" },
+  { id: 3, title: "Questions" },
+  // { id: 4, title: "we offer:" },
+];
 
 export default function Faq() {
   const [selected, setSelected] = useState<null | number>(null);
@@ -49,25 +59,52 @@ export default function Faq() {
 
     setSelected(i);
   };
+
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const cards = gsap.utils.toArray<HTMLDivElement>(
+      `.${styles.card}`,
+      container
+    );
+
+    cards.forEach((card, i) => {
+      if (i === 0) return;
+
+      gsap.fromTo(
+        card,
+        { marginTop: 0 },
+        {
+          marginTop: "-150px",
+          ease: "none",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true,
+          },
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
+
   return (
-    <section className={styles.container}>
+    <section className={styles.container} ref={containerRef}>
+      {cardsData.map((card, index) => (
+        <Card key={card.id} title={card.title} index={index} />
+      ))}
       <LayoutWrapper>
-        {/* <div className={styles.labelContainer}>
-            <Label text="FAQ's" />
-          </div> */}
-        {/* <h2 className={styles.heading}>
-            Your Taco Bell <br /> Questions Answered
-          </h2> */}
-        <SectionHeading3
-          title='Frequently Asked Questions'
-        />
         <div className={styles.content}>
           <div className={styles.top}>
             <p className={styles.topText}>
               Here are some commonly asked questions and their answers below. If
               you don&#39;t see your questions here, call us any time.
             </p>
-            {/* <Hamburger className={styles.hamburger} /> */}
           </div>
           <div className={styles.border}>
             <div className={styles.bottom}>
@@ -116,5 +153,23 @@ export default function Faq() {
         </div>
       </LayoutWrapper>
     </section>
+  );
+}
+
+interface CardProps {
+  title: string;
+  index: number;
+}
+
+function Card({ title, index }: CardProps) {
+  return (
+    <div className={`${styles.card} ${styles["card" + (index + 1)]}`}>
+      <div className={styles.cardInner}>
+        <div className={styles.cardContent}>
+          <h2 className={styles.titleHeading}>{title}</h2>
+          <div className={styles.blackDot}></div>
+        </div>
+      </div>
+    </div>
   );
 }
