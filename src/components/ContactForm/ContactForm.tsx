@@ -4,8 +4,8 @@ import styles from "./ContactForm.module.css";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import Button from "../Button/Button";
 import SectionIntro from "../SectionIntro/SectionIntro";
+import FalseButton from "../FalseButton/FalseButton";
 
 interface Inputs {
   firstName: string;
@@ -77,7 +77,11 @@ const ContactForm = () => {
   return (
     <div className={styles.parent}>
       <div className={styles.heading}>
-        <SectionIntro title="Let's grow together" color='black' dotColor='blackDot' />{" "}
+        <SectionIntro
+          title="Let's grow together"
+          color='black'
+          dotColor='blackDot'
+        />{" "}
       </div>
       <div className={styles.content}>
         <div className={styles.bottom}>
@@ -190,13 +194,8 @@ const ContactForm = () => {
                   </div>
                 </div>
               </div>
-
-              <div className={styles.btnContainer}>
-                <Button
-                  text={loading ? "Sending..." : "Submit"}
-                  btnType='secondary'
-                  href='/'
-                />
+              <div className={styles.btnBtnContainer}>
+                <FalseButton text={loading ? "Sending..." : "Submit"} />
               </div>
             </form>
           </div>
