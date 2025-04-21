@@ -102,7 +102,6 @@
 }
 
 .navItem:nth-child(1) {
-  
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
@@ -131,6 +130,60 @@
   background-color: var(--black);
   transition: all 0.3s ease-in-out;
 }
+
+/* === account dropdown ======================================== */
+.avatarWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.avatar {
+  color: var(--gray);
+  background-color: var(--lightGray);
+  border-radius: 50%;
+}
+
+.avatarMenu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  z-index: 9999;
+}
+
+.avatarMenu li {
+  padding: 0;
+}
+
+.avatarMenu a,
+.logoutBtn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #111;
+  cursor: pointer;
+}
+
+.avatarMenu a:hover,
+.logoutBtn:hover {
+  background: #f5f5f5;
+}
+
+
 
 @media screen and (max-width: 868px) {
   .header {

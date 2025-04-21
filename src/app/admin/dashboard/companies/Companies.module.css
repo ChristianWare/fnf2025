@@ -1,0 +1,101 @@
+.container {
+  padding: 2rem;
+}
+
+.heading {
+  margin: 0 0 1.5rem;
+  font: 600 1.75rem/1.2 system-ui, sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.table th {
+  background: #fafafa;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.wrap {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+}
+
+/* --- pagination --- */
+.pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.pageLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pageLink:hover {
+  text-decoration: underline;
+}
+
+.pageDisabled {
+  color: #aaa;
+}
+
+.editLink {
+  color: #2563eb;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.editLink:hover {
+  text-decoration: underline;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.newBtn {
+  padding: 0.45rem 0.9rem;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.newBtn:hover {
+  background: #1e49b6;
+}

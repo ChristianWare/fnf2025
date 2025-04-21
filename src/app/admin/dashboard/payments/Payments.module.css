@@ -1,0 +1,82 @@
+.container {
+  padding: 2rem;
+}
+
+.heading {
+  margin: 0 0 1.5rem;
+  font: 600 1.75rem/1.2 system-ui, sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.table th {
+  background: #fafafa;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.method {
+  text-transform: capitalize;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+}
+
+/* ---------- status colours ---------- */
+.statusBadge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.statusBadge[data-status="PENDING"]   { background: #ca8a04; }
+.statusBadge[data-status="COMPLETED"] { background: #059669; }
+.statusBadge[data-status="FAILED"]    { background: #dc2626; }
+.statusBadge[data-status="REFUNDED"]  { background: #4b5563; }
+
+/* ---------- pagination -------------- */
+.pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.pageLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pageLink:hover {
+  text-decoration: underline;
+}
+
+.pageDisabled {
+  color: #aaa;
+}

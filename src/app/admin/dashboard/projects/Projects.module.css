@@ -1,0 +1,99 @@
+.container {
+  padding: 2rem;
+}
+
+.heading {
+  margin: 0 0 1.5rem;
+  font: 600 1.75rem/1.2 system-ui, sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.table th {
+  background: #fafafa;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+}
+
+/* -------- status badge colours -------- */
+.statusBadge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.statusBadge[data-status="NOT_STARTED"]  { background: #6b7280; }
+.statusBadge[data-status="IN_PROGRESS"]  { background: #2563eb; }
+.statusBadge[data-status="ON_HOLD"]      { background: #ca8a04; }
+.statusBadge[data-status="COMPLETED"]    { background: #059669; }
+.statusBadge[data-status="CANCELLED"]    { background: #dc2626; }
+
+/* -------- pagination -------- */
+.pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.pageLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pageLink:hover {
+  text-decoration: underline;
+}
+
+.pageDisabled {
+  color: #aaa;
+}
+
+
+.headerRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:1.5rem;
+}
+
+.newBtn{
+  padding:0.45rem 0.9rem;
+  background:#2563eb;
+  color:#fff;
+  border-radius:6px;
+  font-size:0.875rem;
+  text-decoration:none;
+  font-weight:600;
+}
+.newBtn:hover{background:#1e49b6;}

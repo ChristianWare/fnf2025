@@ -2,10 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useTransitionRouter } from "next-view-transitions";
+import { useSession, signOut } from "next-auth/react";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
-import { useTransitionRouter } from "next-view-transitions";
-// import Button from "../Button/Button";
+import User from "../../../public/icons/user.svg";
 
 const navItems = [
   { text: "About", href: "/about" },
@@ -18,18 +19,14 @@ const navItems = [
 
 export default function Nav() {
   const router = useTransitionRouter();
+  const { data: session } = useSession();
 
+  /* ---------------- view‑transition helper ---------------------- */
   function slideInOut() {
     document.documentElement.animate(
       [
-        {
-          opacity: 1,
-          transform: "translateY(0)",
-        },
-        {
-          opacity: 0.2,
-          transform: "translateY(-35%)",
-        },
+        { opacity: 1, transform: "translateY(0)" },
+        { opacity: 0.2, transform: "translateY(-35%)" },
       ],
       {
         duration: 1500,
@@ -41,12 +38,8 @@ export default function Nav() {
 
     document.documentElement.animate(
       [
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-        },
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-        },
+        { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
+        { clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
       ],
       {
         duration: 1500,
@@ -57,131 +50,163 @@ export default function Nav() {
     );
   }
 
+  /* ---------------- state & refs -------------------------------- */
   const [isOpen, setIsOpen] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
   const [showNav, setShowNav] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
 
-  const openMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  /* ---------------- menu toggle --------------------------------- */
+  const toggleHamburger = () => setIsOpen((v) => !v);
+  const closeHamburger = () => setIsOpen(false);
 
+  /* ---------------- dark‑section observer ----------------------- */
   useEffect(() => {
-    const darkSections = document.querySelectorAll(".dark-section");
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      let anyDarkVisible = false;
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          anyDarkVisible = true;
-        }
-      });
-      setNavWhite(anyDarkVisible);
-    };
-
-    const observerOptions = {
-      root: null,
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
+    const sections = document.querySelectorAll(".dark-section");
+    const obs = new IntersectionObserver(
+      (entries) => setNavWhite(entries.some((e) => e.isIntersecting)),
+      { threshold: 0.5 }
     );
-
-    darkSections.forEach((section) => observer.observe(section));
-
-    return () => {
-      observer.disconnect();
-    };
+    sections.forEach((s) => obs.observe(s));
+    return () => obs.disconnect();
   }, []);
 
+  /* ---------------- hide on scroll down ------------------------- */
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and scrolled more than 100px
-        setShowNav(false);
-      } else {
-        // Scrolling up
-        setShowNav(true);
-      }
-
-      lastScrollY = currentScrollY;
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setShowNav(!(y > lastY && y > 100));
+      lastY = y;
     };
-
-    // Throttle scroll events for performance
-    let ticking = false;
-    const optimizedHandleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", optimizedHandleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", optimizedHandleScroll);
-    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* ---------------- render -------------------------------------- */
   return (
     <header
+      ref={navRef}
       className={`${styles.header} ${showNav ? styles.show : styles.hide} ${
         navWhite ? styles.white : ""
       }`}
-      ref={navRef}
     >
+      {/* mobile logo */}
       <div className={styles.logoContainerMobile}>
         <Logo />
       </div>
+
       <nav className={styles.navbar}>
+        {/* ------------- mobile / desktop nav links ------------- */}
         <div
           className={
-            isOpen === false
-              ? styles.navMenu
-              : `${styles.navMenu} ${styles.active}`
+            !isOpen ? styles.navMenu : `${styles.navMenu} ${styles.active}`
           }
-          onClick={openMenu}
         >
           <div className={styles.logoContainer}>
             <Logo />
           </div>
-          <ul className={styles.navItems}>
-            {navItems.map((navItem, index) => (
+
+          <ul
+            className={styles.navItems}
+            onClick={(e) => e.stopPropagation()} /* keep hamburger stable */
+          >
+            {navItems.map((item) => (
               <li
-                key={index}
-                className={`${styles.navItem}`}
-                onClick={() => setIsOpen(false)}
+                key={item.href}
+                className={styles.navItem}
+                onClick={closeHamburger}
               >
                 <Link
-                  onClick={() => {
-                    router.push(navItem.href, {
-                      onTransitionReady: slideInOut,
-                    });
-                  }}
-                  href={navItem.href}
+                  href={item.href}
+                  onClick={() =>
+                    router.push(item.href, { onTransitionReady: slideInOut })
+                  }
                 >
-                  {navItem.text}
+                  {item.text}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
+
+        {/* ------------- avatar / auth dropdown ------------- */}
+        <div
+          className={styles.avatarWrapper}
+          onClick={(e) => {
+            e.stopPropagation();
+            setDropdownOpen((v) => !v);
+          }}
+          tabIndex={0}
+        >
+          <User width={32} height={32} className={styles.avatar} />
+
+          {dropdownOpen && (
+            <menu
+              className={styles.avatarMenu}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {session ? (
+                <>
+                  <li>
+                    <Link
+                      href='/account'
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      Account settings
+                    </Link>
+                  </li>
+                  {session.user.role === "ADMIN" && (
+                    <li>
+                      <Link
+                        href='/admin/dashboard'
+                        onClick={() => setDropdownOpen(false)}
+                      >
+                        Admin dashboard
+                      </Link>
+                    </li>
+                  )}
+                  <li>
+                    <button
+                      type='button'
+                      className={styles.logoutBtn}
+                      onClick={() => signOut({ callbackUrl: "/auth/login" })}
+                    >
+                      Sign out
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link
+                      href='/auth/login'
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      Sign in
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/auth/register'
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      Register
+                    </Link>
+                  </li>
+                </>
+              )}
+            </menu>
+          )}
+        </div>
+
+        {/* ------------- hamburger button ------------- */}
         <div
           className={
-            isOpen === false
-              ? styles.hamburger
-              : `${styles.hamburger} ${styles.active}`
+            !isOpen ? styles.hamburger : `${styles.hamburger} ${styles.active}`
           }
-          onClick={openMenu}
+          onClick={toggleHamburger}
         >
           <span className={styles.whiteBar}></span>
           <span className={styles.whiteBar}></span>
