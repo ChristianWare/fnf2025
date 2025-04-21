@@ -68,7 +68,7 @@ const data = [
       {
         id: 3.1,
         option: "login",
-        href: "/login",
+        href: "/auth/login",
       },
       {
         id: 3.2,

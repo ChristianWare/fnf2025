@@ -4,7 +4,7 @@ import { getToken } from "next-auth/jwt";
 import { NextRequest } from "next/server";
 
 const protectedPaths = ["/account", "/checkout", "/orders", "/admin"];
-const authPaths = ["/auth/signin", "/auth/register"];
+const authPaths = ["/auth/login", "/auth/register"];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -24,7 +24,7 @@ export async function middleware(request: NextRequest) {
   });
 
   if (isProtectedPath && !token) {
-    const url = new URL("/auth/signin", request.url);
+    const url = new URL("/auth/login", request.url);
     url.searchParams.set("callbackUrl", encodeURI(request.url));
     return NextResponse.redirect(url);
   }
