@@ -1,35 +1,40 @@
 // middleware.ts
 import { NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
-import { NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 
-const protectedPaths = ["/account", "/checkout", "/orders", "/admin"];
-const authPaths = ["/auth/login", "/auth/register"];
+const protectedRoots = ["/account", "/admin", "/agent"]; // adjust as needed
+const authRoots = ["/login", "/register"]; // public auth pages
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const isProtected = protectedRoots.some((p) => pathname.startsWith(p));
+  const isAuthPage = authRoots.some((p) => pathname.startsWith(p));
 
-  const isProtectedPath = protectedPaths.some((path) =>
-    pathname.startsWith(path)
-  );
-  const isAuthPath = authPaths.some((path) => pathname.startsWith(path));
-
-  // ** Explicitly pass the secret from process.env. **
-  // If `process.env.NEXTAUTH_SECRET` is not undefined in your Edge runtime,
-  // it will be used. Otherwise, you might need to mark it as an "Edge-compatible"
-  // environment variable in your deployment settings (if using Vercel, etc.)
   const token = await getToken({
     req: request,
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_SECRET, // make sure this env var is edge‑exposed
   });
 
-  if (isProtectedPath && !token) {
-    const url = new URL("/auth/login", request.url);
-    url.searchParams.set("callbackUrl", encodeURI(request.url));
-    return NextResponse.redirect(url);
+  // 1. Block anonymous visitors from protected areas
+  if (isProtected && !token) {
+    const login = new URL("/login", request.url);
+    login.searchParams.set("callbackUrl", encodeURI(request.url));
+    return NextResponse.redirect(login);
   }
 
-  if (isAuthPath && token) {
+  // 2. Role‑based gating for /admin
+  if (pathname.startsWith("/admin") && token?.role !== "ADMIN") {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
+  // 3. Optional: role check for /agent
+  if (pathname.startsWith("/agent") && token?.role !== "SALES_AGENT") {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
+  // 4. Keep logged‑in users out of /login and /register
+  if (isAuthPage && token) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
@@ -37,5 +42,6 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|public).*)"],
+  // don’t run on static assets or API routes
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
