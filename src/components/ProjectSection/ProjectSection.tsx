@@ -11,60 +11,58 @@ import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
-import ServiceHero from "../ServicePage/ServiceHero/ServiceHero";
 
 const projectData = [
   {
     id: 1,
-    title: "Project Name 1",
+    title: "Home Page",
     type: <Arrow className={styles.icon} />,
-    description: "Project Name 1",
+    description: "Home Page",
     label: <Arrow className={styles.icon2} />,
     src: Img1,
   },
   {
     id: 2,
-    title: "Project Name 2",
+    title: "About Page",
     type: <Arrow className={styles.icon} />,
-    description: "Project Name 2",
+    description: "About Page",
     label: <Arrow className={styles.icon2} />,
     src: Img2,
   },
   {
     id: 3,
-    title: "Project Name 3",
+    title: "Product Page",
     type: <Arrow className={styles.icon} />,
-    description: "Project Name 3",
+    description: "Product Page",
     label: <Arrow className={styles.icon2} />,
     src: Img3,
   },
   {
     id: 4,
-    title: "Project Name 4",
+    title: "Filter System",
     type: <Arrow className={styles.icon} />,
-    description: "Project Name 4",
+    description: "Filter System",
     label: <Arrow className={styles.icon2} />,
     src: Img1,
   },
   {
     id: 5,
-    title: "Project Name 5",
+    title: "Services Page",
     type: <Arrow className={styles.icon} />,
-    description: "Project Name 5",
-    label: <Arrow className={styles.icon2} />,
-    src: Img2,
-  },
-  {
-    id: 6,
-    title: "Project Name 6",
-    type: <Arrow className={styles.icon} />,
-    description: "Project Name 6",
+    description: "Services Page",
     label: <Arrow className={styles.icon} />,
     src: Img3,
   },
+  {
+    id: 6,
+    title: "Contact Page",
+    type: <Arrow className={styles.icon} />,
+    description: "Contact Page",
+    label: <Arrow className={styles.icon2} />,
+    src: Img2,
+  },
 ];
 
-// Define position constants similar to the original tutorial
 const POSITIONS = {
   BOTTOM: 0,
   MIDDLE: -80,
@@ -80,7 +78,6 @@ export default function ProjectSection() {
   const [displayedImage, setDisplayedImage] = useState(Img1); // Default to Img1
 
   useEffect(() => {
-    // Initialize refs array for each project
     projectRefs.current = projectRefs.current.slice(0, projectData.length);
   }, []);
 
@@ -91,7 +88,6 @@ export default function ProjectSection() {
     const updateProjects = () => {
       if (!projectsListRef.current) return;
 
-      // Check if active project still has mouse over it
       if (activeProject !== null) {
         const activeProjectElement =
           projectRefs.current[
@@ -106,13 +102,11 @@ export default function ProjectSection() {
             lastMousePosition.y <= rect.bottom;
 
           if (!isStillOver) {
-            // Mouse has left the active project
             setActiveProject(null);
           }
         }
       }
 
-      // Check if mouse is over any project
       projectRefs.current.forEach((projectRef, index) => {
         if (!projectRef) return;
 
@@ -124,7 +118,6 @@ export default function ProjectSection() {
           lastMousePosition.y <= rect.bottom;
 
         if (isMouseOver && activeProject !== projectData[index].id) {
-          // Mouse has entered a new project
           handleMouseEnter(projectData[index].id, index);
         }
       });
@@ -136,14 +129,12 @@ export default function ProjectSection() {
       setLastMousePosition(newPosition);
       setIsMouseMoving(true);
 
-      // Reset timeout for mouse inactivity
       if (mouseTimeout) {
         clearTimeout(mouseTimeout);
       }
 
       if (!projectsListRef.current) return;
 
-      // Check if mouse is inside projects list
       const projectsListRect = projectsListRef.current.getBoundingClientRect();
       const isInsideProjectsList =
         newPosition.x >= projectsListRect.left &&
@@ -152,12 +143,10 @@ export default function ProjectSection() {
         newPosition.y <= projectsListRect.bottom;
 
       if (isInsideProjectsList) {
-        // Set timeout to handle mouse inactivity
         mouseTimeout = setTimeout(() => {
           setIsMouseMoving(false);
         }, 2000);
 
-        // Immediately check for projects under mouse
         projectRefs.current.forEach((projectRef, index) => {
           if (!projectRef) return;
 
@@ -169,13 +158,11 @@ export default function ProjectSection() {
             newPosition.y <= rect.bottom;
 
           if (isMouseOver && activeProject !== projectData[index].id) {
-            // Found project under mouse, immediately trigger hover
             handleMouseEnter(projectData[index].id, index);
           }
         });
       }
 
-      // Update projects on next animation frame
       if (!ticking) {
         requestAnimationFrame(() => {
           updateProjects();
@@ -212,15 +199,22 @@ export default function ProjectSection() {
 
   const handleMouseLeave = (projectId: number) => {
     setActiveProject(null);
-    // Optional: Reset to default image when no project is hovered
-    // setDisplayedImage(Img1);
   };
 
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='4: Featured Work' />
-
+        <SectionHeading2 title='Featured project: Thundertrails' />
+        <p className={styles.copy}>
+          Passion for mountain biking, outdoor adventure, and premium gear
+          inspired the founders of Thundertrails to launch their specialized
+          bike shop in 2019. What began as a local favorite for cycling
+          enthusiasts has rapidly grown into one of the regions premier
+          destinations for high-performance mountain bikes and accessories. With
+          a loyal customer base and growing reputation, Thundertrails needed a
+          digital presence that matched their in-store experience and could
+          support their expansion plans.
+        </p>
         <div className={styles.content}>
           <div className={styles.projectDataContainer} ref={projectsListRef}>
             {projectData.map((project, index) => (
@@ -270,9 +264,12 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
-        <ServiceHero />
         <div className={styles.btnContainer}>
-          <Button btnType='secondary' text='View All Projects' href='/' />
+          <Button
+            btnType='secondary'
+            text='View All Projects'
+            href='/portfolio'
+          />
         </div>
       </LayoutWrapper>
     </section>
