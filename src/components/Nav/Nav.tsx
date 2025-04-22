@@ -6,7 +6,7 @@ import { useTransitionRouter } from "next-view-transitions";
 import { useSession, signOut } from "next-auth/react";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
-import User from "../../../public/icons/user.svg";
+// import User from "../../../public/icons/user.svg";
 
 const navItems = [
   { text: "About", href: "/about" },
@@ -140,7 +140,7 @@ export default function Nav() {
           }}
           tabIndex={0}
         >
-          <User width={32} height={32} className={styles.avatar} />
+          {/* <User width={32} height={32} className={styles.avatar} /> */}
 
           {dropdownOpen && (
             <menu
