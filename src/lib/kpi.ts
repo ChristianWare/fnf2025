@@ -32,9 +32,9 @@ export async function getKpis(): Promise<Kpi[]> {
   });
   const revenueThisMonth = revenueResult._sum.amount ?? 0;
 
-  const totalPosts = await prisma.blogPost.count({
-    where: { published: true },
-  });
+  // const totalPosts = await prisma.blogPost.count({
+  //   where: { published: true },
+  // });
 
   return [
     {
@@ -67,11 +67,11 @@ export async function getKpis(): Promise<Kpi[]> {
       value: `$${revenueThisMonth.toLocaleString()}`,
       href: "/admin/dashboard/payments",
     },
-    {
-      id: "blog",
-      label: "Published Posts",
-      value: totalPosts,
-      href: "/admin/dashboard/blog",
-    },
+    // {
+    //   id: "blog",
+    //   label: "Published Posts",
+    //   value: totalPosts,
+    //   href: "/admin/dashboard/blog",
+    // },
   ];
 }

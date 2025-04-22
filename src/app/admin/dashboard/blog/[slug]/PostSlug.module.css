@@ -6,9 +6,15 @@
   margin: 0 auto;
 }
 
+.heading {
+  font-size: 3rem;
+  letter-spacing: -1px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .form label {
@@ -19,15 +25,10 @@
 
 .titleInput {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--gray);
+  margin-top: 1rem;
   font-size: 1rem;
-}
-
-.editor {
-  margin: 1rem 0;
 }
 
 .checkboxLabel {

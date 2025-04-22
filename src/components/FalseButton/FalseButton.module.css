@@ -27,7 +27,7 @@
 }
 
 .btn:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .dot1,
@@ -61,3 +61,27 @@
   left: 5;
 }
 
+.blue {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+}
+
+.blue:hover {
+  background-color: transparent;
+  color: var(--blue);
+}
+
+.blue .dot1,
+.blue .dot2,
+.blue .dot3,
+.blue .dot4 {
+  background-color: var(--white);
+}
+
+.blue:hover .dot1,
+.blue:hover .dot2,
+.blue:hover .dot3,
+.blue:hover .dot4 {
+  background-color: var(--blue);
+}

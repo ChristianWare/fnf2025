@@ -195,7 +195,7 @@ const ContactForm = () => {
                 </div>
               </div>
               <div className={styles.btnBtnContainer}>
-                <FalseButton text={loading ? "Sending..." : "Submit"} />
+                <FalseButton text={loading ? "Sending..." : "Submit"} btnType="blue" />
               </div>
             </form>
           </div>

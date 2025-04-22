@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import "quill/dist/quill.snow.css";
 import styles from "./Editor.module.css";
@@ -40,7 +40,6 @@ const formats = [
 
 export default function Editor({ initial }: { initial: string }) {
   const [value, setValue] = useState(initial);
-  const quillRef = useRef(null);
 
   // Populate hidden input on mount
   useEffect(() => {
@@ -62,7 +61,6 @@ export default function Editor({ initial }: { initial: string }) {
   return (
     <div className={styles.editorContainer}>
       <ReactQuill
-        ref={quillRef}
         className={styles.quill}
         theme='snow'
         value={value}

@@ -1,4 +1,3 @@
-// src/app/login/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,6 +5,13 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import styles from "./Login.module.css";
+import LayoutWrapper from "@/components/LayoutWrapper";
+import Image from "next/image";
+import Img1 from "../../../../public/images/ecomm.jpeg";
+import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
+// import FinalCTA from "@/components/FinalCTA/FinalCTA";
+import Contact2 from "@/components/Contact2/Contact2";
+import FalseButton from "@/components/FalseButton/FalseButton";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -109,85 +115,118 @@ export default function LoginPage() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.formCard}>
-        <div className={styles.cardHeader}>
-          <h1 className={styles.cardTitle}>Welcome back</h1>
-          <p className={styles.cardDescription}>Sign in to your account</p>
-        </div>
-
-        <div className={styles.cardContent}>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            {generalError && (
-              <div className={styles.errorAlert}>
-                <p>{generalError}</p>
+      <LayoutWrapper>
+        <div className={styles.content}>
+          <div className=':styles left'>
+            <div className={styles.formCard}>
+              <div className={styles.cardHeader}>
+                <div className={styles.SectionHeadingContainer}>
+                  <SectionHeading2 title='Welcome Back' />
+                </div>
+                <p className={styles.cardDescription}>
+                  Sign in to your account
+                </p>
               </div>
-            )}
-
-            {successMessage && (
-              <div className={styles.successAlert}>
-                <p>{successMessage}</p>
-              </div>
-            )}
-
-            <div className={styles.formGroup}>
-              <label htmlFor='email' className={styles.label}>
-                Email
-              </label>
-              <input
-                id='email'
-                name='email'
-                type='email'
-                value={formData.email}
-                onChange={handleChange}
-                placeholder='john@example.com'
-                className={errors.email ? styles.inputError : styles.input}
-              />
-              {errors.email && (
-                <p className={styles.errorText}>{errors.email}</p>
-              )}
-            </div>
-
-            <div className={styles.formGroup}>
-              <div className={styles.labelWithLink}>
-                <label htmlFor='password' className={styles.label}>
-                  Password
-                </label>
-                <Link
-                  href='/forgot-password'
-                  className={styles.forgotPasswordLink}
+              <div className={styles.cardContent}>
+                <form
+                  onSubmit={handleSubmit}
+                  autoComplete='off'
+                  className={styles.form}
                 >
-                  Forgot password?
-                </Link>
+                  {generalError && (
+                    <div className={styles.errorAlert}>
+                      <p>{generalError}</p>
+                    </div>
+                  )}
+
+                  {successMessage && (
+                    <div className={styles.successAlert}>
+                      <p>{successMessage}</p>
+                    </div>
+                  )}
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor='email' className={styles.label}>
+                      Email
+                    </label>
+                    <input
+                      id='email'
+                      name='email'
+                      type='email'
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder='john@example.com'
+                      className={
+                        errors.email ? styles.inputError : styles.input
+                      }
+                    />
+                    {errors.email && (
+                      <p className={styles.errorText}>{errors.email}</p>
+                    )}
+                  </div>
+                  <div className={styles.formGroup}>
+                    <div className={styles.labelWithLink}>
+                      <label htmlFor='password' className={styles.label}>
+                        Password
+                      </label>
+                      <Link
+                        href='/forgot-password'
+                        className={styles.forgotPasswordLink}
+                      >
+                        Forgot password?
+                      </Link>
+                    </div>
+                    <input
+                      id='password'
+                      name='password'
+                      type='password'
+                      value={formData.password}
+                      onChange={handleChange}
+                      placeholder='••••••••'
+                      autoComplete='off'
+                      className={
+                        errors.password ? styles.inputError : styles.input
+                      }
+                    />
+                    {errors.password && (
+                      <p className={styles.errorText}>{errors.password}</p>
+                    )}
+                  </div>
+
+                  {/* <button
+                    type='submit'
+                    className={styles.button}
+                    disabled={loading}
+                  >
+                    {loading ? "Signing in..." : "Sign in"}
+                  </button> */}
+                  <FalseButton
+                    text={loading ? "Signing in..." : "Sign in"}
+                    disabled={loading}
+                    btnType='blue'
+                  />
+                </form>
               </div>
-              <input
-                id='password'
-                name='password'
-                type='password'
-                value={formData.password}
-                onChange={handleChange}
-                placeholder='••••••••'
-                className={errors.password ? styles.inputError : styles.input}
-              />
-              {errors.password && (
-                <p className={styles.errorText}>{errors.password}</p>
-              )}
+
+              <div className={styles.cardFooter}>
+                <p className={styles.footerText}>
+                  Don&apos;t have an account?{" "}
+                  <Link href='/auth/register' className={styles.link}>
+                    Sign up
+                  </Link>
+                </p>
+              </div>
             </div>
-
-            <button type='submit' className={styles.button} disabled={loading}>
-              {loading ? "Signing in..." : "Sign in"}
-            </button>
-          </form>
+          </div>
+          <div className={styles.right}>
+            <div className={styles.imgContainer}>
+              <Image src={Img1} fill alt='' title='' className={styles.img} />
+            </div>
+          </div>
         </div>
-
-        <div className={styles.cardFooter}>
-          <p className={styles.footerText}>
-            Don&apos;t have an account?{" "}
-            <Link href='/register' className={styles.link}>
-              Sign up
-            </Link>
-          </p>
-        </div>
-      </div>
+      </LayoutWrapper>
+      {/* <FinalCTA /> */}
+      <Contact2 />
     </div>
   );
 }

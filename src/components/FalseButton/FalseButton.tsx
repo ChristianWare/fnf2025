@@ -7,6 +7,7 @@ interface Props {
   onClick?: () => void;
   disabled?: any;
   children?: ReactNode;
+  btnType: string;
 }
 
 export default function FalseButton({
@@ -14,11 +15,12 @@ export default function FalseButton({
   onClick,
   disabled,
   children,
+  btnType,
 }: Props) {
   return (
     <div>
       <button
-        className={`${styles.container} ${styles.btn}`}
+        className={`${styles.container} ${styles.btn} ${styles[btnType]}`}
         onClick={onClick}
         disabled={disabled}
       >

@@ -1,75 +1,78 @@
-import { prisma } from "@/lib/prisma";
-import { notFound, redirect } from "next/navigation";
-import Editor from "./Editor"; // ← our new client component
-import styles from "./PostSlug.module.css";
+// src/app/admin/dashboard/blog/new/page.tsx
+"use client";
 
-export default async function EditPost({
-  params: { slug },
-}: {
-  params: { slug: string };
-}) {
-  const post = await prisma.blogPost.findUnique({ where: { slug } });
-  if (!post) notFound();
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
 
-  async function save(formData: FormData) {
-    "use server";
-    await prisma.blogPost.update({
-      where: { slug },
-      data: {
-        title: formData.get("title") as string,
-        content: formData.get("content") as string,
-        published: formData.get("published") === "on",
+export default function NewPost() {
+  const router = useRouter();
+  const [title, setTitle] = useState("");
+
+  const editor = useEditor({
+    extensions: [StarterKit],
+    content: "",
+    editorProps: {
+      attributes: {
+        class: "tiptap-editor", // attach our class
       },
-    });
-    redirect("/admin/dashboard/blog");
-  }
+    },
+  });
 
-  async function remove() {
-    "use server";
-    await prisma.blogPost.delete({ where: { slug } });
-    redirect("/admin/dashboard/blog");
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editor) return;
+
+    const content = editor.getHTML();
+    const res = await fetch("/api/blog", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title, content }),
+    });
+
+    if (res.ok) {
+      router.push("/admin/dashboard/blog");
+    } else {
+      console.error("Failed to create post");
+    }
+  };
 
   return (
-    <section className={styles.container}>
-      <h1>Edit post</h1>
-
-      <form action={save} className={styles.form}>
-        <label>
+    <main style={{ padding: "2rem", maxWidth: 800, margin: "0 auto" }}>
+      <h1>New post</h1>
+      <form onSubmit={handleSubmit}>
+        <label style={{ display: "block", margin: "1rem 0" }}>
           Title
           <input
-            name='title'
-            defaultValue={post.title}
+            type='text'
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             required
-            className={styles.titleInput}
+            style={{ width: "100%", padding: "0.5rem", marginTop: "0.5rem" }}
           />
         </label>
 
-        {/* hidden input to carry content HTML */}
-        <input type='hidden' name='content' defaultValue={post.content} />
+        {/* scrollable wrapper */}
+        <div
+          style={{
+            height: "300px",
+            overflowY: "auto",
+            border: "1px solid #ccc",
+            borderRadius: 4,
+            padding: "0.5rem",
+          }}
+        >
+          <EditorContent editor={editor} />
+        </div>
 
-        {/* our client‑only editor */}
-        <Editor initial={post.content} />
-
-        <label className={styles.checkboxLabel}>
-          <input
-            type='checkbox'
-            name='published'
-            defaultChecked={post.published}
-          />
-          Published
-        </label>
-
-        <button type='submit' className={styles.saveBtn}>
-          Save
+        <button
+          type='submit'
+          style={{ marginTop: "1rem", padding: "0.6rem 1.2rem" }}
+        >
+          Publish
         </button>
       </form>
-
-      <form action={remove}>
-        <button type='submit' className={styles.deleteBtn}>
-          Delete
-        </button>
-      </form>
-    </section>
+    </main>
   );
 }
