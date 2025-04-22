@@ -1,7 +1,7 @@
+import styles from "./Users.module.css";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { format } from "date-fns";
-import styles from "./Users.module.css";
 
 export const revalidate = 60; // rebuild list every 60 s (or on request in dev)
 
@@ -37,6 +37,9 @@ export default async function UsersPage({ searchParams }: PageProps) {
   /* ---------- render --------------------------------------------- */
   return (
     <section className={styles.container}>
+      <Link href='/admin/dashboard' className={styles.back}>
+        Back to Dashboard →
+      </Link>
       <h1 className={styles.heading}>Users</h1>
 
       <table className={styles.table}>

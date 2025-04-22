@@ -2,35 +2,64 @@
   padding: 2rem;
 }
 
+.back {
+  color: var(--blue);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.newBtn {
+  padding: 0.5rem 1rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 50px;
+  transition: all 0.2s ease-in;
+}
+
+.newBtn:hover {
+  background: #1e49b6;
+}
+
 .heading {
-  margin: 0 0 1.5rem;
-  font: 600 1.75rem/1.2 system-ui, sans-serif;
+  font-size: 3rem;
+  letter-spacing: -1px;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
   border-radius: 8px;
-  overflow: hidden;
-}
-
-.table th,
-.table td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e5e5e5;
-  text-align: left;
+  margin-top: 3rem;
+  overflow-x: scroll;
 }
 
 .table th {
-  background: #fafafa;
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: #555;
+  text-align: left;
+  font-size: 1.4rem;
+  background-color: var(--orange);
+  border: 1px solid var(--gray);
+  padding: 0.5rem 1rem;
 }
 
-.table tr:last-child td {
-  border-bottom: none;
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid var(--gray);
+  white-space: nowrap;
+}
+
+.table th:nth-child(5),
+.table th:nth-child(6),
+.table td:nth-child(5),
+.table td:nth-child(6) {
+  text-align: center;
 }
 
 .empty {
@@ -41,12 +70,13 @@
 
 /* ---------- status colours ---------- */
 .statusBadge {
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.4rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 50px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
+  width: 100%;
+  margin-left: auto;
 }
 
 .statusBadge[data-status="DRAFT"]    { background: #6b7280; }
@@ -78,20 +108,3 @@
   color: #aaa;
 }
 
-.headerRow{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:1.5rem;
-}
-
-.newBtn{
-  padding:0.45rem 0.9rem;
-  background:#2563eb;
-  color:#fff;
-  border-radius:6px;
-  font-size:0.875rem;
-  text-decoration:none;
-  font-weight:600;
-}
-.newBtn:hover{background:#1e49b6;}

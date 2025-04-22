@@ -49,6 +49,9 @@ export default async function InvoicesPage({ searchParams }: PageProps) {
 
   return (
     <section className={styles.container}>
+      <Link href='/admin/dashboard' className={styles.back}>
+        Back to Dashboard →
+      </Link>
       <div className={styles.headerRow}>
         <h1 className={styles.heading}>Invoices</h1>
         <Link href='/admin/dashboard/invoices/new' className={styles.newBtn}>

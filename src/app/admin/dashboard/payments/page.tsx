@@ -46,6 +46,9 @@ export default async function PaymentsPage({ searchParams }: PageProps) {
   /* ---------- UI ------------------ */
   return (
     <section className={styles.container}>
+      <Link href='/admin/dashboard' className={styles.back}>
+        Back to Dashboard →
+      </Link>
       <h1 className={styles.heading}>Payments</h1>
 
       <table className={styles.table}>
