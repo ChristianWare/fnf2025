@@ -32,36 +32,46 @@ export async function getKpis(): Promise<Kpi[]> {
   });
   const revenueThisMonth = revenueResult._sum.amount ?? 0;
 
-   return [
-     {
-       id: "users",
-       label: "Total Users",
-       value: totalUsers,
-       href: "/admin/dashboard/users",
-     },
-     {
-       id: "companies",
-       label: "Active Companies",
-       value: totalCompanies,
-       href: "/admin/dashboard/companies",
-     },
-     {
-       id: "projects",
-       label: "Projects In Progress",
-       value: projectsInProgress,
-       href: "/admin/dashboard/projects",
-     },
-     {
-       id: "invoices",
-       label: "Outstanding Invoices",
-       value: outstandingInvoices,
-       href: "/admin/dashboard/invoices",
-     },
-     {
-       id: "revenue",
-       label: "Revenue This Month",
-       value: `$${revenueThisMonth.toLocaleString()}`,
-       href: "/admin/dashboard/payments",
-     },
-   ];
+  const totalPosts = await prisma.blogPost.count({
+    where: { published: true },
+  });
+
+  return [
+    {
+      id: "users",
+      label: "Total Users",
+      value: totalUsers,
+      href: "/admin/dashboard/users",
+    },
+    {
+      id: "companies",
+      label: "Active Companies",
+      value: totalCompanies,
+      href: "/admin/dashboard/companies",
+    },
+    {
+      id: "projects",
+      label: "Projects In Progress",
+      value: projectsInProgress,
+      href: "/admin/dashboard/projects",
+    },
+    {
+      id: "invoices",
+      label: "Outstanding Invoices",
+      value: outstandingInvoices,
+      href: "/admin/dashboard/invoices",
+    },
+    {
+      id: "revenue",
+      label: "Revenue This Month",
+      value: `$${revenueThisMonth.toLocaleString()}`,
+      href: "/admin/dashboard/payments",
+    },
+    {
+      id: "blog",
+      label: "Published Posts",
+      value: totalPosts,
+      href: "/admin/dashboard/blog",
+    },
+  ];
 }

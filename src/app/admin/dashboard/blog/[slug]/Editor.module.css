@@ -1,0 +1,18 @@
+.editorContainer {
+  position: relative;
+  width: 100%;
+}
+
+.quill {
+  width: 100%;
+}
+
+/* Global styles for Quill elements */
+:global(.ql-container) {
+  height: 300px;
+}
+
+:global(.ql-editor) {
+  height: 100%;
+  overflow-y: auto;
+}
