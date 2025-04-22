@@ -1,17 +1,17 @@
 "use client";
 
+import styles from "./Login.module.css";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
-import styles from "./Login.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../public/images/ecomm.jpeg";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
-// import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Contact2 from "@/components/Contact2/Contact2";
 import FalseButton from "@/components/FalseButton/FalseButton";
+import FinalCTA from "@/components/FinalCTA/FinalCTA";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -117,7 +117,7 @@ export default function LoginPage() {
     <div className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          <div className=':styles left'>
+          <div className={styles.left}>
             <div className={styles.formCard}>
               <div className={styles.cardHeader}>
                 <div className={styles.SectionHeadingContainer}>
@@ -138,13 +138,11 @@ export default function LoginPage() {
                       <p>{generalError}</p>
                     </div>
                   )}
-
                   {successMessage && (
                     <div className={styles.successAlert}>
                       <p>{successMessage}</p>
                     </div>
                   )}
-
                   <div className={styles.formGroup}>
                     <label htmlFor='email' className={styles.label}>
                       Email
@@ -192,14 +190,6 @@ export default function LoginPage() {
                       <p className={styles.errorText}>{errors.password}</p>
                     )}
                   </div>
-
-                  {/* <button
-                    type='submit'
-                    className={styles.button}
-                    disabled={loading}
-                  >
-                    {loading ? "Signing in..." : "Sign in"}
-                  </button> */}
                   <FalseButton
                     text={loading ? "Signing in..." : "Sign in"}
                     disabled={loading}
@@ -208,14 +198,6 @@ export default function LoginPage() {
                 </form>
               </div>
 
-              <div className={styles.cardFooter}>
-                <p className={styles.footerText}>
-                  Don&apos;t have an account?{" "}
-                  <Link href='/auth/register' className={styles.link}>
-                    Sign up
-                  </Link>
-                </p>
-              </div>
             </div>
           </div>
           <div className={styles.right}>
@@ -224,8 +206,16 @@ export default function LoginPage() {
             </div>
           </div>
         </div>
+              <div className={styles.cardFooter}>
+                <p className={styles.footerText}>
+                  Don&apos;t have an account?
+                  <Link href='/auth/register' className={styles.link}>
+                    Sign up
+                  </Link>
+                </p>
+              </div>
       </LayoutWrapper>
-      {/* <FinalCTA /> */}
+      <FinalCTA />
       <Contact2 />
     </div>
   );

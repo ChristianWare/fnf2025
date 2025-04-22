@@ -135,6 +135,7 @@
   padding: 1.5rem 2rem;
   border-top: 1px solid #eaeaea;
   text-align: center;
+  margin-top: 3rem;
 }
 
 .footerText {
@@ -145,6 +146,7 @@
   color: #2563eb;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
+  margin-left: .5rem;
 }
 
 .link:hover {
@@ -155,7 +157,7 @@
 .imgContainer {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 100%;
 }
 
 .img {
@@ -176,11 +178,15 @@
   .cardContent {
     width: 100%;
   }
+
+  .imgContainer {
+    height: 500px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .imgContainer {
-    height: 700px;
+    height: 450px;
   }
 }
 
@@ -189,3 +195,4 @@
     height: 400px;
   }
 }
+
