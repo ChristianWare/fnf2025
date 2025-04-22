@@ -1,7 +1,6 @@
-"use client";
 
-import Link from "next/link";
 import styles from "./KpiCard.module.css";
+import Link from "next/link";
 
 export default function KpiCard({
   label,
