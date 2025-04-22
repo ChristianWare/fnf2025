@@ -157,8 +157,12 @@ export default function Hero() {
               </ul>
             </div>
             <div className={styles.btnContainer}>
-              <Button text='Get Started' btnType='black' href='/' />
-              <Button text='View our Work' btnType='primary' href='/' />
+              <Button text='Start a Project' btnType='black' href='/contact' />
+              <Button
+                text='View our Work'
+                btnType='primary'
+                href='/portfolio'
+              />
             </div>
           </div>
           <div className={styles.right}>
