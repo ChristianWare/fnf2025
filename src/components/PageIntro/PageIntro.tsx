@@ -2,6 +2,7 @@ import styles from "./PageIntro.module.css";
 import Image, { StaticImageData } from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionIntro from "../SectionIntro/SectionIntro";
+import ContactForm from "../ContactForm/ContactForm";
 
 interface Props {
   title: string;
@@ -27,13 +28,14 @@ export default function PageIntro({ title, introTitle, src, copy }: Props) {
             </div>
             <Image src={src} alt='' title='' fill className={styles.img} />
             <div className={styles.contentChildren}>
-              <h1 className={styles.heading}>{title} </h1>
+              <h2 className={styles.heading}>{title} </h2>
               <div className={styles.middle}>
                 <p className={styles.copy}>{copy}</p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm />
       </LayoutWrapper>
     </section>
   );

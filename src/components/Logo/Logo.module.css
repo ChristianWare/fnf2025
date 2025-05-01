@@ -8,14 +8,7 @@
   line-height: 0.5;
 }
 
-.logoBox {
-  background-color: var(--lightGray);
-  border: 1px solid var(--gray);
-  border-radius: 50px;
-  padding: 1rem 1.5rem;
-  transition: all 0.2s ease-in;
-  cursor: pointer;
-}
+
 
 .logoBox:hover {
   background-color: var(--tan);

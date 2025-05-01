@@ -1,5 +1,5 @@
 import styles from "./Compare.module.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
+// import LayoutWrapper from "@/components/LayoutWrapper";
 import Listing from "../../../../public/icons/sad.svg";
 import Clock from "../../../../public/icons/happy.svg";
 import Check from "../../../../public/icons/checkii.svg";
@@ -71,48 +71,47 @@ const data = [
 const Compare = () => {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.parentContent}>
-          <div className={styles.content}>
-            <div className={styles.left}>
-              {/* <h2 className={styles.heading}>
+      {/* <LayoutWrapper> */}
+      <div className={styles.parentContent}>
+        <div className={styles.content}>
+          <div className={styles.left}>
+            {/* <h2 className={styles.heading}>
                 Why choose us over the competition?
               </h2> */}
-              <SectionHeading2 title=" Why choose us over the competition?" />
-              <p className={styles.copy}>
-                When it comes to building your e-commerce store, not all
-                solutions are created equal. We go beyond templates and generic
-                designs to deliver custom-built websites tailored to your unique
-                goals.
-              </p>
-            </div>
-            <div className={styles.right}>
-              {data.map((x) => (
-                <div className={styles.column} key={x.id}>
-                  <div className={styles.iconContainerBox}>
-                    <div className={styles.iconContainer}>
-                      <h3 className={styles.title}>{x.title}</h3>
-                      {x.icon}
-                    </div>
-                    <div className={styles.iconContainer}>
-                      <h3 className={styles.title}>{x.titleii}</h3>
-                      {x.iconii}
-                    </div>
+            <SectionHeading2 title=' Why choose us over the competition?' />
+            <p className={styles.copy}>
+              When it comes to building your e-commerce store, not all solutions
+              are created equal. We go beyond templates and generic designs to
+              deliver custom-built websites tailored to your unique goals.
+            </p>
+          </div>
+          <div className={styles.right}>
+            {data.map((x) => (
+              <div className={styles.column} key={x.id}>
+                <div className={styles.iconContainerBox}>
+                  <div className={styles.iconContainer}>
+                    <h3 className={styles.title}>{x.title}</h3>
+                    {x.icon}
                   </div>
-                  <div className={styles.dataBox}>
-                    {x.details.map((y) => (
-                      <ul key={y.id} className={styles.box}>
-                        <div>{y.icon}</div>
-                        <li>{y.details}</li>
-                      </ul>
-                    ))}
+                  <div className={styles.iconContainer}>
+                    <h3 className={styles.title}>{x.titleii}</h3>
+                    {x.iconii}
                   </div>
                 </div>
-              ))}
-            </div>
+                <div className={styles.dataBox}>
+                  {x.details.map((y) => (
+                    <ul key={y.id} className={styles.box}>
+                      <div>{y.icon}</div>
+                      <li>{y.details}</li>
+                    </ul>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </LayoutWrapper>
+      </div>
+      {/* </LayoutWrapper> */}
     </section>
   );
 };

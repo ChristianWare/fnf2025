@@ -6,6 +6,9 @@ import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import SectionIntro from "../SectionIntro/SectionIntro";
 import FalseButton from "../FalseButton/FalseButton";
+import PageIntro from "../PageIntro/PageIntro";
+import Img1 from "../../../public/images/about.jpeg";
+
 
 interface Inputs {
   firstName: string;
@@ -84,6 +87,12 @@ const ContactForm = () => {
         />{" "}
       </div>
       <div className={styles.content}>
+        <PageIntro
+                  title='Ready to elevate your e-commerce experience?'
+                  introTitle='Fonts & Footers'
+                  src={Img1}
+                  copy="Let's discuss how we can help your business grow with a custom e-commerce solution that meets your unique needs."
+                />
         <div className={styles.bottom}>
           <div className={styles.left}></div>
           <div className={styles.right}>

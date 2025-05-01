@@ -1,14 +1,16 @@
 .container {
-  margin-bottom: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: var(--black);
 }
 
 .heading {
   font-size: 7rem;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .revealText {
-  color: var(--tan);
+  color: transparent;
   filter: drop-shadow(0 0 0.1rem var(--black));
   line-height: 1;
 }

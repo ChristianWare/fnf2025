@@ -3,9 +3,10 @@ import { pricing } from "@/lib/data";
 import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import ServicesSectionIntro from "@/components/ServicesSectionIntro/ServicesSectionIntro";
+import Mission from "@/components/Mission/Mission";
 
 const cardsData = [
-  { id: 1, title: "4:" },
+  { id: 1, title: "5:" },
   { id: 3, title: "Pricing" },
 ];
 
@@ -16,9 +17,9 @@ const Pricing = () => {
 
       <LayoutWrapper>
         <div className={styles.content}>
-          <div className={styles.top}>
+          {/* <div className={styles.top}>
             <h2 className={styles.heading}>Package Options</h2>
-          </div>
+          </div> */}
           <div className={styles.bottom}>
             {pricing.map((x) => (
               <div className={styles.card} key={x.id}>
@@ -31,6 +32,9 @@ const Pricing = () => {
                   <div className={styles.timeframe}>{x.timeframe}</div>
                 </div>
                 <div className={styles.price}>${x.price}</div>
+                <div className={styles.featureBox}>
+                  <p className={styles.feature}>{x.features}</p>
+                </div>
                 <div className={styles.btnContainer}>
                   <Button
                     text='Book Your session'
@@ -38,13 +42,11 @@ const Pricing = () => {
                     btnType='primary'
                   />
                 </div>
-                <div className={styles.featureBox}>
-                  <p className={styles.feature}>{x.features}</p>
-                </div>
               </div>
             ))}
           </div>
         </div>
+        <Mission />
       </LayoutWrapper>
     </section>
   );

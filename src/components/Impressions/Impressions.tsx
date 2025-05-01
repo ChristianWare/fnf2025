@@ -11,7 +11,6 @@ import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Solution from "../Solution/Solution";
-// import OurApproach from "../AboutPage/OurApproach/OurApproach";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -95,19 +94,10 @@ export default function Impressions() {
               At Fonts & Footers, we understand the unique challenges of
               e-commerce and build solutions that drive real business growth.
             </p>
-            {/* <div className={styles.btnContainer}>
-              <Button
-                btnType='secondary'
-                text='Learn how we can help'
-                href='/'
-              />
-            </div> */}
           </div>
         </div>
-        {/* <HowItWorks /> */}
-        <Solution />
-        {/* <OurApproach /> */}
       </LayoutWrapper>
+        <Solution />
     </section>
   );
 }

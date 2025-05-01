@@ -11,53 +11,54 @@ import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const projectData = [
   {
     id: 1,
-    title: "Home Page",
+    title: "Project 1",
     type: <Arrow className={styles.icon} />,
-    description: "Home Page",
+    description: "Project 1",
     label: <Arrow className={styles.icon2} />,
     src: Img1,
   },
   {
     id: 2,
-    title: "About Page",
+    title: "Project 2",
     type: <Arrow className={styles.icon} />,
-    description: "About Page",
+    description: "Project 2",
     label: <Arrow className={styles.icon2} />,
     src: Img2,
   },
   {
     id: 3,
-    title: "Product Page",
+    title: "Project 3",
     type: <Arrow className={styles.icon} />,
-    description: "Product Page",
+    description: "Project 3",
     label: <Arrow className={styles.icon2} />,
     src: Img3,
   },
   {
     id: 4,
-    title: "Filter System",
+    title: "Project 4",
     type: <Arrow className={styles.icon} />,
-    description: "Filter System",
+    description: "Project 4",
     label: <Arrow className={styles.icon2} />,
     src: Img1,
   },
   {
     id: 5,
-    title: "Services Page",
+    title: "Project 5",
     type: <Arrow className={styles.icon} />,
-    description: "Services Page",
+    description: "Project 5",
     label: <Arrow className={styles.icon} />,
     src: Img3,
   },
   {
     id: 6,
-    title: "Contact Page",
+    title: "Project 6",
     type: <Arrow className={styles.icon} />,
-    description: "Contact Page",
+    description: "Project 6",
     label: <Arrow className={styles.icon2} />,
     src: Img2,
   },
@@ -204,17 +205,14 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Featured project' />
-        <p className={styles.copy}>
+        <SectionHeading number='4' title='Featured projects' />
+        {/* <p className={styles.copy}>
           Passion for mountain biking, outdoor adventure, and premium gear
           inspired the founders of Thundertrails to launch their specialized
           bike shop in 2019. What began as a local favorite for cycling
           enthusiasts has rapidly grown into one of the regions premier
-          destinations for high-performance mountain bikes and accessories. With
-          a loyal customer base and growing reputation, Thundertrails needed a
-          digital presence that matched their in-store experience and could
-          support their expansion plans.
-        </p>
+          destinations for high-performance mountain bikes and accessories.
+        </p> */}
         <div className={styles.content}>
           <div className={styles.projectDataContainer} ref={projectsListRef}>
             {projectData.map((project, index) => (
@@ -264,13 +262,13 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
-        <div className={styles.btnContainer}>
+        {/* <div className={styles.btnContainer}>
           <Button
             btnType='secondary'
             text='View All Projects'
             href='/portfolio'
           />
-        </div>
+        </div> */}
       </LayoutWrapper>
     </section>
   );

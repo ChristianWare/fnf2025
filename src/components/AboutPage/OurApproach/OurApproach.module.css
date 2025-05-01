@@ -12,7 +12,6 @@
 }
 
 .top {
- 
   width: 100%;
 }
 
@@ -24,63 +23,41 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 3rem;
   width: 100%;
   height: 100%;
+  /* border: 1px solid var(--lightGray); */
 }
 
-.cardTop {
-  padding-bottom: 10rem;
-  border-bottom: 1px solid var(--black);
-  width: 100%;
-  position: relative;
-  padding-left: 2rem;
-  border: 1px solid var(--gray);
-  border-right: none;
-  border-left: 1px solid var(--gray);
-}
-
-.bottom > div:nth-child(4) .cardTop {
-  border-right: 1px solid var(--gray);
-  background-color: var(--pink);
-}
-
-.cardTop:after {
-  position: absolute;
-  content: "";
-  bottom: -7.5px;
-  left: -7.5px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: var(--black);
-}
-
-.index {
-  display: block;
-  font-size: 8rem;
+.icon {
+  color: var(--white);
+  width: 5rem;
+  height: 5rem;
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.4;
+  width: 85%;
+  color: var(--pink);
 }
 
 .cardBottom {
   border: 1px solid var(--gray);
-  border-right: none;
   padding: 1rem;
   padding-top: 1rem;
+  margin-top: 1rem;
   height: 100%;
-}
-
-.bottom > div:nth-child(4) .cardBottom {
-  border-right: 1px solid var(--gray);
 }
 
 .desc {
@@ -109,11 +86,6 @@
 @media screen and (max-width: 1068px) {
   .bottom {
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 3rem;
-  }
-
-  .card:nth-child(3) {
-    border-right: 1px solid var(--gray);
   }
 
   .top {
@@ -131,22 +103,10 @@
   .bottom {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .card:nth-child(2) {
-    border-right: 1px solid var(--gray);
-  }
 }
 
 @media screen and (max-width: 568px) {
   .bottom {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .card:nth-child(1) {
-    border-right: 1px solid var(--gray);
-  }
-
-  .cardTop {
-    padding-bottom: 7rem;
   }
 }
