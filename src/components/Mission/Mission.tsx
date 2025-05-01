@@ -44,8 +44,7 @@ const Mission = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-       
-        <SectionHeading3 title='Our Values' color='orange' />
+        <SectionHeading3 title='We believe in....' color='orange' />
         <div className={styles.bottom}>
           {mission.map((x, index) => (
             <div key={index} className={styles.box}>

@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const cardsData = [
   { id: 1, title: "3 :" },
   { id: 2, title: "the main" },
-  { id: 3, title: "services" },
+  { id: 3, title: "service" },
   { id: 4, title: "we offer:" },
 ];
 

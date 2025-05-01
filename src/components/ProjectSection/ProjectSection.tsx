@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import { useEffect, useRef, useState, useCallback } from "react";
 import styles from "./ProjectSection.module.css";
+import { useEffect, useRef, useState, useCallback } from "react";
 import LayoutWrapper from "../LayoutWrapper";
 import Img1 from "../../../public/images/ecomm.jpeg";
 import Img2 from "../../../public/images/heroii.jpeg";
@@ -204,7 +204,7 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Featured project: Thundertrails' />
+        <SectionHeading2 title='Featured project' />
         <p className={styles.copy}>
           Passion for mountain biking, outdoor adventure, and premium gear
           inspired the founders of Thundertrails to launch their specialized

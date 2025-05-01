@@ -13,6 +13,7 @@ import AboutHero from "@/components/AboutHero/AboutHero";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 // import Solutionii from "@/components/Solutionii/Solutionii";
 import Faq from "@/components/Faq/Faq";
+import ListOfServices from "@/components/ServicePage/ListOfServices/ListOfServices";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <AboutHero />
         {/* <Solutionii /> */}
         <ServicesSection />
+        <ListOfServices />
         <ProjectSection />
         <Pricing />
         <Faq />
