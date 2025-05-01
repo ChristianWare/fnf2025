@@ -3,63 +3,25 @@
 import styles from "./AboutHero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 
-import { useRef } from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Img1 from "../../../public/images/about.jpeg";
-import ParallaxImage from "../ParallaxImage/ParallaxImage";
+// import Img1 from "../../../public/images/about.jpeg";
+// import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import Mission from "../Mission/Mission";
-import Button from "../Button/Button";
+import HomePageSolutions from "../HomePageSolutions/HomePageSolutions";
+import ServiceDetails from "../ServiceDetails/ServiceDetails";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutHero(): JSX.Element {
-  const headingRef = useRef<HTMLHeadingElement | null>(null);
-
-  useGSAP(() => {
-    const animateHeading = (): (() => void) | null => {
-      if (!headingRef.current) return null;
-
-      gsap.set(headingRef.current, { visibility: "visible" });
-
-      const split = new SplitType(headingRef.current, {
-        types: "words",
-        lineClass: styles.line,
-      });
-
-      gsap.set(split.words || [], {
-        y: 400,
-      });
-
-      gsap.to(split.words || [], {
-        y: 0,
-        opacity: 1,
-        duration: 2,
-        stagger: 0.075,
-        ease: "power4.out",
-        delay: 0.25,
-      });
-
-      return () => split.revert();
-    };
-
-    const headingAnimation = animateHeading();
-
-    return () => {
-      headingAnimation?.();
-    };
-  });
-
   return (
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          <SectionHeading2 title='2: Who Are We?' />
+          <SectionHeading2 title='2: Our Specialties' />
         </div>
-        <div className={styles.content}>
+        {/* <div className={styles.content}>
           <div className={styles.left}>
             <h2 className={styles.headingii}>
               Fonts & Footers is a specialized e-commerce development agency
@@ -77,11 +39,10 @@ export default function AboutHero(): JSX.Element {
           <div className={styles.right}>
             <ParallaxImage src={Img1} alt='' title='About Us' />
           </div>
-        </div>
+        </div> */}
+        <HomePageSolutions />
+        <ServiceDetails />
         <Mission />
-        <div className={styles.btnContainer}>
-          <Button text='Learn more about Us' btnType='black' href='/about' />
-        </div>
       </LayoutWrapper>
     </section>
   );

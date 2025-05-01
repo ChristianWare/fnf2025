@@ -1,20 +1,9 @@
 .container {
-  margin-bottom: 5rem;
-}
-
-.heading {
-  font-size: 7rem;
-  text-align: center;
-}
-
-.revealText {
-  color: var(--tan);
-  filter: drop-shadow(0 0 0.1rem var(--black));
-  line-height: 1;
+    margin-top: 5rem;
 }
 
 .bottom {
-  margin-top: 15rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-areas:
     "one one two three"

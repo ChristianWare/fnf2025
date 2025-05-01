@@ -1,6 +1,5 @@
 .container {
   padding-top: 15rem;
-  /* padding-bottom: 10rem; */
   background-color: var(--tan);
 }
 
@@ -17,7 +16,7 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   margin-top: 2rem;
 }
 

@@ -11,6 +11,7 @@ import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Solution from "../Solution/Solution";
+// import OurApproach from "../AboutPage/OurApproach/OurApproach";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -105,6 +106,7 @@ export default function Impressions() {
         </div>
         {/* <HowItWorks /> */}
         <Solution />
+        {/* <OurApproach /> */}
       </LayoutWrapper>
     </section>
   );

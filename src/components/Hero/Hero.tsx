@@ -121,7 +121,6 @@ export default function Hero() {
 
   const services = [
     { id: 1, name: "B2B Stores" },
-    { id: 2, name: "B2C Stores" },
     { id: 3, name: "Booking Platforms" },
     { id: 4, name: "And much more!" },
   ];
@@ -134,15 +133,15 @@ export default function Hero() {
           <div className={styles.left}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                We Build <br />
-                E-Commerce
+                Shopify <br />
+                builds that
                 <br />
-                Websites <br />
+                load in &#x3C; 1s <br />
               </h1>
             </div>
             <div>
               <p className={styles.servicesTitle} ref={refs.servicesTitle}>
-                We specialize in:
+                We build the best:
               </p>
               <ul
                 className={styles.servicesContainer}

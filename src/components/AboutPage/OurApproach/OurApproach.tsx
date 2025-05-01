@@ -1,27 +1,26 @@
 import styles from "./OurApproach.module.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
 import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
 
 const data = [
   {
     id: 1,
-    title: "Strategic thinking",
-    desc: "We start by understanding your business goals, target audience, and competitive landscape.",
+    title: "Very Slow Page Loading Times",
+    desc: "A slow website frustrates customers and leads to abandoned carts, costing you sales and damaging your online brand's reputation.",
   },
   {
     id: 2,
-    title: "Data-informed design",
-    desc: "We use research and analytics to guide our design decisions, ensuring your site not only looks good but performs well.",
+    title: "Bad Mobile Phone Experience",
+    desc: "Many e-commerce sites struggle to deliver a seamless shopping experience on mobile devices, resulting in lost opportunities as customers shop on the go.",
   },
   {
     id: 3,
-    title: "Technical excellence",
-    desc: "Our development team builds robust, scalable solutions that grow with your business.",
+    title: "Complicated Checkout Process",
+    desc: "A confusing or lengthy checkout process causes potential buyers to abandon their carts, leaving revenue on the table.",
   },
   {
     id: 4,
-    title: "Ongoing optimization",
-    desc: "We continually analyze and refine your e-commerce experience to improve conversions and customer satisfaction.",
+    title: "Low Search Engine Visibility",
+    desc: "Without proper optimization, your website fails to rank on search engines, making it hard for potential customers to find you online.",
   },
 ];
 
@@ -32,30 +31,28 @@ interface Props {
 export default function OurApproach({ background = "" }: Props) {
   return (
     <section className={`${styles.container} ${styles[background]}`}>
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <div className={styles.top}>
-            <SectionHeading3 title='Data-driven design, human-centered solutions' />
-            <h3 className={styles.headingii}>
-              We believe that successful e-commerce experiences balance art and
-              science. Our approach combines:
-            </h3>
-          </div>
-          <div className={styles.bottom}>
-            {data.map((x) => (
-              <div key={x.id} className={styles.card}>
-                <div className={styles.cardTop}>
-                  <span className={styles.index}>{x.id}.</span>
-                  <h4 className={styles.title}>{x.title}</h4>
-                </div>
-                <div className={styles.cardBottom}>
-                  <p className={styles.desc}>{x.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className={styles.content}>
+        <div className={styles.top}>
+          <SectionHeading3 title='' />
+          {/* <h3 className={styles.headingii}>
+            We believe that successful e-commerce experiences balance art and
+            science. Our approach combines:
+          </h3> */}
         </div>
-      </LayoutWrapper>
+        <div className={styles.bottom}>
+          {data.map((x) => (
+            <div key={x.id} className={styles.card}>
+              <div className={styles.cardTop}>
+                <span className={styles.index}>{x.id}.</span>
+                <h4 className={styles.title}>{x.title}</h4>
+              </div>
+              <div className={styles.cardBottom}>
+                <p className={styles.desc}>{x.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

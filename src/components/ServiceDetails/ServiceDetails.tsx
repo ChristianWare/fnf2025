@@ -1,9 +1,9 @@
 "use client";
 
-import LayoutWrapper from "../LayoutWrapper";
+// import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
 import SectionIntro from "../SectionIntro/SectionIntro";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 
 const data = [
   {
@@ -46,30 +46,30 @@ const data = [
 export default function ServiceDetails() {
   return (
     <div className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.top}>
-          <SectionIntro
-            title='End-to-end ecommerce solitions'
-            color='black'
-            dotColor='blackDot'
-          />
-        </div>
-        <div className={styles.bottom}>
-          {data.map((x, index) => (
-            <div className={styles.card} key={index}>
-              <h3 className={styles.title}>{x.title}</h3>
-              <p className={styles.desc}>{x.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className={styles.btnContainer}>
+      {/* <LayoutWrapper> */}
+      <div className={styles.top}>
+        <SectionIntro
+          title='End-to-end ecommerce solitions'
+          color='black'
+          dotColor='blackDot'
+        />
+      </div>
+      <div className={styles.bottom}>
+        {data.map((x, index) => (
+          <div className={styles.card} key={index}>
+            <h3 className={styles.title}>{x.title}</h3>
+            <p className={styles.desc}>{x.description}</p>
+          </div>
+        ))}
+      </div>
+      {/* <div className={styles.btnContainer}>
           <Button
             text='See All Services'
             btnType='secondary'
             href='/services'
           />
-        </div>
-      </LayoutWrapper>
+        </div> */}
+      {/* </LayoutWrapper> */}
     </div>
   );
 }
