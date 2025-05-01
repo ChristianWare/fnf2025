@@ -133,10 +133,10 @@ export default function Hero() {
           <div className={styles.left}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                Shopify <br />
-                builds that
+                We build <br />
+                blazing fast
                 <br />
-                load in &#x3C; 1s <br />
+                online stores <br />
               </h1>
             </div>
             <div>

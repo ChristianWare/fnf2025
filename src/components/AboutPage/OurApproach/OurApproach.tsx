@@ -1,5 +1,4 @@
 import styles from "./OurApproach.module.css";
-// import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
 import SlowLoading from "../../../../public/icons/badLoading.svg";
 import BadMobile from "../../../../public/icons/badMobile.svg";
 import BadCheckout from "../../../../public/icons/badCheckout.svg";
@@ -40,9 +39,6 @@ export default function OurApproach({ background = "" }: Props) {
   return (
     <section className={`${styles.container} ${styles[background]}`}>
       <div className={styles.content}>
-        {/* <div className={styles.top}>
-          <SectionHeading3 title='' />
-        </div> */}
         <div className={styles.bottom}>
           {data.map((x) => (
             <div key={x.id} className={styles.card}>
