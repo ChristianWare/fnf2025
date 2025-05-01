@@ -34,16 +34,16 @@ export const pricing = [
     features:
       "Everything in the Growth Store plus premium UX/UI design and unlimited product support. Includes custom functionality development, full systems integration (ERP, CRM, inventory), multi-currency support, advanced analytics, personalization features, conversion optimization, and 60 days of comprehensive post-launch support and training for your team.",
   },
-  {
-    id: 4,
-    title: "Specialized E-commerce Solutions",
-    description:
-      "Businesses with specific e-commerce models or unique requirements that need customized solutions.",
-    price: "Custom",
-    timeframe: "Varies",
-    features:
-      "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",
-  },
+  // {
+  //   id: 4,
+  //   title: "Specialized E-commerce Solutions",
+  //   description:
+  //     "Businesses with specific e-commerce models or unique requirements that need customized solutions.",
+  //   price: "Custom",
+  //   timeframe: "Varies",
+  //   features:
+  //     "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",
+  // },
 ] as const;
 
 export const projects = [

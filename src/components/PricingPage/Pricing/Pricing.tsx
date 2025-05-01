@@ -2,10 +2,18 @@ import styles from "./Pricing.module.css";
 import { pricing } from "@/lib/data";
 import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import ServicesSectionIntro from "@/components/ServicesSectionIntro/ServicesSectionIntro";
+
+const cardsData = [
+  { id: 1, title: "4:" },
+  { id: 3, title: "Pricing" },
+];
 
 const Pricing = () => {
   return (
     <section className={styles.container}>
+      <ServicesSectionIntro data={cardsData} />
+
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
@@ -24,7 +32,11 @@ const Pricing = () => {
                 </div>
                 <div className={styles.price}>${x.price}</div>
                 <div className={styles.btnContainer}>
-                  <Button text='Book Your session' href='/contact' btnType='primary' />
+                  <Button
+                    text='Book Your session'
+                    href='/contact'
+                    btnType='primary'
+                  />
                 </div>
                 <div className={styles.featureBox}>
                   <p className={styles.feature}>{x.features}</p>
