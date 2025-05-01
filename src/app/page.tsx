@@ -19,7 +19,6 @@ export default function Home() {
         <Hero />
         <Impressions />
         <AboutHero />
-        {/* <Solutionii /> */}
         <ServicesSection />
         <ListOfServices />
         <ProjectSection />
