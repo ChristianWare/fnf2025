@@ -11,15 +11,11 @@ export default function FinalCTA() {
       <LayoutWrapper>
         <div className={styles.content}>
           <Logo />
-          {/* <p className={styles.copy}>
-            Let&apos;s discuss how we can help your business grow with a custom
-            e-commerce solution that meets your unique needs.
-          </p> */}
           <h2 className={styles.heading}>
-            We Build <br />
-            E-Commerce
+            We build <br />
+            blazing fast
             <br />
-            Websites <br />
+            online stores <br />
           </h2>
           <ShuffleHero />
         </div>
