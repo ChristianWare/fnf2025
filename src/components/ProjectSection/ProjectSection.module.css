@@ -23,14 +23,18 @@
 
 .projectDataContainer {
   width: 100%;
-  border-top: 1px solid var(--gray);
-  border-bottom: 1px solid var(--gray);
+  /* border: 1px solid var(--gray); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .card {
   height: 80px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   overflow: hidden;
+  width: 100%;
 }
 
 .projectWrapper {
