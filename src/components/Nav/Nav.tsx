@@ -9,11 +9,10 @@ import Logo from "../Logo/Logo";
 // import User from "../../../public/icons/user.svg";
 
 const navItems = [
+  { text: "overview", href: "/" },
   { text: "About", href: "/about" },
-  { text: "Services", href: "/services" },
-  { text: "Pricing", href: "/pricing" },
   { text: "Works", href: "/portfolio" },
-  // { text: "Journal", href: "/blog" },
+  { text: "Account", href: "/auth/login" },
   { text: "Start a Project", href: "/contact" },
 ];
 
@@ -121,8 +120,7 @@ export default function Nav() {
                 }
                 className={styles.navItem}
               >
-                  {item.text}
-                
+                {item.text}
               </Link>
             ))}
           </div>

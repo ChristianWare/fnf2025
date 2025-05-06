@@ -1,122 +1,77 @@
 .container {
   background-color: var(--tan);
   padding-bottom: 10rem;
+  border-bottom: 1px solid var(--gray);
 }
 
 .content {
   padding-top: 10rem;
   display: grid;
-}
-
-.imgContainer {
-  position: relative;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 5rem;
   width: 100%;
-  height: auto;
-  min-height: 500px;
-  border: 1px solid var(--gray);
-  display: flex;
-  flex-direction: column;
 }
 
-.img {
-  padding: 2rem;
-  object-fit: cover;
-}
-
-.overlay {
-  pointer-events: none;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  width: calc(100% - 4rem);
-  height: calc(100% - 4rem);
-  background-color: var(--black);
-  opacity: 0.5;
-  z-index: 3;
-}
-
-.top {
-  background-color: var(--tan);
-  width: fit-content;
-  padding: 1rem 2rem;
-  border: 1px solid var(--gray);
-  border-bottom: none;
-  position: absolute;
-  top: -38px;
-  right: -1px;
-}
-
-.contentChildren {
-  position: relative;
-  z-index: 4;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 10rem;
-  padding: 4rem;
-  width: 100%;
+.right {
+  order: -1;
 }
 
 .heading {
-  width: 50%;
-  color: var(--tan);
-  font-size: 5rem;
-  letter-spacing: -1px;
-}
-
-.middle {
-  width: 100%;
+  color: var(--black);
+  font-family: var(--SuisseIntlCondensed);
 }
 
 .copy {
-  width: 40%;
-  color: var(--tan);
-  margin-left: auto;
-  text-align: right;
+  color: var(--black);
+  width: 80%;
 }
 
-@media screen and (max-width: 1268px) {
-  .contentChildren {
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+/* Needed so GSAP can reveal from a hidden state */
+.heading,
+.copy {
+  will-change: transform, opacity;
+  overflow: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+}
+
+/* SplitType lines/words live inside .line spans */
+.line {
+  display: inline-block;
+  line-height: 0.01;
+}
+
+.heading :global(.word),
+.heading :global(.word),
+.heading :global(.line) {
+  line-height: 0.01;
+  font-family: var(--SuisseIntlCondensed);
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
   }
 
   .heading,
   .copy {
     text-align: center;
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
-}
 
-@media screen and (max-width: 968px) {
-  .top {
-    top: -33px;
+  .copy {
+    width: 80%;
+  }
+
+  .right {
+    order: 1;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .heading,
   .copy {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .heading {
-    font-size: 10vw;
-    text-align: left;
-  }
-
-  .copy {
-    text-align: left;
-  }
-
-   .top {
-    top: -30px;
   }
 }

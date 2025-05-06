@@ -1,8 +1,8 @@
 import styles from "./AboutIntro.module.css";
-import LayoutWrapper from "../LayoutWrapper";
-import ParallaxImage from "../ParallaxImage/ParallaxImage";
-import Img1 from "../../../public/images/aboutiv.jpg";
-import SectionHeading from "../SectionHeading/SectionHeading";
+import LayoutWrapper from "../../LayoutWrapper";
+import ParallaxImage from "../../ParallaxImage/ParallaxImage";
+import Img1 from "../../../../public/images/aboutiv.jpg";
+import SectionHeading from "../../SectionHeading/SectionHeading";
 // import SectionIntro from "../SectionIntro/SectionIntro";
 
 export default function AboutIntro() {

@@ -56,14 +56,19 @@ export default function Hero() {
 
       const targets = config.type === "words" ? split.words : split.lines;
 
+      /*  ▼  START STATE – diagonally down‑left & transparent  ▼  */
       gsap.set(targets, {
-        y: 400,
-        //  opacity: 0
+        y: 200, // vertical offset (down)
+        x: -200, // horizontal offset (to the left)
+        opacity: 0,
       });
+
+      /*  ▲  END STATE – original position & fully opaque  ▲  */
       gsap.to(targets, {
         y: 0,
+        x: 0,
         opacity: 1,
-        duration: 2,
+        duration: 1.5,
         stagger: 0.075,
         ease: "power4.out",
         delay: 0.25,

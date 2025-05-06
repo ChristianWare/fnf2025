@@ -9,12 +9,6 @@
   font-family: var(--SuisseIntlMedium);
 }
 
-
-
-.logoBox:hover {
-  background-color: var(--tan);
-}
-
 .large {
   font-size: 2.5rem;
   padding-left: 3rem;
