@@ -47,12 +47,15 @@
   visibility: hidden;
   line-height: 1;
   white-space: nowrap;
+  font-family: var(--SuisseIntlMedium);
+  padding-right: 1rem;
 }
 
 .heading :global(.word),
 .heading :global(.word),
 .heading :global(.line) {
   line-height: 0.01;
+  font-family: var(--SuisseIntlMedium); 
 }
 
 .servicesTitle {
