@@ -40,7 +40,7 @@ export default function PageIntro({ title, copy }: Props) {
         y: 0,
         x: 0,
         opacity: 1,
-        duration: 2,
+        duration: 2.5,
         stagger: 0.075,
         ease: "power4.out",
         delay: 0.25,

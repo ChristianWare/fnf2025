@@ -68,7 +68,7 @@ export default function Hero() {
         y: 0,
         x: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 2.5,
         stagger: 0.075,
         ease: "power4.out",
         delay: 0.25,

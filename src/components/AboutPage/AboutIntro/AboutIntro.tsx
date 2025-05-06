@@ -1,15 +1,11 @@
 import styles from "./AboutIntro.module.css";
 import LayoutWrapper from "../../LayoutWrapper";
-import ParallaxImage from "../../ParallaxImage/ParallaxImage";
-import Img1 from "../../../../public/images/aboutiv.jpg";
-import SectionHeading from "../../SectionHeading/SectionHeading";
-// import SectionIntro from "../SectionIntro/SectionIntro";
 
 export default function AboutIntro() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='1' title='Bridging design and functionality' />
+        <div className={styles.top}></div>
         <div className={styles.content}>
           <div className={styles.left}>
             <h2 className={styles.heading}>
@@ -18,7 +14,6 @@ export default function AboutIntro() {
               recognition that successful online stores require both beautiful
               aesthetics and robust functionality.{" "}
             </h2>
-            <ParallaxImage src={Img1} alt='' title='Our Story' />
           </div>
           <div className={styles.right}>
             <div className={styles.copyBox}>

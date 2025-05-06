@@ -54,6 +54,7 @@ export default function RootLayout({
       <html lang='en'>
         <body
           className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable}`}
+          style={{ backgroundColor: "var(--tan" }}
         >
           <SmoothScroll>
             <Toaster

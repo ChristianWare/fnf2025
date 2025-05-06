@@ -2,6 +2,7 @@
   background-color: var(--tan);
   padding-bottom: 10rem;
   border-bottom: 1px solid var(--gray);
+  min-height: 90vh;
 }
 
 .content {
