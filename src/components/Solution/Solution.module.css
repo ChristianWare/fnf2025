@@ -17,7 +17,6 @@
   line-height: 1;
 }
 
-/* cards grid */
 .bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -25,7 +24,6 @@
   margin-top: 10rem;
 }
 
-/* card initial state: transparent borders */
 .card {
   display: flex;
   flex-direction: column;
@@ -35,10 +33,9 @@
   padding: 3rem;
   width: 100%;
   height: 100%;
-  border: 1px solid transparent; /* all sides transparent ⇒ gsap draws them */
+  border: 1px solid transparent;
 }
 
-/* icon hidden until gsap animates in */
 .icon {
   width: 10rem;
   height: 10rem;
@@ -47,16 +44,16 @@
   transform: translateY(15px);
 }
 
-/* title */
 .title {
-  width: 85%;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.5;
   color: var(--pink);
+  font-family: var(--SuisseIntlCondensed);
+  hyphens: auto;
+  text-transform: uppercase;
 }
 
-/* breakpoints (unchanged) */
 @media (max-width: 1068px) {
   .bottom {
     grid-template-columns: repeat(3, 1fr);
@@ -65,7 +62,6 @@
 @media (max-width: 768px) {
   .heading {
     font-size: 11vw;
-    /* text-align: left; */
   }
   .bottom {
     grid-template-columns: repeat(2, 1fr);

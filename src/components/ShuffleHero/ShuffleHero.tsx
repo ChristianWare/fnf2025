@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
+import styles from "./ShuffleHero.module.css";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import styles from "./ShuffleHero.module.css";
 // import Image from "next/image";
 import Img1 from "../../../public/images/heroii.jpeg";
 import Img2 from "../../../public/images/heroiii.jpeg";

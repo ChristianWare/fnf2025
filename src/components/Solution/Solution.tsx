@@ -1,10 +1,10 @@
 "use client";
 
+import styles from "./Solution.module.css";
 import { useLayoutEffect, useRef } from "react";
 import LayoutWrapper from "../LayoutWrapper";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import styles from "./Solution.module.css";
 
 import SlowLoading from "../../../public/icons/badLoading.svg";
 import BadMobile from "../../../public/icons/badMobile.svg";
@@ -90,7 +90,7 @@ export default function Solution() {
         <div className={styles.bottom}>
           {data.map(({ id, title, icon: Icon }) => (
             <div key={id} className={styles.card}>
-              <h4 className={styles.title}>{title}</h4>
+              <p className={styles.title}>{title}</p>
               <Icon className={styles.icon} />
             </div>
           ))}

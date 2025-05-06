@@ -290,7 +290,7 @@ export default function ListOfServices() {
           {data.map((a) => (
             <div key={a.id} className={styles.section}>
               <SectionHeading2 title={a.service} />
-              <span className={styles.desc}>{a.desc}</span>
+              {/* <span className={styles.desc}>{a.desc}</span> */}
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>
                   <Image
@@ -320,6 +320,7 @@ export default function ListOfServices() {
                   </div>
                 </div> */}
               </div>
+              <span className={styles.desc}>{a.desc}</span>
             </div>
           ))}
           {/* {data.map((x) => (

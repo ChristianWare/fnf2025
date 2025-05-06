@@ -28,8 +28,9 @@
   max-width: 52rem;
   background-color: var(--orange);
   padding: 2rem;
+  font-size: 2rem;
   border: 1px solid var(--gray);
-  font-size: 1.6rem;
+  color: var(--black);
 }
 
 .imgContainer {
@@ -56,10 +57,8 @@
 
 .copy {
   text-transform: none;
-  width: 70%;
-  letter-spacing: -0.3px;
-  color: var(--black);
-  font-size: 1.4rem;
+  width: 95%;
+  color: var(--text);
 }
 
 .btnContainer {

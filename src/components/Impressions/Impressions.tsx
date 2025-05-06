@@ -76,7 +76,7 @@ export default function Impressions() {
             <ParallaxImage src={Img1} alt='' title='Your Online Store' />
           </div>
           <div className={styles.right}>
-            <h3 className={styles.heading}>
+            <p className={styles.heading}>
               In today&apos;s digital marketplace, having an e-commerce site
               that simply &ldquo;works&rdquo; isn&apos;t enough.
               <br />
@@ -84,7 +84,7 @@ export default function Impressions() {
               Your online store needs to tell your brand story, provide an
               exceptional user experience, and convert visitors into loyal
               customers.
-            </h3>
+            </p>
             <p className={styles.copy}>
               Many businesses struggle with outdated platforms, poor mobile
               experiences, or complicated checkout processes that cost them

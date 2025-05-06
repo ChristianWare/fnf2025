@@ -1,5 +1,6 @@
 :root {
   --black: #1f1f1f;
+  --blackii: #4e4c4c;
   --gray: #919598;
   --grayii: #6e7072;
   --lightGray: #d4d4d4;
@@ -10,7 +11,7 @@
   --tanii: #e2dfd0;
   --taniii: #a39f88;
   --white: #ffffff;
-  --text: #433f3f;
+  --text: #808080;
   --blue: #2563eb;
 }
 
@@ -102,9 +103,10 @@ p,
 input,
 textarea {
   hyphens: auto;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.3;
-  font-family: var(--SuisseIntlMonoRegular);
+  letter-spacing: -0.3px;
+  font-family: var(--SuisseIntlMedium);
   text-transform: none;
 }
 
