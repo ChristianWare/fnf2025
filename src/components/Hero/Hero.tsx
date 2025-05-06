@@ -119,11 +119,11 @@ export default function Hero() {
       });
   });
 
-  const services = [
-    { id: 1, name: "B2B Stores" },
-    { id: 3, name: "Booking Platforms" },
-    { id: 4, name: "And much more!" },
-  ];
+  // const services = [
+  //   { id: 1, name: "B2B Stores" },
+  //   { id: 3, name: "Booking Platforms" },
+  //   { id: 4, name: "And much more!" },
+  // ];
 
   return (
     <section className={styles.container}>
@@ -140,7 +140,7 @@ export default function Hero() {
               </h1>
             </div>
             <div>
-              <p className={styles.servicesTitle} ref={refs.servicesTitle}>
+              {/* <p className={styles.servicesTitle} ref={refs.servicesTitle}>
                 We build the best:
               </p>
               <ul
@@ -153,15 +153,20 @@ export default function Hero() {
                     <span className={styles.blackDot} />
                   </li>
                 ))}
-              </ul>
+              </ul> */}
+              <p className={styles.copy} ref={refs.copy}>
+                Fonts & Footers is a specialized e-commerce web development
+                agency crafting custom, high-converting online stores for
+                businesses of all sizes.
+              </p>
             </div>
             <div className={styles.btnContainer}>
               <Button text='Start a Project' btnType='black' href='/contact' />
-              <Button
+              {/* <Button
                 text='View our Work'
                 btnType='primary'
                 href='/portfolio'
-              />
+              /> */}
             </div>
           </div>
           <div className={styles.right}>

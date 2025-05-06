@@ -21,9 +21,21 @@ const NeueHaasGroteskMedium = localFont({
   display: "swap",
 });
 
-const SuisseIntlMedium = localFont({
+const SuisseIntlCondensed = localFont({
   src: "../../public/fonts/SuisseIntlCondBold.woff2",
+  variable: "--SuisseIntlCondensed",
+  display: "swap",
+});
+
+const SuisseIntlMedium = localFont({
+  src: "../../public/fonts/SuisseIntlMedium.woff2",
   variable: "--SuisseIntlMedium",
+  display: "swap",
+});
+
+const SuisseIntlMonoRegular = localFont({
+  src: "../../public/fonts/SuisseIntlMonoRegular.woff2",
+  variable: "--SuisseIntlMonoRegular",
   display: "swap",
 });
 
@@ -41,7 +53,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang='en'>
         <body
-          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlMedium.variable}`}
+          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable}`}
         >
           <SmoothScroll>
             <Toaster

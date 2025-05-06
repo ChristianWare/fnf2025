@@ -24,8 +24,7 @@
   scroll-margin-top: 40px;
   */
   -webkit-tap-highlight-color: transparent;
-  font-family: var(--NeueHaasGroteskBold);
-  text-transform: uppercase;
+  font-family: var(--SuisseIntlMedium);
   overscroll-behavior: none;
 }
 
@@ -57,8 +56,9 @@ h5,
 h6,
 span {
   color: var(--black);
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlCondensed);
   hyphens: auto;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -104,7 +104,7 @@ textarea {
   hyphens: auto;
   font-size: 1.6rem;
   line-height: 1.3;
-  font-family: var(--NeueHaasGroteskMedium);
+  font-family: var(--SuisseIntlMonoRegular);
   text-transform: none;
 }
 

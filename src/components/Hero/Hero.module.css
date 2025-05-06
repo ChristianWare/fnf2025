@@ -40,14 +40,13 @@
 }
 
 .heading {
-  text-transform: capitalize;
   will-change: transform, opacity, filter;
   overflow: hidden;
   backface-visibility: hidden;
   visibility: hidden;
   line-height: 1;
   white-space: nowrap;
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlCondensed);
   padding-right: 1rem;
 }
 
@@ -55,7 +54,23 @@
 .heading :global(.word),
 .heading :global(.line) {
   line-height: 0.01;
-  font-family: var(--SuisseIntlMedium); 
+  font-family: var(--SuisseIntlCondensed);
+}
+
+.copy {
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 2;
+  position: relative;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  font-family: var(--SuisseIntlMonoRegular);
+  width: 100%;
+}
+
+.copy :global(.word) {
+  font-family: var(--SuisseIntlMonoRegular);
+  width: fit-content;
 }
 
 .servicesTitle {
@@ -147,17 +162,6 @@
   z-index: 1;
 }
 
-.copy {
-  overflow: hidden;
-  visibility: hidden;
-  text-transform: normal;
-  width: 80%;
-  opacity: 0.7;
-  z-index: 2;
-  position: relative;
-  text-transform: capitalize;
-}
-
 @media screen and (max-width: 1068px) {
   .container {
     height: 100%;
@@ -165,7 +169,6 @@
 
   .content {
     grid-template-columns: repeat(1, 1fr);
-    gap: 0rem;
   }
 
   .top {
@@ -186,36 +189,16 @@
   }
 
   .btnContainer {
-    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
     margin-left: auto;
     margin-right: auto;
   }
 
-  .copy {
-    width: 70%;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .right {
-    width: 100%;
-    margin-top: 5rem;
-  }
-
-  .imgContainer {
-    height: 350px;
-  }
 }
 
 @media screen and (max-width: 768px) {
   .copy {
     width: 80%;
-  }
-
-  .btnContainer {
-    width: 100%;
   }
 }
 
@@ -235,5 +218,9 @@
     margin-top: 0rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .btnContainer {
+    width: 100%;
   }
 }
