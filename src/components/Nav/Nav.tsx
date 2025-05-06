@@ -59,7 +59,7 @@ export default function Nav() {
 
   /* ---------------- menu toggle --------------------------------- */
   const toggleHamburger = () => setIsOpen((v) => !v);
-  const closeHamburger = () => setIsOpen(false);
+  // const closeHamburger = () => setIsOpen(false);
 
   /* ---------------- dark‑section observer ----------------------- */
   useEffect(() => {
@@ -108,27 +108,24 @@ export default function Nav() {
             <Logo />
           </div>
 
-          <ul
+          <div
             className={styles.navItems}
             onClick={(e) => e.stopPropagation()} /* keep hamburger stable */
           >
             {navItems.map((item) => (
-              <li
+              <Link
                 key={item.href}
+                href={item.href}
+                onClick={() =>
+                  router.push(item.href, { onTransitionReady: slideInOut })
+                }
                 className={styles.navItem}
-                onClick={closeHamburger}
               >
-                <Link
-                  href={item.href}
-                  onClick={() =>
-                    router.push(item.href, { onTransitionReady: slideInOut })
-                  }
-                >
                   {item.text}
-                </Link>
-              </li>
+                
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* ------------- avatar / auth dropdown ------------- */}
