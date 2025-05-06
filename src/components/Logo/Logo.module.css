@@ -6,6 +6,7 @@
   z-index: 999;
   user-select: none;
   line-height: 0.5;
+  font-family: var(--SuisseIntlMedium);
 }
 
 
