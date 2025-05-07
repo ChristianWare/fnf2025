@@ -67,7 +67,7 @@
   cursor: pointer;
   display: block;
   width: 100%;
-  position: relative;  
+  position: relative;
 }
 
 .card:hover {
@@ -101,12 +101,12 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;           
+  bottom: 0px;
   height: 3px;
   width: 100%;
   background-color: var(--black);
   transform-origin: left;
-  transform: scaleX(0);   
+  transform: scaleX(0);
 }
 
 @media screen and (max-width: 1068px) {
@@ -135,19 +135,20 @@
   .copy {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 568px) {
   .bottom {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .bottomRight {
-    padding: 3rem;
+    padding: 5rem;
   }
 
   .icon {
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .bottomLeft {
+    border-right: none;
   }
 }
