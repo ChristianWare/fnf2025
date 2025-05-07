@@ -1,6 +1,6 @@
 "use client";
 
-// import LayoutWrapper from "../LayoutWrapper";
+import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
 import SectionIntro from "../SectionIntro/SectionIntro";
 // import Button from "../Button/Button";
@@ -46,7 +46,7 @@ const data = [
 export default function ServiceDetails() {
   return (
     <div className={styles.container}>
-      {/* <LayoutWrapper> */}
+      <LayoutWrapper>
       <div className={styles.top}>
         <SectionIntro
           title='End-to-end ecommerce solitions'
@@ -69,7 +69,7 @@ export default function ServiceDetails() {
             href='/services'
           />
         </div> */}
-      {/* </LayoutWrapper> */}
+      </LayoutWrapper>
     </div>
   );
 }

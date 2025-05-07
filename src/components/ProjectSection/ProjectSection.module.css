@@ -2,8 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+      padding: 15rem 0;
   background-color: var(--white);
 }
 

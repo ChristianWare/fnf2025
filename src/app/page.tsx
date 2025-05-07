@@ -9,6 +9,7 @@ import AboutHero from "@/components/AboutHero/AboutHero";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Faq from "@/components/Faq/Faq";
 import ListOfServices from "@/components/ServicePage/ListOfServices/ListOfServices";
+import Problem from "@/components/AboutPage/Problem/Problem";
 // import PageIntro from "@/components/PageIntro/PageIntro";
 // import Img1 from "../../public/images/about.jpeg";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Impressions />
         <AboutHero />
+        <Problem />
         <ServicesSection />
         <ListOfServices />
         <ProjectSection />
