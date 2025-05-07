@@ -6,7 +6,7 @@
 
 .btn {
   z-index: 998;
-  font-family: var(--NeubauGroteskNor);
+  font-family: var(--SuisseIntlMonoRegular);
   text-transform: uppercase;
   font-size: 1.4rem;
   white-space: nowrap;

@@ -21,10 +21,6 @@
   opacity: 1;
 }
 
-.white {
-  color: white !important;
-}
-
 .navbar {
   margin-right: auto;
   margin-left: auto;
@@ -74,6 +70,7 @@
 }
 
 .navItem {
+  font-family: var(--SuisseIntlMonoRegular);
   font-size: 1.4rem;
   line-height: 1;
   color: var(--black);
@@ -220,7 +217,7 @@
     width: 100%;
   }
 
-  .navItem  {
+  .navItem {
     font-size: 9vw;
     line-height: 1;
     text-transform: uppercase;

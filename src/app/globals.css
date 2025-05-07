@@ -70,8 +70,8 @@ h1 {
 
 h2 {
   font-size: 8rem;
-  line-height: 1;
-  letter-spacing: -1.4px;
+  line-height: 115%;
+  letter-spacing: -1px;
 }
 
 h3,

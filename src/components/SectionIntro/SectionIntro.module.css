@@ -32,7 +32,7 @@
 }
 
 .span {
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlMonoRegular);
 }
 
 @keyframes pulse {
