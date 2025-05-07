@@ -95,7 +95,6 @@ export default function ProjectDetails({ project }: Props) {
         <Description project={project} />
         <VideoSection />
         <Challenge project={project} />
-        <VideoSection />
         <Results project={project} />
       </LayoutWrapper>
     </section>

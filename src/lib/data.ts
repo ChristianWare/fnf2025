@@ -156,7 +156,7 @@ export const projects = [
     h1: "Elevating the digital experience for Chuxly's premium audio equipment",
     year: 2025,
     platform: "Shopify Plus with React",
-    href: "https://chuxly-audio.vercel.app/",
+    href: "https://www.chuxly.com/",
     challenge: [
       {
         id: 2.1,
@@ -245,7 +245,7 @@ export const projects = [
     h1: "Crafting a luxurious digital storefront for Golden Drips' premium honey collection",
     year: 2025,
     platform: "WooCommerce with WordPress",
-    href: "https://golden-drips-honey.vercel.app/",
+    href: "https://www.goldendrips.com/",
     challenge: [
       {
         id: 3.1,
