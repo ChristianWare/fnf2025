@@ -72,7 +72,8 @@ export const projects = [
     ],
     h1: "Revolutionizing Thundertrails' online presence with a cutting-edge ecommerce platform",
     year: 2025,
-    platform: "Wix E-commerce with Next.js",
+    platform: "Wix E-commerce",
+    tech: "Next.js",
     href: "https://thunder-wix.vercel.app/",
     challenge: [
       {
@@ -125,7 +126,8 @@ export const projects = [
     ],
     h1: "Elevating the digital experience for Chuxly's premium audio equipment",
     year: 2025,
-    platform: "Shopify Plus with React",
+    platform: "Shopify",
+    tech: "Next.js",
     href: "https://www.chuxly.com/",
     challenge: [
       {
@@ -178,7 +180,8 @@ export const projects = [
     ],
     h1: "Crafting a luxurious digital storefront for Golden Drips' premium honey collection",
     year: 2025,
-    platform: "WooCommerce with WordPress",
+    platform: "WooCommerce",
+    tech: "Next.js",
     href: "https://www.goldendrips.com/",
     challenge: [
       {
@@ -231,7 +234,8 @@ export const projects = [
     ],
     h1: "Designing a seamless direct booking experience for Elite Retreat Rentals' luxury properties",
     year: 2025,
-    platform: "Next.js with Stripe integration",
+    platform: "n/a",
+    tech: "Next.js + MongoDB + Node.js",
     href: "https://elite-retreat-rentals.vercel.app/",
     challenge: [
       {

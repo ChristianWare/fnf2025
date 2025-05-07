@@ -34,11 +34,13 @@ interface Props {
     title: string;
     src: StaticImageData;
     icon: ComponentType<SVGProps<SVGSVGElement>>;
+    video?: string;
     description?: string;
     tags?: readonly TagItem[];
     h1: string;
     year: number;
     platform: string;
+    tech: string;
     href: string;
     challenge: readonly ChallengeItem[];
     results: readonly ResultItem[];
@@ -61,14 +63,24 @@ export default function ProjectDetails({ project }: Props) {
             <div className={styles.isLeft}>
               <div className={styles.isLeftTop}>
                 <div className={styles.isl1}>
-                  <span className={styles.sectionTitle}>Client</span>
-                  <p className={styles.copy}>{project.title}</p>
-                  <span className={styles.sectionTitle}>Year</span>
-                  <p className={styles.copy}>{project.year}</p>
+                  <div>
+                    <span className={styles.sectionTitle}>Client</span>
+                    <p className={styles.copy}>{project.title}</p>
+                  </div>
+                  <div>
+                    <span className={styles.sectionTitle}>Year</span>
+                    <p className={styles.copy}>{project.year}</p>
+                  </div>
                 </div>
                 <div className={styles.isl2}>
-                  <span className={styles.sectionTitle}>Platforms</span>
-                  <p className={styles.copy}>{project.platform}</p>
+                  <div>
+                    <span className={styles.sectionTitle}>CMS/Platform</span>
+                    <p className={styles.copy}>{project.platform}</p>
+                  </div>
+                  <div>
+                    <span className={styles.sectionTitle}>Tech</span>
+                    <p className={styles.copy}>{project.tech}</p>
+                  </div>
                 </div>
               </div>
               <div className={styles.isLeftBottom}>
@@ -96,7 +108,7 @@ export default function ProjectDetails({ project }: Props) {
         </div>
         <Stats />
         <Description project={project} />
-        <VideoSection project={project} />
+        {project.video && <VideoSection video={project.video} />}
         <Challenge project={project} />
         <Results project={project} />
       </LayoutWrapper>

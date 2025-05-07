@@ -37,6 +37,7 @@
 .sectionTitle {
   font-size: 1.6rem;
   display: block;
+  margin-bottom: 0.5rem;
 }
 
 .isLeft {
@@ -93,6 +94,7 @@
   text-transform: none;
   font-family: var(--SuisseIntlMedium);
   width: 70%;
+  color: var(--text);
 }
 
 .tagContainer {
@@ -116,9 +118,21 @@
   .introSection {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .heading {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
   .introSection {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5rem;
@@ -128,10 +142,6 @@
     order: -1;
     padding-left: 0;
     border-left: none;
-  }
-
-  .heading {
-    width: 100%;
   }
 
   .tagContainer {

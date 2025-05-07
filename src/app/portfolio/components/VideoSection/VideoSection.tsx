@@ -1,16 +1,14 @@
 import styles from "./VideoSection.module.css";
 
 interface Props {
-  project: {
-    video: string;
-  };
+  video: string;
 }
 
-export default function VideoSection({ project }: Props) {
+export default function VideoSection({ video }: Props) {
   return (
     <div className={styles.container}>
       <video preload='auto' autoPlay muted loop className={styles.video}>
-        <source src={project.video} />
+        <source src={video} />
       </video>
     </div>
   );
