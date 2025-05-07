@@ -4,7 +4,6 @@
   z-index: 2;
   border: 1px solid var(--gray);
   margin-bottom: 20rem;
-  /* padding: 3rem; */
 }
 
 .top {
@@ -17,8 +16,9 @@
 }
 
 .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
+  color: var(--black);
   margin-left: auto;
   margin-right: auto;
 }

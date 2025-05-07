@@ -2,6 +2,10 @@ import Thundertrails from "../../public/images/thunder.jpg";
 import Chuxly from "../../public/images/chuxly.png";
 import Honey from "../../public/images/honey.jpg";
 import ERREntals from "../../public/images/erRentals.png";
+import Thunder from "../../public/icons/lightning.svg";
+import Headphones from "../../public/icons/headphones.svg";
+import Bee from "../../public/icons/bee2.svg";
+import Rentals from "../../public/icons/rentals.svg";
 
 export const pricing = [
   {
@@ -52,6 +56,8 @@ export const projects = [
     title: "Thundertrails",
     slug: "thundertrails",
     src: Thundertrails,
+    icon: Thunder,
+    video: "/videos/thunder.mp4",
     description:
       "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
     tags: [
@@ -97,50 +103,14 @@ export const projects = [
           "Thundertrails has successfully elevated its brand positioning in the digital space, aligning with its premium in-store experience. The integrated content strategy has boosted organic traffic by 55% and increased newsletter signups by 143%. The platform's scalable architecture now provides Thundertrails with the foundation they need to expand their online presence nationally while maintaining the personalized service their customers expect.",
       },
     ],
-    gallery: [
-      {
-        id: 1.6,
-        src: ERREntals,
-      },
-      {
-        id: 1.7,
-        src: Chuxly,
-      },
-      {
-        id: 1.8,
-        src: Honey,
-      },
-      {
-        id: 1.9,
-        src: ERREntals,
-      },
-      {
-        id: 2.99,
-        src: Chuxly,
-      },
-      {
-        id: 2.98,
-        src: Honey,
-      },
-      {
-        id: 2.97,
-        src: ERREntals,
-      },
-      {
-        id: 2.96,
-        src: Chuxly,
-      },
-      {
-        id: 2.95,
-        src: Honey,
-      },
-    ],
   },
   {
     id: 2,
     title: "Chuxly",
     slug: "chuxly",
     src: Chuxly,
+    icon: Headphones,
+    video: "/videos/chuxly.mp4",
     description:
       "Founded by audio engineers with a passion for exceptional sound quality, Chuxly emerged in 2021 as a boutique brand dedicated to creating premium headphones and portable speakers. Combining cutting-edge acoustic technology with elegant, minimalist design, Chuxly quickly gained recognition among audiophiles and style-conscious consumers alike. As demand for their products grew beyond their flagship store, Chuxly needed an online platform that could communicate the unique sensory experience of their products while handling their expanding inventory and customer base.",
     tags: [
@@ -186,50 +156,14 @@ export const projects = [
           "The content strategy has established Chuxly as a thought leader in the audio space, with their listening guides and technical articles generating significant organic traffic and social media engagement. The membership program has exceeded expectations with over 10,000 subscribers in the first quarter, creating a reliable revenue stream and valuable customer insights. With the robust and scalable architecture in place, Chuxly is now expanding into international markets with localized content and payment options.",
       },
     ],
-    gallery: [
-      {
-        id: 2.6,
-        src: ERREntals,
-      },
-      {
-        id: 2.7,
-        src: Chuxly,
-      },
-      {
-        id: 2.8,
-        src: Honey,
-      },
-      {
-        id: 2.9,
-        src: ERREntals,
-      },
-      {
-        id: 3.99,
-        src: Chuxly,
-      },
-      {
-        id: 3.98,
-        src: Honey,
-      },
-      {
-        id: 3.97,
-        src: ERREntals,
-      },
-      {
-        id: 3.96,
-        src: Chuxly,
-      },
-      {
-        id: 3.95,
-        src: Honey,
-      },
-    ],
   },
   {
     id: 3,
     title: "Golden Drips",
     slug: "golden-drips",
     src: Honey,
+    icon: Bee,
+    video: "/videos/honey.mp4",
     description:
       "Golden Drips began as a family-owned apiary in 2018, producing small-batch, artisanal honey varieties from carefully selected floral sources. Their commitment to sustainable beekeeping practices and exceptionally pure, unprocessed honey products quickly earned them a devoted following at farmers' markets and specialty food stores. As demand for their premium honey and bee pollen products surged, Golden Drips recognized the need to expand their reach beyond local markets while maintaining the artisanal quality and personal connection that defined their brand.",
     tags: [
@@ -275,50 +209,14 @@ export const projects = [
           "The brand storytelling elements have significantly strengthened Golden Drips' market positioning, with engagement metrics showing that 78% of first-time visitors explore the sustainability content before making a purchase. Their educational content on bee conservation has generated substantial media coverage and partnership opportunities with environmental organizations. The platform's scalability has enabled Golden Drips to expand their product line to include limited edition seasonal releases and collaborations with other artisanal food producers, further cementing their reputation as leaders in the premium honey market.",
       },
     ],
-    gallery: [
-      {
-        id: 3.6,
-        src: ERREntals,
-      },
-      {
-        id: 3.7,
-        src: Chuxly,
-      },
-      {
-        id: 3.8,
-        src: Honey,
-      },
-      {
-        id: 3.9,
-        src: ERREntals,
-      },
-      {
-        id: 4.99,
-        src: Chuxly,
-      },
-      {
-        id: 4.98,
-        src: Honey,
-      },
-      {
-        id: 4.97,
-        src: ERREntals,
-      },
-      {
-        id: 4.96,
-        src: Chuxly,
-      },
-      {
-        id: 4.95,
-        src: Honey,
-      },
-    ],
   },
   {
     id: 4,
     title: "Elite Retreat Rentals",
     slug: "elite-retreat-rentals",
     src: ERREntals,
+    icon: Rentals,
+    video: "/videos/rentals.mp4",
     description:
       "Elite Retreat Rentals was established in 2022 by a team of hospitality veterans with a vision to transform the vacation rental experience in Phoenix, Arizona. Their portfolio features three meticulously designed luxury properties, each offering a unique aesthetic and amenities while maintaining consistent high standards of comfort and service. As the Phoenix tourism market became increasingly competitive, Elite Retreat Rentals sought to break away from dependency on third-party booking platforms by creating a direct booking system that would showcase their properties' distinctive features and allow for a more personalized guest experience.",
     tags: [
@@ -362,44 +260,6 @@ export const projects = [
         id: 4.5,
         resultDetail:
           "The improved guest communication system has resulted in a 98% satisfaction rating and a 67% repeat booking rate within the first year. The detailed analytics have enabled more effective marketing strategies, with targeted promotions increasing occupancy rates during traditionally slower periods by 41%. With the success of their direct booking model, Elite Retreat Rentals is now expanding their portfolio with two additional luxury properties in Scottsdale, all seamlessly integrated into their existing platform. Their reputation as a premier luxury accommodation provider in the Phoenix metropolitan area continues to grow, with features in several travel publications highlighting their innovative approach to the vacation rental experience.",
-      },
-    ],
-    gallery: [
-      {
-        id: 4.6,
-        src: ERREntals,
-      },
-      {
-        id: 4.7,
-        src: Chuxly,
-      },
-      {
-        id: 4.8,
-        src: Honey,
-      },
-      {
-        id: 4.9,
-        src: ERREntals,
-      },
-      {
-        id: 5.99,
-        src: Chuxly,
-      },
-      {
-        id: 5.98,
-        src: Honey,
-      },
-      {
-        id: 5.97,
-        src: ERREntals,
-      },
-      {
-        id: 5.96,
-        src: Chuxly,
-      },
-      {
-        id: 5.95,
-        src: Honey,
       },
     ],
   },

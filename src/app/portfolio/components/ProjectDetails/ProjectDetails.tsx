@@ -7,8 +7,7 @@ import Description from "../Description/Description";
 import VideoSection from "../VideoSection/VideoSection";
 import Results from "../Results/Results";
 import Challenge from "../Challenge/Challenge";
-import Thunder from "../../../../../public/icons/lightning.svg";
-// import Rentals from "../../../../../public/icons/rentals.svg";
+import { ComponentType, SVGProps } from "react";
 
 interface TagItem {
   id: number;
@@ -34,6 +33,7 @@ interface Props {
   project: {
     title: string;
     src: StaticImageData;
+    icon: ComponentType<SVGProps<SVGSVGElement>>;
     description?: string;
     tags?: readonly TagItem[];
     h1: string;
@@ -47,11 +47,13 @@ interface Props {
 }
 
 export default function ProjectDetails({ project }: Props) {
+  const Icon = project.icon;
+
   return (
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          <Thunder className={styles.icon} />
+          <Icon className={styles.icon} />
           <h2 className={styles.title}>{project.title}</h2>
         </div>
         <div className={styles.content}>
@@ -94,7 +96,7 @@ export default function ProjectDetails({ project }: Props) {
         </div>
         <Stats />
         <Description project={project} />
-        <VideoSection />
+        <VideoSection project={project} />
         <Challenge project={project} />
         <Results project={project} />
       </LayoutWrapper>
