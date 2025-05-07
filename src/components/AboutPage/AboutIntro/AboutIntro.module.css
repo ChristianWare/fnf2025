@@ -1,79 +1,67 @@
+.container {
+  min-height: 100vh;
+  border-bottom: 1px solid var(--gray);
+}
+
 .content {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-  border-top: 8px solid var(--black);
-  padding-top: 3rem;
+  /* grid-gap: 2rem; */
 }
 
 .left {
   padding-right: 5rem;
+  border-right: 1px solid var(--gray);
+  display: flex;
+  align-items: center;
+}
+
+.leftContent {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5rem;
-  height: 100%;
-  width: 100%;
+  grid-gap: 3rem;
 }
 
 .heading {
-  font-size: 2rem;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-size: 2.8rem;
+  font-family: var(--SuisseIntlMedium);
   margin-top: 2rem;
-  background-color: var(--orange);
-  border: 1px solid var(--gray);
-  padding: 2rem;
-}
-
-.imgParent {
-  padding: 2rem;
-  background-color: var(--tan);
-  border: 1px solid var(--gray);
-  width: 100%;
-}
-
-.title {
-  margin-top: 5rem;
-  background-color: var(--tan);
-  padding: 1rem 2rem;
-  border: 1px solid var(--gray);
-  border-bottom: 3px solid var(--tan);
-  border-bottom: none;
-  position: relative;
-  top: 1px;
-}
-
-.right {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-}
-
-.copyBox,
-.copyBoxMobile {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
 }
 
 .copy {
   text-transform: none;
-  color: var(--gray);
+  color: var(--gtextray);
+}
+
+.right {
+  background-color: var(--orange);
+  height: 100%;
 }
 
 @media screen and (max-width: 1068px) {
+  .container {
+    min-height: fit-content;
+    background-color: var(--orange);
+  }
+
   .content {
     grid-template-columns: repeat(1, 1fr);
+    min-height: fit-content;
+    padding: 10rem 0rem;
   }
 
   .left {
     padding-right: 0rem;
   }
+
+  .right {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .heading {
-    text-align: center;
     width: 100%;
   }
 
@@ -87,5 +75,11 @@
 
   .copyBoxMobile {
     display: block;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding: 5rem 0rem;
   }
 }

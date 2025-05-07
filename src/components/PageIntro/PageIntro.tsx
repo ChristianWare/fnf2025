@@ -1,12 +1,12 @@
 "use client";
 
+import styles from "./PageIntro.module.css";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
-
-import styles from "./PageIntro.module.css";
 import LayoutWrapper from "../LayoutWrapper";
+import Arrow from "../../../public/icons/arrow.svg";
 
 interface Props {
   title: string;
@@ -75,6 +75,9 @@ export default function PageIntro({ title, copy }: Props) {
               </p>
             )}
           </div>
+        <div className={styles.topArrowContainer}>
+          <Arrow className={styles.arrow} />
+        </div>
         </div>
       </LayoutWrapper>
     </section>
