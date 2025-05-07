@@ -46,7 +46,7 @@ export const pricing = [
   //   price: "Custom",
   //   timeframe: "Varies",
   //   features:
-  //     "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",
+  //     "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",+
   // },
 ] as const;
 
@@ -104,6 +104,12 @@ export const projects = [
           "Thundertrails has successfully elevated its brand positioning in the digital space, aligning with its premium in-store experience. The integrated content strategy has boosted organic traffic by 55% and increased newsletter signups by 143%. The platform's scalable architecture now provides Thundertrails with the foundation they need to expand their online presence nationally while maintaining the personalized service their customers expect.",
       },
     ],
+    stats: [
+      { id: 1, title: "Decrease in page‑load time", desc: "‑65%" },
+      { id: 2, title: "Lift in conversion rate", desc: "+38%" },
+      { id: 3, title: "Increase in average order value", desc: "+42%" },
+      { id: 4, title: "Growth in year‑over‑year sales", desc: "+92%" },
+    ],
   },
   {
     id: 2,
@@ -157,6 +163,12 @@ export const projects = [
         resultDetail:
           "The content strategy has established Chuxly as a thought leader in the audio space, with their listening guides and technical articles generating significant organic traffic and social media engagement. The membership program has exceeded expectations with over 10,000 subscribers in the first quarter, creating a reliable revenue stream and valuable customer insights. With the robust and scalable architecture in place, Chuxly is now expanding into international markets with localized content and payment options.",
       },
+    ],
+    stats: [
+      { id: 1, title: "Reduction in product return rate", desc: "‑47%" },
+      { id: 2, title: "Conversion lift on flagship items", desc: "+58%" },
+      { id: 3, title: "Increase in online revenue", desc: "+126%" },
+      { id: 4, title: "Avg. time on product page", desc: "3 min 05 s" },
     ],
   },
   {
@@ -212,6 +224,12 @@ export const projects = [
           "The brand storytelling elements have significantly strengthened Golden Drips' market positioning, with engagement metrics showing that 78% of first-time visitors explore the sustainability content before making a purchase. Their educational content on bee conservation has generated substantial media coverage and partnership opportunities with environmental organizations. The platform's scalability has enabled Golden Drips to expand their product line to include limited edition seasonal releases and collaborations with other artisanal food producers, further cementing their reputation as leaders in the premium honey market.",
       },
     ],
+    stats: [
+      { id: 1, title: "Year‑over‑year online growth", desc: "+173%" },
+      { id: 2, title: "Revenue now DTC (direct‑to‑consumer)", desc: "65%" },
+      { id: 3, title: "Increase in average order value", desc: "+89%" },
+      { id: 4, title: "Subscription program retention", desc: "92%" },
+    ],
   },
   {
     id: 4,
@@ -265,6 +283,12 @@ export const projects = [
         resultDetail:
           "The improved guest communication system has resulted in a 98% satisfaction rating and a 67% repeat booking rate within the first year. The detailed analytics have enabled more effective marketing strategies, with targeted promotions increasing occupancy rates during traditionally slower periods by 41%. With the success of their direct booking model, Elite Retreat Rentals is now expanding their portfolio with two additional luxury properties in Scottsdale, all seamlessly integrated into their existing platform. Their reputation as a premier luxury accommodation provider in the Phoenix metropolitan area continues to grow, with features in several travel publications highlighting their innovative approach to the vacation rental experience.",
       },
+    ],
+    stats: [
+      { id: 1, title: "Bookings made directly", desc: "78%" },
+      { id: 2, title: "Profit‑margin increase", desc: "+32%" },
+      { id: 3, title: "Increase in avg. stay length", desc: "+2.4 nights" },
+      { id: 4, title: "Occupancy lift in slow periods", desc: "+41%" },
     ],
   },
 ] as const;

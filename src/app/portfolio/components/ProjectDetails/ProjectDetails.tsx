@@ -29,6 +29,12 @@ interface GalleryItem {
   src: StaticImageData;
 }
 
+interface StatItem {
+  id: number;
+  title: string;
+  desc: string;
+}
+
 interface Props {
   project: {
     title: string;
@@ -45,6 +51,7 @@ interface Props {
     challenge: readonly ChallengeItem[];
     results: readonly ResultItem[];
     gallery?: readonly GalleryItem[];
+    stats?: readonly StatItem[];
   };
 }
 
@@ -106,7 +113,9 @@ export default function ProjectDetails({ project }: Props) {
             </div>
           </div>
         </div>
-        <Stats />
+        {project.stats && project.stats.length > 0 && (
+          <Stats stats={project.stats} />
+        )}
         <Description project={project} />
         {project.video && <VideoSection video={project.video} />}
         <Challenge project={project} />

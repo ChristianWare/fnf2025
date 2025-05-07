@@ -1,33 +1,21 @@
+// Stats.tsx
 import styles from "./Stats.module.css";
 
-const data = [
-  {
-    id: 1,
-    title: "Faster mobile site speed",
-    desc: "51%",
-  },
-  {
-    id: 2,
-    title: "Faster desktop site speed",
-    desc: "61%",
-  },
-  {
-    id: 3,
-    title: "Increase in conversion rate",
-    desc: "85%",
-  },
-  {
-    id: 4,
-    title: "Increase in total sales",
-    desc: "97%",
-  },
-];
+export interface StatItem {
+  id: number;
+  title: string;
+  desc: string;
+}
 
-export default function Stats() {
+interface Props {
+  stats: readonly StatItem[];
+}
+
+export default function Stats({ stats }: Props) {
   return (
     <section className={styles.container}>
       <div className={styles.bottom}>
-        {data.map((x) => (
+        {stats.map((x) => (
           <div key={x.id} className={styles.card}>
             <div className={styles.cardTop}>
               <span className={styles.index}>{x.desc}</span>
