@@ -62,14 +62,16 @@
   visibility: hidden;
   z-index: 2;
   position: relative;
-  font-size: 1.4rem;
-  letter-spacing: -0.5px;
-  font-family: var(--SuisseIntlMonoRegular);
+  font-size: 1.8rem;
+  font-family: var(--SuisseIntlMedium);
+  line-height: 1.5;
+  width: 80%;
+  color: var(--text);
 }
 
 .copy :global(.word) {
-  font-family: var(--SuisseIntlMonoRegular);
-  width: fit-content;
+  font-family: var(--SuisseIntlMedium);
+  line-height: 1.5;
 }
 
 .servicesTitle {

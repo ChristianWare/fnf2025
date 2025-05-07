@@ -48,11 +48,11 @@
 
 .title {
   margin-bottom: 1rem;
-  font-size: 1.6rem;
+  color: var(--black);
 }
 
 .description {
-  opacity: 0.7;
+  color: var(--text);
   font-size: 1.4rem;
 }
 
@@ -63,6 +63,10 @@
 
 .card:nth-child(2) {
   background-color: var(--pink);
+}
+
+.card:nth-child(2) .description {
+  color: var(--black);
 }
 
 @media screen and (max-width: 1068px) {
