@@ -1,35 +1,16 @@
 .container {
-  background-color: var(--tan);
+  background-color: var(--orange);
   padding-bottom: 10rem;
   border-bottom: 1px solid var(--gray);
 }
 
-.content {
+.top {
   padding-top: 10rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   grid-gap: 5rem;
   width: 100%;
   position: relative;
-}
-
-.topArrowContainer {
-  background-color: var(--black);
-  padding: 1rem;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.arrow {
-  width: 3rem;
-  height: 3rem;
-  transform: rotate(180deg);
-  color: var(--orange);
 }
 
 .right {
@@ -67,10 +48,55 @@
   font-family: var(--SuisseIntlCondensed);
 }
 
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--black);
+  border-bottom: none;
+  margin-top: 7rem;
+}
+
+.bottomLeft {
+  border-right: 1px solid var(--black);
+}
+
+.card {
+  border-bottom: 1px solid var(--black);
+  padding: 3rem 2rem;
+  transition: 0.3s ease-in all;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--black);
+}
+
+.title {
+  font-size: 4rem;
+  width: 100%;
+  transition: 0.3s ease-in all;
+}
+
+.card:hover .title {
+  color: var(--orange);
+}
+
+.bottomRight {
+  border-bottom: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 20rem;
+  height: 20rem;
+}
+
 @media screen and (max-width: 1068px) {
-  .content {
+  .top {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 2rem;
   }
 
   .heading,
@@ -92,5 +118,20 @@
 @media screen and (max-width: 768px) {
   .copy {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bottomRight {
+    padding: 3rem;
+  }
+
+  .icon {
+    width: 10rem;
+    height: 10rem;
   }
 }

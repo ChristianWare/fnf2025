@@ -6,6 +6,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import { projects } from "@/lib/data";
+import Thunder from "../../../../../public/icons/lightning.svg";
 
 export default function PortfolioPageIntro() {
   const refs = {
@@ -56,16 +58,30 @@ export default function PortfolioPageIntro() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          <div className={styles.left}>
-            <h1 ref={refs.heading} className={styles.heading}>
-              Our work speaks for itself
-            </h1>
+          <div className={styles.top}>
+            <div className={styles.left}>
+              <h1 ref={refs.heading} className={styles.heading}>
+                Our work speaks for itself
+              </h1>
+            </div>
+            <div className={styles.right}>
+              <p ref={refs.copy} className={styles.copy}>
+                Explore our portfolio of successful e-commerce projects across
+                various industries and business models.{" "}
+              </p>
+            </div>
           </div>
-          <div className={styles.right}>
-            <p ref={refs.copy} className={styles.copy}>
-              Explore our portfolio of successful e-commerce projects across
-              various industries and business models.{" "}
-            </p>
+          <div className={styles.bottom}>
+            <div className={styles.bottomLeft}>
+              {projects.map((x) => (
+                <div key={x.id} className={styles.card}>
+                  <h2 className={styles.title}>{x.title}</h2>
+                </div>
+              ))}
+            </div>
+            <div className={styles.bottomRight}>
+              <Thunder className={styles.icon} />
+            </div>
           </div>
         </div>
       </LayoutWrapper>
