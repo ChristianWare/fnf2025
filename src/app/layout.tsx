@@ -7,6 +7,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "@/providers/AuthProvider";
 import { ModalProvider } from "@/context/ModalContext";
+import styles from "./layout.module.css";
 
 // import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
@@ -54,24 +55,24 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang='en'>
         <body
-          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable}`}
-          style={{ backgroundColor: "var(--tan" }}
+          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${styles.container}`}
         >
-          <SmoothScroll>
-            <Toaster
-              position='top-right'
-              toastOptions={{
-                className: "toastFont",
-              }}
-            />
-            <AuthProvider>
-              <ModalProvider>
-                <Nav />
-                {children}
-              </ModalProvider>
-            </AuthProvider>
-            {/* <CustomCursor /> */}
-          </SmoothScroll>
+            <SmoothScroll>
+              <Toaster
+                position='top-right'
+                toastOptions={{
+                  className: "toastFont",
+                }}
+              />
+              <AuthProvider>
+                <ModalProvider>
+                  <Nav />
+
+                  {children}
+                </ModalProvider>
+              </AuthProvider>
+              {/* <CustomCursor /> */}
+            </SmoothScroll>
         </body>
       </html>
     </ViewTransitions>
