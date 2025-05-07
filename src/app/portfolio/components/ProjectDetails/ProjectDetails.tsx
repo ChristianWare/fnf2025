@@ -7,7 +7,7 @@ import Description from "../Description/Description";
 import VideoSection from "../VideoSection/VideoSection";
 import Results from "../Results/Results";
 import Challenge from "../Challenge/Challenge";
-import GalleryGrid from "../GalleryGrid/GalleryGrid";
+import Thunder from "../../../../../public/icons/lightning.svg";
 
 interface TagItem {
   id: number;
@@ -49,6 +49,10 @@ export default function ProjectDetails({ project }: Props) {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
+        <div className={styles.top}>
+          <Thunder className={styles.icon} />
+          <h2 className={styles.title}>{project.title}</h2>
+        </div>
         <div className={styles.content}>
           <div className={styles.introSection}>
             <div className={styles.isLeft}>
@@ -76,7 +80,7 @@ export default function ProjectDetails({ project }: Props) {
               </div>
             </div>
             <div className={styles.isRight}>
-              <h1 className={styles.heading}>{project.h1}</h1>
+              <h3 className={styles.heading}>{project.h1}</h3>
               <div className={styles.tagContainer}>
                 {project.tags?.map((x) => (
                   <span className={styles.tag} key={x.id}>
@@ -93,7 +97,6 @@ export default function ProjectDetails({ project }: Props) {
         <Challenge project={project} />
         <VideoSection />
         <Results project={project} />
-        {project.gallery && <GalleryGrid gallery={project.gallery} />}
       </LayoutWrapper>
     </section>
   );

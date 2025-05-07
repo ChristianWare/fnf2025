@@ -1,10 +1,31 @@
 .container {
-  min-height: 100vh;
   background-color: var(--tan);
   position: relative;
   z-index: 2;
-  border-top: 1px solid var(--gray);
-  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--gray);
+  margin-bottom: 20rem;
+  /* padding: 3rem; */
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -2rem;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .introSection {
@@ -68,9 +89,10 @@
 }
 
 .heading {
-  font-size: 5rem;
+  font-size: 2rem;
   text-transform: none;
-  letter-spacing: -1px;
+  font-family: var(--SuisseIntlMedium);
+  width: 70%;
 }
 
 .tagContainer {
@@ -96,12 +118,6 @@
   }
 }
 
-@media screen and (max-width: 968px) {
-  .heading {
-    font-size: 4rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .introSection {
     grid-template-columns: repeat(1, 1fr);
@@ -115,9 +131,7 @@
   }
 
   .heading {
-    font-size: 7vw;
-    text-align: center;
-    margin-bottom: 2rem;
+    width: 100%;
   }
 
   .tagContainer {
