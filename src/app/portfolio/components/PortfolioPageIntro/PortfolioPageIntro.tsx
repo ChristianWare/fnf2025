@@ -1,13 +1,16 @@
 "use client";
 
 import styles from "./PortfolioPageIntro.module.css";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import { projects } from "@/lib/data";
 import Thunder from "../../../../../public/icons/lightning.svg";
+import Rentals from "../../../../../public/icons/rentals.svg";
+import Bee from "../../../../../public/icons/bee2.svg";
+import Headphones from "../../../../../public/icons/headphones.svg";
+import Link from "next/link";
 
 export default function PortfolioPageIntro() {
   const refs = {
@@ -54,6 +57,67 @@ export default function PortfolioPageIntro() {
     return () => cleanups.forEach((c) => c && c());
   });
 
+  const data = [
+    {
+      id: 1,
+      title: "Thundertrails",
+      icon: Thunder,
+      href: "#thundertrails",
+    },
+    {
+      id: 2,
+      title: "Chuxly",
+      icon: Headphones,
+      href: "#chuxly",
+    },
+    {
+      id: 3,
+      title: "Golden Drips",
+      icon: Bee,
+      href: "#goldendrips",
+    },
+    {
+      id: 4,
+      title: "Elite Retreat Rentals",
+      icon: Rentals,
+      href: "#retreat",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % data.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [data.length]);
+
+  const progressTl = useRef<gsap.core.Tween | null>(null);
+
+  
+  useEffect(() => {
+    progressTl.current?.kill();
+    progressTl.current = null;
+    gsap.set(`.${styles.progress}`, { scaleX: 0 });
+    progressTl.current = gsap.fromTo(
+      `.${styles.card}[data-idx="${activeIndex}"] .${styles.progress}`,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        duration: 5,
+        ease: "none",
+        transformOrigin: "left",
+      }
+    );
+
+    return () => {
+      progressTl.current?.kill();
+    };
+  }, [activeIndex]);
+
+  const ActiveIcon = data[activeIndex].icon;
+
   return (
     <section className={styles.container}>
       <LayoutWrapper>
@@ -73,14 +137,28 @@ export default function PortfolioPageIntro() {
           </div>
           <div className={styles.bottom}>
             <div className={styles.bottomLeft}>
-              {projects.map((x) => (
-                <div key={x.id} className={styles.card}>
-                  <h2 className={styles.title}>{x.title}</h2>
-                </div>
+              {data.map((x, index) => (
+                <Link
+                  href={x.href}
+                  key={x.id}
+                  className={styles.card}
+                  data-idx={index}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <h2
+                    className={`${styles.title} ${
+                      activeIndex === index ? styles.active : ""
+                    }`}
+                  >
+                    {x.title}
+                  </h2>
+                  <span className={styles.progress} />
+                </Link>
               ))}
             </div>
             <div className={styles.bottomRight}>
-              <Thunder className={styles.icon} />
+              <ActiveIcon className={styles.icon} />
             </div>
           </div>
         </div>

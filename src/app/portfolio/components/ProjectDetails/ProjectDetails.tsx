@@ -8,6 +8,7 @@ import VideoSection from "../VideoSection/VideoSection";
 import Results from "../Results/Results";
 import Challenge from "../Challenge/Challenge";
 import Thunder from "../../../../../public/icons/lightning.svg";
+// import Rentals from "../../../../../public/icons/rentals.svg";
 
 interface TagItem {
   id: number;
