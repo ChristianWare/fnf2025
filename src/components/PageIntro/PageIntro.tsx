@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
-import Arrow from "../../../public/icons/arrow.svg";
+import Owner from "../Owner/Owner";
 
 interface Props {
   title: string;
@@ -75,10 +75,9 @@ export default function PageIntro({ title, copy }: Props) {
               </p>
             )}
           </div>
-        <div className={styles.topArrowContainer}>
-          <Arrow className={styles.arrow} />
         </div>
-        </div>
+        <Owner />
+       
       </LayoutWrapper>
     </section>
   );

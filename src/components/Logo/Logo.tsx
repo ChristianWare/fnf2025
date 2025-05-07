@@ -13,43 +13,39 @@ interface Props {
 const Logo = ({ size = "", color = "" }: Props) => {
   const router = useTransitionRouter();
 
-  function slideInOut() {
-    document.documentElement.animate(
-      [
-        {
-          opacity: 1,
-          transform: "translateY(0)",
-        },
-        {
-          opacity: 0.2,
-          transform: "translateY(-35%)",
-        },
-      ],
-      {
-        duration: 1500,
-        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
-        fill: "forwards",
-        pseudoElement: "::view-transition-old(root)",
-      }
-    );
+function slideInOut() {
+  const duration = 1500;
+  const easing = "cubic-bezier(0.87, 0, 0.13, 1)";
 
-    document.documentElement.animate(
-      [
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-        },
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-        },
-      ],
-      {
-        duration: 1500,
-        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
-        fill: "forwards",
-        pseudoElement: "::view-transition-new(root)",
-      }
-    );
-  }
+  /* 1️⃣  Outgoing view ‑‑ fade + drift up‑right  */
+  document.documentElement.animate(
+    [
+      { opacity: 1, transform: "translate(0, 0)" },
+      { opacity: 0.2, transform: "translate(35%, -35%)" },
+    ],
+    {
+      duration,
+      easing,
+      fill: "forwards",
+      pseudoElement: "::view-transition-old(root)",
+    }
+  );
+
+  /* 2️⃣  Incoming view ‑‑ start down‑left, glide to centre while fading in */
+  document.documentElement.animate(
+    [
+      { opacity: 0, transform: "translate(-35%, 35%)" },
+      { opacity: 1, transform: "translate(0, 0)" },
+    ],
+    {
+      duration,
+      easing,
+      fill: "forwards",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+}
+
   return (
     <Link
       onClick={() => {
