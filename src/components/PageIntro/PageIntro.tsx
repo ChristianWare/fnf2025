@@ -10,10 +10,9 @@ import Owner from "../Owner/Owner";
 
 interface Props {
   title: string;
-  copy?: string;
 }
 
-export default function PageIntro({ title, copy }: Props) {
+export default function PageIntro({ title }: Props) {
   // refs for the two text blocks
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
@@ -68,13 +67,7 @@ export default function PageIntro({ title, copy }: Props) {
               {title}
             </h1>
           </div>
-          <div className={styles.right}>
-            {copy && (
-              <p ref={refs.copy} className={styles.copy}>
-                {copy}
-              </p>
-            )}
-          </div>
+         
         </div>
         <Owner />
        

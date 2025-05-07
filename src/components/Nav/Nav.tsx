@@ -120,9 +120,10 @@ function slideInOut() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() =>
-                  router.push(item.href, { onTransitionReady: slideInOut })
-                }
+                onClick={() => {
+                  router.push(item.href, { onTransitionReady: slideInOut });
+                  setIsOpen(false);
+                }}
                 className={styles.navItem}
               >
                 {item.text}

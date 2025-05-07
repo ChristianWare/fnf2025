@@ -6,46 +6,18 @@
 }
 
 .content {
-  /* min-height: 90vh; */
   padding-top: 10rem;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-gap: 5rem;
+
   width: 100%;
   position: relative;
   margin-bottom: 5rem;
 }
 
-.topArrowContainer {
-  background-color: var(--black);
-  padding: 1rem;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.arrow {
-  width: 3rem;
-  height: 3rem;
-  transform: rotate(180deg);
-  color: var(--orange);
-}
-
-.right {
-  order: -1;
-}
-
 .heading {
   color: var(--black);
   font-family: var(--SuisseIntlCondensed);
-}
-
-.copy {
-  color: var(--black);
-  width: 80%;
-  font-size: 1.8rem;
+  /* text-align: center; */
+  width: 70%;
 }
 
 /* Needed so GSAP can reveal from a hidden state */
@@ -69,24 +41,8 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .content {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3rem;
-  }
-
-  .heading,
-  .copy {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .copy {
-    width: 80%;
-  }
-
-  .right {
-    order: 1;
+  .heading {
+    width: 100%;
   }
 }
 

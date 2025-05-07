@@ -20,7 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  line-height: 120%;
+  line-height: 110%;
   /* scroll-behavior: smooth;
   scroll-margin-top: 40px;
   */
@@ -65,7 +65,7 @@ span {
 h1 {
   font-size: 9rem;
   line-height: 1;
-  letter-spacing: -3.2px;
+  letter-spacing: -2px;
 }
 
 h2 {
@@ -161,7 +161,7 @@ textarea:focus {
     font-size: 8rem;
   }
 
-   h2 {
+  h2 {
     font-size: 6rem;
   }
 
@@ -182,7 +182,6 @@ textarea:focus {
   h2 {
     font-size: 5rem;
   }
-
 }
 
 /* .toastFont {
