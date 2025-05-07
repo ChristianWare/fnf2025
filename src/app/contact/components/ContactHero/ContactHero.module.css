@@ -1,0 +1,36 @@
+.container {
+  background-color: var(--white);
+  padding-top: 10rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 5rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  height: 100%;
+}
+
+.copy {
+  width: 80%;
+}
+
+@media screen and (max-width: 1068px){
+    .copy {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 968px){
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+    }
+}

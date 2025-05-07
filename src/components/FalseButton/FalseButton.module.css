@@ -72,6 +72,13 @@
   color: var(--blue);
 }
 
+.pink {
+  background-color: var(--pink);
+  color: var(--black);
+  border: 1px solid var(--pink);
+}
+
+
 .blue .dot1,
 .blue .dot2,
 .blue .dot3,

@@ -26,12 +26,6 @@ export default function Home() {
         <ProjectSection />
         <Pricing />
         <Faq />
-        {/* <PageIntro
-          title='Ready to elevate your e-commerce experience?'
-          introTitle='Fonts & Footers'
-          src={Img1}
-          copy="Let's discuss how we can help your business grow with a custom e-commerce solution that meets your unique needs."
-        /> */}
         <FinalCTA />
         <Contact2 />
       </div>
