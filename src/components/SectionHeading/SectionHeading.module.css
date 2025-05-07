@@ -11,6 +11,7 @@
   background-color: var(--white);
   padding: 2rem;
   font-family: var(--NeueHaasGroteskMedium);
+  font-size: 4.5rem;
 }
 
 .title {

@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import { ViewTransitions } from "next-view-transitions";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "@/providers/AuthProvider";
+import { ModalProvider } from "@/context/ModalContext";
 
 // import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
@@ -64,8 +65,10 @@ export default function RootLayout({
               }}
             />
             <AuthProvider>
-              <Nav />
-              {children}
+              <ModalProvider>
+                <Nav />
+                {children}
+              </ModalProvider>
             </AuthProvider>
             {/* <CustomCursor /> */}
           </SmoothScroll>

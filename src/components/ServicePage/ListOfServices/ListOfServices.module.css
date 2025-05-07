@@ -1,5 +1,6 @@
 .container {
-  margin-top: 10rem;
+  padding-top: 10rem;
+  background-color: var(--white);
 }
 
 .section {
@@ -44,7 +45,6 @@
 
 .bottom .card:nth-child(2) {
   border-bottom: none;
-  /* border-left: 1px solid var(--gray); */
 }
 
 .bottom .card:nth-child(3) {

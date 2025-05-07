@@ -1,14 +1,12 @@
 import AboutIntro from "@/components/AboutPage/AboutIntro/AboutIntro";
-import OurApproach from "@/components/AboutPage/OurApproach/OurApproach";
 import Contact2 from "@/components/Contact2/Contact2";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
-import HowItWorks from "@/components/HowItWorks/HowItWorks";
-import OtherThings from "@/components/OtherThings/OtherThings";
+
 import PageIntro from "@/components/PageIntro/PageIntro";
-import Img1 from "../../../public/images/servicesHero.jpg";
+
 import Problem from "@/components/AboutPage/Problem/Problem";
-import Compare from "@/components/AboutPage/Compare/Compare";
 import Faq from "@/components/Faq/Faq";
+import AboutMission from "@/components/AboutPage/AboutMission/AboutMission";
 
 export default function AboutPage() {
   return (
@@ -18,13 +16,12 @@ export default function AboutPage() {
         // copy='Fonts & Footers is a specialized e-commerce development agencyhelping businesses of all sizes establish and optimize their online presence. With a focus on user experience, conversion optimization, and technical excellence, we create online stores that not only look great but also drive real business results.'
       />
       <AboutIntro />
-      {/* <AboutIntro />
-      <OurApproach />
-      <HowItWorks />
+      <AboutMission />
       <Problem />
-      <Compare />
-      <Faq />
-      <OtherThings /> */}
+
+      {/* 
+       */}
+       <Faq />
       <FinalCTA />
       <Contact2 />
     </main>

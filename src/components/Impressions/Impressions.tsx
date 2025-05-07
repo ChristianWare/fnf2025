@@ -78,14 +78,11 @@ export default function Impressions() {
           <div className={styles.right}>
             <p className={styles.heading}>
               In today&apos;s digital marketplace, having an e-commerce site
-              that simply &ldquo;works&rdquo; isn&apos;t enough.
-              <br />
-              <br />
-              Your online store needs to tell your brand story, provide an
-              exceptional user experience, and convert visitors into loyal
-              customers.
+              that simply &ldquo;works&rdquo; isn&apos;t enough. Your online
+              store needs to tell your brand story, provide an exceptional user
+              experience, and convert visitors into loyal customers.
             </p>
-            <p className={styles.copy}>
+            {/* <p className={styles.copy}>
               Many businesses struggle with outdated platforms, poor mobile
               experiences, or complicated checkout processes that cost them
               sales every day.
@@ -93,11 +90,11 @@ export default function Impressions() {
               <br />
               At Fonts & Footers, we understand the unique challenges of
               e-commerce and build solutions that drive real business growth.
-            </p>
+            </p> */}
           </div>
         </div>
       </LayoutWrapper>
-        <Solution />
+      <Solution />
     </section>
   );
 }

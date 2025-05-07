@@ -2,24 +2,44 @@
 
 import styles from "./FinalCTA.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import ShuffleHero from "../ShuffleHero/ShuffleHero";
 import Logo from "../Logo/Logo";
 
 export default function FinalCTA() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <Logo />
-          <h2 className={styles.heading}>
-            We build <br />
-            blazing fast
-            <br />
-            online stores <br />
-          </h2>
-          <ShuffleHero />
+      <div className={styles.top}>
+        <Logo />
+        <h2 className={styles.heading}>
+          Ready to <br />
+          improve your
+          <br />
+          online store ? <br />
+        </h2>
+      </div>
+      <div className={styles.bottom}>
+        <div className={styles.left}>
+          <LayoutWrapper>
+            <div className={styles.leftContent}>
+              <h2 className={styles.headingii}>Book an intro call</h2>
+              <p className={styles.copy}>
+                Let&apos;s transform the way work works. Book an intro to see
+                our demo in action.
+              </p>
+            </div>
+          </LayoutWrapper>
         </div>
-      </LayoutWrapper>
+        <div className={styles.right}>
+          <LayoutWrapper>
+            <div className={styles.rightContent}>
+              <h2 className={styles.headingii}>Contact us today </h2>
+              <p className={styles.copy}>
+                Let&apos;s transform the way work works. Book an intro to see
+                our demo in action.
+              </p>
+            </div>
+          </LayoutWrapper>
+        </div>
+      </div>
     </section>
   );
 }

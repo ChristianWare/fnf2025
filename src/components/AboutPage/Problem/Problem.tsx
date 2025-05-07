@@ -31,18 +31,23 @@ const Problem = () => {
   ];
 
   return (
-    <section className={styles.container} id='problems'>
+    <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.problemContainer}>
-            <h3 className={styles.heading}>Problems we solve</h3>
+            <h2 className={styles.heading}>
+              Problems <br /> we solve
+            </h2>
           </div>
         </div>
         <div className={styles.bottom}>
           {data.map((x, index) => (
             <div key={index} className={styles.card}>
-              <h3 className={styles.title}>{x.title}</h3>
-              <p className={styles.description}>{x.description}</p>
+              <span className={styles.index}>0{index + 1}</span>
+              <div>
+                <h3 className={styles.title}>{x.title}</h3>
+                <p className={styles.description}>{x.description}</p>
+              </div>
             </div>
           ))}
         </div>

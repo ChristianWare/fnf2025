@@ -18,8 +18,9 @@
 }
 
 .topText {
-  color: var(--olive);
-  font-weight: 500;
+  color: var(--black);
+  font-size: 2rem;
+  display: none;
 }
 
 .bottom {
