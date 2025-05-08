@@ -34,6 +34,23 @@
   justify-content: space-between;
   gap: 3rem;
   height: 100%;
+  position: relative;
+}
+
+.sectionIntroContainer1 {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: fit-content;
+  padding: 2rem;
+  border: 1px solid var(--gray);
+  border-bottom: none;
+  position: absolute;
+  bottom: 99.8%;
+  right: 0px;
+  z-index: 999;
 }
 
 .iframeWrapper {
@@ -43,7 +60,7 @@
   position: relative;
 }
 
-.sectionIntroContainer {
+.sectionIntroContainer2 {
   background-color: var(--white);
   display: flex;
   align-items: center;
@@ -54,8 +71,9 @@
   border: 1px solid var(--gray);
   border-bottom: 1px solid var(--white);
   position: absolute;
-  bottom: 100%;
+  bottom: 99.9%;
   left: -1px;
+  z-index: 999;
 }
 
 @media screen and (max-width: 1068px) {

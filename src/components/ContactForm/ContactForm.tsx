@@ -4,7 +4,6 @@ import styles from "./ContactForm.module.css";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import SectionIntro from "../SectionIntro/SectionIntro";
 import FalseButton from "../FalseButton/FalseButton";
 
 interface Inputs {
@@ -31,7 +30,11 @@ const serviceOptions = [
   "Blog/Content Site",
 ];
 
-const ContactForm = () => {
+interface Props {
+  border?: string;
+}
+
+export default function ContactForm({ border = "" }: Props) {
   const [loading, setLoading] = useState(false);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
@@ -76,14 +79,7 @@ const ContactForm = () => {
 
   return (
     <div className={styles.parent}>
-      <div className={styles.content}>
-        <div className={styles.heading}>
-          <SectionIntro
-            title='Send a Message'
-            color='black'
-            dotColor='blackDot'
-          />
-        </div>
+      <div className={`${styles.content} ${styles[border]}`}>
         <div className={styles.bottom}>
           <div className={styles.left}></div>
           <div className={styles.right}>
@@ -206,5 +202,4 @@ const ContactForm = () => {
       </div>
     </div>
   );
-};
-export default ContactForm;
+}

@@ -2,7 +2,7 @@
 
 import styles from "./Modal.module.css";
 import { useEffect } from "react";
-import Close from "../../../../public/icons/close.svg";
+import Close from "../../../public/icons/close.svg";
 
 interface Props {
   isOpen: boolean;
@@ -12,20 +12,39 @@ interface Props {
 
 export default function Modal({ isOpen, onClose, children }: Props) {
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose();
-      }
-    };
+    /* -- ESC closes -------------------------------------------------------- */
+    const onEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onEsc);
 
-    window.addEventListener("keydown", handleKeyDown);
+    /* -- Lock scrolling & block layout shift ------------------------------ */
+    if (isOpen) {
+      const scrollY = window.scrollY || window.pageYOffset;
 
-    // Disable scrolling when the modal is open
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
+      /* scrollbar width = viewport - document width */
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+
+      Object.assign(document.body.style, {
+        position: "fixed",
+        top: `-${scrollY}px`,
+        left: "0",
+        right: "0",
+        width: "100%",
+        overflow: "hidden",
+        paddingRight: `${scrollbarWidth}px`, // compensate for missing scrollbar
+      });
+    }
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", onEsc);
+
+      /* restore scroll & body styles if we had locked them */
+      const top = document.body.style.top;
+      if (top) {
+        const y = -parseInt(top, 10) || 0;
+        document.body.style.cssText = "";
+        window.scrollTo(0, y);
+      }
     };
   }, [isOpen, onClose]);
 
@@ -34,11 +53,7 @@ export default function Modal({ isOpen, onClose, children }: Props) {
   return (
     <div className={styles.modalBackdrop}>
       <div className={styles.modalContent}>
-        <button
-          onClick={onClose}
-          // style={{ marginBottom: "10px", cursor: "pointer",  }}
-          className={styles.button}
-        >
+        <button onClick={onClose} className={styles.button}>
           <Close width={30} height={30} className={styles.icon} />
         </button>
         <div className={styles.children}>{children}</div>

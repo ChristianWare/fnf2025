@@ -67,6 +67,19 @@
   font-size: 1.6rem;
 }
 
+.iframeWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modalHeading {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
 @media screen and (max-width: 1068px) {
   .heading {
     width: 100%;

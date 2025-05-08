@@ -21,11 +21,18 @@ export default function ContactHero() {
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.sectionIntroContainer1}>
+              <SectionIntro
+                title='Send a Message'
+                color='black'
+                dotColor='blackDot'
+              />
+            </div>
             <ContactForm />
           </div>
           <div className={styles.right}>
             <div className={styles.iframeWrapper}>
-              <div className={styles.sectionIntroContainer}>
+              <div className={styles.sectionIntroContainer2}>
                 <SectionIntro
                   title='Book a call'
                   color='black'
