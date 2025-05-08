@@ -1,5 +1,4 @@
 .parent {
-  margin-top: 5rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -9,6 +8,7 @@
   background-color: var(--white);
   padding: 3rem;
   border: 1px solid var(--gray);
+  position: relative;
 }
 
 .heading {
@@ -21,8 +21,9 @@
   padding: 2rem;
   border: 1px solid var(--gray);
   border-bottom: 1px solid var(--white);
-  position: relative;
-  top: 2px;
+  position: absolute;
+  bottom: 100%;
+  right: -1px;
 }
 
 .blackDot {

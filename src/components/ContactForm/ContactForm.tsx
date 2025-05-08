@@ -76,14 +76,14 @@ const ContactForm = () => {
 
   return (
     <div className={styles.parent}>
-      <div className={styles.heading}>
-        <SectionIntro
-          title="Let's grow together"
-          color='black'
-          dotColor='blackDot'
-        />{" "}
-      </div>
       <div className={styles.content}>
+        <div className={styles.heading}>
+          <SectionIntro
+            title='Send a Message'
+            color='black'
+            dotColor='blackDot'
+          />
+        </div>
         <div className={styles.bottom}>
           <div className={styles.left}></div>
           <div className={styles.right}>
