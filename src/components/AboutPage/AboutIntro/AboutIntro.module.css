@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  border-bottom: 1px solid var(--gray);
+  /* border-bottom: 1px solid var(--gray); */
 }
 
 .content {
@@ -35,14 +35,12 @@
 }
 
 .right {
-  background-color: var(--orange);
   height: 100%;
 }
 
 @media screen and (max-width: 1068px) {
   .container {
     min-height: fit-content;
-    background-color: var(--orange);
   }
 
   .content {
