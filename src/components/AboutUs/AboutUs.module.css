@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 5rem;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
@@ -44,6 +44,11 @@
 
 .imgContainer {
   width: 100%;
+}
+
+.copy {
+  font-size: 1.8rem;
+  
 }
 
 .right {
@@ -74,6 +79,15 @@
 
 .card:nth-child(4) {
   background-color: var(--orange);
+}
+
+.desc {
+  color: var(--blackii);
+  font-size: 1.6rem;
+}
+
+.card:nth-child(4) .desc {
+  color: var(--black);
 }
 
 @media screen and (max-width: 768px) {

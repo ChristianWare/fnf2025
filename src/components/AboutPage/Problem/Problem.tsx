@@ -1,3 +1,4 @@
+import Button from "@/components/Button/Button";
 import styles from "./Problem.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
@@ -50,6 +51,13 @@ const Problem = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className={styles.btnContainer}>
+          <Button
+            text='learn more about us'
+            href='/about'
+            btnType='secondary'
+          />
         </div>
       </LayoutWrapper>
     </section>
