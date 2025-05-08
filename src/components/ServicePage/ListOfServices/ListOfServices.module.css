@@ -1,5 +1,7 @@
 .container {
-    padding: 15rem 0;  background-color: var(--white);
+  padding: 15rem 0;
+  padding-bottom: 0rem;
+  background-color: var(--white);
 }
 
 .section {
