@@ -1,0 +1,128 @@
+.container {
+  background-color: var(--tan);
+  position: relative;
+  padding-bottom: 15rem;
+}
+
+.heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.span {
+  text-transform: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  margin-bottom: 1rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  width: 100%;
+}
+
+.imgContainer {
+  width: 100%;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+}
+
+.card {
+  border: 1px solid var(--gray);
+  background-color: var(--tan);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+}
+
+.title {
+  font-size: 5rem;
+  color: var(--black);
+}
+
+.card:nth-child(4) {
+  background-color: var(--orange);
+}
+
+@media screen and (max-width: 768px) {
+  .rightiiWrapper {
+    height: 70vh;
+  }
+
+  .cardii {
+    width: 300px;
+    min-height: 300px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: static;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .faslBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .span {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

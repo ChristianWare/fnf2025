@@ -46,7 +46,7 @@
   border: 1px solid var(--gray);
   padding: 8px 12px;
   border-radius: 50px;
-  /* background-color: var(--tan); */
+  backdrop-filter: blur(90px);
 }
 
 .logoContainerMobile {
@@ -69,10 +69,10 @@
   user-select: none;
   z-index: 998;
   padding: 6px 12px;
-  /* background-color: var(--tan); */
   border: 1px solid var(--gray);
   text-transform: uppercase;
   transition: all 0.3s ease-in;
+  backdrop-filter: blur(90px);
 }
 
 .navItem:hover {

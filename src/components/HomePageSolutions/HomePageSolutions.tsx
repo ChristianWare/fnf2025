@@ -1,3 +1,4 @@
+import SectionHeading3 from "../SectionHeading3/SectionHeading3";
 import styles from "./HomePageSolutions.module.css";
 
 const data = [
@@ -36,6 +37,7 @@ const data = [
 export default function HomePageSolutions() {
   return (
     <section className={styles.container}>
+      <SectionHeading3 title='Our Specialties' />
       <div className={styles.bottom}>
         {data.map((x) => (
           <div key={x.id} className={`${styles.card} ${styles[x.span]}`}>
