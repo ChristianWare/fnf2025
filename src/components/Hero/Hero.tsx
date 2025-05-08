@@ -160,9 +160,8 @@ export default function Hero() {
                 ))}
               </ul> */}
               <p className={styles.copy} ref={refs.copy}>
-                Fonts & Footers is a specialized e-commerce web development
-                agency crafting custom, high-converting online stores for
-                businesses of all sizes.
+                Blazing‑fast, conversion‑focused e‑commerce sites crafted for
+                growth‑minded brands.
               </p>
             </div>
             <div className={styles.btnContainer}>
