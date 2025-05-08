@@ -3,10 +3,6 @@
 import LayoutWrapper from "@/components/LayoutWrapper";
 import styles from "./Mission.module.css";
 
-/**
- * Four pillars that drive everything we build at Fonts & Footers.
- * Each line pairs a promise with the practical outcome a client can expect.
- */
 const mission = [
   {
     feature: "Performance‑First Engineering",
@@ -26,7 +22,7 @@ const mission = [
   },
 ];
 
-const Mission = () => {
+export default function Mission() {
   return (
     <div className={styles.container}>
       <LayoutWrapper>
@@ -59,6 +55,4 @@ const Mission = () => {
       </LayoutWrapper>
     </div>
   );
-};
-
-export default Mission;
+}
