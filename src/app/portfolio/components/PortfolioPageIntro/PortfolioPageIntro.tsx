@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import styles from "./PortfolioPageIntro.module.css";
@@ -7,11 +6,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import Thunder from "../../../../../public/icons/lightning.svg";
-import Rentals from "../../../../../public/icons/rentals.svg";
-import Bee from "../../../../../public/icons/bee2.svg";
-import Headphones from "../../../../../public/icons/headphones.svg";
 import Link from "next/link";
+import { projects } from "@/lib/data";
 
 /* ───────── helper types ───────────────────────────────────────── */
 interface CardItem {
@@ -21,6 +17,14 @@ interface CardItem {
   href: string;
 }
 
+/* derive cards from the single source of truth (`projects`) */
+const cards: CardItem[] = projects.map(({ id, title, slug, icon }) => ({
+  id,
+  title,
+  icon,
+  href: `/portfolio/#${slug}`,
+}));
+
 export default function PortfolioPageIntro() {
   /* ───────── intro text refs ─────────────────────────────────── */
   const refs = {
@@ -28,7 +32,7 @@ export default function PortfolioPageIntro() {
     copy: useRef<HTMLParagraphElement>(null),
   };
 
-  /* ───────── SplitType (unchanged) ───────────────────────────── */
+  /* ───────── SplitType animation ─────────────────────────────── */
   useGSAP(() => {
     const animate = (el: HTMLElement | null, type: "words" | "lines") => {
       if (!el) return;
@@ -58,27 +62,17 @@ export default function PortfolioPageIntro() {
     return () => clean.forEach((c) => c && c());
   });
 
-  /* ───────── card data ───────────────────────────────────────── */
-  const data: CardItem[] = [
-    { id: 1, title: "Thundertrails", icon: Thunder, href: "#thundertrails" },
-    { id: 2, title: "Chuxly", icon: Headphones, href: "#chuxly" },
-    { id: 3, title: "Golden Drips", icon: Bee, href: "#goldendrips" },
-    { id: 4, title: "Elite Retreat Rentals", icon: Rentals, href: "#retreat" },
-  ];
-
   /* ───────── autoplay state & refs ───────────────────────────── */
   const [activeIndex, setActiveIndex] = useState(0);
-
   const timeoutRef = useRef<NodeJS.Timeout | null>(null); // drives index change
-  const progressTl = useRef<gsap.core.Tween | null>(null); // fills pink bar
+  const progressTl = useRef<gsap.core.Tween | null>(null); // fills progress bar
   const pausedRef = useRef(false); // true while hovered
   const remainingRef = useRef(5000); // ms left when paused
-  const startedTsRef = useRef<number>(Date.now()); // timestamp when cycle began
+  const startedTsRef = useRef<number>(Date.now()); // cycle start timestamp
 
-  /* helper: schedule the next change after `delay` ms */
   const scheduleNext = (delay = 5000) => {
     timeoutRef.current = setTimeout(() => {
-      setActiveIndex((i) => (i + 1) % data.length);
+      setActiveIndex((i) => (i + 1) % cards.length);
     }, delay);
     startedTsRef.current = Date.now();
   };
@@ -91,7 +85,6 @@ export default function PortfolioPageIntro() {
 
   /* ───────── when activeIndex changes ───────────────────────── */
   useEffect(() => {
-    /* reset / restart bar */
     progressTl.current?.kill();
     gsap.set(`.${styles.progress}`, { scaleX: 0 });
 
@@ -101,12 +94,8 @@ export default function PortfolioPageIntro() {
       { scaleX: 1, duration: 5, ease: "none", transformOrigin: "left" }
     );
 
-    /* if we're paused, freeze bar immediately */
-    if (pausedRef.current) {
-      progressTl.current.pause();
-    }
+    if (pausedRef.current) progressTl.current.pause();
 
-    /* reschedule next change (unless paused) */
     clearTimeout(timeoutRef.current!);
     if (!pausedRef.current) scheduleNext();
   }, [activeIndex]);
@@ -116,7 +105,6 @@ export default function PortfolioPageIntro() {
     if (pausedRef.current) return;
     pausedRef.current = true;
 
-    /* how much time is left in this 5‑s cycle? */
     const elapsed = Date.now() - startedTsRef.current;
     remainingRef.current = Math.max(5000 - elapsed, 0);
 
@@ -132,8 +120,7 @@ export default function PortfolioPageIntro() {
     scheduleNext(remainingRef.current);
   };
 
-  /* ───────── icon of the active card ────────────────────────── */
-  const ActiveIcon = data[activeIndex].icon;
+  const ActiveIcon = cards[activeIndex].icon;
 
   /* ───────── render ─────────────────────────────────────────── */
   return (
@@ -162,7 +149,7 @@ export default function PortfolioPageIntro() {
               onMouseEnter={handlePause}
               onMouseLeave={handleResume}
             >
-              {data.map((item, idx) => (
+              {cards.map((item, idx) => (
                 <Link
                   key={item.id}
                   href={item.href}

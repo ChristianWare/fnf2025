@@ -38,6 +38,7 @@ interface StatItem {
 interface Props {
   project: {
     title: string;
+    slug: string;
     src: StaticImageData;
     icon: ComponentType<SVGProps<SVGSVGElement>>;
     video?: string;
@@ -59,7 +60,7 @@ export default function ProjectDetails({ project }: Props) {
   const Icon = project.icon;
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={project.slug}>
       <LayoutWrapper>
         <div className={styles.top}>
           <Icon className={styles.icon} />
