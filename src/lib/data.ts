@@ -194,7 +194,7 @@ export const projects = [
     year: 2025,
     platform: "WooCommerce",
     tech: "Next.js",
-    href: "https://www.goldendrips.com/",
+    href: "https://golden-tau-ten.vercel.app/",
     challenge: [
       {
         id: 3.1,
@@ -254,7 +254,7 @@ export const projects = [
     year: 2025,
     platform: "n/a",
     tech: "Next.js + MongoDB + Node.js",
-    href: "https://elite-retreat-rentals.vercel.app/",
+    href: "https://case-study-one-git-main-christianwares-projects.vercel.app/",
     challenge: [
       {
         id: 4.1,
