@@ -35,6 +35,10 @@
   font-family: var(--SuisseIntlMonoRegular);
 }
 
+.blackii {
+  color: var(--blackii);
+}
+
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -113,5 +117,21 @@
   height: 100%;
   border-radius: 50%;
   border: 2px solid var(--white);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.blackDotii {
+  background-color: var(--blackii);
+}
+
+.blackDotii::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--blackii);
   animation: pulse 1.5s infinite ease-in-out;
 }

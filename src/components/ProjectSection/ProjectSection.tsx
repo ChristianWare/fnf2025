@@ -4,14 +4,15 @@
 import styles from "./ProjectSection.module.css";
 import { useEffect, useRef, useState, useCallback } from "react";
 import LayoutWrapper from "../LayoutWrapper";
-import Img1 from "../../../public/images/ecomm.jpeg";
-import Img2 from "../../../public/images/heroii.jpeg";
 import Img3 from "../../../public/images/heroiii.jpeg";
 import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
-import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import Thunder from '../../../public/images/thunder.jpg'
+import Chuxly from '../../../public/images/chuxly.png'
+import Honey from '../../../public/images/honey.jpg'
+import Rentals from '../../../public/images/erRentals.png'
 
 const projectData = [
   {
@@ -20,7 +21,7 @@ const projectData = [
     type: <Arrow className={styles.icon} />,
     description: "Thundertrails",
     label: <Arrow className={styles.icon2} />,
-    src: Img1,
+    src: Thunder,
   },
   {
     id: 2,
@@ -28,7 +29,7 @@ const projectData = [
     type: <Arrow className={styles.icon} />,
     description: "Chuxly",
     label: <Arrow className={styles.icon2} />,
-    src: Img2,
+    src: Chuxly,
   },
   {
     id: 3,
@@ -36,7 +37,7 @@ const projectData = [
     type: <Arrow className={styles.icon} />,
     description: "Golden Drips",
     label: <Arrow className={styles.icon2} />,
-    src: Img3,
+    src: Honey,
   },
   {
     id: 4,
@@ -44,7 +45,7 @@ const projectData = [
     type: <Arrow className={styles.icon} />,
     description: "Elite Retreat Rentals",
     label: <Arrow className={styles.icon2} />,
-    src: Img1,
+    src: Rentals,
   },
   {
     id: 5,
@@ -54,14 +55,7 @@ const projectData = [
     label: <Arrow className={styles.icon} />,
     src: Img3,
   },
-  // {
-  //   id: 6,
-  //   title: "Project 6",
-  //   type: <Arrow className={styles.icon} />,
-  //   description: "Project 6",
-  //   label: <Arrow className={styles.icon2} />,
-  //   src: Img2,
-  // },
+  
 ];
 
 const POSITIONS = {
@@ -76,7 +70,7 @@ export default function ProjectSection() {
   const [lastMousePosition, setLastMousePosition] = useState({ x: 0, y: 0 });
   const [isMouseMoving, setIsMouseMoving] = useState(false);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [displayedImage, setDisplayedImage] = useState(Img1); // Default to Img1
+  const [displayedImage, setDisplayedImage] = useState(Thunder);
 
   useEffect(() => {
     projectRefs.current = projectRefs.current.slice(0, projectData.length);
@@ -262,13 +256,13 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
-        {/* <div className={styles.btnContainer}>
+        <div className={styles.btnContainer}>
           <Button
             btnType='secondary'
             text='View All Projects'
             href='/portfolio'
           />
-        </div> */}
+        </div>
       </LayoutWrapper>
     </section>
   );

@@ -23,7 +23,6 @@
 
 .projectDataContainer {
   width: 100%;
-  /* border: 1px solid var(--gray); */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -115,8 +114,8 @@
 .btnContainer {
   margin-top: 5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 1068px) {

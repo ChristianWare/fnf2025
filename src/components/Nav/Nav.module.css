@@ -46,7 +46,7 @@
   border: 1px solid var(--gray);
   padding: 8px 12px;
   border-radius: 50px;
-  background-color: var(--tan);
+  /* background-color: var(--tan); */
 }
 
 .logoContainerMobile {
@@ -65,11 +65,11 @@
   font-family: var(--SuisseIntlMonoRegular);
   font-size: 1.4rem;
   line-height: 1;
-  color: var(--black);
+  color: var(--blackii);
   user-select: none;
   z-index: 998;
   padding: 6px 12px;
-  background-color: var(--tan);
+  /* background-color: var(--tan); */
   border: 1px solid var(--gray);
   text-transform: uppercase;
   transition: all 0.3s ease-in;
@@ -105,7 +105,7 @@
   height: 3px;
   margin: 2px auto;
   border-radius: 15px;
-  background-color: var(--black);
+  background-color: var(--blackii);
   transition: all 0.3s ease-in-out;
 }
 
@@ -231,7 +231,6 @@
     position: relative;
     cursor: pointer;
     z-index: 9999;
-
   }
 
   .hamburger .whiteBar:nth-child(2) {

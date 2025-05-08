@@ -59,8 +59,8 @@ function slideInOut() {
       <div className={styles.logoBox}>
         <SectionIntro
           title='FONTS & FOOTERS'
-          color='black'
-          dotColor='blackDot'
+          color='blackii'
+          dotColor='blackDotii'
         />
       </div>
     </Link>
