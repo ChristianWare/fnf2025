@@ -3,13 +3,17 @@ import { format } from "date-fns";
 import Link from "next/link";
 import styles from "./Payments.module.css";
 
-export const revalidate = 60; // refresh list once a minute
+export const revalidate = 60; // regenerate every minute
 
-type PageProps = { searchParams?: { page?: string } };
+/* ─────────────── Types ─────────────── */
+type SearchParams = { page?: string };
+type PageProps = { searchParams?: Promise<SearchParams> }; // ← key change
 
+/* ─────────────── Page ──────────────── */
 export default async function PaymentsPage({ searchParams }: PageProps) {
   /* ---------- pagination ---------- */
-  const page = Math.max(1, Number(searchParams?.page ?? 1));
+  const { page: rawPage } = (await searchParams) ?? {}; // ← await here
+  const page = Math.max(1, Number(rawPage ?? 1));
   const perPage = 20;
   const skip = (page - 1) * perPage;
 
@@ -119,7 +123,7 @@ export default async function PaymentsPage({ searchParams }: PageProps) {
   );
 }
 
-/* helper for pagination */
+/* ─────────── Pagination helper ─────────── */
 function PageLink({
   page,
   disabled,

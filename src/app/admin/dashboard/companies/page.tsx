@@ -3,13 +3,18 @@ import { format } from "date-fns";
 import Link from "next/link";
 import styles from "./Companies.module.css";
 
-export const revalidate = 60; // refresh once a minute
+/** Revalidate the page (ISR) once every minute */
+export const revalidate = 60;
 
-type PageProps = { searchParams?: { page?: string } };
+/* ──────────────── Types ──────────────── */
+type SearchParams = { page?: string };
+type PageProps = { searchParams?: Promise<SearchParams> }; // ← Note the **Promise**
 
+/* ──────────────── Page ───────────────── */
 export default async function CompaniesPage({ searchParams }: PageProps) {
   /* ---------- pagination ---------- */
-  const page = Math.max(1, Number(searchParams?.page ?? 1));
+  const { page: rawPage } = (await searchParams) ?? {}; // ← await the params
+  const page = Math.max(1, Number(rawPage ?? 1));
   const pageSize = 20;
   const skip = (page - 1) * pageSize;
 
@@ -34,11 +39,13 @@ export default async function CompaniesPage({ searchParams }: PageProps) {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const headers = ["Name", "Website", "Phone", "Users", "Projects", "Joined"];
 
+  /* ---------- JSX ---------- */
   return (
     <section className={styles.container}>
       <Link href='/admin/dashboard' className={styles.back}>
         Back to Dashboard →
       </Link>
+
       <div className={styles.headerRow}>
         <h1 className={styles.heading}>Active Companies</h1>
         <Link href='/admin/dashboard/companies/new' className={styles.newBtn}>
@@ -52,8 +59,7 @@ export default async function CompaniesPage({ searchParams }: PageProps) {
             {headers.map((h) => (
               <th key={h}>{h}</th>
             ))}
-            <th />
-            {/* actions */}
+            <th /> {/* actions column */}
           </tr>
         </thead>
 
@@ -65,19 +71,26 @@ export default async function CompaniesPage({ searchParams }: PageProps) {
                   {c.name}
                 </Link>
               </td>
+
               <td className={styles.wrap}>
                 {c.website ? (
-                  <Link href={c.website} target='_blank'>
-                    {new URL(c.website).hostname.replace("www.", "")}
+                  <Link
+                    href={c.website}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {new URL(c.website).hostname.replace(/^www\./, "")}
                   </Link>
                 ) : (
                   "—"
                 )}
               </td>
+
               <td>{c.phone ?? "—"}</td>
               <td>{c._count.users}</td>
               <td>{c._count.projects}</td>
               <td>{format(c.createdAt, "MMM d, yyyy")}</td>
+
               <td>
                 <Link
                   href={`/admin/dashboard/companies/${c.id}`}
@@ -116,7 +129,7 @@ export default async function CompaniesPage({ searchParams }: PageProps) {
   );
 }
 
-/* ---------- helper ---------- */
+/* ────────── Pagination Link helper ────────── */
 function PageLink({
   page,
   disabled,

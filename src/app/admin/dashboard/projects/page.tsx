@@ -3,13 +3,17 @@ import { format } from "date-fns";
 import Link from "next/link";
 import styles from "./Projects.module.css";
 
-export const revalidate = 60; // refresh list every minute
+export const revalidate = 60; // regenerate list every minute
 
-type PageProps = { searchParams?: { page?: string } };
+/* ─────────────── Types ─────────────── */
+type SearchParams = { page?: string };
+type PageProps = { searchParams?: Promise<SearchParams> }; // ← Promise!
 
+/* ─────────────── Page ──────────────── */
 export default async function ProjectsPage({ searchParams }: PageProps) {
   /* ---------- pagination ---------- */
-  const page = Math.max(1, Number(searchParams?.page ?? 1));
+  const { page: rawPage } = (await searchParams) ?? {}; // ← await
+  const page = Math.max(1, Number(rawPage ?? 1));
   const perPage = 20;
   const skip = (page - 1) * perPage;
 
@@ -34,11 +38,13 @@ export default async function ProjectsPage({ searchParams }: PageProps) {
 
   const totalPages = Math.max(1, Math.ceil(total / perPage));
 
+  /* ---------- UI ---------- */
   return (
     <section className={styles.container}>
       <Link href='/admin/dashboard' className={styles.back}>
         Back to Dashboard →
       </Link>
+
       <div className={styles.headerRow}>
         <h1 className={styles.heading}>Projects</h1>
         <Link href='/admin/dashboard/projects/new' className={styles.newBtn}>
@@ -90,6 +96,7 @@ export default async function ProjectsPage({ searchParams }: PageProps) {
         </tbody>
       </table>
 
+      {/* ---------- pagination ---------- */}
       {totalPages > 1 && (
         <nav className={styles.pagination}>
           <PageLink page={page - 1} disabled={page === 1}>
@@ -107,7 +114,7 @@ export default async function ProjectsPage({ searchParams }: PageProps) {
   );
 }
 
-/* helper */
+/* ───── helper ───── */
 function PageLink({
   page,
   disabled,

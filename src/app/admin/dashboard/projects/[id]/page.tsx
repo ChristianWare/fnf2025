@@ -4,11 +4,14 @@ import { revalidatePath } from "next/cache";
 import { notFound, redirect } from "next/navigation";
 import styles from "./Project.module.css";
 
-export default async function ProjectEdit({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+/* ───────── Types ───────── */
+type Params = Promise<{ id: string }>;
+type PageProps = { params: Params };
+
+/* ───────── Page ───────── */
+export default async function ProjectEdit({ params }: PageProps) {
+  const { id } = await params; // ← await async params
+
   const project = await prisma.project.findUnique({
     where: { id },
     include: { company: true, user: true },
@@ -22,7 +25,7 @@ export default async function ProjectEdit({
     select: { id: true, name: true },
   });
 
-  /* ------------ server actions ------------- */
+  /* -------- server actions -------- */
   async function save(formData: FormData) {
     "use server";
     await prisma.project.update({

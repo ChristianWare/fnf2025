@@ -1,7 +1,7 @@
-// src/app/auth/login/page.tsx
+/* src/app/auth/login/page.tsx */
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
@@ -14,11 +14,27 @@ import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Img1 from "../../../../public/images/ecomm.jpeg";
 import styles from "./Login.module.css";
 
+/* ───────────────────────────
+   Outer wrapper: provides the
+   required <Suspense> boundary
+   ─────────────────────────── */
 export default function LoginPage() {
+  return (
+    <Suspense fallback={null}>
+      <LoginInner />
+    </Suspense>
+  );
+}
+
+/* ───────────────────────────
+   All previous logic moved here
+   ─────────────────────────── */
+function LoginInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const isRegistered = searchParams.get("registered") === "true";
 
+  /* ---------- local state ---------- */
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -27,6 +43,7 @@ export default function LoginPage() {
     isRegistered ? "Account created successfully! Please log in." : null
   );
 
+  /* auto‑dismiss success message */
   useEffect(() => {
     if (successMessage) {
       const timer = setTimeout(() => setSuccessMessage(null), 5000);
@@ -34,24 +51,22 @@ export default function LoginPage() {
     }
   }, [successMessage]);
 
+  /* ---------- helpers ---------- */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => {
-      const errs = { ...prev };
-      delete errs[name];
-      return errs;
+      const newErrs = { ...prev };
+      delete newErrs[name];
+      return newErrs;
     });
   };
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = "Please enter a valid email address";
-    }
-    if (!formData.password) {
-      newErrors.password = "Password is required";
-    }
+    if (!formData.password) newErrors.password = "Password is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -73,15 +88,11 @@ export default function LoginPage() {
       if (result?.error) {
         setGeneralError("Invalid email or password");
       } else {
-        // Determine role and redirect
-        const userRes = await fetch("/api/user");
-        if (userRes.ok) {
-          const { role } = await userRes.json();
-          if (role === "ADMIN") {
-            router.push("/admin/dashboard");
-          } else {
-            router.push("/account");
-          }
+        // fetch role then redirect
+        const res = await fetch("/api/user");
+        if (res.ok) {
+          const { role } = await res.json();
+          router.push(role === "ADMIN" ? "/admin/dashboard" : "/account");
         } else {
           router.push("/account");
         }
@@ -94,18 +105,21 @@ export default function LoginPage() {
     }
   };
 
+  /* ---------- UI ---------- */
   return (
     <div className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
+          {/* -------------- left / form -------------- */}
           <div className={styles.left}>
             <div className={styles.formCard}>
-              <div className={styles.cardHeader}>
+              <header className={styles.cardHeader}>
                 <SectionHeading2 title='Welcome Back' />
                 <p className={styles.cardDescription}>
                   Sign in to your account
                 </p>
-              </div>
+              </header>
+
               <div className={styles.cardContent}>
                 <form
                   onSubmit={handleSubmit}
@@ -123,6 +137,7 @@ export default function LoginPage() {
                     </div>
                   )}
 
+                  {/* Email */}
                   <div className={styles.formGroup}>
                     <label htmlFor='email' className={styles.label}>
                       Email
@@ -144,6 +159,7 @@ export default function LoginPage() {
                     )}
                   </div>
 
+                  {/* Password */}
                   <div className={styles.formGroup}>
                     <div className={styles.labelWithLink}>
                       <label htmlFor='password' className={styles.label}>
@@ -156,6 +172,7 @@ export default function LoginPage() {
                         Forgot password?
                       </Link>
                     </div>
+
                     <input
                       id='password'
                       name='password'
@@ -184,6 +201,7 @@ export default function LoginPage() {
             </div>
           </div>
 
+          {/* -------------- right / image -------------- */}
           <div className={styles.right}>
             <div className={styles.imgContainer}>
               <Image src={Img1} fill alt='' className={styles.img} />
@@ -191,15 +209,18 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className={styles.cardFooter}>
+        {/* Footer under layout wrapper */}
+        <footer className={styles.cardFooter}>
           <p className={styles.footerText}>
             Don&apos;t have an account?{" "}
             <Link href='/auth/register' className={styles.link}>
               Sign up
             </Link>
           </p>
-        </div>
+        </footer>
       </LayoutWrapper>
+
+      {/* Global footer sections */}
       <FinalCTA />
       <Contact2 />
     </div>

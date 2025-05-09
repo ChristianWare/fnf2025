@@ -3,13 +3,17 @@ import { format } from "date-fns";
 import Link from "next/link";
 import styles from "./Invoices.module.css";
 
-export const revalidate = 60; // refresh list every minute
+export const revalidate = 60; // regenerate every minute
 
-type PageProps = { searchParams?: { page?: string } };
+/* ─────────────── Types ─────────────── */
+type SearchParams = { page?: string };
+type PageProps = { searchParams?: Promise<SearchParams> }; // ← Promise!
 
+/* ─────────────── Page ──────────────── */
 export default async function InvoicesPage({ searchParams }: PageProps) {
   /* ---------- pagination ------------ */
-  const page = Math.max(1, Number(searchParams?.page ?? 1));
+  const { page: rawPage } = (await searchParams) ?? {};       // ← await
+  const page = Math.max(1, Number(rawPage ?? 1));
   const perPage = 20;
   const skip = (page - 1) * perPage;
 
@@ -47,14 +51,16 @@ export default async function InvoicesPage({ searchParams }: PageProps) {
     "Created",
   ];
 
+  /* ---------- JSX -------------- */
   return (
     <section className={styles.container}>
-      <Link href='/admin/dashboard' className={styles.back}>
+      <Link href="/admin/dashboard" className={styles.back}>
         Back to Dashboard →
       </Link>
+
       <div className={styles.headerRow}>
         <h1 className={styles.heading}>Invoices</h1>
-        <Link href='/admin/dashboard/invoices/new' className={styles.newBtn}>
+        <Link href="/admin/dashboard/invoices/new" className={styles.newBtn}>
           + New Invoice
         </Link>
       </div>
@@ -128,7 +134,7 @@ export default async function InvoicesPage({ searchParams }: PageProps) {
   );
 }
 
-/* helper */
+/* ─────────── Pagination helper ─────────── */
 function PageLink({
   page,
   disabled,

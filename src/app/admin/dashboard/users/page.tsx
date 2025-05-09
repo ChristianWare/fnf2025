@@ -3,19 +3,21 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { format } from "date-fns";
 
-export const revalidate = 60; // rebuild list every 60 s (or on request in dev)
+export const revalidate = 60; // regenerate list every minute
 
-type PageProps = {
-  searchParams?: { page?: string };
-};
+/* ────────── Types ────────── */
+type SearchParams = { page?: string };
+type PageProps = { searchParams?: Promise<SearchParams> }; // ← Promise!
 
+/* ────────── Page ────────── */
 export default async function UsersPage({ searchParams }: PageProps) {
-  /* ---------- pagination ----------------------------------------- */
-  const page = Math.max(1, Number(searchParams?.page ?? 1));
+  /* ---------- pagination ---------- */
+  const { page: rawPage } = (await searchParams) ?? {}; // ← await
+  const page = Math.max(1, Number(rawPage ?? 1));
   const pageSize = 20;
   const offset = (page - 1) * pageSize;
 
-  /* ---------- db queries ----------------------------------------- */
+  /* ---------- db queries ---------- */
   const [users, total] = await Promise.all([
     prisma.user.findMany({
       skip: offset,
@@ -34,7 +36,7 @@ export default async function UsersPage({ searchParams }: PageProps) {
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
-  /* ---------- render --------------------------------------------- */
+  /* ---------- render ------------- */
   return (
     <section className={styles.container}>
       <Link href='/admin/dashboard' className={styles.back}>
@@ -62,9 +64,10 @@ export default async function UsersPage({ searchParams }: PageProps) {
                   {u.role}
                 </span>
               </td>
-              <td>{format(u.createdAt, "MMM d, yyyy")}</td>
+              <td>{format(u.createdAt, "MMM d, yyyy")}</td>
             </tr>
           ))}
+
           {users.length === 0 && (
             <tr>
               <td colSpan={4} className={styles.empty}>
@@ -75,17 +78,15 @@ export default async function UsersPage({ searchParams }: PageProps) {
         </tbody>
       </table>
 
-      {/* ---------- pagination footer ------------------------------ */}
+      {/* ---------- pagination footer ---------- */}
       {totalPages > 1 && (
         <nav className={styles.pagination}>
           <PageLink page={page - 1} disabled={page === 1}>
             ← Prev
           </PageLink>
-
           <span>
             Page {page} of {totalPages}
           </span>
-
           <PageLink page={page + 1} disabled={page === totalPages}>
             Next →
           </PageLink>
@@ -95,7 +96,7 @@ export default async function UsersPage({ searchParams }: PageProps) {
   );
 }
 
-/* ---------- helper component (also server) ----------------------- */
+/* ---------- helper component ---------- */
 function PageLink({
   page,
   disabled,
@@ -106,7 +107,6 @@ function PageLink({
   children: React.ReactNode;
 }) {
   if (disabled) return <span className={styles.pageDisabled}>{children}</span>;
-
   return (
     <Link href={{ query: { page } }} className={styles.pageLink}>
       {children}

@@ -1,13 +1,14 @@
+import styles from "./Company.module.css";
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { notFound, redirect } from "next/navigation";
-import styles from "./Company.module.css";
 
-export default async function CompanyEdit({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+type Params = Promise<{ id: string }>;
+
+
+export default async function CompanyEdit({ params }: { params: Params }) {
+  const { id } = await params; // ← await the promise
+
   const company = await prisma.company.findUnique({ where: { id } });
   if (!company) notFound();
 

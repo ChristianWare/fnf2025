@@ -4,12 +4,15 @@ import { revalidatePath } from "next/cache";
 import { notFound, redirect } from "next/navigation";
 import styles from "./Invoice.module.css";
 
-export default async function InvoiceEdit({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
-  /* fetch invoice with relations */
+/* ──────────────── Types ──────────────── */
+type Params = Promise<{ id: string }>;
+type PageProps = { params: Params };
+
+/* ──────────────── Page ───────────────── */
+export default async function InvoiceEdit({ params }: PageProps) {
+  const { id } = await params; // ← await the promised params
+
+  /* ---------- fetch invoice ---------- */
   const invoice = await prisma.invoice.findUnique({
     where: { id },
     include: {
@@ -19,7 +22,7 @@ export default async function InvoiceEdit({
   });
   if (!invoice) notFound();
 
-  /* dropdown options */
+  /* ---------- dropdown options ---------- */
   const [companies, projects] = await Promise.all([
     prisma.company.findMany({ select: { id: true, name: true } }),
     prisma.project.findMany({ select: { id: true, name: true } }),
@@ -58,7 +61,7 @@ export default async function InvoiceEdit({
 
       <form action={save} className={styles.form}>
         <label>
-          Amount (USD)
+          Amount&nbsp;(USD)
           <input
             name='amount'
             type='number'
@@ -81,7 +84,7 @@ export default async function InvoiceEdit({
         </label>
 
         <label>
-          Due date
+          Due date
           <input
             name='dueDate'
             type='date'
@@ -102,7 +105,7 @@ export default async function InvoiceEdit({
         </label>
 
         <label>
-          Project (optional)
+          Project&nbsp;(optional)
           <select name='project' defaultValue={invoice.projectId ?? ""}>
             <option value=''>— none —</option>
             {projects.map((p) => (
