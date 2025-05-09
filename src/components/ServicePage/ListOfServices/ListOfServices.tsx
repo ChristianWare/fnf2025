@@ -3,6 +3,7 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import Image from "next/image";
 import Devlopment from "../../../../public/images/servicesHero.jpg";
+import Booking from "../../../../public/images/bookingii.jpg";
 // import Strategy from "../../../../public/images/strategy.jpg";
 // import Design from "../../../../public/images/design.jpg";
 // import Integration from "../../../../public/images/integration.jpg";
@@ -142,6 +143,51 @@ const data = [
         serviceName: "Product data import and setup",
         description:
           "We efficiently organize and import your product catalog with all necessary attributes, variations, and media.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    service: "Booking‑Site Development",
+    headline: "Fast, friction‑free scheduling & reservations",
+    desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
+    src: Booking,
+    servicesInclude: [
+      {
+        id: 4.1,
+        serviceName: "Custom booking‑flow design",
+        description:
+          "We map and code a user journey that matches your service logic—single appointments, multi‑step rentals, or group sessions—so guests book in under 60 seconds.",
+      },
+      {
+        id: 4.2,
+        serviceName: "Real‑time calendar & resource sync",
+        description:
+          "Your online availability pulls live data from Google Calendar, Microsoft 365, or PMS (Property‑Management System) APIs, eliminating double‑bookings.",
+      },
+      {
+        id: 4.3,
+        serviceName: "Integrated payments & deposits",
+        description:
+          "Stripe and Square gateways handle deposits, full charges, or split payments while keeping you PCI compliant.",
+      },
+      {
+        id: 4.4,
+        serviceName: "Automated reminders & no‑show protection",
+        description:
+          "SMS and email reminders reduce no‑shows by up to 40 %. Optional card‑on‑file or late‑cancel fees protect revenue.",
+      },
+      {
+        id: 4.5,
+        serviceName: "Multi‑location & staff management",
+        description:
+          "We build admin dashboards where you assign services, set staff hours, and manage pricing per location—all in one place.",
+      },
+      {
+        id: 4.6,
+        serviceName: "Analytics & occupancy reporting",
+        description:
+          "Custom dashboards surface key KPIs like utilisation rate, average booking value, and repeat‑guest percentage so you can optimise pricing and staffing.",
       },
     ],
   },

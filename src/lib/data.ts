@@ -11,32 +11,30 @@ export const pricing = [
   {
     id: 1,
     title: "Starter Store",
-    description:
-      "Small businesses launching their first e-commerce presence or entrepreneurs with straightforward product catalogs.",
+    description: "For new brands or entrepreneurs with a small product line.",
     price: "5,900",
-    timeframe: "4-6 weeks",
+    timeframe: "4–6 weeks",
     features:
-      "Custom design on your chosen platform (Shopify, WooCommerce, or Wix) with a mobile-responsive layout. Includes setup for up to 25 products, basic payment gateway integration, standard shipping configuration, essential SEO implementation, and comprehensive launch support to ensure your store starts strong.",
+      "Custom design on Shopify, WooCommerce, or Wix, mobile‑responsive layout, up to 25 products, basic payments, standard shipping & tax, core SEO, launch support.",
   },
   {
     id: 2,
     title: "Growth Store",
     description:
-      "Established businesses requiring more sophisticated e-commerce functionality or those with larger product catalogs.",
+      "For established shops that need richer features and a larger catalog.",
     price: "7,500",
-    timeframe: "8-10 weeks",
+    timeframe: "8–10 weeks",
     features:
-      "All Starter Store features plus advanced user experience design and support for up to 100 products. Includes multiple payment gateways, complex shipping rules, advanced product filtering, wishlist functionality, basic CRM integration, email marketing setup, and 30 days of dedicated post-launch support to optimize your store's performance.",
+      "Everything in Starter plus advanced UX, up to 100 products, extra payment gateways, complex shipping rules, product filters, wish‑lists, basic CRM and email setup, 30‑day post‑launch support.",
   },
   {
     id: 3,
     title: "Enterprise Solution",
-    description:
-      "Larger businesses with complex requirements, extensive product catalogs, or specialized e-commerce needs.",
+    description: "For high‑volume or highly customised e‑commerce operations.",
     price: "10,000",
-    timeframe: "12-16 weeks",
+    timeframe: "12–16 weeks",
     features:
-      "Everything in the Growth Store plus premium UX/UI design and unlimited product support. Includes custom functionality development, full systems integration (ERP, CRM, inventory), multi-currency support, advanced analytics, personalization features, conversion optimization, and 60 days of comprehensive post-launch support and training for your team.",
+      "Everything in Growth plus premium UI, unlimited products, custom features, full ERP/CRM integration, multi‑currency, advanced analytics, personalisation, CRO tweaks, 60‑day post‑launch support.",
   },
   // {
   //   id: 4,
@@ -49,6 +47,40 @@ export const pricing = [
   //     "Tailored solutions for specialized e-commerce models including B2B portals, multi-vendor marketplaces, subscription-based platforms, digital product stores, service booking systems, and rental e-commerce platforms. Each solution includes customized features specifically designed for your unique business model and requirements.",+
   // },
 ] as const;
+
+export const pricingii = [
+  {
+    id: 1,
+    title: "Booking Launch Plan",
+    description:
+      "For solo operators or very small teams that need a simple, reliable booking site.",
+    price: "350 / month",
+    timeframe: "6‑month minimum term",
+    features:
+      "Custom mobile‑ready booking site, 4 developer hours per month, Stripe deposits, automated reminders, 24‑hour support reply, monthly performance report.",
+  },
+  {
+    id: 2,
+    title: "Booking Growth Plan",
+    description:
+      "For service brands with up to fifteen staff who want richer UX and basic marketing automations.",
+    price: "425 / month",
+    timeframe: "6‑month minimum term",
+    features:
+      "All Launch features plus 8 monthly dev hours, multi‑staff calendar sync, gift‑card and package builder, abandoned‑booking emails, same‑day support, quarterly A/B test.",
+  },
+  {
+    id: 3,
+    title: "Booking Scale Plan",
+    description:
+      "For multi‑location salons, luxury fleets, or rental portfolios that need custom integrations.",
+    price: "500 / month",
+    timeframe: "12‑month term (setup fee waived)",
+    features:
+      "All Growth features plus 12 monthly dev hours, custom API link to PMS/ERP, dynamic pricing rules, 4‑hour support reply, advanced analytics dashboard.",
+  },
+] as const;
+
 
 export const projects = [
   {

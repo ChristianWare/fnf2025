@@ -1,16 +1,23 @@
 .container {
-    padding: 15rem 0;  background-color: var(--tan);
+  padding: 15rem 0;
+  background-color: var(--tan);
+}
+
+.content,
+.content2 {
+  margin-bottom: 15rem;
 }
 
 .heading {
   text-align: center;
+  font-size: 4rem;
 }
 
 .bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .card {
@@ -50,17 +57,15 @@
 }
 
 .card:nth-child(1) .title {
-  background-color: var(--orange);
+  background-color: var(--orange2);
 }
 
 .card:nth-child(2) .title {
-  background-color: var(--pink);
-  color: var(--white);
+  background-color: var(--orange3);
 }
 
 .card:nth-child(3) .title {
-  background-color: var(--black);
-  color: var(--tan);
+  background-color: var(--orange);
 }
 
 .price {
@@ -93,16 +98,16 @@
 }
 
 .card:nth-child(1) .featureBox {
-  background-color: var(--orange);
+  background-color: var(--orange2);
   color: var(--white);
 }
 
 .card:nth-child(2) .featureBox {
-  background-color: var(--pink);
+  background-color: var(--orange3);
 }
 
 .card:nth-child(3) .featureBox {
-  background-color: var(--black);
+  background-color: var(--orange);
 }
 
 .feature {
@@ -113,12 +118,33 @@
   font-size: 1.4rem;
 }
 
-.card:nth-child(3) .featureBox .feature {
-  color: var(--tan);
-}
-
 .feature:last-child {
   border-bottom: none;
+}
+
+.content2 .card:nth-child(1) .title {
+  background-color: var(--pink2);
+}
+
+.content2 .card:nth-child(2) .title {
+  background-color: var(--pink3);
+}
+
+.content2 .card:nth-child(3) .title {
+  background-color: var(--pink);
+}
+
+.content2 .card:nth-child(1) .featureBox {
+  background-color: var(--pink2);
+  color: var(--white);
+}
+
+.content2 .card:nth-child(2) .featureBox {
+  background-color: var(--pink3);
+}
+
+.content2 .card:nth-child(3) .featureBox {
+  background-color: var(--pink);
 }
 
 @media screen and (max-width: 1100px) {
