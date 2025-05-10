@@ -53,7 +53,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 30rem;
+  gap: 3rem;
   height: 100%;
 }
 
@@ -80,6 +80,13 @@
   margin-bottom: 5rem;
 }
 
+.arrow {
+  color: var(--black);
+  transform: rotate(45deg);
+  width: 40%;
+  height: 40%;
+}
+
 @media screen and (max-width: 1068px) {
   .heading {
     width: 100%;
@@ -88,11 +95,6 @@
   .copy {
     width: 70%;
     margin-left: 0%;
-  }
-
-  .leftContent,
-  .rightContent {
-    gap: 15rem;
   }
 }
 
@@ -103,5 +105,12 @@
 
   .copy {
     width: 100%;
+  }
+
+  .arrow {
+    color: var(--black);
+    transform: rotate(45deg);
+    width: 100%;
+    height: 100%;
   }
 }

@@ -1,5 +1,5 @@
-import Button from "@/components/Button/Button";
 import styles from "./Problem.module.css";
+import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 const Problem = () => {
@@ -12,7 +12,7 @@ const Problem = () => {
     {
       title: "Bad Mobile Phone Experience",
       description:
-        "Many e-commerce sites struggle to deliver a seamless shopping experience on mobile devices, resulting in lost opportunities as customers shop on the go.",
+        "Many e-commerce sites struggle to deliver a seamless shopping experience on mobile devices.",
     },
     {
       title: "Complicated Checkout Process",
@@ -53,11 +53,7 @@ const Problem = () => {
           ))}
         </div>
         <div className={styles.btnContainer}>
-          <Button
-            text='learn more about us'
-            href='/about'
-            btnType='secondary'
-          />
+          <Button text='learn more about us' href='/about' btnType='black' />
         </div>
       </LayoutWrapper>
     </section>

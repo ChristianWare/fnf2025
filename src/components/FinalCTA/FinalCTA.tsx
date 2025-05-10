@@ -7,19 +7,17 @@ import Modal from "../Modal/Modal";
 import { InlineWidget } from "react-calendly";
 import ContactForm from "../ContactForm/ContactForm";
 import { useState } from "react";
+import Arrow from "../../../public/icons/arrow2.svg";
 
 type ModalKind = "calendly" | "contact" | null;
 
 export default function FinalCTA() {
-  /* which modal is open? (null = none) */
   const [open, setOpen] = useState<ModalKind>(null);
 
-  /* convenience helper */
   const closeModal = () => setOpen(null);
 
   return (
     <section className={styles.container}>
-      {/* ─── heading & logo ─────────────────────────── */}
       <div className={styles.top}>
         <Logo />
         <h2 className={styles.heading}>
@@ -30,9 +28,7 @@ export default function FinalCTA() {
         </h2>
       </div>
 
-      {/* ─── call‑to‑action tiles ───────────────────── */}
       <div className={styles.bottom}>
-        {/* left: Calendly */}
         <div className={styles.left}>
           <LayoutWrapper>
             <div
@@ -40,6 +36,7 @@ export default function FinalCTA() {
               onClick={() => setOpen("calendly")}
             >
               <h2 className={styles.headingii}>Book an intro call</h2>
+              <Arrow className={styles.arrow} />
               <p className={styles.copy}>
                 Let&apos;s transform the way work works. Book an intro to see
                 our demo in action.
@@ -48,7 +45,6 @@ export default function FinalCTA() {
           </LayoutWrapper>
         </div>
 
-        {/* right: Contact form */}
         <div className={styles.right}>
           <LayoutWrapper>
             <div
@@ -56,6 +52,7 @@ export default function FinalCTA() {
               onClick={() => setOpen("contact")}
             >
               <h2 className={styles.headingii}>Contact us today</h2>
+              <Arrow className={styles.arrow} />
               <p className={styles.copy}>
                 Let&apos;s transform the way work works. Book an intro to see
                 our demo in action.
@@ -65,7 +62,6 @@ export default function FinalCTA() {
         </div>
       </div>
 
-      {/* ─── modals ─────────────────────────────────── */}
       <Modal isOpen={open === "calendly"} onClose={closeModal}>
         <div className={styles.modalContent}>
           <h3 className={styles.modalHeading}>Book an Intro Call</h3>

@@ -54,7 +54,7 @@
 .right {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 }
 
 .card {

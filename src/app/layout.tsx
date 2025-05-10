@@ -7,9 +7,8 @@ import { ViewTransitions } from "next-view-transitions";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "@/providers/AuthProvider";
 import { ModalProvider } from "@/context/ModalContext";
-import styles from "./layout.module.css";
 
-// import CustomCursor from "@/components/CustomCursor/CustomCursor";
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const NeueHaasGroteskBold = localFont({
   src: "../../public/fonts/NeueHaasGroteskBold.woff2",
@@ -55,7 +54,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang='en'>
         <body
-          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${styles.container}`}
+          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable}`}
         >
             <SmoothScroll>
               <Toaster
@@ -71,7 +70,7 @@ export default function RootLayout({
                   {children}
                 </ModalProvider>
               </AuthProvider>
-              {/* <CustomCursor /> */}
+              <CustomCursor />
             </SmoothScroll>
         </body>
       </html>

@@ -1,12 +1,7 @@
-// import LayoutWrapper from "../LayoutWrapper";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import styles from "./AboutUs.module.css";
 import Img1 from "../../../public/images/service.jpg";
 
-/**
- * Fast‑scan “About” stats that reinforce our value proposition.
- * Each desc line ends with a hard metric or differentiator.
- */
 const data = [
   {
     id: 1,

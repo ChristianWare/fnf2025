@@ -227,3 +227,14 @@ textarea:focus {
   z-index: 1;
   animation: none !important;
 }
+
+body::before {
+  content: "";
+  position: fixed;    /* true viewport‑fixed */
+  inset: 0;           /* shorthand for top/right/bottom/left: 0 */
+  z-index: 9999;      /* above everything */
+  pointer-events: none;
+  background: url("/images/noise.gif") repeat;
+  opacity: 0.03;
+
+}

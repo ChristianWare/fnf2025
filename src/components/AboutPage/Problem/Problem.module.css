@@ -27,19 +27,20 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  margin-top: 10rem;
+  grid-gap: 1rem;
+  margin-top: 5rem;
 }
 
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
-  border-bottom: 1px solid var(--gray);
-  border-right: none;
-}
-
-.card:last-child {
-  border-right: none;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
 }
 
 .index {
@@ -55,6 +56,7 @@
 .description {
   color: var(--text);
   font-size: 1.6rem;
+  width: 90%;
 }
 
 .icon {
@@ -106,6 +108,7 @@
 
   .card {
     gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .btnContainer {
