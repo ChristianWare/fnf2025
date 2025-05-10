@@ -38,7 +38,8 @@
   justify-self: start;
   gap: 2rem;
   padding: 2rem;
-  background-color: var(--orange2);
+  background-color: var(--orange3);
+  border: 1px solid var(--black);
 }
 
 .index {
@@ -102,7 +103,7 @@
   .top {
     padding-bottom: 5rem;
   }
-  
+
   .topHeading {
     font-size: 6rem;
   }

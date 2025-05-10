@@ -1,10 +1,11 @@
 import styles from "./AboutIntro.module.css";
 import LayoutWrapper from "../../LayoutWrapper";
+import Img1 from '../../../../public/images/aboutpage.jpg'
+import Image from "next/image";
 
 export default function AboutIntro() {
   return (
     <section className={styles.container}>
-      {/* <LayoutWrapper> */}
       <div className={styles.content}>
         <div className={styles.left}>
           <LayoutWrapper>
@@ -30,9 +31,12 @@ export default function AboutIntro() {
             </div>
           </LayoutWrapper>
         </div>
-        <div className={styles.right}></div>
+        <div className={styles.right}>
+          <div className={styles.imgContainer}>
+            <Image src={Img1} fill title='' alt='' className={styles.img} />
+          </div>
+        </div>
       </div>
-      {/* </LayoutWrapper> */}
     </section>
   );
 }
