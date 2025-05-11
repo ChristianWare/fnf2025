@@ -4,11 +4,13 @@
   background-color: var(--tan);
   border-bottom: 8px solid var(--black);
   padding-bottom: 8rem;
+  border: 1px solid var(--gray);
+  padding: 2rem;
 }
 
 .title,
 .number {
-  background-color: var(--white);
+  /* background-color: var(--white); */
   padding: 2rem;
   font-family: var(--SuisseIntlCondensed);
   font-size: 4.5rem;
@@ -82,5 +84,11 @@
 @media screen and (max-width: 568px) {
   .title {
     text-align: center;
+  }
+
+  .t .blackDot,
+  .blackDotii,
+  .blackDot2 {
+    display: none;
   }
 }
