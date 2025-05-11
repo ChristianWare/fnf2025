@@ -1,7 +1,23 @@
 .container {
-  background-color: var(--white);
+  background-color: var(--tan);
   padding-top: 15rem;
+  z-index: 1;
+  position: relative;
 }
+
+.container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("/images/noise.gif") repeat;
+  opacity: 0.04;
+  z-index: -1;
+}
+
 
 .top {
   width: 100%;

@@ -1,6 +1,6 @@
 .container {
   padding-top: 15rem;
-  background-color: var(--tan);
+  /* background-color: var(--tan); */
 }
 
 .content {
@@ -48,8 +48,8 @@
 }
 
 .feature {
-  color: var(--bgColor);
-  font-size: 1.6rem;
+  color: var(--black);
+  font-size: 2rem;
 }
 
 .desc {

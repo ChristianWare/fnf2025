@@ -1,7 +1,4 @@
 .container {
-  background-color: var(--tan);
-  /* padding-top: 20rem; */
-  /* padding-top: 5rem; */
   padding-bottom: 5rem;
 }
 
@@ -37,7 +34,7 @@
 .heading {
   background-color: var(--orange);
   font-size: 2rem;
-  letter-spacing: -.01px;
+  letter-spacing: -0.01px;
   line-height: 1.3;
   border: 1px solid var(--gray);
   padding: 3rem;
