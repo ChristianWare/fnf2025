@@ -44,7 +44,6 @@ export default function FinalCTA() {
             </div>
           </LayoutWrapper>
         </div>
-
         <div className={styles.right}>
           <LayoutWrapper>
             <div

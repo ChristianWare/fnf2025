@@ -10,8 +10,7 @@
   --pink: #ff2df1;
   --pink2: rgba(255, 45, 241, 0.3);
   --pink3: rgba(255, 45, 241, 0.6);
-  
-  
+
   --tan: #e9e4dd;
   --tanii: #e2dfd0;
   --taniii: #a39f88;
@@ -195,10 +194,10 @@ textarea:focus {
 /* Only use in production */
 @media screen and (max-width: 480px) {
   h1 {
-    letter-spacing: -1.5px;
+    letter-spacing: -2.5px;
   }
   h2 {
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     line-height: 120%;
   }
 }
@@ -226,15 +225,4 @@ textarea:focus {
 ::view-transition-old(root) {
   z-index: 1;
   animation: none !important;
-}
-
-body::before {
-  content: "";
-  position: fixed;    /* true viewport‑fixed */
-  inset: 0;           /* shorthand for top/right/bottom/left: 0 */
-  z-index: 9999;      /* above everything */
-  pointer-events: none;
-  background: url("/images/noise.gif") repeat;
-  opacity: 0.03;
-
 }
