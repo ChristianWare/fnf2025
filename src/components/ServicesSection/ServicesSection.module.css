@@ -97,8 +97,8 @@
   }
 
   .blackDot {
-    top: 30;
-    right: 30;
+    top: 30px;
+    right: 30px;
     width: 30px;
     height: 30px;
   }
@@ -111,8 +111,8 @@
   }
 
   .blackDot {
-    top: 25;
-    right: 25;
+    top: 25px;
+    right: 25px;
     width: 25px;
     height: 25px;
   }

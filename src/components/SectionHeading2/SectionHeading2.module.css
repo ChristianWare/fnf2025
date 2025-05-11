@@ -35,8 +35,8 @@
 .blackDotii,
 .blackDot2 {
   position: absolute;
-  top: 25;
-  right: 25;
+  top: 25px;
+  right: 25px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
