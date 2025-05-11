@@ -1,5 +1,6 @@
 .container {
   padding-bottom: 15rem;
+  
 }
 
 .content {
@@ -204,8 +205,8 @@
 
 .blackDot {
   position: absolute;
-  top: 35;
-  right: 35;
+  top: 35px;
+  right: 35px;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -239,8 +240,22 @@
 
 @media screen and (max-width: 868px) {
   .titleHeading {
-    font-size: 17vw;
+    font-size: 10rem;
     letter-spacing: -4px;
+  }
+
+  .blackDot {
+    top: 25;
+    right: 25;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .titleHeading {
+    font-size: 7.5rem;
+    letter-spacing: -2px;
   }
 
   .blackDot {

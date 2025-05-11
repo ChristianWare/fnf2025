@@ -75,8 +75,10 @@ export default function FinalCTA() {
 
       <Modal isOpen={open === "contact"} onClose={closeModal}>
         <div className={styles.modalContent}>
-          <h3 className={styles.modalHeading}>COntact us</h3>
-          <ContactForm border='noBorder' />
+          <h3 className={styles.modalHeading}>Contact us</h3>
+          <div className={styles.iframeWrapper}>
+            <ContactForm border='noBorder' />
+          </div>
         </div>
       </Modal>
     </section>

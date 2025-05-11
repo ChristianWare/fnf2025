@@ -10,25 +10,28 @@ import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Faq from "@/components/Faq/Faq";
 import ListOfServices from "@/components/ServicePage/ListOfServices/ListOfServices";
 import Problem from "@/components/AboutPage/Problem/Problem";
-// import PageIntro from "@/components/PageIntro/PageIntro";
-// import Img1 from "../../public/images/about.jpeg";
+import NoiseBg from "@/components/Noise/NoiseBg";
+import HomePageSolutions from "@/components/HomePageSolutions/HomePageSolutions";
 
 export default function Home() {
   return (
     <main>
-      <div className={styles.scrollContainer}>
-        <Hero />
-        <Impressions />
-        <AboutHero />
-        <Problem />
-        <ServicesSection />
-        <ListOfServices />
-        <ProjectSection />
-        <Pricing />
-        <Faq />
-        <FinalCTA />
-        <Contact2 />
-      </div>
+      <NoiseBg>
+        <div className={styles.scrollContainer}>
+          <Hero />
+          <Impressions />
+          <AboutHero />
+          <HomePageSolutions />
+          <Problem />
+          <ServicesSection />
+          <ListOfServices />
+          <ProjectSection />
+          <Pricing />
+          <Faq />
+          <FinalCTA />
+          <Contact2 />
+        </div>
+      </NoiseBg>
     </main>
   );
 }

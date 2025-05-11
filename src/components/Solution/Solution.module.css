@@ -1,6 +1,4 @@
-/* container + headline (unchanged) */
 .container {
-  /* padding: 10rem 0; */
   background-color: var(--black);
   min-height: 100vh;
   display: flex;
@@ -72,9 +70,5 @@
 @media (max-width: 568px) {
   .bottom {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .container {
-    display: none;
   }
 }

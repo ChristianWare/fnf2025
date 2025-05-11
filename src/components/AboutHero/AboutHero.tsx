@@ -6,7 +6,6 @@ import LayoutWrapper from "../LayoutWrapper";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-import HomePageSolutions from "../HomePageSolutions/HomePageSolutions";
 import AboutUs from "../AboutUs/AboutUs";
 // import ServiceDetails from "../ServiceDetails/ServiceDetails";
 
@@ -20,7 +19,7 @@ export default function AboutHero(): JSX.Element {
           <SectionHeading2 title='2. About Us' />
         </div>
         <AboutUs />
-        <HomePageSolutions />
+        {/* <HomePageSolutions /> */}
         {/* <ServiceDetails /> */}
       </LayoutWrapper>
     </section>

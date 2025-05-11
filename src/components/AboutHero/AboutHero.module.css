@@ -1,7 +1,22 @@
 .container {
-    padding: 15rem 0;
+  padding: 15rem 0;
+  padding-bottom: 0rem;
   background-color: var(--tan);
+  position: relative;
 }
+
+.container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("/images/noise.gif") repeat;
+  opacity: 0.04;
+}
+
 
 .top {
   margin: 5rem 0rem;
@@ -75,7 +90,6 @@
   justify-content: flex-end;
   width: 100%;
 }
-
 
 @media screen and (max-width: 1068px) {
   .content {

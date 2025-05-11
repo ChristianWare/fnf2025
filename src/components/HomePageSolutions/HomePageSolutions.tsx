@@ -1,5 +1,6 @@
-import SectionHeading3 from "../SectionHeading3/SectionHeading3";
 import styles from "./HomePageSolutions.module.css";
+import LayoutWrapper from "../LayoutWrapper";
+import SectionHeading3 from "../SectionHeading3/SectionHeading3";
 
 const data = [
   {
@@ -37,15 +38,17 @@ const data = [
 export default function HomePageSolutions() {
   return (
     <section className={styles.container}>
-      <SectionHeading3 title='Our Specialties' />
-      <div className={styles.bottom}>
-        {data.map((x) => (
-          <div key={x.id} className={`${styles.card} ${styles[x.span]}`}>
-            <h3 className={styles.title}>{x.title}</h3>
-            <p className={styles.desc}>{x.desc}</p>
-          </div>
-        ))}
-      </div>{" "}
+      <LayoutWrapper>
+        <SectionHeading3 title='Our Specialties' />
+        <div className={styles.bottom}>
+          {data.map((x) => (
+            <div key={x.id} className={`${styles.card} ${styles[x.span]}`}>
+              <h3 className={styles.title}>{x.title}</h3>
+              <p className={styles.desc}>{x.desc}</p>
+            </div>
+          ))}
+        </div>
+      </LayoutWrapper>
     </section>
   );
 }
