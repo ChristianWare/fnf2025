@@ -153,17 +153,13 @@ export default function PortfolioPageIntro() {
                 <Link
                   key={item.id}
                   href={item.href}
-                  className={styles.card}
+                  className={`${styles.card} ${
+                    activeIndex === idx ? styles.active : ""
+                  } `}
                   data-idx={idx}
                   onMouseEnter={() => setActiveIndex(idx)}
                 >
-                  <h2
-                    className={`${styles.title} ${
-                      activeIndex === idx ? styles.active : ""
-                    }`}
-                  >
-                    {item.title}
-                  </h2>
+                  <h2 className={`${styles.title}`}>{item.title}</h2>
                   <span className={styles.progress} />
                 </Link>
               ))}

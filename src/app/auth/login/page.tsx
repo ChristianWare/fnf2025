@@ -1,6 +1,7 @@
 /* src/app/auth/login/page.tsx */
 "use client";
 
+import styles from "./Login.module.css";
 import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
@@ -12,7 +13,6 @@ import Contact2 from "@/components/Contact2/Contact2";
 import FalseButton from "@/components/FalseButton/FalseButton";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Img1 from "../../../../public/images/ecomm.jpeg";
-import styles from "./Login.module.css";
 
 /* ───────────────────────────
    Outer wrapper: provides the

@@ -1,7 +1,22 @@
 .container {
-  background-color: var(--orange);
+  background-color: var(--tan);
   padding-bottom: 10rem;
   border-bottom: 1px solid var(--gray);
+  position: relative;
+  z-index: 1;
+}
+
+.container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("/images/noise.gif") repeat;
+  opacity: 0.04;
+  z-index: -1;
 }
 
 .top {
@@ -28,7 +43,6 @@
   font-size: 1.8rem;
 }
 
-/* Needed so GSAP can reveal from a hidden state */
 .heading,
 .copy {
   will-change: transform, opacity;
@@ -62,6 +76,7 @@
 
 .card {
   border-bottom: 1px solid var(--black);
+  background-color: var(--tan);
   padding: 3rem 2rem;
   transition: 0.3s ease-in all;
   cursor: pointer;
@@ -80,12 +95,17 @@
   transition: 0.3s ease-in all;
 }
 
+.active {
+  background-color: var(--orange);
+}
+
 .card:hover .title {
   color: var(--orange);
 }
 
 .bottomRight {
   border-bottom: 1px solid var(--black);
+  background-color: var(--tan);
   display: flex;
   align-items: center;
   justify-content: center;

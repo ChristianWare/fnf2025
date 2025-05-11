@@ -1,7 +1,7 @@
 'use client'
 
-import LayoutWrapper from "@/components/LayoutWrapper";
 import styles from "./ContactHero.module.css";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import { InlineWidget } from "react-calendly";
 import SectionIntro from "@/components/SectionIntro/SectionIntro";
