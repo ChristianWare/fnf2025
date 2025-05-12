@@ -2,6 +2,7 @@ import styles from "./Users.module.css";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { format } from "date-fns";
+import RoleToggleButton from "./components/RoleToggleButton/RoleToggleButton";
 
 export const revalidate = 60; // regenerate list every minute
 
@@ -51,10 +52,11 @@ export default async function UsersPage({ searchParams }: PageProps) {
             <th>Email</th>
             <th>Role</th>
             <th>Joined</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className={styles.tBody}>
           {users.map((u) => (
             <tr key={u.id}>
               <td>{u.name ?? "—"}</td>
@@ -65,6 +67,9 @@ export default async function UsersPage({ searchParams }: PageProps) {
                 </span>
               </td>
               <td>{format(u.createdAt, "MMM d, yyyy")}</td>
+              <td>
+                <RoleToggleButton userId={u.id} currentRole={u.role} />
+              </td>
             </tr>
           ))}
 

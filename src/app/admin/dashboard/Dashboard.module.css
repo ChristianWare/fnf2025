@@ -1,11 +1,12 @@
 .container {
   background-color: var(--tan);
+  
 }
 
 .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: .5rem;
+  grid-gap: 0.5rem;
   margin-block: 2rem;
   padding: var(--gap);
 }

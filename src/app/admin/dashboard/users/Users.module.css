@@ -16,9 +16,12 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
   border-radius: 8px;
   margin-top: 3rem;
+  overflow-x: scroll;
+}
+
+.tBody {
   overflow-x: scroll;
 }
 

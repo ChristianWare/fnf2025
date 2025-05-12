@@ -47,9 +47,3 @@
     width: 90vw;
   }
 }
-
-@media screen and (max-width: 568px) {
-  .modalContent {
-    height: 90vh;
-  }
-}

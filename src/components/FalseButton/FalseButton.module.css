@@ -116,3 +116,14 @@
 .black:hover .dot4 {
   background-color: var(--black);
 }
+
+.outline {
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.outline:hover {
+  background-color: var(--black);
+  color: var(--tan);
+}
