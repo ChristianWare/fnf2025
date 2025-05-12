@@ -72,7 +72,6 @@ export default function FinalCTA() {
           </div>
         </div>
       </Modal>
-
       <Modal isOpen={open === "contact"} onClose={closeModal}>
         <div className={styles.modalContent}>
           <h3 className={styles.modalHeading}>Contact us</h3>

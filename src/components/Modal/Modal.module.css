@@ -43,6 +43,13 @@
 @media screen and (max-width: 768px) {
   .modalContent {
     width: 90vw;
-    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .modalContent {
+    width: 100vw;
+    height: 100vh;
+    /* padding: 0rem; */
   }
 }
