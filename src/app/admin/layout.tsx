@@ -1,7 +1,9 @@
 import { ReactNode } from "react";
-import { auth } from "@/auth"; // NextAuth server helper
-import { redirect } from "next/navigation"; // server-side redirect
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import styles from "./AdminLayout.module.css";
+import Contact2 from "@/components/Contact2/Contact2";
 
 export default async function AdminLayout({
   children,
@@ -18,12 +20,11 @@ export default async function AdminLayout({
 
   // 3. Happy path – render nested pages
   return (
-    <section
-      style={{
-        paddingTop: "5rem",
-      }}
-    >
-      <LayoutWrapper>{children}</LayoutWrapper>
+    <section className={styles.container}>
+      <LayoutWrapper>
+        {children}
+      </LayoutWrapper>
+        <Contact2 />
     </section>
   );
 }

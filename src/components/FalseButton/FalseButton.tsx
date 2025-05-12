@@ -4,7 +4,7 @@ import styles from "./FalseButton.module.css";
 
 interface Props {
   text?: string;
-  onClick?: () => void;
+  onClick?: any;
   disabled?: any;
   children?: ReactNode;
   btnType: string;

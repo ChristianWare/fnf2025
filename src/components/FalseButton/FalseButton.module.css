@@ -78,7 +78,6 @@
   border: 1px solid var(--pink);
 }
 
-
 .blue .dot1,
 .blue .dot2,
 .blue .dot3,
@@ -91,4 +90,29 @@
 .blue:hover .dot3,
 .blue:hover .dot4 {
   background-color: var(--blue);
+}
+
+.black {
+  background-color: var(--black);
+  color: var(--tan);
+  border: 1px solid var(--black);
+}
+
+.black:hover {
+  background-color: transparent;
+  color: var(--black);
+}
+
+.black .dot1,
+.black .dot2,
+.black .dot3,
+.black .dot4 {
+  background-color: var(--white);
+}
+
+.black:hover .dot1,
+.black:hover .dot2,
+.black:hover .dot3,
+.black:hover .dot4 {
+  background-color: var(--black);
 }

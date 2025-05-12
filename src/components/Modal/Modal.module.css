@@ -17,9 +17,10 @@
   background-color: var(--white);
   padding: 2rem;
   width: 700px;
+  max-height: 100%;
   position: relative;
   transition: all 0.3s ease-in;
-  z-index: 10001;
+  z-index: 1008999999901;
   overflow: auto;
 }
 

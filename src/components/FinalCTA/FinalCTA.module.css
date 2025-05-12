@@ -1,7 +1,7 @@
 .container {
   background-color: var(--tan);
   padding-top: 15rem;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 
