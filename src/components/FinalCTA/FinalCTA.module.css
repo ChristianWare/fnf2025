@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid var(--gray);
+  order: -1;
 }
 
 .left {
@@ -80,6 +81,10 @@
 .copy {
   width: 50%;
   font-size: 1.6rem;
+}
+
+.modalContent {
+  height: 100%;
 }
 
 .iframeWrapper {

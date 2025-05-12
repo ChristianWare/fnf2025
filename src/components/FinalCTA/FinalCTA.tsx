@@ -27,7 +27,6 @@ export default function FinalCTA() {
           online store ? <br />
         </h2>
       </div>
-
       <div className={styles.bottom}>
         <div className={styles.left}>
           <LayoutWrapper>

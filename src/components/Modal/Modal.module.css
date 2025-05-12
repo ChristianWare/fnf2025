@@ -33,6 +33,7 @@
 
 .children {
   margin-top: 1rem;
+  height: 100%;
 }
 
 .modalLinks {
@@ -48,8 +49,6 @@
 
 @media screen and (max-width: 568px) {
   .modalContent {
-    width: 100vw;
-    height: 100vh;
-    /* padding: 0rem; */
+    height: 90vh;
   }
 }
