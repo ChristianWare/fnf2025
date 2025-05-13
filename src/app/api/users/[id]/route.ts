@@ -1,24 +1,26 @@
 // src/app/api/users/[id]/route.ts
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 
 export async function PATCH(
-  request: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> } // ← must be Promise
 ) {
-  // 1) enforce that the user is an ADMIN
+  const { id } = await params; // ← await it
+
+  /* 1 — authorize */
   const session = await auth();
-  if (!session?.user?.role || session.user.role !== "ADMIN") {
+  if (session?.user?.role !== "ADMIN") {
     return NextResponse.json({ message: "Forbidden" }, { status: 403 });
   }
 
-  // 2) pull the flag from the body
-  const { makeAdmin }: { makeAdmin: boolean } = await request.json();
+  /* 2 — read body */
+  const { makeAdmin }: { makeAdmin: boolean } = await req.json();
 
-  // 3) update the target user
+  /* 3 — update user */
   const updated = await prisma.user.update({
-    where: { id: params.id },
+    where: { id },
     data: { role: makeAdmin ? "ADMIN" : "USER" },
   });
 

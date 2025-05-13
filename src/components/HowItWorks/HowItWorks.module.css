@@ -94,7 +94,7 @@
   align-items: center;
   justify-content: center;
   border: 1px dashed var(--black);
-  /* background-color: var(--orange); */
+  /* background-color: var(--orange ); */
 }
 
 .index {

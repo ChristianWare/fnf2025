@@ -79,11 +79,21 @@
   margin-left: auto;
 }
 
-.statusBadge[data-status="DRAFT"]    { background: #6b7280; }
-.statusBadge[data-status="PENDING"]  { background: #ca8a04; }
-.statusBadge[data-status="PAID"]     { background: #059669; }
-.statusBadge[data-status="OVERDUE"]  { background: #dc2626; }
-.statusBadge[data-status="CANCELLED"] { background: #4b5563; }
+.statusBadge[data-status="DRAFT"] {
+  background: #6b7280;
+}
+.statusBadge[data-status="PENDING"] {
+  background: #ca8a04;
+}
+.statusBadge[data-status="PAID"] {
+  background: #059669;
+}
+.statusBadge[data-status="OVERDUE"] {
+  background: #dc2626;
+}
+.statusBadge[data-status="CANCELLED"] {
+  background: #4b5563;
+}
 
 /* ---------- pagination -------------- */
 .pagination {
@@ -107,4 +117,3 @@
 .pageDisabled {
   color: #aaa;
 }
-
