@@ -1,33 +1,69 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
+// ---------- Generators & datasource ----------
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
+// ---------- Enums ----------
+enum Role {
+  USER
+  ADMIN
+}
+
+enum ProjectStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  ON_HOLD
+  COMPLETED
+  CANCELLED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  PENDING
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  BANK_TRANSFER
+  PAYPAL
+  CHECK
+  CASH
+  OTHER
+}
+
+// ---------- Core models ----------
 model User {
-  id             String          @id @default(cuid())
-  name           String?
-  email          String          @unique
-  emailVerified  DateTime?
-  image          String?
-  password       String?
-  role           Role            @default(USER)
-  company        Company?        @relation(fields: [companyId], references: [id])
-  companyId      String?
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
-  accounts       Account[]
-  sessions       Session[]
-  questionnaires Questionnaire[]
-  documents      Document[]
-  activities     ActivityLog[]
-  projects       Project[]
+  id            String        @id @default(cuid())
+  name          String?
+  email         String        @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          Role          @default(USER)
+  company       Company?      @relation(fields: [companyId], references: [id])
+  companyId     String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  documents     Document[]
+  activities    ActivityLog[]
+  projects      Project[]
 }
 
 model Account {
@@ -92,6 +128,10 @@ model Project {
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
   invoices    Invoice[]
+
+  // --- NEW relations for the design‑brief workflow
+  questions   ProjectQuestion[]
+  answers     ProjectAnswer[]
 }
 
 model Invoice {
@@ -117,18 +157,6 @@ model Payment {
   invoiceId     String
   createdAt     DateTime      @default(now())
   transactionId String?
-}
-
-model Questionnaire {
-  id          String   @id @default(cuid())
-  title       String
-  description String?
-  questions   Json
-  responses   Json?
-  user        User     @relation(fields: [userId], references: [id])
-  userId      String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
 }
 
 model Document {
@@ -164,39 +192,30 @@ model ActivityLog {
   createdAt DateTime @default(now())
 }
 
-enum Role {
-  USER
-  ADMIN
+// ---------- NEW normalized brief models ----------
+model ProjectQuestion {
+  id         String   @id @default(cuid())
+  project    Project  @relation(fields: [projectId], references: [id])
+  projectId  String
+
+  prompt     String
+  isRequired Boolean  @default(true)
+  inputType  String   @default("TEXT") // e.g. TEXT | SELECT | FILE
+  order      Int
+
+  answers    ProjectAnswer[]
 }
 
-enum ProjectStatus {
-  NOT_STARTED
-  IN_PROGRESS
-  ON_HOLD
-  COMPLETED
-  CANCELLED
-}
+model ProjectAnswer {
+  id         String   @id @default(cuid())
+  project    Project  @relation(fields: [projectId], references: [id])
+  projectId  String
 
-enum InvoiceStatus {
-  DRAFT
-  PENDING
-  PAID
-  OVERDUE
-  CANCELLED
-}
+  question   ProjectQuestion @relation(fields: [questionId], references: [id])
+  questionId String
 
-enum PaymentStatus {
-  PENDING
-  COMPLETED
-  FAILED
-  REFUNDED
-}
+  value      String
+  updatedAt  DateTime @updatedAt
 
-enum PaymentMethod {
-  CREDIT_CARD
-  BANK_TRANSFER
-  PAYPAL
-  CHECK
-  CASH
-  OTHER
+  @@unique([projectId, questionId]) // enforce one answer per question per project
 }
