@@ -1,8 +1,7 @@
-// src/app/register/page.tsx
 "use client";
 
+import styles from "./Register.module.css";
 import { useState } from "react";
-// import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
@@ -12,10 +11,8 @@ import Contact2 from "@/components/Contact2/Contact2";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import FalseButton from "@/components/FalseButton/FalseButton";
 import Img1 from "../../../../public/images/servicesHeroii.jpg";
-import styles from "./Register.module.css";
 
 export default function RegisterPage() {
-  // const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

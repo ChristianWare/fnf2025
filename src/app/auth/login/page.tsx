@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* src/app/auth/login/page.tsx */
 "use client";
 
 import styles from "./Login.module.css";
