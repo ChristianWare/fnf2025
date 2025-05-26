@@ -91,6 +91,10 @@
   background-color: var(--orange);
 }
 
+.bottom .card:nth-child(2) .cardContent {
+  background-color: var(--pink);
+}
+
 /* .section:nth-child(2) .bottom .card:nth-child(2) .cardContent {
   background-color: var(--pink);
 }
@@ -118,6 +122,10 @@
 }
 
 .bottom .card:last-child .cardContent .description {
+  color: var(--black);
+}
+
+.bottom .card:nth-child(2) .cardContent .description {
   color: var(--black);
 }
 

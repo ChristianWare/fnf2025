@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import styles from "./ContactHero.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
@@ -11,7 +11,9 @@ export default function ContactHero() {
     <div className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          <h1 className={styles.heading}>Get Started</h1>
+          <h2 className={styles.heading}>
+            Ready to improve your online store ?
+          </h2>{" "}
           <p className={styles.copy}>
             Ready to finally see how work, should work? We have the business
             apps you depend on, the support you need, and the AI you’ve been

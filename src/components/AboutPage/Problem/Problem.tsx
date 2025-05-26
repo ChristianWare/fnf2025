@@ -1,5 +1,5 @@
 import styles from "./Problem.module.css";
-import Button from "@/components/Button/Button";
+// import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 const Problem = () => {
@@ -52,9 +52,9 @@ const Problem = () => {
             </div>
           ))}
         </div>
-        <div className={styles.btnContainer}>
+        {/* <div className={styles.btnContainer}>
           <Button text='learn more about us' href='/about' btnType='black' />
-        </div>
+        </div> */}
       </LayoutWrapper>
     </section>
   );
