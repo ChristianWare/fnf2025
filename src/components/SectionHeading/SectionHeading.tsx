@@ -10,7 +10,7 @@ export default function SectionHeading({ number, title }: Props) {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.left}>
-          <span className={styles.number}>{number}:</span>
+          <span className={styles.number}>{number}</span>
           <div className={styles.blackDot2}></div>
         </div>
         <div className={styles.right}>

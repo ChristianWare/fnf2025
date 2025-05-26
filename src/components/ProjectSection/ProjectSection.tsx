@@ -199,7 +199,7 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='4' title='Featured projects' />
+        <SectionHeading number='' title='Featured projects' />
         {/* <p className={styles.copy}>
           Passion for mountain biking, outdoor adventure, and premium gear
           inspired the founders of Thundertrails to launch their specialized

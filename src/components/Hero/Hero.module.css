@@ -79,7 +79,7 @@
 
 .copy {
   z-index: 2;
-  font-family: var(--FeatureDeckLight);
+  font-family: var(--FeatureDeckLight) !important;
   font-size: 3.2rem;
   line-height: 1.2;
   width: 80%;
@@ -101,7 +101,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 0.5rem;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .imgOverlay {
