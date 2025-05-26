@@ -47,7 +47,7 @@
 }
 
 .copy {
-  font-family: var(--FeatureDeckLight) !important;
+  font-family: var(--FeatureDeckLight);
   font-size: 2.8rem;
   width: 70%;
   text-align: center;
@@ -129,6 +129,8 @@
 .desc {
   color: var(--blackii);
   font-size: 1.6rem;
+    font-family: var(--FeatureDeckLight);
+
 }
 
 .card:nth-child(4) .desc {

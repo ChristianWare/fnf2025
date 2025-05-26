@@ -11,7 +11,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 1.3rem 4rem;
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlMonoRegular);
   border: 1px solid var(--black);
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -26,7 +26,8 @@
   visibility: hidden;
   pointer-events: none;
   white-space: nowrap;
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlMonoRegular);
+  letter-spacing: -0.03px;
 }
 
 .marqueeSpan {
@@ -38,7 +39,8 @@
   align-items: center;
   white-space: nowrap;
   pointer-events: none;
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlMonoRegular);
+  letter-spacing: -0.03px;
 }
 
 .primary {

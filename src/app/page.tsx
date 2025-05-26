@@ -21,11 +21,11 @@ export default function Home() {
       <NoiseBg>
         <div className={styles.scrollContainer}>
           <Hero />
-          {/* <Impressions /> */}
+          {/* <Impressions /> */}``
           <AboutHero />
           <HomePageSolutions />
-          <Problem />
-          <Mission />
+          {/* <Problem /> */}
+          {/* <Mission /> */}
           <ServicesSection />
           <ListOfServices />
           <ProjectSection />

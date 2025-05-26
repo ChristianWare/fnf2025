@@ -1,5 +1,5 @@
-import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import styles from "./AboutUs.module.css";
+import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Img1 from "../../../public/images/service.jpg";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
@@ -48,10 +48,10 @@ export default function AboutUs() {
           </div>
           <div className={styles.right}>
             <p className={styles.copy}>
-              <strong>Fonts&nbsp;&amp;&nbsp;Footers</strong> is a Phoenix‑based
-              e‑commerce agency that fuses pixel‑perfect design (“Fonts”) with
-              rock‑solid engineering (“Footers”). Our team has one north star—
-              <em>speed that sells</em>.
+              Fonts&nbsp;&amp;&nbsp;Footers is a Phoenix‑based e‑commerce agency
+              that fuses pixel‑perfect design (“Fonts”) with rock‑solid
+              engineering (“Footers”). Our team has one north star— speed that
+              sells.
             </p>
           </div>
         </div>
