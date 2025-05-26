@@ -21,7 +21,7 @@
   z-index: 1;
   width: 100%;
   transition: all 0.2s ease-in;
-  background-color: var(--orange);
+  background-color: var(--yellow);
   border: 1px solid var(--gray);
   cursor: pointer;
 }

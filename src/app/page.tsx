@@ -1,4 +1,4 @@
-import Impressions from "@/components/Impressions/Impressions";
+// import Impressions from "@/components/Impressions/Impressions";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
@@ -21,7 +21,7 @@ export default function Home() {
       <NoiseBg>
         <div className={styles.scrollContainer}>
           <Hero />
-          <Impressions />
+          {/* <Impressions /> */}
           <AboutHero />
           <HomePageSolutions />
           <Problem />

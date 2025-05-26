@@ -20,8 +20,8 @@
   background-image: repeating-linear-gradient(
     45deg,
     var(--black),
-    var(--orange) 1px,
-    var(--orange) 0 50%
+    var(--yellow) 1px,
+    var(--yellow) 0 50%
   );
 }
 

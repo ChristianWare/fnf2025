@@ -65,7 +65,7 @@
 
 .labelInputBox span {
   font-size: 1.4rem;
-  color: var(--orange);
+  color: var(--yellow);
 }
 
 .labelInputBox textarea {
@@ -132,7 +132,7 @@
 }
 
 .required {
-  color: var(--orange);
+  color: var(--yellow);
 }
 
 .btnContainer {

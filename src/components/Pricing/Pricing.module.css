@@ -51,7 +51,7 @@
 }
 
 .card:nth-child(1) .title {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .card:nth-child(2) .title {
@@ -94,7 +94,7 @@
 }
 
 .card:nth-child(1) .featureBox {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .card:nth-child(2) .featureBox {

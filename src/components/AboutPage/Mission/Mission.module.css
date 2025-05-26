@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--orange);
+  background-color: var(--yellow);
   padding: 15rem 0rem;
 }
 
@@ -38,7 +38,7 @@
   justify-self: start;
   gap: 2rem;
   padding: 2rem;
-  background-color: var(--orange3);
+  background-color: var(--yellow3);
   border: 1px solid var(--black);
   position: relative;
   z-index: 1;

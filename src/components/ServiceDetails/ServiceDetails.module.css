@@ -51,7 +51,7 @@
 }
 
 .card:hover {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .card:nth-child(4) {
@@ -61,7 +61,7 @@
 
 /* when the container HAS a hovered first card, style .top */
 .container:has(.card:nth-child(1):hover) > .top {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .card:last-child {

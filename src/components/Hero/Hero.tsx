@@ -8,6 +8,7 @@ import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../Button/Button";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +22,6 @@ export default function Hero() {
   };
 
   useGSAP(() => {
-    // Overlay animation
     if (refs.overlay.current) {
       gsap.fromTo(
         refs.overlay.current,
@@ -73,7 +73,6 @@ export default function Hero() {
 
       return () => split.revert();
     };
-    
 
     // Animate all text elements
     const animations = [
@@ -128,6 +127,11 @@ export default function Hero() {
         <div className={styles.overlay} ref={refs.overlay}></div>
         <div className={styles.content}>
           <div className={styles.left}>
+            <SectionIntro
+              title='Web Development Agency'
+              color='black'
+              dotColor='blackDot'
+            />
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
                 Blazing fast <br /> online stores & <br /> Booking Platforms
@@ -138,10 +142,20 @@ export default function Hero() {
               growth‑minded brands.
             </p>
             <div className={styles.btnContainer}>
-              <Button text='Start a Project' btnType='secondary' href='/contact' />
+              <Button
+                text='Book a free call'
+                btnType='primary'
+                href='/contact'
+                marquee={true}
+              />
+              <Button
+                text='Veiw Services'
+                btnType='normal'
+                href='/services'
+                showChevron={true}
+              />
             </div>
             <br />
-            {/* <ShuffleHero /> */}
           </div>
         </div>
       </LayoutWrapper>

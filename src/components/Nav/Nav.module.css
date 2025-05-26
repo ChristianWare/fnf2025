@@ -78,7 +78,7 @@
 }
 
 .navItem:hover {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .hamburger {
@@ -179,7 +179,7 @@
     height: 100.5vh;
     transition: 0.3s all ease-in;
     z-index: 1000;
-    background-color: var(--orange);
+    background-color: var(--yellow);
     transition: all 0.3s ease-in;
     display: flex;
     align-items: flex-end;
@@ -216,7 +216,7 @@
   }
 
   .navItem:last-child {
-    background-color: var(--orange);
+    background-color: var(--yellow);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 00px;
   }

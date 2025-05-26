@@ -1,12 +1,12 @@
 :root {
-  --black: #2C2C2C;
+  --black: #2c2c2c;
   --blackii: #4e4c4c;
   --gray: #919598;
   --grayii: #6e7072;
   --lightGray: #d4d4d4;
-  --orange: #ff8f00;
-  --orange2: #f0cea3;
-  --orange3: #f9b55c;
+  --yellow: #e7f255;
+  --yellow2: #eff77e;
+  --yellow3: #c4d03e;
   --pink: #ff2df1;
   --pink2: rgba(255, 45, 241, 0.3);
   --pink3: rgba(255, 45, 241, 0.6);
@@ -140,11 +140,11 @@ textarea:focus {
 } */
 
 ::selection {
-  background: var(--orange);
+  background: var(--yellow);
   color: var(--black);
 }
 ::-moz-selection {
-  background: var(--orange);
+  background: var(--yellow);
   color: var(--black);
 }
 

@@ -24,7 +24,7 @@
 .table th {
   text-align: left;
   font-size: 1.4rem;
-  background-color: var(--orange);
+  background-color: var(--yellow);
   border: 1px solid var(--gray);
   padding: 0.5rem 1rem;
 }

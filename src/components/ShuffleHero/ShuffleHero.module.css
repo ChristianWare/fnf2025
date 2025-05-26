@@ -28,13 +28,13 @@
 }
 
 .square:hover {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .square:nth-child(1),
 .square:nth-child(5),
 .square:nth-child(9) {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .title {

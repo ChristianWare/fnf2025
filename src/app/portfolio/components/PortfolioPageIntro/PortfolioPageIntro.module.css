@@ -96,11 +96,11 @@
 }
 
 .active {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .card:hover .title {
-  color: var(--orange);
+  color: var(--yellow);
 }
 
 .bottomRight {
@@ -130,7 +130,7 @@
 }
 
 .card:hover .progress {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 @media screen and (max-width: 1068px) {

@@ -72,15 +72,15 @@
 }
 
 .card:nth-child(1) .title {
-  background-color: var(--orange2);
+  background-color: var(--yellow2);
 }
 
 .card:nth-child(2) .title {
-  background-color: var(--orange3);
+  background-color: var(--yellow3);
 }
 
 .card:nth-child(3) .title {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .price {
@@ -113,16 +113,16 @@
 }
 
 .card:nth-child(1) .featureBox {
-  background-color: var(--orange2);
+  background-color: var(--yellow2);
   color: var(--white);
 }
 
 .card:nth-child(2) .featureBox {
-  background-color: var(--orange3);
+  background-color: var(--yellow3);
 }
 
 .card:nth-child(3) .featureBox {
-  background-color: var(--orange);
+  background-color: var(--yellow);
 }
 
 .feature {

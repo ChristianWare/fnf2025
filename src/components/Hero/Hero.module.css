@@ -96,37 +96,12 @@
   overflow: hidden;
 }
 
-.servicesContainer {
-  list-style: none;
-  color: var(--black);
-  width: 100%;
-}
-
-.service {
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--gray);
-  padding: 1rem 0rem;
-  overflow: hidden;
-  visibility: hidden;
-  overflow: hidden;
-  width: 100%;
-  color: var(--black);
-  font-size: 1.4rem;
-  /* opacity: 0.7; */
-}
-
-.service:nth-child(1) {
-  border-top: 1px solid var(--gray);
-}
-
 .btnContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0.5rem;
+  gap: 2rem;
 }
 
 .imgOverlay {

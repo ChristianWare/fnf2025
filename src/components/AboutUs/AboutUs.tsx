@@ -1,6 +1,7 @@
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import styles from "./AboutUs.module.css";
 import Img1 from "../../../public/images/service.jpg";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
 const data = [
   {
@@ -41,15 +42,21 @@ export default function AboutUs() {
       <div className={styles.parent}>
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.sectionHeadingContainer}>
+              <SectionHeading2 title='2. About Us' />
+            </div>
+          </div>
+          <div className={styles.right}>
             <p className={styles.copy}>
               <strong>Fonts&nbsp;&amp;&nbsp;Footers</strong> is a Phoenix‑based
               e‑commerce agency that fuses pixel‑perfect design (“Fonts”) with
               rock‑solid engineering (“Footers”). Our team has one north star—
-              <em>speed that sells</em>. Work with us and you’ll get
-              senior‑level attention, transparent sprints, and a storefront that
-              outpaces both Google’s Core Web Vitals <em>and</em> your
-              competition.
+              <em>speed that sells</em>.
             </p>
+          </div>
+        </div>
+        <div className={styles.bottom}>
+          <div className={styles.bottomLeft}>
             <div className={styles.imgContainer}>
               <ParallaxImage
                 src={Img1}
@@ -58,8 +65,7 @@ export default function AboutUs() {
               />
             </div>
           </div>
-
-          <div className={styles.right}>
+          <div className={styles.bottomRight}>
             {data.map((item) => (
               <div className={styles.card} key={item.id}>
                 <h3 className={styles.title}>{item.title}</h3>
