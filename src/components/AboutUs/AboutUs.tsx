@@ -43,7 +43,7 @@ export default function AboutUs() {
         <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.sectionHeadingContainer}>
-              <SectionHeading2 title='2. About Us' />
+              <SectionHeading2 title='About Us' />
             </div>
           </div>
           <div className={styles.right}>

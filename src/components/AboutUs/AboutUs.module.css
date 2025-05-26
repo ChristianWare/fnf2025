@@ -129,7 +129,7 @@
 .desc {
   color: var(--blackii);
   font-size: 1.6rem;
-    font-family: var(--FeatureDeckLight);
+    /* font-family: var(--FeatureDeckLight); */
 
 }
 

@@ -4,7 +4,6 @@
   justify-content: flex-start;
   gap: 2rem;
   height: fit-content;
-  /* padding-top: 1rem; */
 }
 
 .circle {
@@ -32,7 +31,8 @@
 }
 
 .span {
-  font-family: var(--SuisseIntlMonoRegular);
+  font-family: var(--SuisseIntlMedium);
+  letter-spacing: 1px;
 }
 
 .blackii {

@@ -6,7 +6,7 @@
   height: 24px;
   border-radius: 50%;
   background-color: var(--yellow);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--black);
   z-index: 9999;
   pointer-events: none;
   transform: translate(-50%, -50%);

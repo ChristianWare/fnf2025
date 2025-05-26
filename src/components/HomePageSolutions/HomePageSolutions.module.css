@@ -1,8 +1,11 @@
 .container {
   position: relative;
-  background-color: var(--tan);
+  background-color: var(--white);
   z-index: 1;
+  padding-top: 15rem;
   padding-bottom: 15rem;
+  position: relative;
+  z-index: 1;
 }
 
 .container::before {
@@ -14,7 +17,7 @@
   height: 100%;
   pointer-events: none;
   background: url("/images/noise.gif") repeat;
-  opacity: 0.04;
+  opacity: 0.08;
   z-index: -1;
 }
 
@@ -79,15 +82,15 @@
 .card.five .title {
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--gray);
-  background-image: repeating-linear-gradient(
+  /* background-image: repeating-linear-gradient(
     45deg,
     #0f0c0c,
     #f1f1f1 1px,
     #0000 0 50%
-  );
+  ); */
   background-size: 10px 10px;
   position: relative;
-  background-color: var(--pink);
+  background-color: var(--yellow);
 }
 
 .sectionIntroContainer {
@@ -102,6 +105,10 @@
 
 .title,
 .titleii {
+  font-family: var(--FeatureDeckLight);
+  text-transform: none;
+  letter-spacing: 0em;
+  line-height: 1.2;
   font-size: 2rem;
   padding: 3rem;
   padding-bottom: 0rem;

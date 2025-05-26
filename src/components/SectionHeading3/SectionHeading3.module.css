@@ -6,8 +6,8 @@
   background-image: repeating-linear-gradient(
     45deg,
     var(--black),
-    var(--pink) 1px,
-    var(--pink) 0 50%
+    var(--yellow) 1px,
+    var(--yellow) 0 50%
   );
   background-size: 10px 10px;
   border: 1px solid var(--gray);
@@ -35,7 +35,8 @@
 }
 
 .heading {
-  width: 45%;
+  width: 60%;
+  line-height: 1.1;
   /* padding: 1rem; */
   /* background-color: var(--pink); */
   /* border: 1px solid var(--gray); */

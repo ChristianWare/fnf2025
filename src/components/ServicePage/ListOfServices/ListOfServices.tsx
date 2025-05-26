@@ -4,6 +4,9 @@ import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import Image from "next/image";
 import Devlopment from "../../../../public/images/servicesHero.jpg";
 import Booking from "../../../../public/images/bookingii.jpg";
+import Button from "@/components/Button/Button";
+// import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
+// import SectionHeading from "@/components/SectionHeading/SectionHeading";
 // import Strategy from "../../../../public/images/strategy.jpg";
 // import Design from "../../../../public/images/design.jpg";
 // import Integration from "../../../../public/images/integration.jpg";
@@ -332,11 +335,12 @@ export default function ListOfServices() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
+        <SectionHeading2 title='Our Web Development Services'  />
         <div className={styles.content}>
           {data.map((a) => (
             <div key={a.id} className={styles.section}>
-              <SectionHeading2 title={a.service} />
-              {/* <span className={styles.desc}>{a.desc}</span> */}
+              {/* <SectionHeading2 title={a.service} /> */}
+              <h3 className={styles.title}>{a.service}</h3>
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>
                   <Image
@@ -347,7 +351,7 @@ export default function ListOfServices() {
                     className={styles.img}
                   />
                 </div>
-                {a.servicesInclude.map((b, index) => (
+                {a.servicesInclude.slice(0, 2).map((b, index) => (
                   <div key={b.id} className={styles.card}>
                     <div className={styles.cardContent}>
                       <div className={styles.cardTop}>
@@ -366,7 +370,15 @@ export default function ListOfServices() {
                   </div>
                 </div> */}
               </div>
-              <span className={styles.desc}>{a.desc}</span>
+              {/* <p className={styles.desc}>{a.desc}</p> */}
+              <div className={styles.btnContainer}>
+                <Button
+                  text='Learn More'
+                  btnType='normal'
+                  href='/services'
+                  showChevron={true}
+                />
+              </div>
             </div>
           ))}
           {/* {data.map((x) => (
@@ -387,6 +399,14 @@ export default function ListOfServices() {
                 </div>
               </div>
             ))} */}
+        </div>
+        <div className={styles.btnBottomContainer}>
+          <Button
+            text='Start My Project'
+            btnType='primary'
+            href='/contact'
+            marquee={true}
+          />
         </div>
       </LayoutWrapper>
     </section>
