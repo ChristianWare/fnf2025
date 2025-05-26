@@ -21,7 +21,7 @@ export default function Home() {
       <NoiseBg>
         <div className={styles.scrollContainer}>
           <Hero />
-          {/* <Impressions /> */}``
+          {/* <Impressions /> */}
           <AboutHero />
           {/* <Problem /> */}
           {/* <Mission /> */}
