@@ -1,10 +1,10 @@
-// import Impressions from "@/components/Impressions/Impressions";
+// import Impressions from "@/coamponents/Impressions/Impressions";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 // import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Contact2 from "@/components/Contact2/Contact2";
-import Pricing from "@/components/PricingPage/Pricing/Pricing";
+// import Pricing from "@/components/PricingPage/Pricing/Pricing";
 import AboutHero from "@/components/AboutHero/AboutHero";
 // import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Faq from "@/components/Faq/Faq";
@@ -13,6 +13,7 @@ import ListOfServices from "@/components/ServicePage/ListOfServices/ListOfServic
 import NoiseBg from "@/components/Noise/NoiseBg";
 import HomePageSolutions from "@/components/HomePageSolutions/HomePageSolutions";
 import ContactHero from "./contact/components/ContactHero/ContactHero";
+import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 // import Mission from "@/components/AboutPage/Mission/Mission";
 
 export default function Home() {
@@ -26,10 +27,11 @@ export default function Home() {
           {/* <Problem /> */}
           {/* <Mission /> */}
           {/* <ServicesSection /> */}
-          <ListOfServices />
           <HomePageSolutions />
+          <ListOfServices />
           <ProjectSection />
-          <Pricing />
+          <ServiceDetails />
+          {/* <Pricing /> */}
           <Faq />
           {/* <FinalCTA /> */}
           <ContactHero />

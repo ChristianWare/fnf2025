@@ -5,7 +5,7 @@
   padding: 15rem 0;
   padding-top: 5rem;
   z-index: 1;
-  background-color: var(--tan);
+  background-color: var(--white);
 }
 
 .container::before {
@@ -17,7 +17,7 @@
   height: 100%;
   pointer-events: none;
   background: url("/images/noise.gif") repeat;
-  opacity: 0.04;
+  opacity: 0.08;
   z-index: -1;
 }
 

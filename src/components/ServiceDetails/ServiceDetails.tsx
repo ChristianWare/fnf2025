@@ -3,6 +3,7 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
 import SectionIntro from "../SectionIntro/SectionIntro";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 // import Button from "../Button/Button";
 
 const data = [
@@ -47,6 +48,7 @@ export default function ServiceDetails() {
   return (
     <div className={styles.container}>
       <LayoutWrapper>
+        <SectionHeading2 title="Why work with us?" />
       <div className={styles.top}>
         <SectionIntro
           title='End-to-end ecommerce solitions'

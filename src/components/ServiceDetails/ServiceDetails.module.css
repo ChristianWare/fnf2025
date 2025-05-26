@@ -1,6 +1,6 @@
 .container {
   background-color: var(--tan);
-  padding-top: 15rem;
+  /* padding-top: 15rem; */
   padding-bottom: 15rem;
   position: relative;
   z-index: 1;
@@ -28,6 +28,7 @@
   position: relative;
   top: 1px;
   transition: all 0.3s ease-in;
+  margin-top: 3rem;
 }
 
 .bottom {
@@ -64,8 +65,8 @@
   background-color: var(--yellow);
 }
 
-.card:last-child {
-  background-color: var(--pink);
+.card:nth-child(3), .card:last-child {
+  background-color: var(--yellow);
 }
 
 .title,
