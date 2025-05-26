@@ -2,7 +2,7 @@
 
 import styles from "./Impressions.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import SectionHeading from "../SectionHeading/SectionHeading";
 
 import Img1 from "../../../public/images/ecomm.jpeg";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
@@ -10,7 +10,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Solution from "../Solution/Solution";
+// import Solution from "../Solution/Solution";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -67,15 +67,14 @@ export default function Impressions() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading
-          number='1'
-          title='Your online store is more than just a website'
-        />
         <div className={styles.content}>
           <div className={styles.left}>
             <ParallaxImage src={Img1} alt='' title='Your Online Store' />
           </div>
           <div className={styles.right}>
+            {/* <SectionHeading
+              title='Your online store is more than just a website'
+            /> */}
             <p className={styles.heading}>
               In today&apos;s digital marketplace, having an e-commerce site
               that simply &ldquo;works&rdquo; isn&apos;t enough. Your online
@@ -94,7 +93,7 @@ export default function Impressions() {
           </div>
         </div>
       </LayoutWrapper>
-      <Solution />
+      {/* <Solution /> */}
     </section>
   );
 }

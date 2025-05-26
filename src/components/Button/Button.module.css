@@ -1,57 +1,42 @@
 .container {
   position: relative;
   z-index: 1;
-  /* z-index: 998; */
 }
 
 .btn {
-  z-index: 998;
-  font-family: var(--SuisseIntlMonoRegular);
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  user-select: none;
-  display: inline-block;
-  padding: 1.5rem 6rem;
-  display: flex;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  position: relative;
-  z-index: 1;
+  padding: 1.3rem 4rem;
+  font-family: var(--SuisseIntlMedium);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  border-radius: 50px;
   width: 100%;
   transition: all 0.2s ease-in;
 }
 
-.dot1,
-.dot2,
-.dot3,
-.dot4 {
-  width: 5px;
-  height: 5px;
-  background-color: var(--black);
+.label {
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.marqueeSpan {
   position: absolute;
-  transition: all 0.2s ease-in;
-}
-
-.dot1 {
-  top: 5px;
-  right: 5px;
-}
-
-.dot2 {
-  bottom: 5px;
-  right: 5px;
-}
-
-.dot3 {
-  top: 5px;
-  left: 5px;
-}
-
-.dot4 {
-  bottom: 5px;
-  left: 5px;
+  /* occupy the full button box */
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: inline-flex;          /* let us vertically center the text */
+  align-items: center;           /* ← centers the text vertically */
+  white-space: nowrap;
+  pointer-events: none;          /* don’t block clicks */
 }
 
 .primary {
@@ -74,12 +59,12 @@
 
 .secondary {
   background-color: var(--orange);
-  border: 1px solid var(--gray);
+  /* border: 1px solid var(--gray); */
   color: var(--brown);
 }
 
 .secondary:hover {
-  background-color: transparent;
+  background-color: var(--orange3);
 }
 
 .black {

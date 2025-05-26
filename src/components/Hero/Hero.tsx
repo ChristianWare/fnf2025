@@ -138,7 +138,7 @@ export default function Hero() {
               growth‑minded brands.
             </p>
             <div className={styles.btnContainer}>
-              <Button text='Start a Project' btnType='black' href='/contact' />
+              <Button text='Start a Project' btnType='secondary' href='/contact' />
             </div>
             <br />
             {/* <ShuffleHero /> */}

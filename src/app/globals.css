@@ -1,5 +1,5 @@
 :root {
-  --black: #1f1f1f;
+  --black: #2C2C2C;
   --blackii: #4e4c4c;
   --gray: #919598;
   --grayii: #6e7072;
@@ -162,7 +162,7 @@ textarea:focus {
   } */
 
   h1 {
-    font-size: 8rem;
+    font-size: 9vw;
   }
 
   h2 {
@@ -180,7 +180,7 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 15vw;
+    font-size: 10.5vw;
   }
 
   h2 {

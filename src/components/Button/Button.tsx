@@ -1,18 +1,19 @@
+// src/components/Button/Button.tsx
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import styles from "./Button.module.css";
 import { ReactNode } from "react";
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
+import { motion } from "framer-motion";
+import styles from "./Button.module.css";
 
 interface Props {
   href: string;
   text?: string;
   btnType: string;
   target?: string;
-  onClick?: () => void; // This is correctly typed
-  disabled?: any;
+  onClick?: () => void;
+  disabled?: boolean;
   children?: ReactNode;
 }
 
@@ -28,71 +29,123 @@ export default function Button({
   const router = useTransitionRouter();
 
   /* ---------------- view‑transition helper ---------------------- */
-function slideInOut() {
-  const duration = 1500;
-  const easing = "cubic-bezier(0.87, 0, 0.13, 1)";
+  function slideInOut() {
+    const duration = 1500;
+    const easing = "cubic-bezier(0.87, 0, 0.13, 1)";
 
-  /* 1️⃣  Outgoing view ‑‑ fade + drift up‑right  */
-  document.documentElement.animate(
-    [
-      { opacity: 1, transform: "translate(0, 0)" },
-      { opacity: 0.2, transform: "translate(35%, -35%)" },
-    ],
-    {
-      duration,
-      easing,
-      fill: "forwards",
-      pseudoElement: "::view-transition-old(root)",
-    }
-  );
+    document.documentElement.animate(
+      [
+        { opacity: 1, transform: "translate(0, 0)" },
+        { opacity: 0.2, transform: "translate(35%, -35%)" },
+      ],
+      {
+        duration,
+        easing,
+        fill: "forwards",
+        pseudoElement: "::view-transition-old(root)",
+      }
+    );
 
-  /* 2️⃣  Incoming view ‑‑ start down‑left, glide to centre while fading in */
-  document.documentElement.animate(
-    [
-      { opacity: 0, transform: "translate(-35%, 35%)" },
-      { opacity: 1, transform: "translate(0, 0)" },
-    ],
-    {
-      duration,
-      easing,
-      fill: "forwards",
-      pseudoElement: "::view-transition-new(root)",
-    }
-  );
-}
+    document.documentElement.animate(
+      [
+        { opacity: 0, transform: "translate(-35%, 35%)" },
+        { opacity: 1, transform: "translate(0, 0)" },
+      ],
+      {
+        duration,
+        easing,
+        fill: "forwards",
+        pseudoElement: "::view-transition-new(root)",
+      }
+    );
+  }
 
-  const handleClick = (e: React.MouseEvent) => {
-    // If target is set to open in a new window, don't use the transition
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // if they want a new tab, just let the default anchor work
     if (target === "_blank") return;
 
-    // Prevent default link behavior
     e.preventDefault();
-
-    // Call the custom onClick if provided
-    if (onClick) {
-      onClick();
-    }
-
-    // Use the transition router if href exists
+    if (onClick) onClick();
     if (href) {
       router.push(href, { onTransitionReady: slideInOut });
     }
   };
 
+  const content = text || children;
+
   return (
-    <button className={styles.container} disabled={disabled}>
+    <motion.button
+      className={styles.container}
+      disabled={disabled}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <Link
         href={href}
         className={`${styles.btn} ${styles[btnType]}`}
         target={target}
         onClick={handleClick}
       >
-        <span className={styles.dot1}></span>
-        <span className={styles.dot2}></span>
-        <span className={styles.dot3}></span>
-        <span className={styles.dot4}></span>
-        {text || children}
+        {/* 👻 keeps the button’s natural size */}
+        <span className={styles.label}>{content}</span>
+
+        {/* marquee clones */}
+        <motion.span
+          className={styles.marqueeSpan}
+          initial={{ x: "0%" }}
+          animate={{ x: "calc(-100% - 6px)" }}
+          transition={{
+            ease: "linear",
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+        >
+          {content} •
+        </motion.span>
+
+        <motion.span
+          className={styles.marqueeSpan}
+          initial={{ x: "calc(-100% - 6px)" }}
+          animate={{ x: "calc(-200% - 12px)" }}
+          transition={{
+            ease: "linear",
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+        >
+          {content} •
+        </motion.span>
+
+        <motion.span
+          className={styles.marqueeSpan}
+          initial={{ x: "calc(100% + 6px)" }}
+          animate={{ x: "0%" }}
+          transition={{
+            ease: "linear",
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+        >
+          {content} •
+        </motion.span>
+
+        <motion.span
+          className={styles.marqueeSpan}
+          initial={{ x: "calc(200% + 12px)" }}
+          animate={{ x: "calc(100% + 6px)" }}
+          transition={{
+            ease: "linear",
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+        >
+          {content} •
+        </motion.span>
       </Link>
-    </button>
+    </motion.button>
   );
 }

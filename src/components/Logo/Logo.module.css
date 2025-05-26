@@ -6,7 +6,13 @@
   z-index: 999;
   user-select: none;
   line-height: 0.5;
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--FeatureDeckLight);
+}
+
+.logoBox {
+  font-family: var(--FeatureDeckLight);
+  text-transform: none;
+  font-size: 2rem;
 }
 
 .large {
