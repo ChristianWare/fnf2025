@@ -71,9 +71,7 @@
   color: var(--tan);
 }
 
-.card.one .title {
-  font-size: 3rem;
-}
+
 
 .card.two {
   background-color: var(--yellow);
@@ -109,7 +107,7 @@
   text-transform: none;
   letter-spacing: 0em;
   line-height: 1.2;
-  font-size: 2rem;
+  font-size: 2.8rem;
   padding: 3rem;
   padding-bottom: 0rem;
   width: 100%;

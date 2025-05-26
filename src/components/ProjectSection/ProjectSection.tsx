@@ -8,7 +8,7 @@ import Img3 from "../../../public/images/heroiii.jpeg";
 import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
-import SectionHeading from "../SectionHeading/SectionHeading";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import Thunder from '../../../public/images/thunder.jpg'
 import Chuxly from '../../../public/images/chuxly.png'
 import Honey from '../../../public/images/honey.jpg'
@@ -199,7 +199,7 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading number='' title='Featured projects' />
+        <SectionHeading2 title='Featured projects' />
         {/* <p className={styles.copy}>
           Passion for mountain biking, outdoor adventure, and premium gear
           inspired the founders of Thundertrails to launch their specialized

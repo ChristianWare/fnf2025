@@ -96,6 +96,10 @@
   position: -webkit-sticky;
   position: sticky;
   top: var(--card-top, 90px);
+  background-image:
+    linear-gradient(var(--tanii) 1px, transparent 1px),
+    linear-gradient(to right, var(--tanii) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 .card:nth-child(1) {
@@ -124,13 +128,16 @@
 
 .card:nth-child(4) {
   background-color: var(--yellow);
+  background-image:
+  linear-gradient(var(--yellow) 1px, transparent 1px),
+  linear-gradient(to right, var(--yellow) 1px, transparent 1px);
+background-size: 100px 100px;
 }
 
 .desc {
   color: var(--blackii);
   font-size: 1.6rem;
-    /* font-family: var(--FeatureDeckLight); */
-
+  /* font-family: var(--FeatureDeckLight); */
 }
 
 .card:nth-child(4) .desc {

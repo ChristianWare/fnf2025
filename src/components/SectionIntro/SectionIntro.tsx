@@ -2,8 +2,8 @@ import styles from "./SectionIntro.module.css";
 
 interface Props {
   title: string;
-  color: string;
-  dotColor: string;
+  color?: string;
+  dotColor?: string;
 }
 
 export default function SectionIntro({

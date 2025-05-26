@@ -138,8 +138,8 @@ export default function Hero() {
               </h1>
             </div>
             <p className={styles.copy}>
-              Blazing‑fast, conversion‑focused e‑commerce sites crafted for
-              growth‑minded brands.
+              We build blazing‑fast, conversion‑focused e‑commerce sites crafted
+              for growth‑minded brands.
             </p>
             <div className={styles.btnContainer}>
               <Button

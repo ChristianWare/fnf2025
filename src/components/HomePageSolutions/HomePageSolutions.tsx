@@ -1,18 +1,19 @@
 import styles from "./HomePageSolutions.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading3 from "../SectionHeading3/SectionHeading3";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 const data = [
   {
     id: 1,
-    title: "Brand Storytelling",
-    desc: "Emotion‑led visuals and copy embed your value prop in shoppers’ minds—averaging a 28 % lift in time‑on‑page.",
+    title: "Brand Storytelling",
+    desc: "Emotion-led visuals and copy embed your value prop in shoppers’ minds—averaging a 28 % lift in time‑on‑page.",
     span: "one",
   },
   {
     id: 2,
-    title: "Conversion‑Focused Design",
-    desc: "UX patterns and micro‑interactions guide buyers from browse to checkout, lifting add‑to‑cart rates 15‑30 %.",
+    title: "Conversion-Focused Design",
+    desc: "UX patterns and micro-interactions guide buyers from browse to checkout, lifting add‑to‑cart rates 15‑30 %.",
     span: "two",
   },
   {
@@ -39,9 +40,9 @@ export default function HomePageSolutions() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading3
-          title='We make working with us easy'
-        />
+        <SectionIntro title='How it works'  />
+        <br />
+        <SectionHeading3 title='We make working with us easy' />
         <div className={styles.bottom}>
           {data.map((x) => (
             <div key={x.id} className={`${styles.card} ${styles[x.span]}`}>
