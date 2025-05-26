@@ -8,7 +8,6 @@ import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../Button/Button";
-import ShuffleHero from "../ShuffleHero/ShuffleHero";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,19 +55,17 @@ export default function Hero() {
 
       const targets = config.type === "words" ? split.words : split.lines;
 
-      /*  ▼  START STATE – diagonally down‑left & transparent  ▼  */
+      // START STATE – only vertical offset
       gsap.set(targets, {
-        y: 200, // vertical offset (down)
-        x: -200, // horizontal offset (to the left)
-        opacity: 0,
+        y: 200, // from 200px below
+        opacity: 0, // fully transparent
       });
 
-      /*  ▲  END STATE – original position & fully opaque  ▲  */
+      // END STATE – original place & fully opaque
       gsap.to(targets, {
         y: 0,
-        x: 0,
         opacity: 1,
-        duration: 2.5,
+        duration: 1.5,
         stagger: 0.075,
         ease: "power4.out",
         delay: 0.25,
@@ -76,12 +73,13 @@ export default function Hero() {
 
       return () => split.revert();
     };
+    
 
     // Animate all text elements
     const animations = [
       {
         ref: refs.heading,
-        config: { type: "words" as const },
+        config: { type: "lines" as const },
       },
       {
         ref: refs.copy,
@@ -124,12 +122,6 @@ export default function Hero() {
       });
   });
 
-  // const services = [
-  //   { id: 1, name: "B2B Stores" },
-  //   { id: 3, name: "Booking Platforms" },
-  //   { id: 4, name: "And much more!" },
-  // ];
-
   return (
     <section className={styles.container}>
       <LayoutWrapper>
@@ -138,52 +130,18 @@ export default function Hero() {
           <div className={styles.left}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                We build <br />
-                blazing fast
-                <br />
-                online stores <br />
+                Blazing fast <br /> online stores & <br /> Booking Platforms
               </h1>
             </div>
-            <div>
-              {/* <p className={styles.servicesTitle} ref={refs.servicesTitle}>
-                We build the best:
-              </p>
-              <ul
-                className={styles.servicesContainer}
-                ref={refs.servicesContainer}
-              >
-                {services.map((x) => (
-                  <li className={styles.service} key={x.id}>
-                    {x.name}
-                    <span className={styles.blackDot} />
-                  </li>
-                ))}
-              </ul> */}
-              <p className={styles.copy} ref={refs.copy}>
-                Blazing‑fast, conversion‑focused e‑commerce sites crafted for
-                growth‑minded brands.
-              </p>
-            </div>
+            <p className={styles.copy}>
+              Blazing‑fast, conversion‑focused e‑commerce sites crafted for
+              growth‑minded brands.
+            </p>
             <div className={styles.btnContainer}>
               <Button text='Start a Project' btnType='black' href='/contact' />
-              {/* <Button
-                text='View our Work'
-                btnType='primary'
-                href='/portfolio'
-              /> */}
             </div>
-          </div>
-          <div className={styles.right}>
-            {/* <div className={styles.imgContainer}>
-              <div className={styles.imgOverlay} />
-              <Image src={Img1} fill alt='' title='' className={styles.img} />
-              <p className={styles.copy} ref={refs.copy}>
-                Fonts & Footers is a specialized e-commerce web development
-                agency crafting custom, high-converting online stores for
-                businesses of all sizes.
-              </p>
-            </div> */}
-            <ShuffleHero />
+            <br />
+            {/* <ShuffleHero /> */}
           </div>
         </div>
       </LayoutWrapper>
