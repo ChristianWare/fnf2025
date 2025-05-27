@@ -9,10 +9,10 @@ import Arrow from "../../../public/icons/arrow.svg";
 import Button from "../Button/Button";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-import Thunder from '../../../public/images/thunder.jpg'
-import Chuxly from '../../../public/images/chuxly.png'
-import Honey from '../../../public/images/honey.jpg'
-import Rentals from '../../../public/images/erRentals.png'
+import Thunder from "../../../public/images/thunder.jpg";
+import Chuxly from "../../../public/images/chuxly.png";
+import Honey from "../../../public/images/honey.jpg";
+import Rentals from "../../../public/images/erRentals.png";
 
 const projectData = [
   {
@@ -55,7 +55,6 @@ const projectData = [
     label: <Arrow className={styles.icon} />,
     src: Img3,
   },
-  
 ];
 
 const POSITIONS = {
@@ -258,9 +257,10 @@ export default function ProjectSection() {
         </div>
         <div className={styles.btnContainer}>
           <Button
-            btnType='secondary'
             text='View All Projects'
+            btnType='normal'
             href='/portfolio'
+            showChevron={true}
           />
         </div>
       </LayoutWrapper>

@@ -119,7 +119,7 @@ const data = [
       },
       {
         id: 3.2,
-        serviceName: "Platform migration (Shopify, WooCommerce, Magento, etc.)",
+        serviceName: "Platform migration (Shopify, WooCommerce, etc.)",
         description:
           "We seamlessly transition your existing store to a new platform while preserving your data, SEO, and customer experience.",
       },
@@ -335,11 +335,10 @@ export default function ListOfServices() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Our Web Development Services'  />
+        <SectionHeading2 title='Our Web Development Services' />
         <div className={styles.content}>
           {data.map((a) => (
             <div key={a.id} className={styles.section}>
-              {/* <SectionHeading2 title={a.service} /> */}
               <h3 className={styles.title}>{a.service}</h3>
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>
@@ -351,14 +350,14 @@ export default function ListOfServices() {
                     className={styles.img}
                   />
                 </div>
-                {a.servicesInclude.slice(0, 2).map((b, index) => (
+                {a.servicesInclude.slice(0, 2).map((b) => (
                   <div key={b.id} className={styles.card}>
                     <div className={styles.cardContent}>
                       <div className={styles.cardTop}>
-                        <span className={styles.index}>0{index + 1}</span>
+                        {/* <span className={styles.index}>0{index + 1}</span> */}
+                        <h3 className={styles.serviceName}>{b.serviceName}</h3>
                       </div>
                       <div className={styles.cardBottom}>
-                        <h3 className={styles.serviceName}>{b.serviceName}</h3>
                         <p className={styles.description}>{b.description}</p>
                       </div>
                     </div>
