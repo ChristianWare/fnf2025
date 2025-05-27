@@ -53,11 +53,6 @@ const FeatureDeckLight = localFont({
   display: "swap",
 });
 
-const MarvinVisionsBold = localFont({
-  src: "../../public/fonts/MarvinVisionsBold.woff2",
-  variable: "--MarvinVisionsBold",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -73,7 +68,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang='en'>
         <body
-          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${FeatureDeckLight.variable} ${sofia.variable} ${MarvinVisionsBold.variable}`}
+          className={`${NeueHaasGroteskBold.variable} ${NeueHaasGroteskMedium.variable} ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${FeatureDeckLight.variable} ${sofia.variable}`}
         >
           <SmoothScroll>
             <Toaster
