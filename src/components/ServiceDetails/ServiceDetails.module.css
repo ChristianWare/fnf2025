@@ -24,7 +24,7 @@
   border: 1px solid var(--gray);
   border-bottom: none;
   padding: 1rem 2rem;
-  background-color: var(--tan);
+  background-color: var(--yellow);
   position: relative;
   top: 1px;
   transition: all 0.3s ease-in;
@@ -65,7 +65,13 @@
   background-color: var(--yellow);
 }
 
-.card:nth-child(3), .card:last-child {
+.card:nth-child(1),
+.card:last-child {
+  background-color: var(--yellow);
+}
+
+.card:nth-child(3),
+.card:last-child {
   background-color: var(--yellow);
 }
 
