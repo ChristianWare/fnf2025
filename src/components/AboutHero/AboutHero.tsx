@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import AboutUs from "../AboutUs/AboutUs";
+import Circle from "../Circle/Circle";
 // import ServiceDetails from "../ServiceDetails/ServiceDetails";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,6 +22,7 @@ export default function AboutHero(): JSX.Element {
         <AboutUs />
         {/* <HomePageSolutions /> */}
         {/* <ServiceDetails /> */}
+        <Circle />
       </LayoutWrapper>
     </section>
   );
