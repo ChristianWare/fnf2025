@@ -14,6 +14,7 @@ import NoiseBg from "@/components/Noise/NoiseBg";
 import HomePageSolutions from "@/components/HomePageSolutions/HomePageSolutions";
 import ContactHero from "./contact/components/ContactHero/ContactHero";
 import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
+import Circle from "@/components/Circle/Circle";
 // import Mission from "@/components/AboutPage/Mission/Mission";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
           <Hero />
           {/* <Impressions /> */}
           <AboutHero />
+          <Circle />
           {/* <Problem /> */}
           {/* <Mission /> */}
           {/* <ServicesSection /> */}
