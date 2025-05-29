@@ -89,7 +89,6 @@
   background-color: var(--white);
   font-size: clamp(1rem, 2vw, 1.4rem);
   cursor: pointer;
-  transition: all 0.3s ease-in;
 }
 
 .quad1:hover,
@@ -97,6 +96,7 @@
 .quad3:hover,
 .quad4:hover {
   background-color: var(--yellow);
+  scale: 1.2;
 }
 
 .quad1 {

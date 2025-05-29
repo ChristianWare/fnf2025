@@ -9,7 +9,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   padding: 1.3rem 4rem;
   font-family: var(--SuisseIntlMedium);
   border: 1px solid var(--taniii);
@@ -19,7 +19,7 @@
   white-space: nowrap;
   border-radius: 50px;
   width: 100%;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .label {
@@ -66,17 +66,6 @@
   color: var(--black);
 }
 
-.blue {
-  background-color: var(--blue);
-  color: var(--white);
-  border: 1px solid var(--blue);
-}
-
-.blue:hover {
-  background-color: transparent;
-  color: var(--vlue);
-}
-
 .normal {
   color: var(--black);
   background-color: transparent;
@@ -84,6 +73,35 @@
   font-family: var(--SuisseIntlMedium);
   padding-left: 0rem;
   padding-right: 0rem;
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.outline:hover {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+.btn.outline:hover .label {
+  /* force the span’s text to switch to yellow */
+  color: var(--yellow);
+}
+
+/* if you want your chevron icon to go yellow, too: */
+.btn.outline:hover .chevron {
+  /* assuming your SVG uses currentColor or you override fill here */
+  color: var(--yellow);
+}
+.btn.outline:hover .iconContainer {
+  border: 1px solid var(--yellow);
+}
+
+.btn.outline .label {
+  visibility: visible;
 }
 
 .iconContainer {
