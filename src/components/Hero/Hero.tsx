@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import styles from "./Hero.module.css";
@@ -22,6 +23,7 @@ export default function Hero() {
   };
 
   useGSAP(() => {
+    // overlay fade
     if (refs.overlay.current) {
       gsap.fromTo(
         refs.overlay.current,
@@ -38,6 +40,7 @@ export default function Hero() {
       );
     }
 
+    // generic text‑flip animator
     const animateText = (
       element: HTMLElement,
       config: {
@@ -45,49 +48,43 @@ export default function Hero() {
         ignore?: string;
       }
     ) => {
+      // make sure it's visible before we split it
       gsap.set(element, { visibility: "visible" });
 
+      // split into lines or words
       const split = new SplitType(element, {
         types: config.type,
         ...(config.ignore && { children: config.ignore }),
         lineClass: styles.line,
       });
-
       const targets = config.type === "words" ? split.words : split.lines;
 
-      // START STATE – only vertical offset
+      // START STATE – flip down
       gsap.set(targets, {
-        y: 200, // from 200px below
-        opacity: 0, // fully transparent
+        rotationX: 90,
+        transformOrigin: "bottom center",
+        opacity: 0,
       });
 
-      // END STATE – original place & fully opaque
+      // END STATE – flip up
       gsap.to(targets, {
-        y: 0,
+        rotationX: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 3,
         stagger: 0.075,
         ease: "power4.out",
         delay: 0.25,
       });
 
+      // cleanup
       return () => split.revert();
     };
 
-    // Animate all text elements
+    // apply to each ref
     const animations = [
-      {
-        ref: refs.heading,
-        config: { type: "lines" as const },
-      },
-      {
-        ref: refs.copy,
-        config: { type: "lines" as const },
-      },
-      {
-        ref: refs.servicesTitle,
-        config: { type: "lines" as const },
-      },
+      { ref: refs.heading, config: { type: "lines" as const } },
+      { ref: refs.copy, config: { type: "lines" as const } },
+      { ref: refs.servicesTitle, config: { type: "lines" as const } },
       {
         ref: refs.servicesContainer,
         config: {
@@ -98,27 +95,19 @@ export default function Hero() {
       },
     ].map(({ ref, config }) => {
       if (!ref.current) return null;
-
-      if (config.isList) {
-        const listItems = gsap.utils.toArray<HTMLLIElement>(
+      if ((config as any).isList) {
+        const items = gsap.utils.toArray<HTMLLIElement>(
           ref.current.querySelectorAll("li")
         );
-
-        return listItems.map((li) => animateText(li, config));
+        return items.map((li) => animateText(li, config));
       }
-
       return animateText(ref.current, config);
     });
 
-    // Cleanup
     return () =>
-      animations.forEach((animation) => {
-        if (Array.isArray(animation)) {
-          animation.forEach((a) => a?.());
-        } else {
-          animation?.();
-        }
-      });
+      animations.forEach((anim) =>
+        Array.isArray(anim) ? anim.forEach((fn) => fn?.()) : anim?.()
+      );
   });
 
   return (
