@@ -10,6 +10,7 @@ import Logo from "../Logo/Logo";
 const navItems = [
   { text: "About", href: "/about" },
   { text: "Works", href: "/portfolio" },
+  { text: "Pricing", href: "/pricing" },
   { text: "Blog", href: "/blog" },
   { text: "Contact", href: "/contact" },
 ];
@@ -108,10 +109,7 @@ export default function Nav() {
             <Logo />
           </div>
 
-          <div
-            className={styles.navItems}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className={styles.navItems} onClick={(e) => e.stopPropagation()}>
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -127,8 +125,6 @@ export default function Nav() {
             ))}
           </div>
         </div>
-
-        
 
         {/* ------------- hamburger button ------------- */}
         <div
