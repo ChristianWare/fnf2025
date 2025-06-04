@@ -146,6 +146,10 @@
 }
 
 @media screen and (max-width: 568px) {
+  .container {
+    height: 100vh;
+  }
+  
   .content {
     /* margin-top: 0rem; */
     margin-left: auto;

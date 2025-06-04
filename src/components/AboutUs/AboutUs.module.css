@@ -34,7 +34,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 5rem;
-
   width: 100%;
 }
 
@@ -47,12 +46,9 @@
 }
 
 .copy {
-  font-family: var(--FeatureDeckLight);
+  font-family: var(--SuisseIntlMedium);
   font-size: 2.8rem;
   width: 70%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .right {
@@ -100,6 +96,7 @@
     linear-gradient(var(--tanii) 1px, transparent 1px),
     linear-gradient(to right, var(--tanii) 1px, transparent 1px);
   background-size: 50px 50px;
+  width: 100%;
 }
 
 .card:nth-child(1) {
@@ -126,12 +123,12 @@
   color: var(--black);
 }
 
-.card:nth-child(4) {
+.card:nth-child(5) {
   background-color: var(--yellow);
   background-image:
-  linear-gradient(var(--yellow) 1px, transparent 1px),
-  linear-gradient(to right, var(--yellow) 1px, transparent 1px);
-background-size: 100px 100px;
+    linear-gradient(var(--yellow) 1px, transparent 1px),
+    linear-gradient(to right, var(--yellow) 1px, transparent 1px);
+  background-size: 100px 100px;
 }
 
 .desc {
@@ -142,22 +139,6 @@ background-size: 100px 100px;
 
 .card:nth-child(4) .desc {
   color: var(--black);
-}
-
-@media screen and (max-width: 768px) {
-  .rightiiWrapper {
-    height: 70vh;
-  }
-
-  .cardii {
-    width: 300px;
-    min-height: 300px;
-    padding: 2rem;
-  }
-
-  .title {
-    font-size: 6rem;
-  }
 }
 
 @media screen and (max-width: 968px) {
@@ -180,6 +161,30 @@ background-size: 100px 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .bottomLeft {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rightiiWrapper {
+    height: 70vh;
+  }
+
+  .cardii {
+    width: 300px;
+    min-height: 300px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+
+  .copy {
+    width: 100%;
   }
 }
 

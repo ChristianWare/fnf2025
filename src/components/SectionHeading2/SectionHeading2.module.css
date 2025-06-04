@@ -79,10 +79,10 @@
     height: 15px;
   }
 
-  .title {
+  /* .title {
     text-align: center;
     width: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 568px) {

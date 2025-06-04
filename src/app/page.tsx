@@ -15,6 +15,7 @@ import NoiseBg from "@/components/Noise/NoiseBg";
 import ContactHero from "./contact/components/ContactHero/ContactHero";
 import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 import Pricing from "@/components/Pricing/Pricing";
+// import Problem from "@/components/AboutPage/Problem/Problem";
 // import Circle from "@/components/Circle/Circle";
 // import Mission from "@/components/AboutPage/Mission/Mission";
 
@@ -24,13 +25,13 @@ export default function Home() {
       <NoiseBg>
         <div className={styles.scrollContainer}>
           <Hero />
-          {/* <Impressions /> */}
+          {/* <Problem /> */}
           <AboutHero />
           {/* <Circle /> */}
           {/* <Problem /> */}
           {/* <Mission /> */}
           {/* <ServicesSection /> */}
-          
+
           <ListOfServices />
           <ProjectSection />
           <ServiceDetails />
