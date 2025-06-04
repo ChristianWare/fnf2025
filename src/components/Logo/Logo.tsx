@@ -56,14 +56,7 @@ const Logo = ({ size = "", color = "" }: Props) => {
       href={"/"}
       className={`${styles.logo} ${styles[size]} ${styles[color]}`}
     >
-      <div className={styles.logoBox}>
-        {/* <SectionIntro
-          title='FONTS & FOOTERS'
-          color='blackii'
-          dotColor='blackDotii'
-        /> */}
-        Fonts and Footers
-      </div>
+      Fonts & Footers
     </Link>
   );
 };

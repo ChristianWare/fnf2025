@@ -12,9 +12,9 @@
   gap: 3rem;
   padding: 1.3rem 4rem;
   font-family: var(--SuisseIntlMedium);
-  border: 1px solid var(--taniii);
-  font-size: 1.6rem;
-  text-transform: uppercase;
+  border: 1px solid var(--tanii);
+  font-size: 1.4rem;
+  text-transform: capitalize;
   letter-spacing: 0.5px;
   white-space: nowrap;
   border-radius: 50px;
@@ -27,6 +27,8 @@
   pointer-events: none;
   white-space: nowrap;
   font-family: var(--SuisseIntlMedium);
+  text-transform: capitalize;
+
 }
 
 .marqueeSpan {
@@ -39,6 +41,8 @@
   white-space: nowrap;
   pointer-events: none;
   font-family: var(--SuisseIntlMedium);
+  text-transform: capitalize;
+
 }
 
 .primary {

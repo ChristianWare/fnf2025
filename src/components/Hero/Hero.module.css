@@ -38,18 +38,9 @@
 
 .content {
   min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin-top: 10rem; */
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10rem;
 }
 
 .headingClip {
@@ -71,23 +62,20 @@
   line-height: 1;
   white-space: nowrap;
   font-family: var(--SuisseIntlCondensed);
-  text-align: center;
 }
 
 .heading :global(.word),
 .heading :global(.line) {
-  text-align: center;
   line-height: 0.01;
   font-family: inherit;
 }
 
 .copy {
   z-index: 2;
-  font-family: var(--FeatureDeckLight) !important;
-  font-size: 3.2rem;
-  line-height: 1.2;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
   width: 80%;
-  text-align: center;
   color: var(--black);
 }
 
