@@ -123,7 +123,8 @@ export default function Hero() {
             />
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                Blazing fast <br /> online stores & <br /> Booking Platforms
+                We Build <br />
+                Blazing fast <br /> E-commerce Websites
               </h1>
             </div>
             <p className={styles.copy}>
