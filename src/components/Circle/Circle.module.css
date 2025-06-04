@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -89,6 +89,7 @@
   background-color: var(--white);
   font-size: clamp(1rem, 2vw, 1.4rem);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .quad1:hover,
@@ -96,7 +97,6 @@
 .quad3:hover,
 .quad4:hover {
   background-color: var(--yellow);
-  scale: 1.2;
 }
 
 .quad1 {
