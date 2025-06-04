@@ -5,7 +5,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AboutUs from "../AboutUs/AboutUs";
-import Circle from "../Circle/Circle";
+// import Circle from "../Circle/Circle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,7 @@ export default function AboutHero(): JSX.Element {
     <section className={styles.container}>
       <LayoutWrapper>
         <AboutUs />
-        <Circle />
+        {/* <Circle /> */}
       </LayoutWrapper>
     </section>
   );

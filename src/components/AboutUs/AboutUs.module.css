@@ -49,6 +49,14 @@
   font-family: var(--SuisseIntlMedium);
   font-size: 2.8rem;
   width: 70%;
+  will-change: transform, opacity;
+  overflow: hidden;
+  backface-visibility: hidden;
+  visibility: hidden; 
+}
+
+.line {
+  display: inline-block;
 }
 
 .right {

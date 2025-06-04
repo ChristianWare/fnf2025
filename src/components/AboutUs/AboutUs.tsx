@@ -1,7 +1,16 @@
+"use client";
+
 import styles from "./AboutUs.module.css";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Img1 from "../../../public/images/service.jpg";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   // {
@@ -62,6 +71,46 @@ const data = [
 ];
 
 export default function AboutUs() {
+  const copyRef = useRef<HTMLParagraphElement>(null);
+
+  useGSAP(() => {
+    if (!copyRef.current) return;
+
+    gsap.set(copyRef.current, { visibility: "visible" });
+
+    const split = new SplitType(copyRef.current, {
+      types: "lines",
+      lineClass: styles.line,
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: copyRef.current,
+        start: "top 80%",
+        once: true,
+      },
+    });
+
+    tl.fromTo(
+      split.lines,
+      { y: 200, x: -200, opacity: 0 },
+      {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 1.3,
+        stagger: 0.075,
+        ease: "power4.out",
+        delay: 0.25,
+      }
+    );
+
+    return () => {
+      split.revert();
+      tl.kill();
+    };
+  });
+
   return (
     <section className={styles.container} id='about'>
       <div className={styles.parent}>
@@ -72,7 +121,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className={styles.right}>
-            <p className={styles.copy}>
+            <p ref={copyRef} className={styles.copy}>
               {/* Fonts&nbsp;&amp;&nbsp;Footers is a Phoenix‑based e‑commerce agency
               that fuses pixel‑perfect design (“Fonts”) with rock‑solid
               engineering (“Footers”). Our team has one north star— speed that

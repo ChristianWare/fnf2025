@@ -1,0 +1,32 @@
+.container {
+  padding: 15rem 0rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+}
+
+.right {
+  height: 100%;
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .copy {
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 100%;
+  }
+}
