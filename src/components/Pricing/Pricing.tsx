@@ -197,7 +197,7 @@ export default function Pricing() {
                     <Button
                       text='Book Your session'
                       href='/contact'
-                      btnType='primary'
+                      btnType='outline'
                     />
                   </div>
                   {/* <div className={styles.featureBox}>
@@ -207,7 +207,12 @@ export default function Pricing() {
               ))}
             </div>
             <div className={styles.btnContainerii}>
-              <Button btnType='secondary' href='/pricing' text='More Details' />
+              <Button
+                text='Book a free call'
+                btnType='primary'
+                href='/contact'
+                marquee={true}
+              />
             </div>
           </div>
         </LayoutWrapper>

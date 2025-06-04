@@ -11,9 +11,10 @@ import Faq from "@/components/Faq/Faq";
 import ListOfServices from "@/components/ServicePage/ListOfServices/ListOfServices";
 // import Problem from "@/components/AboutPage/Problem/Problem";
 import NoiseBg from "@/components/Noise/NoiseBg";
-import HomePageSolutions from "@/components/HomePageSolutions/HomePageSolutions";
+// import HomePageSolutions from "@/components/HomePageSolutions/HomePageSolutions";
 import ContactHero from "./contact/components/ContactHero/ContactHero";
 import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
+import Pricing from "@/components/Pricing/Pricing";
 // import Circle from "@/components/Circle/Circle";
 // import Mission from "@/components/AboutPage/Mission/Mission";
 
@@ -29,11 +30,11 @@ export default function Home() {
           {/* <Problem /> */}
           {/* <Mission /> */}
           {/* <ServicesSection /> */}
-          <HomePageSolutions />
+          
           <ListOfServices />
           <ProjectSection />
           <ServiceDetails />
-          {/* <Pricing /> */}
+          <Pricing />
           <Faq />
           {/* <FinalCTA /> */}
           <ContactHero />

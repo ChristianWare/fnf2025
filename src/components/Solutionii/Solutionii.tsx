@@ -98,53 +98,55 @@ export default function Solutionii() {
               without requiring physical presence.
             </p>
           </div>
-          <div className={styles.middle}>
-            <span className={styles.subheading}>
-              breakdown of the main types (Click a box to learn more) :
-            </span>
-            <div className={styles.dataBox}>
-              {data.map((item, index) => (
-                <div
-                  key={item.id}
-                  className={
-                    activeIndex === index
-                      ? `${styles.card} ${styles.active}`
-                      : styles.card
-                  }
-                  onClick={() => setActiveIndex(index)}
-                >
-                  <h3 className={styles.title}>{item.title}</h3>
-                </div>
-              ))}
+              <span className={styles.subheading}>
+                breakdown of the main types (Click a box to learn more) :
+              </span>
+          <div className={styles.box}>
+            <div className={styles.middle}>
+              <div className={styles.dataBox}>
+                {data.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={
+                      activeIndex === index
+                        ? `${styles.card} ${styles.active}`
+                        : styles.card
+                    }
+                    onClick={() => setActiveIndex(index)}
+                  >
+                    <h3 className={styles.title}>{item.title}</h3>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className={styles.bottom}>
-            <AnimatePresence mode='wait'>
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className={styles.imgContainer}
-              >
-                <Image
-                  src={data[activeIndex].src}
-                  alt={data[activeIndex].title}
-                  title={data[activeIndex].title}
-                  fill
-                  className={styles.img}
-                  priority
-                />
-                <div className={styles.overlay}></div>
-                <div className={styles.descriptionContainer}>
-                  <p className={styles.descriptionText}>
-                    {data[activeIndex].desc}
-                  </p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+            <div className={styles.bottom}>
+              <AnimatePresence mode='wait'>
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className={styles.imgContainer}
+                >
+                  <Image
+                    src={data[activeIndex].src}
+                    alt={data[activeIndex].title}
+                    title={data[activeIndex].title}
+                    fill
+                    className={styles.img}
+                    priority
+                  />
+                  <div className={styles.overlay}></div>
+                  <div className={styles.descriptionContainer}>
+                    <p className={styles.descriptionText}>
+                      {data[activeIndex].desc}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </LayoutWrapper>
