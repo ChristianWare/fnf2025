@@ -40,11 +40,11 @@
   min-height: 90vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 
 .headingClip {
-  line-height: 1;
+  line-height: 0.95;
   width: 100%;
   font-family: var(--SuisseIntlCondensed);
 }
@@ -59,7 +59,7 @@
   overflow: hidden;
   backface-visibility: hidden;
   visibility: hidden;
-  line-height: 1;
+  line-height: 0.95;
   white-space: nowrap;
   font-family: var(--SuisseIntlCondensed);
 }
@@ -114,24 +114,16 @@
 
   .content {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+    min-height: auto;
   }
 
-  .top {
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+  .right {
+    order: -1;
   }
 
-  .content {
-    margin-top: 5rem;
-  }
-
-  .heading,
   .copy {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    width: 70%;
   }
 
   .btnContainer {
@@ -154,13 +146,8 @@
 }
 
 @media screen and (max-width: 568px) {
-  .container {
-    min-height: 100vh;
-    padding-top: 5rem;
-  }
-
   .content {
-    margin-top: 0rem;
+    /* margin-top: 0rem; */
     margin-left: auto;
     margin-right: auto;
   }

@@ -18,7 +18,7 @@ export default function Hero() {
   };
 
   useGSAP(() => {
-    /* ─────── overlay fade (unchanged) ─────── */
+    /* ───────── overlay fade (unchanged) ───────── */
     if (refs.overlay.current) {
       gsap.fromTo(
         refs.overlay.current,
@@ -35,46 +35,37 @@ export default function Hero() {
       );
     }
 
-    /* ─────── heading flip-up animation ─────── */
-    const animateHeading = (el: HTMLElement) => {
-      /* make sure the element itself is visible */
+    const animateText = (el: HTMLElement | null, type: "words" | "lines") => {
+      if (!el) return;
       gsap.set(el, { visibility: "visible" });
 
       const split = new SplitType(el, {
-        types: "lines",
-        lineClass: styles.line,
+        types: type,
+        lineClass: styles.line, // style below
       });
 
-      const tl = gsap.timeline({ defaults: { ease: "back.out(1.4)" } });
+      const targets = type === "words" ? split.words : split.lines;
 
-      gsap.set(split.lines, {
-        yPercent: 200,
-        rotationX: -200,
-        skewY: 7,
-        transformOrigin: "50% 100%",
-        opacity: 0,
-      });
+      // ▶ start bottom‑left & transparent
+      gsap.set(targets, { y: 200, x: -200, opacity: 0 });
 
-      tl.to(split.lines, {
-        yPercent: 0,
-        rotationX: 0,
-        skewY: 0,
+      // ▶ travel to natural spot, fade in
+      gsap.to(targets, {
+        y: 0,
+        x: 0,
         opacity: 1,
-        duration: 1,
-        stagger: { each: 0.45 },
+        duration: 2.5,
+        stagger: 0.075,
+        ease: "power4.out",
+        delay: 0.25,
       });
 
-      return () => {
-        tl.kill();
-        split.revert();
-      };
+      return () => split.revert();
     };
 
-    const cleanup = refs.heading.current
-      ? animateHeading(refs.heading.current)
-      : () => {};
+    const cleanups = [animateText(refs.heading.current, "words")];
 
-    return cleanup;
+    return () => cleanups.forEach((c) => c && c());
   });
 
   return (
@@ -90,7 +81,6 @@ export default function Hero() {
               buyers.
             </p>
           </div>
-
           <div className={styles.right}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>

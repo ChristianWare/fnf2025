@@ -5,7 +5,7 @@
   --grayii: #6e7072;
   --lightGray: #d4d4d4;
   /* --yellow: #e7f255; */
-  --yellow: #D9FB06;
+  --yellow: #d9fb06;
   --yellow2: #eff77e;
   --yellow3: #c4d03e;
   --pink: #ff2df1;
@@ -162,16 +162,22 @@ textarea:focus {
     font-size: 4rem;
   } */
 
-  h1 {
+  /* h1 {
     font-size: 9vw;
-  }
+  } */
 
-  h2 {
+  /* h2 {
     font-size: 6rem;
-  }
+  } */
 
   p {
     font-size: 113.7%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 14vw;
   }
 }
 
@@ -181,8 +187,9 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 10.5vw;
+    letter-spacing: -1.4px;
   }
+
 
   h2 {
     font-size: 5rem;
@@ -195,7 +202,7 @@ textarea:focus {
 /* Only use in production */
 @media screen and (max-width: 480px) {
   h1 {
-    letter-spacing: -2.5px;
+    letter-spacing: -1.5px;
   }
   h2 {
     letter-spacing: -1.5px;

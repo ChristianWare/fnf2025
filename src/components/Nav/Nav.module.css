@@ -79,8 +79,9 @@
 
 @media screen and (max-width: 568px) {
   .header {
-    padding-right: 10px;
-    padding-left: 10px;
+    top: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .navItems {
@@ -89,8 +90,6 @@
 }
 
 @media screen and (max-width: 320px) {
-
-
   .navItems {
     bottom: -87vh;
   }

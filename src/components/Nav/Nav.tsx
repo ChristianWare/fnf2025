@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
 import styles from "./Nav.module.css";
@@ -49,21 +49,9 @@ export default function Nav() {
     );
   }
 
-  const [navWhite, setNavWhite] = useState(false);
   const [showNav, setShowNav] = useState(true);
-  const navRef = useRef<HTMLElement | null>(null);
 
   // const toggleHamburger = () => setIsOpen((v) => !v);
-
-  useEffect(() => {
-    const sections = document.querySelectorAll(".dark-section");
-    const obs = new IntersectionObserver(
-      (entries) => setNavWhite(entries.some((e) => e.isIntersecting)),
-      { threshold: 0.5 }
-    );
-    sections.forEach((s) => obs.observe(s));
-    return () => obs.disconnect();
-  }, []);
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -78,9 +66,7 @@ export default function Nav() {
 
   return (
     <header
-      ref={navRef}
-      className={`${styles.header} ${showNav ? styles.show : styles.hide} ${
-        navWhite ? styles.white : ""
+      className={`${styles.header} ${showNav ? styles.show : styles.hide}
       }`}
     >
       <nav className={styles.navbar}>

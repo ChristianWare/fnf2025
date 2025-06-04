@@ -54,7 +54,6 @@ export default function PageIntro({ title }: Props) {
       animateText(refs.copy.current, "lines"),
     ];
 
-    // tidy on unmount
     return () => cleanups.forEach((c) => c && c());
   });
 
