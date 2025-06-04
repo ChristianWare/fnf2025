@@ -5,7 +5,6 @@ import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
 import { ViewTransitions } from "next-view-transitions";
 import { Toaster } from "react-hot-toast";
-import AuthProvider from "@/providers/AuthProvider";
 import { ModalProvider } from "@/context/ModalContext";
 import { Sofia_Sans_Extra_Condensed } from "next/font/google";
 
@@ -77,13 +76,11 @@ export default function RootLayout({
                 className: "toastFont",
               }}
             />
-            <AuthProvider>
               <ModalProvider>
                 <Nav />
 
                 {children}
               </ModalProvider>
-            </AuthProvider>
             <CustomCursor />
           </SmoothScroll>
         </body>
