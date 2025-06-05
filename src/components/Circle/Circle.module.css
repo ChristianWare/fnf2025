@@ -51,7 +51,22 @@
   align-items: center;
   justify-content: center;
   z-index: 20;
+  animation: pulseCenter 3s ease-in-out infinite;
+
 }
+
+@keyframes pulseCenter {
+  0%,
+  100% {
+    background-color: var(--white);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    background-color: var(--yellow);
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
 
 .centerText {
   font-family: var(--SuisseIntlCondensed);
@@ -90,6 +105,7 @@
   font-size: clamp(1rem, 2vw, 1.4rem);
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.2s ease-in;
 }
 
 .quad1:hover,
@@ -108,7 +124,7 @@
 .quad2 {
   border-bottom: 2px dashed var(--blackii);
   border-top-right-radius: 100%;
-  background-color: var(--yellow);
+  /* background-color: var(--yellow); */
 }
 
 .quad3 {

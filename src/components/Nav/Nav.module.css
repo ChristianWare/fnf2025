@@ -86,27 +86,28 @@
     padding-left: 15px;
     background-color: var(--tan);
     /* border-bottom: 1px solid var(--tanii); */
-  
-    background-image:
-    linear-gradient(var(--tanii) 1px, transparent 1px),
-    linear-gradient(to right, var(--tanii) 1px, transparent 1px);
-  background-size: 100px 100px;
-}
 
-.header::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: url("/images/noise.gif") repeat;
-  opacity: 0.04;
-}
+    background-image:
+      linear-gradient(var(--tanii) 1px, transparent 1px),
+      linear-gradient(to right, var(--tanii) 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+
+  .header::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url("/images/noise.gif") repeat;
+    opacity: 0.04;
+  }
   .navItems {
     bottom: -90vh;
     padding: 1.3rem;
+    border: 1px solid var(--white);
 
   }
 }

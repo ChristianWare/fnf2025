@@ -73,6 +73,45 @@ const data = [
 export default function AboutUs() {
   const copyRef = useRef<HTMLParagraphElement>(null);
 
+  // useGSAP(() => {
+  //   if (!copyRef.current) return;
+
+  //   gsap.set(copyRef.current, { visibility: "visible" });
+
+  //   const split = new SplitType(copyRef.current, {
+  //     types: "lines",
+  //     lineClass: styles.line,
+  //   });
+
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: copyRef.current,
+  //       start: "top 80%", // adjust to taste
+  //       toggleActions: "play reverse play reverse", // ★ every visit
+  //       // markers: true,                 // ← uncomment while debugging
+  //     },
+  //   });
+
+  //   tl.fromTo(
+  //     split.lines,
+  //     { y: 200, x: -200, opacity: 0 },
+  //     {
+  //       y: 0,
+  //       x: 0,
+  //       opacity: 1,
+  //       duration: 2.5,
+  //       stagger: 0.075,
+  //       ease: "power4.out",
+  //       delay: 0.25,
+  //     }
+  //   );
+
+  //   return () => {
+  //     split.revert();
+  //     tl.kill();
+  //   };
+  // });
+
   useGSAP(() => {
     if (!copyRef.current) return;
 
@@ -83,34 +122,30 @@ export default function AboutUs() {
       lineClass: styles.line,
     });
 
+    /* scroll-scrubbed timeline */
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: copyRef.current,
-        start: "top 80%",
-        once: true,
+        trigger: copyRef.current, // watch the paragraph
+        start: "top 80%", // when its top hits 90% of viewport
+        end: "top 40%", // …animate until it reaches 40% (≈50 vh span)
+        scrub: 3,
+        // markers: true,
       },
     });
 
-    tl.fromTo(
-      split.lines,
-      { y: 200, x: -200, opacity: 0 },
-      {
-        y: 0,
-        x: 0,
-        opacity: 1,
-        duration: 1.3,
-        stagger: 0.075,
-        ease: "power4.out",
-        delay: 0.25,
-      }
-    );
+    tl.from(split.lines, {
+      y: 200,
+      x: -200,
+      opacity: 0,
+      stagger: 0.075,
+      ease: "power4.out",
+    });
 
     return () => {
       split.revert();
       tl.kill();
     };
   });
-
   return (
     <section className={styles.container} id='about'>
       <div className={styles.parent}>
@@ -129,7 +164,7 @@ export default function AboutUs() {
               Shoppers leave slow, cluttered storefronts in seconds. Generic
               templates and bloated plugins cripple performance, frustrate
               visitors, and drain ad budgets. You deserve a store engineered for
-              speed, stability, and storytelling—without hiring an in-house tech
+              speed, stability, and storytelling without hiring an in house tech
               team or wading through freelance uncertainty.
             </p>
           </div>

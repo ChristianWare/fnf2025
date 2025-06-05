@@ -95,7 +95,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap:1rem;
+  gap: 1rem;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
@@ -154,6 +154,12 @@
 }
 
 @media screen and (max-width: 968px) {
+  .copy {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 968px) {
   .bottom {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -193,10 +199,6 @@
 
   .title {
     font-size: 6rem;
-  }
-
-  .copy {
-    width: 100%;
   }
 }
 

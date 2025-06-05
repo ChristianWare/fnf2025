@@ -1,5 +1,6 @@
 .container {
-  padding: 15rem 0rem;
+  padding: 10rem 0rem;
+  background-color: var(--black);
 }
 
 .content {
@@ -8,8 +9,28 @@
   grid-gap: 5rem;
 }
 
+.copy {
+  font-family: var(--SuisseIntlMedium);
+  font-size: 2.8rem;
+  color: var(--white);
+  margin-right: auto;
+  width: 70%;
+  will-change: transform, opacity;
+  overflow: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  margin-bottom: 10rem;
+}
+
 .right {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer {
+  width: 100%;
 }
 
 @media screen and (max-width: 1068px) {
@@ -18,10 +39,10 @@
   }
 
   .copy {
-    width: 80%;
-    text-align: center;
+    width: 100%;
+    /* text-align: center;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
   }
 }
 
