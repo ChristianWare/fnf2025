@@ -9,6 +9,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LayoutWrapper from "../LayoutWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,47 +149,49 @@ export default function AboutUs() {
   });
   return (
     <section className={styles.container} id='about'>
-      <div className={styles.parent}>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <div className={styles.sectionHeadingContainer}>
-              <SectionHeading2 title='Problems we solve' />
+      <LayoutWrapper>
+        <div className={styles.parent}>
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <div className={styles.sectionHeadingContainer}>
+                <SectionHeading2 title='Problems we solve' />
+              </div>
             </div>
-          </div>
-          <div className={styles.right}>
-            <p ref={copyRef} className={styles.copy}>
-              {/* Fonts&nbsp;&amp;&nbsp;Footers is a Phoenix‑based e‑commerce agency
+            <div className={styles.right}>
+              <p ref={copyRef} className={styles.copy}>
+                {/* Fonts&nbsp;&amp;&nbsp;Footers is a Phoenix‑based e‑commerce agency
               that fuses pixel‑perfect design (“Fonts”) with rock‑solid
               engineering (“Footers”). Our team has one north star— speed that
               sells. */}
-              Shoppers leave slow, cluttered storefronts in seconds. Generic
-              templates and bloated plugins cripple performance, frustrate
-              visitors, and drain ad budgets. You deserve a store engineered for
-              speed, stability, and storytelling without hiring an in house tech
-              team or wading through freelance uncertainty.
-            </p>
-          </div>
-        </div>
-        <div className={styles.bottom}>
-          <div className={styles.bottomLeft}>
-            <div className={styles.imgContainer}>
-              <ParallaxImage
-                src={Img1}
-                alt='Fonts & Footers office'
-                title='Fonts & Footers'
-              />
+                Shoppers leave slow, cluttered storefronts in seconds. Generic
+                templates and bloated plugins cripple performance, frustrate
+                visitors, and drain ad budgets. You deserve a store engineered
+                for speed, stability, and storytelling without hiring an in
+                house tech team or wading through freelance uncertainty.
+              </p>
             </div>
           </div>
-          <div className={styles.bottomRight}>
-            {data.map((item) => (
-              <div className={styles.card} key={item.id}>
-                <h3 className={styles.title}>{item.title}</h3>
-                <p className={styles.desc}>{item.desc}</p>
+          <div className={styles.bottom}>
+            <div className={styles.bottomLeft}>
+              <div className={styles.imgContainer}>
+                <ParallaxImage
+                  src={Img1}
+                  alt='Fonts & Footers office'
+                  title='Fonts & Footers'
+                />
               </div>
-            ))}
+            </div>
+            <div className={styles.bottomRight}>
+              {data.map((item) => (
+                <div className={styles.card} key={item.id}>
+                  <h3 className={styles.title}>{item.title}</h3>
+                  <p className={styles.desc}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </LayoutWrapper>
     </section>
   );
 }
