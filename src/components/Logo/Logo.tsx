@@ -17,7 +17,6 @@ const Logo = ({ size = "", color = "" }: Props) => {
     const duration = 1500;
     const easing = "cubic-bezier(0.87, 0, 0.13, 1)";
 
-    /* 1️⃣  Outgoing view ‑‑ fade + drift up‑right  */
     document.documentElement.animate(
       [
         { opacity: 1, transform: "translate(0, 0)" },
@@ -31,7 +30,6 @@ const Logo = ({ size = "", color = "" }: Props) => {
       }
     );
 
-    /* 2️⃣  Incoming view ‑‑ start down‑left, glide to centre while fading in */
     document.documentElement.animate(
       [
         { opacity: 0, transform: "translate(-35%, 35%)" },
