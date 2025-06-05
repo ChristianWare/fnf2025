@@ -1,7 +1,8 @@
 import styles from "./AboutIntro.module.css";
 import LayoutWrapper from "../../LayoutWrapper";
-import Img1 from '../../../../public/images/aboutpage.jpg'
+import Img1 from "../../../../public/images/aboutpage.jpg";
 import Image from "next/image";
+import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 
 export default function AboutIntro() {
   return (
@@ -10,6 +11,9 @@ export default function AboutIntro() {
         <div className={styles.left}>
           <LayoutWrapper>
             <div className={styles.leftContent}>
+              <div className={styles.sectionHeadingContainer}>
+                <SectionHeading2 title='About Us' />
+              </div>
               <p className={styles.heading}>
                 Founded by a team of e-commerce enthusiasts with backgrounds in
                 both design and development, Fonts & Footers was born from the
