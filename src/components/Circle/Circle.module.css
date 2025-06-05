@@ -10,7 +10,8 @@
   width: 100%;
   height: 0;
   padding-bottom: 100%;
-  border: 2px dashed var(--blackii);
+  border: 2px dashed var(--tan);
+  /* background-color: var(--tan); */
   border-radius: 50%;
   margin: 0 auto;
 }
@@ -23,6 +24,10 @@
   height: 100%;
   pointer-events: none;
   padding-top: 2rem;
+}
+
+.curveText textPath {
+  fill: var(--tan);
 }
 
 .outerCircle:after {
@@ -46,19 +51,18 @@
   aspect-ratio: 1/1;
   border: 2px dashed var(--blackii);
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--tan);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 20;
   animation: pulseCenter 3s ease-in-out infinite;
-
 }
 
 @keyframes pulseCenter {
   0%,
   100% {
-    background-color: var(--white);
+    background-color: var(--tan);
     transform: translate(-50%, -50%) scale(1);
   }
   50% {
@@ -66,7 +70,6 @@
     transform: translate(-50%, -50%) scale(1.08);
   }
 }
-
 
 .centerText {
   font-family: var(--SuisseIntlCondensed);
@@ -101,7 +104,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--tan);
   font-size: clamp(1rem, 2vw, 1.4rem);
   cursor: pointer;
   overflow: hidden;
