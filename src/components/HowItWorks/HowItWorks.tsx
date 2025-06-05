@@ -1,7 +1,5 @@
 import styles from "./HowItWorks.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Owner from "../Owner/Owner";
-// import SectionHeading from "../SectionHeading/SectionHeading";
 
 const data = [
   {
@@ -54,7 +52,6 @@ const HowItWorks = () => {
               ))}
             </div>
           </div>
-          <Owner />
         </LayoutWrapper>
       </div>
     </section>
